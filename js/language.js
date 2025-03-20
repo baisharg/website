@@ -1,134 +1,135 @@
-// Language toggle functionality
+// Language toggle functionality for BAISH website
 document.addEventListener('DOMContentLoaded', function () {
   // Default language is English
-  let currentLang = localStorage.getItem('baish-language') || 'en'
+  const defaultLang = 'en'
 
-  // Apply stored language preference on page load
-  setLanguage(currentLang)
+  // Get saved language preference from localStorage or use default
+  let currentLang = localStorage.getItem('baish-language') || defaultLang
 
-  // Add event listener to language toggle buttons
+  // Apply the language on page load
+  applyLanguage(currentLang)
+
+  // Add click event listeners to language toggle buttons
   document.querySelectorAll('.lang-toggle').forEach(button => {
     button.addEventListener('click', function () {
       const newLang = this.getAttribute('data-lang')
-      setLanguage(newLang)
-      localStorage.setItem('baish-language', newLang)
+      console.log(`Changing language from ${currentLang} to ${newLang}`)
 
-      // Update active state of language toggle buttons
-      document.querySelectorAll('.lang-toggle').forEach(btn => {
-        btn.classList.remove('active')
-      })
-      this.classList.add('active')
+      // Only change if it's a different language
+      if (newLang !== currentLang) {
+        // Save to localStorage
+        localStorage.setItem('baish-language', newLang)
+        currentLang = newLang
 
-      // Translate any dynamic content
-      translateDynamicContent()
+        // Apply the language change
+        applyLanguage(newLang)
+      }
     })
   })
-
-  // Set initial active state for the current language button
-  document
-    .querySelector(`.lang-toggle[data-lang="${currentLang}"]`)
-    ?.classList.add('active')
-
-  // Initialize dynamic content translation
-  translateDynamicContent()
 })
 
-function setLanguage (lang) {
+// Apply the language to the page
+function applyLanguage (lang) {
+  console.log(`Applying language: ${lang}`)
+
+  // Set the HTML lang attribute
   document.documentElement.setAttribute('lang', lang)
 
-  // Hide all language elements
+  // 1. Handle static content with data-lang-xx attributes
+  // Hide all language-specific elements
   document.querySelectorAll('[data-lang-en], [data-lang-es]').forEach(el => {
     el.style.display = 'none'
   })
 
   // Show elements for the selected language
-  document.querySelectorAll(`[data-lang-${lang}]`).forEach(el => {
+  const elementsToShow = document.querySelectorAll(`[data-lang-${lang}]`)
+  console.log(
+    `Found ${elementsToShow.length} static elements for language ${lang}`
+  )
+  elementsToShow.forEach(el => {
     el.style.display = ''
   })
-}
 
-// Helper function to translate a specific element
-function translateElement (element, translationKey) {
-  if (!element || !translationKey) return
+  // 2. Handle dynamic content with data-translate attributes
+  translateDynamicContent(lang)
 
-  const lang = localStorage.getItem('baish-language') || 'en'
+  // 3. Update the active state of language toggle buttons
+  document.querySelectorAll('.lang-toggle').forEach(btn => {
+    btn.classList.remove('active')
+  })
 
-  // Parse the translation key (e.g., "common.submit" becomes translations.common.submit)
-  const keys = translationKey.split('.')
-  let translation = translations
-
-  // Navigate through the translation object
-  for (const key of keys) {
-    if (translation[key]) {
-      translation = translation[key]
-    } else {
-      console.warn(`Translation key not found: ${translationKey}`)
-      return
-    }
-  }
-
-  // Apply the translation if found
-  if (translation[lang]) {
-    element.textContent = translation[lang]
+  const activeToggle = document.querySelector(
+    `.lang-toggle[data-lang="${lang}"]`
+  )
+  if (activeToggle) {
+    activeToggle.classList.add('active')
   }
 }
 
-// Function to translate all dynamic content on the page
-function translateDynamicContent () {
-  // Find all elements with data-translate attribute
+// Translate all dynamic content on the page
+function translateDynamicContent (lang) {
+  // Check if translations are available
+  if (typeof translations === 'undefined') {
+    console.error(
+      'Translations object is not defined. Make sure translations.js is loaded before language.js'
+    )
+    return
+  }
+
+  // Process elements with data-translate attribute
   document.querySelectorAll('[data-translate]').forEach(element => {
-    const translationKey = element.getAttribute('data-translate')
-    translateElement(element, translationKey)
+    const key = element.getAttribute('data-translate')
+    const translation = getTranslationByKey(key, lang)
+
+    if (translation) {
+      element.textContent = translation
+    }
   })
 
-  // Find all elements with data-translate-placeholder attribute (for input fields)
+  // Process placeholder translations
   document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
-    const translationKey = element.getAttribute('data-translate-placeholder')
-    const lang = localStorage.getItem('baish-language') || 'en'
+    const key = element.getAttribute('data-translate-placeholder')
+    const translation = getTranslationByKey(key, lang)
 
-    // Parse the translation key
-    const keys = translationKey.split('.')
-    let translation = translations
-
-    // Navigate through the translation object
-    for (const key of keys) {
-      if (translation[key]) {
-        translation = translation[key]
-      } else {
-        console.warn(`Translation key not found: ${translationKey}`)
-        return
-      }
-    }
-
-    // Apply the translation to the placeholder if found
-    if (translation[lang]) {
-      element.placeholder = translation[lang]
+    if (translation) {
+      element.placeholder = translation
     }
   })
 }
 
-// Add a global helper to get a translation by key
-window.getTranslation = function (translationKey) {
-  const lang = localStorage.getItem('baish-language') || 'en'
+// Get a translation value by dot-notation key
+function getTranslationByKey (key, lang) {
+  if (!key) return null
 
-  // Parse the translation key
-  const keys = translationKey.split('.')
-  let translation = translations
+  const keys = key.split('.')
+  let value = translations
 
-  // Navigate through the translation object
-  for (const key of keys) {
-    if (translation[key]) {
-      translation = translation[key]
+  // Navigate through the nested object
+  for (const k of keys) {
+    if (value && value[k]) {
+      value = value[k]
     } else {
-      console.warn(`Translation key not found: ${translationKey}`)
-      return ''
+      console.warn(`Translation key not found: ${key}`)
+      return null
     }
   }
 
-  // Return the translation if found
-  if (translation[lang]) {
-    return translation[lang]
+  // Return the translation for the specified language
+  if (value && value[lang]) {
+    return value[lang]
   }
 
-  return ''
+  return null
+}
+
+// Expose global helper function
+window.getTranslation = function (key) {
+  const lang = localStorage.getItem('baish-language') || 'en'
+  return getTranslationByKey(key, lang) || ''
+}
+
+// Expose global function to translate dynamic content
+window.translateDynamicContent = function () {
+  const lang = localStorage.getItem('baish-language') || 'en'
+  translateDynamicContent(lang)
 }

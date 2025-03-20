@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Toggle Test</title>
+    <style>
+        [data-lang-es] {
+            display: none;
+        }
+        .lang-toggle.active {
+            font-weight: bold;
+            color: blue;
+            background-color: #eee;
+        }
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .lang-toggle {
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .lang-divider {
+            width: 1px;
+            height: 16px;
+            background-color: #999;
+            margin: 0 5px;
+        }
+    </style>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</head>
+<body>
+    <h1>Language Toggle Test</h1>
+
+    <div class="lang-switcher">
+        <button class="lang-toggle" data-lang="en">EN</button>
+        <span class="lang-divider"></span>
+        <button class="lang-toggle" data-lang="es">ES</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Static Content (data-lang-xx attributes)</h2>
+        <p data-lang-en>This text should only be visible when English is selected.</p>
+        <p data-lang-es>Este texto solo debería ser visible cuando se seleccione Español.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Dynamic Content (data-translate attribute)</h2>
+        <p data-translate="resources.title">This text will be replaced with the translation</p>
+        <p data-translate="resources.subtitle">This text will be replaced with the translation</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Console Output</h2>
+        <p>Open your browser's developer console (F12) to see debugging information.</p>
+    </div>
+</body>
+</html>

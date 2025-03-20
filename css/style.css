@@ -680,56 +680,53 @@
 .lang-switcher {
 	display: flex;
 	align-items: center;
-	margin-left: 15px;
+	margin-left: 20px;
 }
 
 .lang-toggle {
 	background: none;
 	border: none;
-	color: var(--color-text-light);
-	font-size: 0.9rem;
-	font-weight: 500;
-	padding: 5px 8px;
+	color: var(--text-color);
+	font-size: 14px;
 	cursor: pointer;
-	transition: all 0.2s ease;
+	padding: 5px 8px;
+	font-weight: 500;
+	transition: all 0.2s;
 	opacity: 0.7;
-	border-radius: 4px;
 }
 
 .lang-toggle:hover {
 	opacity: 1;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
 }
 
 .lang-toggle.active {
-	opacity: 1;
 	font-weight: 600;
-	color: var(--color-accent);
+	opacity: 1;
+	color: var(--primary-color);
 }
 
 .lang-divider {
 	width: 1px;
 	height: 16px;
-	background-color: rgba(255, 255, 255, 0.3);
-	margin: 0 5px;
+	background-color: var(--border-color);
+	margin: 0 4px;
 }
 
-/* Hide initially */
+/* Default: Hide Spanish elements unless Spanish is active */
 [data-lang-es] {
 	display: none;
 }
+
+/* When the document language is changed to Spanish, these rules will be applied
+   by the language.js script using inline styles */
 
 @media (max-width: 768px) {
 	.lang-switcher {
 		position: absolute;
 		top: 18px;
 		right: 70px;
-	}
-}
-
-@media (max-width: 480px) {
-	.lang-switcher {
-		right: 60px;
 	}
 }
 
