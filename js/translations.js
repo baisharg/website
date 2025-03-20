@@ -206,6 +206,22 @@ const translations = {
       en: 'Learning Pathways',
       es: 'Trayectos de Aprendizaje'
     },
+    pathways_intro: {
+      en: "We've organized resources into three learning paths depending on your background and experience level.",
+      es: 'Hemos organizado los recursos en tres trayectos de aprendizaje según tu formación y nivel de experiencia.'
+    },
+    beginner_description: {
+      en: 'For those new to AI safety concepts who want to understand the key ideas and concerns.',
+      es: 'Para quienes son nuevos en los conceptos de seguridad en IA y quieren entender las ideas y preocupaciones clave.'
+    },
+    intermediate_description: {
+      en: 'For those with some understanding of machine learning who want to explore core AI safety challenges.',
+      es: 'Para quienes tienen algo de conocimiento en machine learning y quieren explorar los desafíos centrales de la seguridad en IA.'
+    },
+    advanced_description: {
+      en: 'For those with strong ML/AI knowledge who want to engage with cutting-edge research.',
+      es: 'Para quienes tienen un fuerte conocimiento en ML/IA y quieren involucrarse con investigación de vanguardia.'
+    },
     beginners: {
       en: 'Beginners',
       es: 'Principiantes'
@@ -234,13 +250,79 @@ const translations = {
       en: 'Paper Reading Club List',
       es: 'Lista del Club de Lectura de Papers'
     },
+    papers_intro: {
+      en: 'Papers we have discussed or plan to discuss in our Paper Reading Club.',
+      es: 'Papers que hemos discutido o planeamos discutir en nuestro Club de Lectura de Papers.'
+    },
     newsletter_title: {
       en: 'Newsletter Archive',
       es: 'Archivo de Boletines'
     },
+    newsletter_intro: {
+      en: 'Browse our past newsletters to stay updated on our activities and AI safety developments.',
+      es: 'Explorá nuestros boletines anteriores para mantenerte actualizado sobre nuestras actividades y desarrollos en seguridad en IA.'
+    },
     books_title: {
       en: 'Recommended Books',
       es: 'Libros Recomendados'
+    },
+    books: {
+      human_compatible: {
+        title: {
+          en: 'Human Compatible',
+          es: 'Human Compatible'
+        },
+        author: {
+          en: 'Stuart Russell',
+          es: 'Stuart Russell'
+        },
+        description: {
+          en: "A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity.",
+          es: 'El convincente argumento de un destacado investigador de IA sobre cómo garantizar que la inteligencia artificial siga beneficiando a la humanidad.'
+        }
+      },
+      superintelligence: {
+        title: {
+          en: 'Superintelligence',
+          es: 'Superinteligencia'
+        },
+        author: {
+          en: 'Nick Bostrom',
+          es: 'Nick Bostrom'
+        },
+        description: {
+          en: 'Explores the potential risks and paths to superintelligent AI, addressing key questions about the future of intelligence.',
+          es: 'Explora los riesgos potenciales y caminos hacia la IA superinteligente, abordando preguntas clave sobre el futuro de la inteligencia.'
+        }
+      },
+      alignment_problem: {
+        title: {
+          en: 'The Alignment Problem',
+          es: 'El Problema de Alineamiento'
+        },
+        author: {
+          en: 'Brian Christian',
+          es: 'Brian Christian'
+        },
+        description: {
+          en: 'An exploration of the growing field of AI alignment, explaining technical concepts in an accessible way.',
+          es: 'Una exploración del creciente campo del alineamiento de IA, explicando conceptos técnicos de manera accesible.'
+        }
+      },
+      life_3: {
+        title: {
+          en: 'Life 3.0',
+          es: 'Vida 3.0'
+        },
+        author: {
+          en: 'Max Tegmark',
+          es: 'Max Tegmark'
+        },
+        description: {
+          en: 'Examines how artificial intelligence might affect life in the future and what choices we face in shaping that future.',
+          es: 'Examina cómo la inteligencia artificial podría afectar la vida en el futuro y qué decisiones enfrentamos al dar forma a ese futuro.'
+        }
+      }
     },
     paper_title: {
       en: 'Paper Title',
@@ -285,6 +367,94 @@ const translations = {
     read_newsletter: {
       en: 'Read Newsletter',
       es: 'Leer Boletín'
+    },
+    // Resource types
+    resource_type: {
+      overview: {
+        en: 'Overview',
+        es: 'Resumen General'
+      },
+      blog_series: {
+        en: 'Blog Series',
+        es: 'Serie de Blog'
+      },
+      video: {
+        en: 'Video',
+        es: 'Video'
+      },
+      wiki: {
+        en: 'Wiki',
+        es: 'Wiki'
+      },
+      course_materials: {
+        en: 'Course Materials',
+        es: 'Materiales de Curso'
+      },
+      reading_list: {
+        en: 'Reading List',
+        es: 'Lista de Lectura'
+      },
+      company_perspective: {
+        en: 'Company Perspective',
+        es: 'Perspectiva de Empresa'
+      },
+      research_paper: {
+        en: 'Research Paper',
+        es: 'Paper de Investigación'
+      },
+      course: {
+        en: 'Course',
+        es: 'Curso'
+      },
+      interpretability_research: {
+        en: 'Interpretability Research',
+        es: 'Investigación en Interpretabilidad'
+      },
+      research_series: {
+        en: 'Research Series',
+        es: 'Serie de Investigación'
+      },
+      technical_discussion: {
+        en: 'Technical Discussion',
+        es: 'Discusión Técnica'
+      }
+    },
+    // Categories
+    category_type: {
+      alignment: {
+        en: 'Alignment',
+        es: 'Alineamiento'
+      },
+      interpretability: {
+        en: 'Interpretability',
+        es: 'Interpretabilidad'
+      },
+      ethics: {
+        en: 'Ethics',
+        es: 'Ética'
+      },
+      capabilities: {
+        en: 'Capabilities',
+        es: 'Capacidades'
+      },
+      robustness: {
+        en: 'Robustness',
+        es: 'Robustez'
+      }
+    },
+    get_recommendations: {
+      beginner: {
+        en: 'Get Beginner Recommendations',
+        es: 'Obtener Recomendaciones para Principiantes'
+      },
+      intermediate: {
+        en: 'Get Intermediate Recommendations',
+        es: 'Obtener Recomendaciones Intermedias'
+      },
+      advanced: {
+        en: 'Get Advanced Recommendations',
+        es: 'Obtener Recomendaciones Avanzadas'
+      }
     }
   },
 
