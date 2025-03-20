@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.classList.remove('active')
       })
       this.classList.add('active')
+
+      // Translate any dynamic content
+      translateDynamicContent()
     })
   })
 
@@ -25,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
   document
     .querySelector(`.lang-toggle[data-lang="${currentLang}"]`)
     ?.classList.add('active')
+
+  // Initialize dynamic content translation
+  translateDynamicContent()
 })
 
 function setLanguage (lang) {
@@ -42,9 +48,87 @@ function setLanguage (lang) {
 }
 
 // Helper function to translate a specific element
-function translateElement (element, translations) {
+function translateElement (element, translationKey) {
+  if (!element || !translationKey) return
+
   const lang = localStorage.getItem('baish-language') || 'en'
-  if (element && translations[lang]) {
-    element.textContent = translations[lang]
+
+  // Parse the translation key (e.g., "common.submit" becomes translations.common.submit)
+  const keys = translationKey.split('.')
+  let translation = translations
+
+  // Navigate through the translation object
+  for (const key of keys) {
+    if (translation[key]) {
+      translation = translation[key]
+    } else {
+      console.warn(`Translation key not found: ${translationKey}`)
+      return
+    }
   }
+
+  // Apply the translation if found
+  if (translation[lang]) {
+    element.textContent = translation[lang]
+  }
+}
+
+// Function to translate all dynamic content on the page
+function translateDynamicContent () {
+  // Find all elements with data-translate attribute
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const translationKey = element.getAttribute('data-translate')
+    translateElement(element, translationKey)
+  })
+
+  // Find all elements with data-translate-placeholder attribute (for input fields)
+  document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+    const translationKey = element.getAttribute('data-translate-placeholder')
+    const lang = localStorage.getItem('baish-language') || 'en'
+
+    // Parse the translation key
+    const keys = translationKey.split('.')
+    let translation = translations
+
+    // Navigate through the translation object
+    for (const key of keys) {
+      if (translation[key]) {
+        translation = translation[key]
+      } else {
+        console.warn(`Translation key not found: ${translationKey}`)
+        return
+      }
+    }
+
+    // Apply the translation to the placeholder if found
+    if (translation[lang]) {
+      element.placeholder = translation[lang]
+    }
+  })
+}
+
+// Add a global helper to get a translation by key
+window.getTranslation = function (translationKey) {
+  const lang = localStorage.getItem('baish-language') || 'en'
+
+  // Parse the translation key
+  const keys = translationKey.split('.')
+  let translation = translations
+
+  // Navigate through the translation object
+  for (const key of keys) {
+    if (translation[key]) {
+      translation = translation[key]
+    } else {
+      console.warn(`Translation key not found: ${translationKey}`)
+      return ''
+    }
+  }
+
+  // Return the translation if found
+  if (translation[lang]) {
+    return translation[lang]
+  }
+
+  return ''
 }
