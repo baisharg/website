@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- JavaScript for language toggle -->
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -27,23 +30,32 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html" data-lang-en>About</a><a href="about.html" data-lang-es>Quiénes Somos</a></li>
+                    <li><a href="activities.html" data-lang-en>Activities</a><a href="activities.html" data-lang-es>Actividades</a></li>
+                    <li><a href="research.html" data-lang-en>Research</a><a href="research.html" data-lang-es>Investigación</a></li>
+                    <li><a href="resources.html" data-lang-en>Resources</a><a href="resources.html" data-lang-es>Recursos</a></li>
+                    <li><a href="contact.html" data-lang-en>Contact</a><a href="contact.html" data-lang-es>Contacto</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="btn btn-primary">Join Us</a>
+            <div class="lang-switcher">
+                <button class="lang-toggle" data-lang="en">EN</button>
+                <span class="lang-divider"></span>
+                <button class="lang-toggle" data-lang="es">ES</button>
+            </div>
+            <a href="contact.html" class="btn btn-primary" data-lang-en>Join Us</a>
+            <a href="contact.html" class="btn btn-primary" data-lang-es>Sumate</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Ensuring AI Benefits Humanity</h1>
-                <p class="subtitle">BAISH's student-led initiative exploring safe and beneficial AI development</p>
-                <a href="#get-involved" class="btn btn-primary">Get Involved</a>
+                <h1 data-lang-en>Ensuring AI Benefits Humanity</h1>
+                <h1 data-lang-es>Garantizando que la IA beneficie a la humanidad</h1>
+                <p class="subtitle" data-lang-en>BAISH's student-led initiative exploring safe and beneficial AI development</p>
+                <p class="subtitle" data-lang-es>Iniciativa estudiantil de BAISH que explora el desarrollo seguro y beneficioso de la IA</p>
+                <a href="#get-involved" class="btn btn-primary" data-lang-en>Get Involved</a>
+                <a href="#get-involved" class="btn btn-primary" data-lang-es>Participá</a>
             </div>
         </div>
     </section>
@@ -90,7 +102,7 @@
                     <h3>Weekly Discussion Group: Interpretability Methods</h3>
                     <p class="event-details">
                         <span class="time">18:00 - 19:30</span>
-                        <span class="location">Pavilion I, Room 114, Ciudad Universitaria</span>
+                        <span class="location">Pabellon 0+inf, Room 114, Ciudad Universitaria</span>
                     </p>
                     <p class="event-description">Join us for an interactive discussion on recent advances in neural network interpretability methods and their implications for AI alignment.</p>
                     <a href="activities.html#weekly-discussion" class="btn btn-secondary">RSVP Now</a>
@@ -167,22 +179,25 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">BAISH - Buenos Aires AI Safety Hub</div>
-                    <p class="tagline">Ensuring beneficial AI through research and education.</p>
+                    <p class="tagline" data-lang-en>Ensuring beneficial AI through research and education.</p>
+                    <p class="tagline" data-lang-es>Promoviendo el desarrollo de IA beneficiosa mediante la investigación y la educación.</p>
                 </div>
                 <div class="footer-links">
                     <div class="link-group">
-                        <h4>Pages</h4>
+                        <h4 data-lang-en>Pages</h4>
+                        <h4 data-lang-es>Páginas</h4>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="activities.html">Activities</a></li>
-                            <li><a href="research.html">Research</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="index.html" data-lang-en>Home</a><a href="index.html" data-lang-es>Inicio</a></li>
+                            <li><a href="about.html" data-lang-en>About</a><a href="about.html" data-lang-es>Quiénes Somos</a></li>
+                            <li><a href="activities.html" data-lang-en>Activities</a><a href="activities.html" data-lang-es>Actividades</a></li>
+                            <li><a href="research.html" data-lang-en>Research</a><a href="research.html" data-lang-es>Investigación</a></li>
+                            <li><a href="resources.html" data-lang-en>Resources</a><a href="resources.html" data-lang-es>Recursos</a></li>
+                            <li><a href="contact.html" data-lang-en>Contact</a><a href="contact.html" data-lang-es>Contacto</a></li>
                         </ul>
                     </div>
                     <div class="link-group">
-                        <h4>Connect</h4>
+                        <h4 data-lang-en>Connect</h4>
+                        <h4 data-lang-es>Conectate</h4>
                         <ul>
                             <li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
                             <li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
@@ -192,7 +207,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 BAISH - Buenos Aires AI Safety Hub. A student initiative at the University of Buenos Aires.</p>
+                <p data-lang-en>&copy; 2025 BAISH - Buenos Aires AI Safety Hub. A student initiative at the University of Buenos Aires.</p>
+                <p data-lang-es>&copy; 2025 BAISH - Buenos Aires AI Safety Hub. Una iniciativa estudiantil de la Universidad de Buenos Aires.</p>
             </div>
         </div>
     </footer>
