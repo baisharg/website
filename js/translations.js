@@ -202,7 +202,171 @@ const translations = {
 
     // Activities page
     activities: {
-      // Add translations for activities page
+      pageHeader: {
+        breadcrumb: 'Home / Activities',
+        title: 'Our Activities',
+        subtitle:
+          'Join our community and participate in AI safety research and learning'
+      },
+      agiFundamentals: {
+        title: 'AGI Safety Fundamentals Cohort',
+        status: 'Currently Active',
+        description:
+          'The AGI Safety Fundamentals cohort is an 8-week guided course covering the essential concepts in AI alignment and safety. Participants read curated materials and meet weekly to discuss the readings with a facilitator.',
+        description2:
+          'This program is based on the BlueDot AGI Safety Fundamentals curriculum and provides a structured introduction to the field of AI safety.',
+        whatToExpect: {
+          title: 'What to Expect',
+          items: [
+            '2-hour weekly discussion sessions',
+            '1-3 hours of reading per week',
+            'Small groups of 6-12 participants',
+            'Experienced facilitators to guide discussions',
+            'Certificate of completion'
+          ]
+        },
+        details: {
+          title: 'Program Details',
+          duration: 'Duration:',
+          durationValue: '10-12 weeks',
+          period: 'Fellowship Period:',
+          periodValue: 'August - December 2025'
+        }
+      },
+      weeklyDiscussion: {
+        title: 'Weekly Discussion Group',
+        status: 'Every Tuesday @ 18:00',
+        description:
+          'Our Weekly Discussion Group provides a casual forum to discuss recent papers, concepts, and developments in AI safety. These sessions are open to anyone interested in the field, regardless of prior knowledge.',
+        description2:
+          'Each week features a different topic, announced in advance via our mailing list and Telegram group.',
+        format: {
+          title: 'Format',
+          items: [
+            '90-minute discussions led by a rotating facilitator',
+            "Brief presentation on the week's topic (15-20 minutes)",
+            'Open discussion and Q&A',
+            'Optional pre-reading materials shared in advance'
+          ]
+        },
+        participation: {
+          title: 'Participation',
+          description:
+            "No registration required. Just show up! If it's your first time attending, we recommend arriving 10 minutes early to meet the organizers."
+        },
+        nextDiscussion: {
+          title: 'Next Discussion',
+          date: 'Date:',
+          dateValue: 'March 25, 2025',
+          time: 'Time:',
+          timeValue: '18:00 - 19:30',
+          location: 'Location:',
+          locationValue: 'Pabellón 0+inf, Room 1603, Ciudad Universitaria',
+          topic: 'Topic:',
+          topicValue: 'Interpretability Methods',
+          facilitator: 'Facilitator:',
+          facilitatorValue: 'Eitan Sprejer',
+          button: 'Join Telegram for Updates'
+        }
+      },
+      paperReading: {
+        title: 'Paper Reading Club',
+        status: 'Every Friday @ 17:00',
+        description:
+          'The Paper Reading Club conducts deep dives into foundational and recent papers in AI safety research. Unlike the more casual discussion group, this activity involves a close examination of specific research papers.',
+        description2:
+          'Participants are expected to read the selected paper in advance and come prepared to discuss its methods, results, and implications.',
+        selectionCriteria: {
+          title: 'Paper Selection Criteria',
+          items: [
+            'Importance to the field of AI safety',
+            'Technical relevance to current research directions',
+            'Mix of foundational papers and recent publications',
+            'Accessibility to graduate and advanced undergraduate students'
+          ]
+        },
+        sessionFormat: {
+          title: 'Session Format',
+          items: [
+            'Brief overview of the paper (5-10 minutes)',
+            'Section-by-section discussion',
+            'Examination of methods and results',
+            'Critical evaluation of claims and limitations',
+            'Discussion of potential follow-up research'
+          ]
+        },
+        nextSession: {
+          title: 'Next Paper Session',
+          date: 'Date:',
+          dateValue: 'March 21, 2025',
+          time: 'Time:',
+          timeValue: '17:00 - 18:30',
+          location: 'Location:',
+          locationValue: 'Pabellón 0+inf, Room 1603, Ciudad Universitaria',
+          paper: 'Paper:',
+          paperValue: '"Mechanistic Interpretability for Language Models"',
+          lead: 'Discussion Lead:',
+          leadValue: 'Eitan Sprejer',
+          button: 'Access Reading List'
+        }
+      },
+      mechInterp: {
+        title: 'Mechanistic Interpretability Course',
+        status: 'Starts June 2025',
+        description:
+          'The Mechanistic Interpretability Course is an intensive 1-month program focused on techniques for understanding the internal mechanisms of neural networks. This course combines theoretical learning with practical projects.',
+        description2:
+          'Mechanistic interpretability is a key area of AI safety research, seeking to make AI systems more transparent and understandable.',
+        curriculum: {
+          title: 'Curriculum Overview',
+          items: [
+            'Fundamentals of neural network architectures',
+            'Feature visualization techniques',
+            'Circuit analysis in transformer models',
+            'Techniques for analyzing attention mechanisms',
+            'Gradient-based attribution methods',
+            'Final project: Interpreting a specific model component'
+          ]
+        },
+        timeCommitment: {
+          title: 'Time Commitment',
+          items: [
+            '2 classes per week (2 hours each)',
+            '1 practical session per week (3 hours)',
+            'Individual project work (5-10 hours per week)',
+            'Final project presentation'
+          ]
+        },
+        prerequisites: {
+          title: 'Prerequisites',
+          items: [
+            'Strong programming skills (Python)',
+            'Experience with deep learning frameworks (preferably PyTorch)',
+            'Familiarity with basic neural network architectures',
+            'Linear algebra and calculus'
+          ]
+        },
+        courseDetails: {
+          title: 'Course Details',
+          duration: 'Duration:',
+          durationValue: '4 weeks',
+          startDate: 'Start Date:',
+          startDateValue: 'June 2, 2025',
+          endDate: 'End Date:',
+          endDateValue: 'June 27, 2025',
+          deadline: 'Application Deadline:',
+          deadlineValue: 'May 15, 2025',
+          location: 'Location:',
+          locationValue: 'Hybrid (In-person and Zoom)',
+          instructors: 'Instructors:',
+          instructorsValue: 'Dr. Laura Fernandez, Carlos Mendez',
+          button: 'Express Interest'
+        }
+      },
+      calendar: {
+        title: 'Upcoming Events Calendar',
+        subscribe: 'Subscribe to Google Calendar for All Events'
+      }
     },
 
     // Resources page
@@ -597,7 +761,143 @@ const translations = {
 
     // Resources page
     resources: {
-      // Add translations for resources page
+      pageHeader: {
+        breadcrumb: 'Inicio / Recursos',
+        title: 'Recursos de Aprendizaje',
+        subtitle:
+          'Materiales curados para explorar conceptos de seguridad en IA y nuestro archivo de boletines'
+      },
+      learningPathways: {
+        title: 'Caminos de Aprendizaje',
+        intro:
+          'Hemos organizado recursos en tres caminos de aprendizaje según tu formación y nivel de experiencia.',
+        pathways: {
+          beginners: {
+            title: 'Principiantes',
+            difficulty: 'Accesible para Todos',
+            description:
+              'Para quienes son nuevos en los conceptos de seguridad en IA y quieren entender las ideas y preocupaciones principales.',
+            resources: {
+              resource1: {
+                title: 'Future of Life Institute: Introducción a Riesgos de IA',
+                type: 'Panorama General'
+              },
+              resource2: {
+                title: 'Cold Takes: Serie sobre IA Transformativa',
+                type: 'Serie de Blog'
+              },
+              resource3: {
+                title: 'Rob Miles: Intro a Seguridad en IA',
+                type: 'Video'
+              },
+              resource4: {
+                title: '80,000 Hours: Perfil del Problema de Riesgo de IA',
+                type: 'Panorama General'
+              },
+              resource5: {
+                title: 'Wiki de Seguridad en IA de Stampy',
+                type: 'Wiki'
+              }
+            },
+            button: 'Obtener Recomendaciones para Principiantes'
+          },
+          intermediate: {
+            title: 'Intermedio',
+            difficulty: 'Algo de Formación Técnica',
+            description:
+              'Para quienes tienen algún conocimiento de aprendizaje automático y quieren explorar los desafíos centrales de la seguridad en IA.',
+            resources: {
+              resource1: {
+                title: 'Plan de Estudios de Fundamentos de Seguridad en AGI',
+                type: 'Materiales de Curso'
+              },
+              resource2: {
+                title: 'Fundamentos de Alineamiento Técnico',
+                type: 'Lista de Lectura'
+              },
+              resource3: {
+                title: 'Anthropic: Visiones Centrales sobre Seguridad en IA',
+                type: 'Perspectiva de Empresa'
+              },
+              resource4: {
+                title:
+                  'Entrenando Modelos de Lenguaje para Seguir Instrucciones',
+                type: 'Paper de Investigación'
+              },
+              resource5: {
+                title: 'DeepLearning.AI: Técnicas de Alineamiento para LLMs',
+                type: 'Curso'
+              }
+            },
+            button: 'Obtener Recomendaciones Intermedias'
+          },
+          advanced: {
+            title: 'Avanzado',
+            difficulty: 'Sólida Formación Técnica',
+            description:
+              'Para quienes tienen sólidos conocimientos de ML/IA y quieren involucrarse en investigación de vanguardia.',
+            resources: {
+              resource1: {
+                title: 'Distill: Hilo de Circuitos',
+                type: 'Investigación de Interpretabilidad'
+              },
+              resource2: {
+                title: 'Anthropic: Circuitos de Transformer',
+                type: 'Serie de Investigación'
+              },
+              resource3: {
+                title:
+                  'Descubriendo Conocimiento Latente en Modelos de Lenguaje',
+                type: 'Paper de Investigación'
+              },
+              resource4: {
+                title: 'Agentes de Lenguaje para Investigación de Alineamiento',
+                type: 'Paper de Investigación'
+              },
+              resource5: {
+                title: 'Alignment Forum: Conceptos Avanzados',
+                type: 'Discusión Técnica'
+              }
+            },
+            button: 'Obtener Recomendaciones Avanzadas'
+          }
+        }
+      },
+      recommendedBooks: {
+        title: 'Libros Recomendados',
+        books: {
+          book1: {
+            title: 'Uncontrollable',
+            author: 'Darren McKee (2023)',
+            description:
+              'Uncontrollable utiliza analogías atractivas y ejemplos relacionables para resumir la IA para principiantes, y explica el riesgo y la seguridad de la IA para lectores sin formación técnica.'
+          },
+          book2: {
+            title: 'Human Compatible',
+            author: 'Stuart Russell (2019)',
+            description:
+              'Un caso convincente de un investigador líder en IA sobre cómo asegurar que la inteligencia artificial siga siendo beneficiosa para la humanidad.'
+          },
+          book3: {
+            title: 'Superintelligence',
+            author: 'Nick Bostrom (2014)',
+            description:
+              'Explora los riesgos potenciales y caminos hacia la IA superinteligente, abordando preguntas clave sobre el futuro de la inteligencia.'
+          },
+          book4: {
+            title: 'The Alignment Problem',
+            author: 'Brian Christian (2020)',
+            description:
+              'Una exploración del creciente campo del alineamiento de IA, explicando conceptos técnicos de manera accesible.'
+          },
+          book5: {
+            title: 'Life 3.0',
+            author: 'Max Tegmark (2017)',
+            description:
+              'Examina cómo la inteligencia artificial podría afectar la vida en el futuro y qué elecciones enfrentamos al dar forma a ese futuro.'
+          }
+        }
+      }
     },
 
     // Contact page
