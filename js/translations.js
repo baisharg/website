@@ -371,12 +371,150 @@ const translations = {
 
     // Resources page
     resources: {
-      // Add translations for resources page
+      pageHeader: {
+        breadcrumb: 'Home / Resources',
+        title: 'Learning Resources',
+        subtitle:
+          'Curated materials for exploring AI safety concepts and our newsletter archive'
+      },
+      learningPathways: {
+        title: 'Learning Pathways',
+        intro:
+          "We've organized resources into three learning paths depending on your background and experience level.",
+        pathways: {
+          beginners: {
+            title: 'Beginners',
+            difficulty: 'Accessible to All',
+            description:
+              'For those new to AI safety concepts who want to understand the key ideas and concerns.',
+            resources: {
+              resource1: {
+                title: 'Future of Life Institute: AI Risk Introduction',
+                type: 'Overview'
+              },
+              resource2: {
+                title: 'Cold Takes: Transformative AI series',
+                type: 'Blog Series'
+              },
+              resource3: {
+                title: 'Rob Miles: AI Safety Intro',
+                type: 'Video'
+              },
+              resource4: {
+                title: '80,000 Hours: AI Risk Problem Profile',
+                type: 'Overview'
+              },
+              resource5: {
+                title: "Stampy's AI Safety Wiki",
+                type: 'Wiki'
+              }
+            },
+            button: 'Get Beginner Recommendations'
+          },
+          intermediate: {
+            title: 'Intermediate',
+            difficulty: 'Some Technical Background',
+            description:
+              'For those with some understanding of machine learning who want to explore core AI safety challenges.',
+            resources: {
+              resource1: {
+                title: 'AGI Safety Fundamentals Curriculum',
+                type: 'Course Materials'
+              },
+              resource2: {
+                title: 'Technical Alignment Fundamentals',
+                type: 'Reading List'
+              },
+              resource3: {
+                title: 'Anthropic: Core Views on AI Safety',
+                type: 'Company Perspective'
+              },
+              resource4: {
+                title: 'Training Language Models to Follow Instructions',
+                type: 'Research Paper'
+              },
+              resource5: {
+                title: 'DeepLearning.AI: Alignment Techniques for LLMs',
+                type: 'Course'
+              }
+            },
+            button: 'Get Intermediate Recommendations'
+          },
+          advanced: {
+            title: 'Advanced',
+            difficulty: 'Strong Technical Background',
+            description:
+              'For those with strong ML/AI knowledge who want to engage with cutting-edge research.',
+            resources: {
+              resource1: {
+                title: 'Distill: Circuits Thread',
+                type: 'Interpretability Research'
+              },
+              resource2: {
+                title: 'Anthropic: Transformer Circuits',
+                type: 'Research Series'
+              },
+              resource3: {
+                title: 'Discovering Latent Knowledge in Language Models',
+                type: 'Research Paper'
+              },
+              resource4: {
+                title: 'Language Agents for Alignment Research',
+                type: 'Research Paper'
+              },
+              resource5: {
+                title: 'Alignment Forum: Advanced Concepts',
+                type: 'Technical Discussion'
+              }
+            },
+            button: 'Get Advanced Recommendations'
+          }
+        }
+      },
+      recommendedBooks: {
+        title: 'Recommended Books',
+        books: {
+          book1: {
+            title: 'Uncontrollable',
+            author: 'Darren McKee (2023)',
+            description:
+              'Uncontrollable uses engaging analogies and relatable examples to summarize AI for beginners, and unpacks AI risk and safety for readers without a technical background.'
+          },
+          book2: {
+            title: 'Human Compatible',
+            author: 'Stuart Russell (2019)',
+            description:
+              "A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity."
+          },
+          book3: {
+            title: 'Superintelligence',
+            author: 'Nick Bostrom (2014)',
+            description:
+              'Explores the potential risks and paths to superintelligent AI, addressing key questions about the future of intelligence.'
+          },
+          book4: {
+            title: 'The Alignment Problem',
+            author: 'Brian Christian (2020)',
+            description:
+              'An exploration of the growing field of AI alignment, explaining technical concepts in an accessible way.'
+          },
+          book5: {
+            title: 'Life 3.0',
+            author: 'Max Tegmark (2017)',
+            description:
+              'Examines how artificial intelligence might affect life in the future and what choices we face in shaping that future.'
+          }
+        }
+      }
     },
 
     // Contact page
     contact: {
-      // Add translations for contact page
+      pageHeader: {
+        breadcrumb: 'Home / Contact',
+        title: 'Contact Us',
+        subtitle: 'Get in touch with the BAISH community'
+      }
     },
 
     // Common elements
@@ -902,7 +1040,11 @@ const translations = {
 
     // Contact page
     contact: {
-      // Add translations for contact page
+      pageHeader: {
+        breadcrumb: 'Inicio / Contacto',
+        title: 'Contactanos',
+        subtitle: 'Comunicate con la comunidad de BAISH'
+      }
     },
 
     // Common elements
