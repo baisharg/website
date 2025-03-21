@@ -513,7 +513,66 @@ const translations = {
       pageHeader: {
         breadcrumb: 'Home / Contact',
         title: 'Contact Us',
-        subtitle: 'Get in touch with the BAISH community'
+        subtitle: 'Get in touch with our team and join our community'
+      },
+      contactInfo: {
+        email: {
+          title: 'Email',
+          description: 'For general inquiries, suggestions, or questions:'
+        },
+        telegram: {
+          title: 'Telegram',
+          description: 'Join our community channel for discussions and updates:'
+        },
+        location: {
+          title: 'Location',
+          description: "We're based at the Department of Computer Science:"
+        },
+        socialMedia: {
+          title: 'Social Media',
+          description: 'Follow us for updates and announcements:'
+        }
+      },
+      getInvolved: {
+        title: 'Get Involved',
+        intro:
+          'There are multiple ways to participate in our community and activities.',
+        mailingList: {
+          title: 'Join our Mailing List',
+          description:
+            'Stay updated with our events, activities, and opportunities by subscribing to our mailing list. We send monthly newsletters and important announcements.'
+        }
+      },
+      faq: {
+        title: 'Frequently Asked Questions',
+        questions: {
+          q1: {
+            question: 'Do I need to be a UBA student to participate?',
+            answer:
+              'Most of our activities are primarily designed for UBA students, but we welcome participants from other universities for our discussion groups and paper reading sessions. Research fellowships are currently limited to UBA students.'
+          },
+          q2: {
+            question: 'What background do I need to participate?',
+            answer:
+              'This varies by activity. Our discussion groups are open to anyone with an interest in AI safety, regardless of technical background. For more technical activities like the Mechanistic Interpretability course or the Research Fellowship, some background in computer science, mathematics, or AI/ML is expected.'
+          },
+          q3: {
+            question: 'Are your activities conducted in English or Spanish?',
+            answer:
+              'We conduct most of our activities in both languages. Discussion groups are typically in Spanish, while some technical sessions may be in English, especially when using materials from international sources. Our written materials are available in both languages whenever possible.'
+          },
+          q4: {
+            question:
+              "How can I start learning about AI safety if I'm a complete beginner?",
+            answer:
+              'We recommend starting with our beginner resources on the Resources page and joining our weekly discussion group. The discussion group is a great place to ask questions and learn from others in an informal setting.'
+          },
+          q5: {
+            question: 'Can I propose a new activity or research direction?',
+            answer:
+              "Absolutely! We're always open to new ideas. Contact us at aisafetyarg@gmail.com with your proposal, and one of our coordinators will discuss it with you."
+          }
+        }
       }
     },
 
@@ -1044,6 +1103,68 @@ const translations = {
         breadcrumb: 'Inicio / Contacto',
         title: 'Contactanos',
         subtitle: 'Comunicate con la comunidad de BAISH'
+      },
+      contactInfo: {
+        email: {
+          title: 'Email',
+          description: 'Para consultas generales, sugerencias o preguntas:'
+        },
+        telegram: {
+          title: 'Telegram',
+          description:
+            'Únete al canal de la comunidad para discusiones y actualizaciones:'
+        },
+        location: {
+          title: 'Ubicación',
+          description:
+            'Estamos ubicados en el Departamento de Ciencias de la Computación:'
+        },
+        socialMedia: {
+          title: 'Medios Sociales',
+          description: 'Síguenos para actualizaciones y anuncios:'
+        }
+      },
+      getInvolved: {
+        title: 'Sumate',
+        intro:
+          'Hay múltiples formas de participar en nuestra comunidad y actividades.',
+        mailingList: {
+          title: 'Suscribite a Nuestra Lista de Correo',
+          description:
+            'Mantenete al día con nuestros eventos, actividades y oportunidades suscribiéndote a nuestra lista de correo. Te enviamos newsletters mensuales y anuncios importantes.'
+        }
+      },
+      faq: {
+        title: 'Preguntas Frecuentes',
+        questions: {
+          q1: {
+            question: '¿Necesito ser estudiante de la UBA para participar?',
+            answer:
+              'La mayoría de nuestras actividades están principalmente diseñadas para estudiantes de la UBA, pero estamos abiertos a participantes de otras universidades para nuestras reuniones de grupo y sesiones de lectura de papeles. Los becarios de investigación actualmente están limitados a estudiantes de la UBA.'
+          },
+          q2: {
+            question: '¿Qué antecedentes necesito para participar?',
+            answer:
+              'Esto varía por actividad. Nuestras reuniones de grupo están abiertas a cualquier persona con interés en la seguridad en IA, independientemente del fondo técnico. Para actividades más técnicas como el curso de Interpretabilidad Mecánica o el becario de investigación, se espera algún conocimiento en ciencias de la computación, matemáticas o IA/ML.'
+          },
+          q3: {
+            question: '¿Se realizan tus actividades en inglés o español?',
+            answer:
+              'Realizamos la mayoría de nuestras actividades en ambos idiomas. Las reuniones de grupo son típicamente en español, mientras que algunas sesiones técnicas pueden ser en inglés, especialmente cuando se utilizan materiales de fuentes internacionales. Nuestros materiales escritos están disponibles en ambos idiomas siempre que sea posible.'
+          },
+          q4: {
+            question:
+              '¿Cómo puedo empezar a aprender sobre seguridad en IA si soy un principiante completo?',
+            answer:
+              'Te recomendamos empezar con nuestros recursos principiantes en la página de Recursos y unirte a nuestro grupo de reuniones de grupo. El grupo de reuniones de grupo es un gran lugar para hacer preguntas y aprender de otros en un entorno informal.'
+          },
+          q5: {
+            question:
+              '¿Puedo proponer una nueva actividad o dirección de investigación?',
+            answer:
+              '¡Por supuesto! Estamos siempre abiertos a nuevas ideas. Contáctanos en aisafetyarg@gmail.com con tu propuesta y uno de nuestros coordinadores te lo discutirá con vos.'
+          }
+        }
       }
     },
 
