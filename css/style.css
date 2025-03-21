@@ -623,6 +623,10 @@
 		gap: var(--spacing-md);
 	}
 
+	.logo-text {
+		font-size: 1rem;
+	}
+
 	.main-nav ul {
 		flex-wrap: wrap;
 		justify-content: center;
@@ -660,13 +664,20 @@
 	}
 
 	.btn {
-		display: block;
-		width: 100%;
-		margin-bottom: var(--spacing-sm);
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+	}
+
+	.logo-img {
+		height: 35px;
+	}
+
+	.logo-text {
+		font-size: 0.9rem;
 	}
 
 	.cta-buttons,
-	.action-buttons {
+	.involvement-options {
 		flex-direction: column;
 	}
 
@@ -674,7 +685,25 @@
 		display: block;
 		overflow-x: auto;
 	}
-} /*
+}
+
+@media (max-width: 360px) {
+	.logo a {
+		flex-direction: column;
+		text-align: center;
+		gap: 5px;
+	}
+
+	.logo-img {
+		height: 30px;
+	}
+
+	.logo-text {
+		font-size: 0.8rem;
+	}
+}
+
+/*
  * BAAISH - Buenos Aires AI Safety Hub Website Styles
  * A clean, minimalist design for an academic AI safety group
  */
@@ -843,11 +872,17 @@ section {
 	text-decoration: none;
 	display: flex;
 	align-items: center;
+	gap: 10px;
 }
 
 .logo-img {
-	height: 50px;
+	height: 40px;
 	width: auto;
+}
+
+.logo-text {
+	font-size: 1.2rem;
+	font-weight: 700;
 }
 
 .main-nav ul {
