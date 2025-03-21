@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/language-toggle.css">
 </head>
 <body>
     <header class="site-header">
@@ -27,13 +28,18 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="resources.html" class="active">Resources</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="activities.html" data-i18n="nav.activities">Activities</a></li>
+                    <li><a href="resources.html" class="active" data-i18n="nav.resources">Resources</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="btn btn-primary">Join Us</a>
+            <div class="language-toggle">
+                <button id="lang-en" class="language-toggle-btn active">EN</button>
+                <span class="language-toggle-separator">|</span>
+                <button id="lang-es" class="language-toggle-btn">ES</button>
+            </div>
+            <a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs">Join Us</a>
         </div>
     </header>
 
@@ -224,5 +230,8 @@
             </div>
         </div>
     </footer>
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/language-toggle.js"></script>
 </body>
 </html>
