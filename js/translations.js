@@ -15,7 +15,7 @@ const translations = {
       hero: {
         title: 'Ensuring AI Benefits Humanity',
         subtitle:
-          "BAISH's student-led initiative exploring safe and beneficial AI development",
+          "BAAISH's student-led initiative exploring safe and beneficial AI development",
         cta: 'Get Involved'
       },
       intro: {
@@ -23,7 +23,7 @@ const translations = {
         paragraph1:
           'Advanced AI systems are becoming increasingly capable, with the potential to transform society in profound ways. The field of AI Safety focuses on ensuring these systems are aligned with human values and beneficial to humanity.',
         paragraph2:
-          'At the BAISH - Buenos Aires AI Safety Hub, we bring together students from Computer Science, Physics, and Mathematics to understand and address these challenges through research, education, and community.',
+          'At the BAAISH - Buenos Aires AI Safety Hub, we bring together students from Computer Science, Physics, and Mathematics to understand and address these challenges through research, education, and community.',
         point1: 'Understanding AI capabilities and risks',
         point2: 'Developing alignment techniques',
         point3: 'Conducting original research',
@@ -168,7 +168,7 @@ const translations = {
         focusAreas: {
           title: 'Focus Areas',
           intro:
-            'At BAISH - Buenos Aires AI Safety Hub, we focus on several key areas within AI safety research:',
+            'At BAAISH - Buenos Aires AI Safety Hub, we focus on several key areas within AI safety research:',
           areas: [
             'Mechanistic interpretability of neural networks',
             'Alignment techniques for large language models',
@@ -195,6 +195,21 @@ const translations = {
             name: 'Eitan Sprejer',
             title: 'Co-founding Director',
             bio: 'Physics student with a passion for AI safety and alignment.'
+          },
+          luca: {
+            name: 'Luca De Leo',
+            title: 'Co-founding Director',
+            bio: 'Operations Generalist with experience working in AI Safety Organizations'
+          },
+          lucas: {
+            name: 'Lucas Vitali',
+            title: 'Communications Director',
+            bio: 'Computer Science student with a passion for science communications'
+          },
+          sergio: {
+            name: 'Sergio Abriola, PhD',
+            title: 'Research Director',
+            bio: 'Mathematics PhD and professor with a passion for AI Safety'
           }
         }
       }
@@ -601,7 +616,7 @@ const translations = {
       hero: {
         title: 'Asegurando que la IA Beneficie a la Humanidad',
         subtitle:
-          'Iniciativa estudiantil de BAISH explorando el desarrollo seguro y beneficioso de la IA',
+          'Iniciativa estudiantil de BAAISH explorando el desarrollo seguro y beneficioso de la IA',
         cta: 'Sumate'
       },
       intro: {
@@ -609,7 +624,7 @@ const translations = {
         paragraph1:
           'Los sistemas de IA avanzados son cada vez más capaces, con el potencial de transformar la sociedad de manera profunda. El campo de la Seguridad de la IA se enfoca en garantizar que estos sistemas estén alineados con los valores humanos y sean beneficiosos para la humanidad.',
         paragraph2:
-          'En BAISH - Buenos Aires AI Safety Hub, reunimos a estudiantes de Ciencias de la Computación, Física y Matemáticas para entender y abordar estos desafíos a través de la investigación, la educación y la comunidad.',
+          'En BAAISH - Buenos Aires AI Safety Hub, reunimos a estudiantes de Ciencias de la Computación, Física y Matemáticas para entender y abordar estos desafíos a través de la investigación, la educación y la comunidad.',
         point1: 'Entendiendo las capacidades y riesgos de la IA',
         point2: 'Desarrollando técnicas de alineamiento',
         point3: 'Realizando investigación original',
@@ -755,7 +770,7 @@ const translations = {
         focusAreas: {
           title: 'Áreas de Enfoque',
           intro:
-            'En BAISH - Buenos Aires AI Safety Hub, nos enfocamos en varias áreas clave dentro de la investigación de seguridad en IA:',
+            'En BAAISH - Buenos Aires AI Safety Hub, nos enfocamos en varias áreas clave dentro de la investigación de seguridad en IA:',
           areas: [
             'Interpretabilidad mecánica de redes neuronales',
             'Técnicas de alineamiento para modelos grandes de lenguaje',
@@ -782,6 +797,21 @@ const translations = {
             name: 'Eitan Sprejer',
             title: 'Co-director Fundador',
             bio: 'Estudiante de Física con pasión por la seguridad y el alineamiento de la IA.'
+          },
+          luca: {
+            name: 'Luca De Leo',
+            title: 'Co-director Fundador',
+            bio: 'Generalista de Operaciones con experiencia trabajando en Organizaciones de Seguridad en IA'
+          },
+          lucas: {
+            name: 'Lucas Vitali',
+            title: 'Director de Comunicación',
+            bio: 'Estudiante de Ciencias de la Computación con pasión por la comunicación científica'
+          },
+          sergio: {
+            name: 'Sergio Abriola, PhD',
+            title: 'Director de Investigación',
+            bio: 'Doctor en Matemáticas y profesor con pasión por la seguridad en IA'
           }
         }
       }
@@ -1102,7 +1132,7 @@ const translations = {
       pageHeader: {
         breadcrumb: 'Inicio / Contacto',
         title: 'Contactanos',
-        subtitle: 'Comunicate con la comunidad de BAISH'
+        subtitle: 'Comunicate con la comunidad de BAAISH'
       },
       contactInfo: {
         email: {
