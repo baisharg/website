@@ -428,7 +428,171 @@ const translations = {
 
     // Activities page
     activities: {
-      // Add translations for activities page
+      pageHeader: {
+        breadcrumb: 'Inicio / Actividades',
+        title: 'Nuestras Actividades',
+        subtitle:
+          'Sumate a nuestra comunidad y participá en investigación y aprendizaje sobre seguridad en IA'
+      },
+      agiFundamentals: {
+        title: 'Cohorte de Fundamentos de Seguridad en AGI',
+        status: 'Actualmente Activo',
+        description:
+          'La cohorte de Fundamentos de Seguridad en AGI es un curso guiado de 8 semanas que cubre los conceptos esenciales en alineamiento y seguridad de IA. Los participantes leen materiales seleccionados y se reúnen semanalmente para discutir las lecturas con un facilitador.',
+        description2:
+          'Este programa está basado en el plan de estudios de Fundamentos de Seguridad en AGI de BlueDot y proporciona una introducción estructurada al campo de la seguridad en IA.',
+        whatToExpect: {
+          title: 'Qué Esperar',
+          items: [
+            'Sesiones de discusión semanales de 2 horas',
+            '1-3 horas de lectura por semana',
+            'Grupos pequeños de 6-12 participantes',
+            'Facilitadores experimentados para guiar las discusiones',
+            'Certificado de finalización'
+          ]
+        },
+        details: {
+          title: 'Detalles del Programa',
+          duration: 'Duración:',
+          durationValue: '10-12 semanas',
+          period: 'Período de Fellowship:',
+          periodValue: 'Agosto - Diciembre 2025'
+        }
+      },
+      weeklyDiscussion: {
+        title: 'Grupo de Discusión Semanal',
+        status: 'Cada Martes @ 18:00',
+        description:
+          'Nuestro Grupo de Discusión Semanal proporciona un foro casual para discutir papers recientes, conceptos y avances en seguridad de IA. Estas sesiones están abiertas a cualquier persona interesada en el campo, independientemente de conocimientos previos.',
+        description2:
+          'Cada semana presenta un tema diferente, anunciado con anticipación a través de nuestra lista de correo y grupo de Telegram.',
+        format: {
+          title: 'Formato',
+          items: [
+            'Discusiones de 90 minutos dirigidas por un facilitador rotativo',
+            'Breve presentación del tema de la semana (15-20 minutos)',
+            'Discusión abierta y preguntas y respuestas',
+            'Materiales de lectura previa opcionales compartidos con anticipación'
+          ]
+        },
+        participation: {
+          title: 'Participación',
+          description:
+            'No se requiere inscripción. ¡Simplemente vení! Si asistís por primera vez, te recomendamos llegar 10 minutos antes para conocer a los organizadores.'
+        },
+        nextDiscussion: {
+          title: 'Próxima Discusión',
+          date: 'Fecha:',
+          dateValue: '25 de Marzo, 2025',
+          time: 'Hora:',
+          timeValue: '18:00 - 19:30',
+          location: 'Ubicación:',
+          locationValue: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
+          topic: 'Tema:',
+          topicValue: 'Métodos de Interpretabilidad',
+          facilitator: 'Facilitador:',
+          facilitatorValue: 'Eitan Sprejer',
+          button: 'Unite al Telegram para Actualizaciones'
+        }
+      },
+      paperReading: {
+        title: 'Club de Lectura de Papers',
+        status: 'Cada Viernes @ 17:00',
+        description:
+          'El Club de Lectura de Papers realiza análisis profundos de papers fundamentales y recientes en investigación de seguridad en IA. A diferencia del grupo de discusión más casual, esta actividad implica un examen minucioso de papers de investigación específicos.',
+        description2:
+          'Se espera que los participantes lean el paper seleccionado con anticipación y vengan preparados para discutir sus métodos, resultados e implicaciones.',
+        selectionCriteria: {
+          title: 'Criterios de Selección de Papers',
+          items: [
+            'Importancia para el campo de la seguridad en IA',
+            'Relevancia técnica para las direcciones de investigación actuales',
+            'Mezcla de papers fundamentales y publicaciones recientes',
+            'Accesibilidad para estudiantes de posgrado y de grado avanzados'
+          ]
+        },
+        sessionFormat: {
+          title: 'Formato de la Sesión',
+          items: [
+            'Breve descripción general del paper (5-10 minutos)',
+            'Discusión sección por sección',
+            'Examen de métodos y resultados',
+            'Evaluación crítica de afirmaciones y limitaciones',
+            'Discusión de posible investigación de seguimiento'
+          ]
+        },
+        nextSession: {
+          title: 'Próxima Sesión de Paper',
+          date: 'Fecha:',
+          dateValue: '21 de Marzo, 2025',
+          time: 'Hora:',
+          timeValue: '17:00 - 18:30',
+          location: 'Ubicación:',
+          locationValue: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
+          paper: 'Paper:',
+          paperValue: '"Interpretabilidad Mecánica para Modelos de Lenguaje"',
+          lead: 'Líder de Discusión:',
+          leadValue: 'Eitan Sprejer',
+          button: 'Acceder a la Lista de Lectura'
+        }
+      },
+      mechInterp: {
+        title: 'Curso de Interpretabilidad Mecánica',
+        status: 'Comienza en Junio 2025',
+        description:
+          'El Curso de Interpretabilidad Mecánica es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
+        description2:
+          'La interpretabilidad mecánica es un área clave de la investigación en seguridad de IA, que busca hacer que los sistemas de IA sean más transparentes y comprensibles.',
+        curriculum: {
+          title: 'Descripción General del Plan de Estudios',
+          items: [
+            'Fundamentos de arquitecturas de redes neuronales',
+            'Técnicas de visualización de características',
+            'Análisis de circuitos en modelos de transformers',
+            'Técnicas para analizar mecanismos de atención',
+            'Métodos de atribución basados en gradientes',
+            'Proyecto final: Interpretación de un componente específico del modelo'
+          ]
+        },
+        timeCommitment: {
+          title: 'Dedicación de Tiempo',
+          items: [
+            '2 clases por semana (2 horas cada una)',
+            '1 sesión práctica por semana (3 horas)',
+            'Trabajo de proyecto individual (5-10 horas por semana)',
+            'Presentación de proyecto final'
+          ]
+        },
+        prerequisites: {
+          title: 'Requisitos Previos',
+          items: [
+            'Sólidas habilidades de programación (Python)',
+            'Experiencia con frameworks de aprendizaje profundo (preferiblemente PyTorch)',
+            'Familiaridad con arquitecturas básicas de redes neuronales',
+            'Álgebra lineal y cálculo'
+          ]
+        },
+        courseDetails: {
+          title: 'Detalles del Curso',
+          duration: 'Duración:',
+          durationValue: '4 semanas',
+          startDate: 'Fecha de Inicio:',
+          startDateValue: '2 de Junio, 2025',
+          endDate: 'Fecha de Finalización:',
+          endDateValue: '27 de Junio, 2025',
+          deadline: 'Fecha Límite de Solicitud:',
+          deadlineValue: '15 de Mayo, 2025',
+          location: 'Ubicación:',
+          locationValue: 'Híbrido (Presencial y Zoom)',
+          instructors: 'Instructores:',
+          instructorsValue: 'Dra. Laura Fernandez, Carlos Mendez',
+          button: 'Expresar Interés'
+        }
+      },
+      calendar: {
+        title: 'Calendario de Próximos Eventos',
+        subscribe: 'Suscribirse al Calendario de Google de Todos los Eventos'
+      }
     },
 
     // Resources page
