@@ -1,6 +1,6 @@
 /* Cards & Components */
 .project-card {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-lg);
@@ -17,11 +17,11 @@
 }
 
 .project-year {
-	background-color: var(--light-gray);
+	background-color: var(--secondary);
 	padding: 0.1rem 0.5rem;
 	border-radius: 12px;
 	font-size: 0.8rem;
-	color: var(--dark-gray);
+	color: var(--primary-dark);
 }
 
 .project-footer {
@@ -32,15 +32,15 @@
 }
 
 .project-tag {
-	background-color: var(--light-gray);
+	background-color: var(--secondary);
 	padding: 0.1rem 0.5rem;
 	border-radius: 12px;
 	font-size: 0.8rem;
-	color: var(--dark-gray);
+	color: var(--primary-dark);
 }
 
 .resource-card {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-lg);
@@ -52,11 +52,11 @@
 .resource-icon {
 	font-size: 2rem;
 	margin-bottom: var(--spacing-md);
-	color: var(--secondary);
+	color: var(--accent);
 }
 
 .activity-card {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-lg);
@@ -67,7 +67,7 @@
 .activity-icon {
 	font-size: 2rem;
 	margin-bottom: var(--spacing-md);
-	color: var(--primary);
+	color: var(--accent);
 }
 
 .activity-card h3 {
@@ -76,7 +76,7 @@
 }
 
 .activity-card p {
-	color: var(--dark-gray);
+	color: var(--white);
 	margin-bottom: var(--spacing-md);
 	flex-grow: 1;
 }
@@ -87,7 +87,7 @@
 }
 
 .event-card {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-lg);
@@ -100,7 +100,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--primary);
+	background-color: var(--accent);
 	color: var(--white);
 	border-radius: var(--border-radius);
 	padding: var(--spacing-md);
@@ -124,7 +124,7 @@
 }
 
 .event-details {
-	color: var(--dark-gray);
+	color: var(--white);
 	margin-bottom: var(--spacing-md);
 }
 
@@ -135,7 +135,7 @@
 }
 
 .contact-card {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-lg);
@@ -145,7 +145,7 @@
 .contact-icon {
 	font-size: 2rem;
 	margin-bottom: var(--spacing-md);
-	color: var(--secondary);
+	color: var(--accent);
 }
 
 .contact-detail {
@@ -155,7 +155,7 @@
 }
 
 .book-card {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-md);
@@ -171,12 +171,12 @@
 
 .book-author {
 	font-size: 0.9rem;
-	color: var(--dark-gray);
+	color: var(--white);
 	margin-bottom: var(--spacing-sm);
 }
 
 .cta-box {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	color: var(--white);
 	border-radius: var(--border-radius);
 	padding: var(--spacing-xl);
@@ -195,7 +195,7 @@
 }
 
 .faq-item {
-	background-color: var(--white);
+	background-color: var(--primary-dark);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-lg);
@@ -211,13 +211,13 @@
 }
 
 .status.active {
-	background-color: #c6f6d5; /* Light green */
-	color: #22543d; /* Dark green */
+	background-color: #e6b3ff; /* Detail color */
+	color: #560080; /* Fondo color */
 }
 
 .status.upcoming {
-	background-color: #bee3f8; /* Light blue */
-	color: #2a4365; /* Dark blue */
+	background-color: #d699ff; /* Secondary dark */
+	color: #420066; /* Primary dark */
 }
 
 .difficulty {
@@ -229,22 +229,22 @@
 }
 
 .difficulty.technical {
-	background-color: #fed7d7; /* Light red */
-	color: #822727; /* Dark red */
+	background-color: #c64eff; /* Accent color */
+	color: #560080; /* Fondo color */
 }
 
 .difficulty.intermediate {
-	background-color: #feebc8; /* Light orange */
-	color: #744210; /* Dark orange */
+	background-color: #d47fff; /* Accent light */
+	color: #560080; /* Fondo color */
 }
 
 .difficulty.introductory,
 .difficulty.beginner {
-	background-color: #c6f6d5; /* Light green */
-	color: #22543d; /* Dark green */
+	background-color: #e6b3ff; /* Detail color */
+	color: #560080; /* Fondo color */
 }
 
 .difficulty.advanced {
-	background-color: #fed7d7; /* Light red */
-	color: #822727; /* Dark red */
+	background-color: #b01ff0; /* Accent dark */
+	color: #ffffff; /* White for readability */
 }
