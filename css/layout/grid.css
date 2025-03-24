@@ -1,0 +1,64 @@
+/* Layout Components */
+.container {
+	width: 100%;
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 var(--spacing-lg);
+}
+
+section {
+	padding: var(--spacing-xl) 0;
+}
+
+.alt-bg {
+	background-color: var(--light-gray);
+}
+
+.two-column {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-xl);
+}
+
+.column {
+	flex: 1;
+	min-width: 300px;
+}
+
+/* Grid layouts */
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: var(--spacing-lg);
+	margin-top: var(--spacing-lg);
+}
+
+.activities-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: var(--spacing-lg);
+}
+
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: var(--spacing-lg);
+}
+
+.books-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: var(--spacing-lg);
+}
+
+.resources-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: var(--spacing-lg);
+}
+
+.contact-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: var(--spacing-lg);
+}

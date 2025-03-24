@@ -1,0 +1,93 @@
+/* Home Page Specific Styles */
+.intro-content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-xl);
+}
+
+.intro-text {
+	flex: 2;
+	min-width: 300px;
+}
+
+.intro-points {
+	flex: 1;
+	min-width: 250px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--spacing-lg);
+}
+
+.point {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--spacing-md);
+}
+
+.point-icon {
+	font-size: 1.5rem;
+	color: var(--secondary);
+}
+
+.learn-more {
+	display: inline-block;
+	margin-top: var(--spacing-md);
+	font-weight: 500;
+}
+
+.upcoming-event {
+	padding: var(--spacing-lg) 0;
+}
+
+.spotlight-content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-xl);
+	align-items: center;
+}
+
+.spotlight-image {
+	flex: 1;
+	min-width: 300px;
+}
+
+.spotlight-info {
+	flex: 2;
+	min-width: 300px;
+}
+
+.placeholder-image {
+	background-color: var(--medium-gray);
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--border-radius);
+	color: var(--dark-gray);
+	font-weight: 500;
+}
+
+.researchers {
+	color: var(--dark-gray);
+	margin-bottom: var(--spacing-sm);
+}
+
+.get-involved {
+	background-color: var(--light-gray);
+	padding: var(--spacing-xl) 0;
+}
+
+.involvement-options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-xl);
+}
+
+.involvement-option {
+	flex: 1;
+	min-width: 300px;
+	background-color: var(--white);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	padding: var(--spacing-lg);
+}

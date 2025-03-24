@@ -1,0 +1,67 @@
+/* Contact Page Specific Styles */
+.qr-code {
+	margin-top: var(--spacing-md);
+}
+
+.qr-placeholder {
+	width: 150px;
+	height: 150px;
+	background-color: var(--medium-gray);
+	margin: 0 auto;
+	border-radius: var(--border-radius);
+}
+
+.involvement-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.contact-people {
+	display: flex;
+	gap: var(--spacing-lg);
+	margin-top: var(--spacing-md);
+	flex-wrap: wrap;
+}
+
+.contact-person h4 {
+	margin-bottom: var(--spacing-xs);
+}
+
+.contact-person p {
+	margin-bottom: var(--spacing-xs);
+	color: var(--dark-gray);
+}
+
+.faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.faq-question {
+	margin-bottom: var(--spacing-md);
+	position: relative;
+	padding-left: var(--spacing-lg);
+}
+
+.faq-question:before {
+	content: "Q:";
+	position: absolute;
+	left: 0;
+	color: var(--primary);
+	font-weight: bold;
+}
+
+.faq-answer {
+	position: relative;
+	padding-left: var(--spacing-lg);
+}
+
+.faq-answer:before {
+	content: "A:";
+	position: absolute;
+	left: 0;
+	color: var(--secondary);
+	font-weight: bold;
+}
