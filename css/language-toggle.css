@@ -9,7 +9,7 @@
 .language-toggle-btn {
 	background: none;
 	border: none;
-	color: var(--black);
+	color: var(--color-text);
 	font-size: 0.9rem;
 	font-weight: 500;
 	padding: 5px 8px;
@@ -35,13 +35,13 @@
 	left: 8px;
 	right: 8px;
 	height: 2px;
-	background-color: var(--accent);
+	background-color: var(--color-primary);
 	border-radius: 1px;
 }
 
 .language-toggle-separator {
 	margin: 0 5px;
-	color: var(--dark-gray);
+	color: var(--color-text);
 	opacity: 0.5;
 }
 

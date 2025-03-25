@@ -1,15 +1,15 @@
 /* CSS Variables */
 :root {
 	/* Colors */
-	--primary: #560080;
-	--primary-light: #6a1a98;
-	--primary-dark: #420066;
-	--secondary: #e6b3ff;
-	--secondary-light: #f0cbff;
-	--secondary-dark: #d699ff;
-	--accent: #c64eff;
-	--accent-light: #d47fff;
-	--accent-dark: #b01ff0;
+	--primary: #1a365d;
+	--primary-light: #2a4a7d;
+	--primary-dark: #0a264d;
+	--secondary: #2c7a7b;
+	--secondary-light: #3c9a9b;
+	--secondary-dark: #1c5a5b;
+	--accent: #d69e2e;
+	--accent-light: #f6b84e;
+	--accent-dark: #b67e0e;
 
 	/* Neutrals */
 	--white: #ffffff;

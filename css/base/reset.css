@@ -13,8 +13,8 @@ html {
 body {
 	font-family: var(--font-primary);
 	line-height: var(--line-height-base);
-	color: var(--white);
-	background-color: var(--primary);
+	color: var(--black);
+	background-color: var(--white);
 }
 
 h1,
@@ -54,7 +54,7 @@ a {
 }
 
 a:hover {
-	color: var(--accent);
+	color: var(--secondary-dark);
 	text-decoration: underline;
 }
 

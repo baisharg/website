@@ -12,24 +12,24 @@
 }
 
 .btn-primary {
-	background-color: var(--accent);
+	background-color: var(--primary);
 	color: var(--white);
 }
 
 .btn-primary:hover {
-	background-color: var(--accent-dark);
+	background-color: var(--primary-dark);
 	color: var(--white);
 	text-decoration: none;
 }
 
 .btn-secondary {
 	background-color: var(--secondary);
-	color: var(--primary-dark);
+	color: var(--white);
 }
 
 .btn-secondary:hover {
 	background-color: var(--secondary-dark);
-	color: var(--primary-dark);
+	color: var(--white);
 	text-decoration: none;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .btn-link:hover {
-	color: var(--accent);
+	color: var(--secondary-dark);
 }
 
 .btn.disabled {
@@ -72,20 +72,19 @@
 
 .filter-btn {
 	background: none;
-	border: 1px solid var(--secondary);
+	border: 1px solid var(--medium-gray);
 	padding: 0.3rem 0.8rem;
 	border-radius: var(--border-radius);
 	cursor: pointer;
 	font-size: 0.9rem;
 	transition: all 0.3s ease;
-	color: var(--white);
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-	background-color: var(--accent);
+	background-color: var(--primary);
 	color: var(--white);
-	border-color: var(--accent);
+	border-color: var(--primary);
 }
 
 .pagination {
@@ -101,19 +100,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid var(--secondary);
+	border: 1px solid var(--medium-gray);
 	background: none;
 	border-radius: var(--border-radius);
 	cursor: pointer;
 	transition: all 0.3s ease;
-	color: var(--white);
 }
 
 .pagination-btn:hover,
 .pagination-btn.active {
-	background-color: var(--accent);
+	background-color: var(--primary);
 	color: var(--white);
-	border-color: var(--accent);
+	border-color: var(--primary);
 }
 
 .pagination-ellipsis {
@@ -131,15 +129,14 @@
 
 .social-link {
 	padding: 0.3rem 0.8rem;
-	border: 1px solid var(--secondary);
+	border: 1px solid var(--medium-gray);
 	border-radius: var(--border-radius);
 	transition: all 0.3s ease;
-	color: var(--white);
 }
 
 .social-link:hover {
-	background-color: var(--accent);
+	background-color: var(--secondary);
 	color: var(--white);
-	border-color: var(--accent);
+	border-color: var(--secondary);
 	text-decoration: none;
 }
