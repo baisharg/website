@@ -1206,6 +1206,18 @@ section {
 	align-items: center;
 	justify-content: center;
 	gap: var(--spacing-sm);
+	background-color: #5a9fff !important;
+	color: var(--bg-dark) !important;
+}
+
+.telegram-btn:hover {
+	background-color: #4589e8 !important;
+}
+
+.telegram-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* ======= Research Spotlight ======= */
