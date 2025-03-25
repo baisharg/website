@@ -1127,7 +1127,7 @@ const translations = {
       }
     },
 
-    // Contact page
+    // Contact pages
     contact: {
       pageHeader: {
         breadcrumb: 'Inicio / Contacto',
