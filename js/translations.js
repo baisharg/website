@@ -75,7 +75,7 @@ const translations = {
         paragraph1:
           'Advanced AI systems are becoming increasingly capable, with the potential to transform society in profound ways. The field of AI Safety focuses on ensuring these systems are aligned with human values and beneficial to humanity.',
         paragraph2:
-          'At the BAISH - Buenos Aires AI Safety Hub, we bring together students from Computer Science, Physics, and Mathematics to understand and address these challenges through research, education, and community.',
+          'At the BAISH - Buenos Aires AI Safety Hub, we bring together students from Computer Science, Physics, Mathematics and other enthusiasts to understand and address these challenges through research, education, and community.',
         point1: 'Understanding AI capabilities and risks',
         point2: 'Developing alignment techniques',
         point3: 'Conducting original research',
@@ -117,7 +117,7 @@ const translations = {
           title: 'Mech Interp Course',
           description:
             'Intensive 1-month course on mechanistic interpretability methods.',
-          status: 'Starts June 2025',
+          status: 'Starts end of April 2025',
           link: 'Learn More →'
         }
       },
@@ -260,7 +260,7 @@ const translations = {
           },
           sergio: {
             name: 'Sergio Abriola, PhD',
-            title: 'Research Director',
+            title: 'Advisor',
             bio: 'Mathematics PhD and professor with a passion for AI Safety'
           }
         }
@@ -379,7 +379,7 @@ const translations = {
       },
       mechInterp: {
         title: 'Mechanistic Interpretability Course',
-        status: 'Starts June 2025',
+        status: 'Starts end of April 2025',
         description:
           'The Mechanistic Interpretability Course is an intensive 1-month program focused on techniques for understanding the internal mechanisms of neural networks. This course combines theoretical learning with practical projects.',
         description2:
@@ -793,7 +793,7 @@ const translations = {
         paragraph1:
           'Los sistemas de IA avanzados son cada vez más capaces, con el potencial de transformar la sociedad de manera profunda. El campo de la Seguridad de la IA se enfoca en garantizar que estos sistemas estén alineados con los valores humanos y sean beneficiosos para la humanidad.',
         paragraph2:
-          'En BAISH - Buenos Aires AI Safety Hub, reunimos a estudiantes de Ciencias de la Computación, Física y Matemáticas para entender y abordar estos desafíos a través de la investigación, la educación y la comunidad.',
+          'En BAISH - Buenos Aires AI Safety Hub, reunimos a estudiantes de Ciencias de la Computación, Física , Matemáticas y demas entusiastas para entender y abordar estos desafíos a través de la investigación, la educación y la comunidad.',
         point1: 'Entendiendo las capacidades y riesgos de la IA',
         point2: 'Desarrollando técnicas de alineamiento',
         point3: 'Realizando investigación original',
@@ -806,7 +806,7 @@ const translations = {
         location: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
         description:
           'Sumate a una discusión interactiva sobre avances recientes en métodos de interpretabilidad de redes neuronales y sus implicaciones para el alineamiento de la IA.',
-        rsvp: 'Anotate Ahora'
+        rsvp: 'Agregalo a tu calendario'
       },
       activities: {
         title: 'Nuestras Actividades',
@@ -832,10 +832,10 @@ const translations = {
           link: 'Ver Más →'
         },
         card4: {
-          title: 'Curso de Interpretabilidad Mecánica',
+          title: 'Curso de Interpretabilidad Mecanística',
           description:
             'Curso intensivo de 1 mes sobre métodos de interpretabilidad mecánica.',
-          status: 'Comienza en Junio 2025',
+          status: 'Comienza en fines de Abril 2025',
           link: 'Ver Más →'
         }
       },
@@ -850,7 +850,7 @@ const translations = {
           title: 'Unite a Nuestra Comunidad de Telegram',
           description:
             'Conectate con otros estudiantes interesados en la seguridad de la IA.',
-          button: 'Unirse al Grupo de Telegram'
+          button: 'Sumate al grupo de Telegram'
         }
       }
     },
@@ -979,7 +979,7 @@ const translations = {
           },
           sergio: {
             name: 'Sergio Abriola, PhD',
-            title: 'Director de Investigación',
+            title: 'Advisor',
             bio: 'Doctor en Matemáticas y profesor con pasión por la seguridad en IA'
           }
         }
@@ -1090,17 +1090,18 @@ const translations = {
           location: 'Ubicación:',
           locationValue: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
           paper: 'Paper:',
-          paperValue: '"Interpretabilidad Mecánica para Modelos de Lenguaje"',
+          paperValue:
+            '"Interpretabilidad Mecanística para Modelos de Lenguaje"',
           lead: 'Líder de Discusión:',
           leadValue: 'Eitan Sprejer',
           button: 'Acceder a la Lista de Lectura'
         }
       },
       mechInterp: {
-        title: 'Curso de Interpretabilidad Mecánica',
-        status: 'Comienza en Junio 2025',
+        title: 'Curso de Interpretabilidad Mecanística',
+        status: 'Comienza en fines de Abril 2025',
         description:
-          'El Curso de Interpretabilidad Mecánica es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
+          'El Curso de Interpretabilidad Mecanística es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
         description2:
           'La interpretabilidad mecánica es un área clave de la investigación en seguridad de IA, que busca hacer que los sistemas de IA sean más transparentes y comprensibles.',
         curriculum: {
@@ -1351,7 +1352,7 @@ const translations = {
           q2: {
             question: '¿Qué antecedentes necesito para participar?',
             answer:
-              'Esto varía por actividad. Nuestras reuniones de grupo están abiertas a cualquier persona con interés en la seguridad en IA, independientemente del fondo técnico. Para actividades más técnicas como el curso de Interpretabilidad Mecánica o el becario de investigación, se espera algún conocimiento en ciencias de la computación, matemáticas o IA/ML.'
+              'Esto varía por actividad. Nuestras reuniones de grupo están abiertas a cualquier persona con interés en la seguridad en IA, independientemente del fondo técnico. Para actividades más técnicas como el curso de Interpretabilidad Mecanística o el becario de investigación, se espera algún conocimiento en ciencias de la computación, matemáticas o IA/ML.'
           },
           q3: {
             question: '¿Se realizan tus actividades en inglés o español?',
