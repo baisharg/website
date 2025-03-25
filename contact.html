@@ -195,14 +195,25 @@
 								subscribing to our mailing list. We send monthly newsletters and
 								important announcements.
 							</p>
-							<iframe
-								src="https://baish.substack.com/embed"
-								width="480"
-								height="320"
-								style="border: 1px solid #eee; background: white"
-								frameborder="0"
-								scrolling="no"
-							></iframe>
+							<div id="custom-substack-embed"></div>
+
+							<script>
+								window.CustomSubstackWidget = {
+									substackUrl: "baish.substack.com",
+									placeholder: "example@gmail.com",
+									buttonText: "Subscribe",
+									theme: "custom",
+									colors: {
+										primary: "#5A9FFF",
+										input: "#121620",
+										email: "#F0F2F5",
+										text: "#000000",
+									},
+
+									// Go to substackapi.com to unlock custom redirect
+								};
+							</script>
+							<script src="https://substackapi.com/widget.js" async></script>
 						</div>
 					</div>
 				</div>
