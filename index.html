@@ -1,200 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAAISH - Buenos Aires AI Safety Hub</title>
-    <meta name="description" content="BAAISH - Buenos Aires AI Safety Hub - Ensuring AI benefits humanity through research, education, and community">
-    <!-- Open Graph tags for social sharing -->
-    <meta property="og:title" content="BAAISH - Buenos Aires AI Safety Hub">
-    <meta property="og:description" content="BAAISH - Buenos Aires AI Safety Hub - Ensuring AI benefits humanity through research, education, and community">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lucadeleo.github.io/aisafetysite/">
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/language-toggle.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.svg" alt="BAAISH Logo" class="logo-img">
-                    <span class="logo-text">BAAISH - Buenos Aires AI Safety Hub</span>
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
-                    <li><a href="activities.html" data-i18n="nav.activities">Activities</a></li>
-                    <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
-                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="language-toggle">
-                <button id="lang-en" class="language-toggle-btn active">EN</button>
-                <span class="language-toggle-separator">|</span>
-                <button id="lang-es" class="language-toggle-btn">ES</button>
-            </div>
-            <a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs">Join Us</a>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BAISH - Buenos Aires AI Safety Hub</title>
+		<meta
+			name="description"
+			content="BAISH - Buenos Aires AI Safety Hub - Ensuring AI benefits humanity through research, education, and community"
+		/>
+		<!-- Open Graph tags for social sharing -->
+		<meta property="og:title" content="BAISH - Buenos Aires AI Safety Hub" />
+		<meta
+			property="og:description"
+			content="BAISH - Buenos Aires AI Safety Hub - Ensuring AI benefits humanity through research, education, and community"
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://lucadeleo.github.io/aisafetysite/"
+		/>
+		<!-- Favicon -->
+		<link rel="icon" href="img/favicon.ico" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/language-toggle.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="BAISH Logo" class="logo-img" />
+						<span class="logo-text">BAISH - Buenos Aires AI Safety Hub</span>
+					</a>
+				</div>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="about.html" data-i18n="nav.about">About</a></li>
+						<li>
+							<a href="activities.html" data-i18n="nav.activities"
+								>Activities</a
+							>
+						</li>
+						<li>
+							<a href="resources.html" data-i18n="nav.resources">Resources</a>
+						</li>
+						<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="language-toggle">
+					<button id="lang-en" class="language-toggle-btn active">EN</button>
+					<span class="language-toggle-separator">|</span>
+					<button id="lang-es" class="language-toggle-btn">ES</button>
+				</div>
+				<a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs"
+					>Join Us</a
+				>
+			</div>
+		</header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-i18n="home.hero.title">Ensuring AI Benefits Humanity</h1>
-                <p class="subtitle" data-i18n="home.hero.subtitle">BAAISH's student-led initiative exploring safe and beneficial AI development</p>
-                <a href="#get-involved" class="btn btn-primary" data-i18n="home.hero.cta">Get Involved</a>
-            </div>
-        </div>
-    </section>
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1 data-i18n="home.hero.title">Ensuring AI Benefits Humanity</h1>
+					<p class="subtitle" data-i18n="home.hero.subtitle">
+						BAISH's student-led initiative exploring safe and beneficial AI
+						development
+					</p>
+					<a
+						href="#get-involved"
+						class="btn btn-primary"
+						data-i18n="home.hero.cta"
+						>Get Involved</a
+					>
+				</div>
+			</div>
+		</section>
 
-    <section class="intro">
-        <div class="container">
-            <h2 data-i18n="home.intro.title">Why AI Safety Matters</h2>
-            <div class="intro-content">
-                <div class="intro-text">
-                    <p data-i18n="home.intro.paragraph1">Advanced AI systems are becoming increasingly capable, with the potential to transform society in profound ways. The field of AI Safety focuses on ensuring these systems are aligned with human values and beneficial to humanity.</p>
-                    <p data-i18n="home.intro.paragraph2">At the BAAISH - Buenos Aires AI Safety Hub, we bring together students from Computer Science, Physics, and Mathematics to understand and address these challenges through research, education, and community.</p>
-                </div>
-                <div class="intro-points">
-                    <div class="point">
-                        <div class="point-icon">🔍</div>
-                        <div class="point-text" data-i18n="home.intro.point1">Understanding AI capabilities and risks</div>
-                    </div>
-                    <div class="point">
-                        <div class="point-icon">🧠</div>
-                        <div class="point-text" data-i18n="home.intro.point2">Developing alignment techniques</div>
-                    </div>
-                    <div class="point">
-                        <div class="point-icon">🔬</div>
-                        <div class="point-text" data-i18n="home.intro.point3">Conducting original research</div>
-                    </div>
-                    <div class="point">
-                        <div class="point-icon">👥</div>
-                        <div class="point-text" data-i18n="home.intro.point4">Building a community of researchers</div>
-                    </div>
-                </div>
-                <a href="about.html" class="learn-more" data-i18n="home.intro.learnMore">Learn more about AI Safety →</a>
-            </div>
-        </div>
-    </section>
+		<section class="intro">
+			<div class="container">
+				<h2 data-i18n="home.intro.title">Why AI Safety Matters</h2>
+				<div class="intro-content">
+					<div class="intro-text">
+						<p data-i18n="home.intro.paragraph1">
+							Advanced AI systems are becoming increasingly capable, with the
+							potential to transform society in profound ways. The field of AI
+							Safety focuses on ensuring these systems are aligned with human
+							values and beneficial to humanity.
+						</p>
+						<p data-i18n="home.intro.paragraph2">
+							At the BAISH - Buenos Aires AI Safety Hub, we bring together
+							students from Computer Science, Physics, and Mathematics to
+							understand and address these challenges through research,
+							education, and community.
+						</p>
+					</div>
+					<div class="intro-points">
+						<div class="point">
+							<div class="point-icon">🔍</div>
+							<div class="point-text" data-i18n="home.intro.point1">
+								Understanding AI capabilities and risks
+							</div>
+						</div>
+						<div class="point">
+							<div class="point-icon">🧠</div>
+							<div class="point-text" data-i18n="home.intro.point2">
+								Developing alignment techniques
+							</div>
+						</div>
+						<div class="point">
+							<div class="point-icon">🔬</div>
+							<div class="point-text" data-i18n="home.intro.point3">
+								Conducting original research
+							</div>
+						</div>
+						<div class="point">
+							<div class="point-icon">👥</div>
+							<div class="point-text" data-i18n="home.intro.point4">
+								Building a community of researchers
+							</div>
+						</div>
+					</div>
+					<a
+						href="about.html"
+						class="learn-more"
+						data-i18n="home.intro.learnMore"
+						>Learn more about AI Safety →</a
+					>
+				</div>
+			</div>
+		</section>
 
-    <section class="upcoming-event">
-        <div class="container">
-            <div class="event-card">
-                <div class="event-date">
-                    <span class="month">MAR</span>
-                    <span class="day">25</span>
-                </div>
-                <div class="event-info">
-                    <h3 data-i18n="home.upcomingEvent.title">Weekly Discussion Group: Interpretability Methods</h3>
-                    <p class="event-details">
-                        <span class="time" data-i18n="home.upcomingEvent.time">18:00 - 19:30</span>
-                        <span class="location" data-i18n="home.upcomingEvent.location">Pabellon 0+inf, Room 1603, Ciudad Universitaria</span>
-                    </p>
-                    <p class="event-description" data-i18n="home.upcomingEvent.description">Join us for an interactive discussion on recent advances in neural network interpretability methods and their implications for AI alignment.</p>
-                    <a href="activities.html#weekly-discussion" class="btn btn-secondary" data-i18n="home.upcomingEvent.rsvp">RSVP Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="upcoming-event">
+			<div class="container">
+				<div class="event-card">
+					<div class="event-date">
+						<span class="month">MAR</span>
+						<span class="day">25</span>
+					</div>
+					<div class="event-info">
+						<h3 data-i18n="home.upcomingEvent.title">
+							Weekly Discussion Group: Interpretability Methods
+						</h3>
+						<p class="event-details">
+							<span class="time" data-i18n="home.upcomingEvent.time"
+								>18:00 - 19:30</span
+							>
+							<span class="location" data-i18n="home.upcomingEvent.location"
+								>Pabellon 0+inf, Room 1603, Ciudad Universitaria</span
+							>
+						</p>
+						<p
+							class="event-description"
+							data-i18n="home.upcomingEvent.description"
+						>
+							Join us for an interactive discussion on recent advances in neural
+							network interpretability methods and their implications for AI
+							alignment.
+						</p>
+						<a
+							href="activities.html#weekly-discussion"
+							class="btn btn-secondary"
+							data-i18n="home.upcomingEvent.rsvp"
+							>RSVP Now</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="activities">
-        <div class="container">
-            <h2 data-i18n="home.activities.title">Our Activities</h2>
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <div class="activity-icon">📚</div>
-                    <h3 data-i18n="home.activities.card1.title">AGI Safety Fundamentals Cohort</h3>
-                    <p data-i18n="home.activities.card1.description">An 8-week guided course covering the essential concepts in AI alignment and safety.</p>
-                    <span class="status active" data-i18n="home.activities.card1.status">Currently Active</span>
-                    <a href="activities.html#agi-fundamentals" class="activity-link" data-i18n="home.activities.card1.link">Learn More →</a>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">💬</div>
-                    <h3 data-i18n="home.activities.card2.title">Weekly Discussion Group</h3>
-                    <p data-i18n="home.activities.card2.description">Weekly meetings to discuss recent papers, concepts, and developments in AI safety.</p>
-                    <span class="status active" data-i18n="home.activities.card2.status">Every Tuesday @ 18:00</span>
-                    <a href="activities.html#weekly-discussion" class="activity-link" data-i18n="home.activities.card2.link">Learn More →</a>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">📝</div>
-                    <h3 data-i18n="home.activities.card3.title">Paper Reading Club</h3>
-                    <p data-i18n="home.activities.card3.description">Deep dives into foundational and recent papers in AI safety research.</p>
-                    <span class="status active" data-i18n="home.activities.card3.status">Every Friday @ 17:00</span>
-                    <a href="activities.html#paper-reading" class="activity-link" data-i18n="home.activities.card3.link">Learn More →</a>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">🧠</div>
-                    <h3 data-i18n="home.activities.card4.title">Mech Interp Course</h3>
-                    <p data-i18n="home.activities.card4.description">Intensive 1-month course on mechanistic interpretability methods.</p>
-                    <span class="status upcoming" data-i18n="home.activities.card4.status">Starts June 2025</span>
-                    <a href="activities.html#mech-interp" class="activity-link" data-i18n="home.activities.card4.link">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="activities">
+			<div class="container">
+				<h2 data-i18n="home.activities.title">Our Activities</h2>
+				<div class="activities-grid">
+					<div class="activity-card">
+						<div class="activity-icon">📚</div>
+						<h3 data-i18n="home.activities.card1.title">
+							AGI Safety Fundamentals Cohort
+						</h3>
+						<p data-i18n="home.activities.card1.description">
+							An 8-week guided course covering the essential concepts in AI
+							alignment and safety.
+						</p>
+						<span class="status active" data-i18n="home.activities.card1.status"
+							>Currently Active</span
+						>
+						<a
+							href="activities.html#agi-fundamentals"
+							class="activity-link"
+							data-i18n="home.activities.card1.link"
+							>Learn More →</a
+						>
+					</div>
+					<div class="activity-card">
+						<div class="activity-icon">💬</div>
+						<h3 data-i18n="home.activities.card2.title">
+							Weekly Discussion Group
+						</h3>
+						<p data-i18n="home.activities.card2.description">
+							Weekly meetings to discuss recent papers, concepts, and
+							developments in AI safety.
+						</p>
+						<span class="status active" data-i18n="home.activities.card2.status"
+							>Every Tuesday @ 18:00</span
+						>
+						<a
+							href="activities.html#weekly-discussion"
+							class="activity-link"
+							data-i18n="home.activities.card2.link"
+							>Learn More →</a
+						>
+					</div>
+					<div class="activity-card">
+						<div class="activity-icon">📝</div>
+						<h3 data-i18n="home.activities.card3.title">Paper Reading Club</h3>
+						<p data-i18n="home.activities.card3.description">
+							Deep dives into foundational and recent papers in AI safety
+							research.
+						</p>
+						<span class="status active" data-i18n="home.activities.card3.status"
+							>Every Friday @ 17:00</span
+						>
+						<a
+							href="activities.html#paper-reading"
+							class="activity-link"
+							data-i18n="home.activities.card3.link"
+							>Learn More →</a
+						>
+					</div>
+					<div class="activity-card">
+						<div class="activity-icon">🧠</div>
+						<h3 data-i18n="home.activities.card4.title">Mech Interp Course</h3>
+						<p data-i18n="home.activities.card4.description">
+							Intensive 1-month course on mechanistic interpretability methods.
+						</p>
+						<span
+							class="status upcoming"
+							data-i18n="home.activities.card4.status"
+							>Starts June 2025</span
+						>
+						<a
+							href="activities.html#mech-interp"
+							class="activity-link"
+							data-i18n="home.activities.card4.link"
+							>Learn More →</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section id="get-involved" class="get-involved">
-        <div class="container">
-            <h2 data-i18n="home.getInvolved.title">Get Involved</h2>
-            <div class="involvement-options">
-                <div class="involvement-option">
-                    <h3 data-i18n="home.getInvolved.mailingList.title">Join our Mailing List</h3>
-                    <p data-i18n="home.getInvolved.mailingList.description">Stay updated with our activities, events, and opportunities.</p>
-                    <iframe src="https://baish.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-                </div>
-                <div class="involvement-option">
-                    <h3 data-i18n="home.getInvolved.telegram.title">Join our Telegram Community</h3>
-                    <p data-i18n="home.getInvolved.telegram.description">Connect with fellow students interested in AI safety.</p>
-                    <a href="https://t.me/+zfvMHU8TaAhjNjVh" class="btn btn-secondary telegram-btn">
-                        <span class="telegram-icon">✈️</span> <span data-i18n="home.getInvolved.telegram.button">Join Telegram Group</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section id="get-involved" class="get-involved">
+			<div class="container">
+				<h2 data-i18n="home.getInvolved.title">Get Involved</h2>
+				<div class="involvement-options">
+					<div class="involvement-option">
+						<h3 data-i18n="home.getInvolved.mailingList.title">
+							Join our Mailing List
+						</h3>
+						<p data-i18n="home.getInvolved.mailingList.description">
+							Stay updated with our activities, events, and opportunities.
+						</p>
+						<iframe
+							src="https://baish.substack.com/embed"
+							width="480"
+							height="320"
+							style="border: 1px solid #eee; background: white"
+							frameborder="0"
+							scrolling="no"
+						></iframe>
+					</div>
+					<div class="involvement-option">
+						<h3 data-i18n="home.getInvolved.telegram.title">
+							Join our Telegram Community
+						</h3>
+						<p data-i18n="home.getInvolved.telegram.description">
+							Connect with fellow students interested in AI safety.
+						</p>
+						<a
+							href="https://t.me/+zfvMHU8TaAhjNjVh"
+							class="btn btn-secondary telegram-btn"
+						>
+							<span class="telegram-icon">✈️</span>
+							<span data-i18n="home.getInvolved.telegram.button"
+								>Join Telegram Group</span
+							>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/logo.svg" alt="BAAISH - Buenos Aires AI Safety Hub" class="footer-logo-img">
-                    <div class="tagline">Buenos Aires AI Safety Hub</div>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
-                        <li><a href="activities.html" data-i18n="nav.activities">Activities</a></li>
-                        <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
-                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="link-group">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
-                            <li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
-                            <li><a href="https://www.instagram.com/aisafetyarg">Instagram</a></li>
-                        </ul>
-                    </div>`
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 BAAISH - Buenos Aires AI Safety Hub</p>
-            </div>
-        </div>
-    </footer>
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-logo">
+						<img
+							src="img/logo.svg"
+							alt="BAISH - Buenos Aires AI Safety Hub"
+							class="footer-logo-img"
+						/>
+						<div class="tagline">Buenos Aires AI Safety Hub</div>
+					</div>
+					<div class="footer-links">
+						<ul>
+							<li><a href="about.html" data-i18n="nav.about">About</a></li>
+							<li>
+								<a href="activities.html" data-i18n="nav.activities"
+									>Activities</a
+								>
+							</li>
+							<li>
+								<a href="resources.html" data-i18n="nav.resources">Resources</a>
+							</li>
+							<li>
+								<a href="contact.html" data-i18n="nav.contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="link-group">
+						<h4>Connect</h4>
+						<ul>
+							<li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
+							<li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
+							<li>
+								<a href="https://www.instagram.com/aisafetyarg">Instagram</a>
+							</li>
+						</ul>
+					</div>
+					`
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2024 BAISH - Buenos Aires AI Safety Hub</p>
+				</div>
+			</div>
+		</footer>
 
-    <!-- Scripts -->
-    <script src="js/translations.js"></script>
-    <script src="js/language-toggle.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="js/translations.js"></script>
+		<script src="js/language-toggle.js"></script>
+	</body>
 </html>

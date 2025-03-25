@@ -1,230 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About AI Safety - BAAISH - Buenos Aires AI Safety Hub</title>
-    <meta name="description" content="Learn about AI Safety and why it matters - BAAISH - Buenos Aires AI Safety Hub">
-    <!-- Open Graph tags for social sharing -->
-    <meta property="og:title" content="About AI Safety - BAAISH - Buenos Aires AI Safety Hub">
-    <meta property="og:description" content="Learn about AI Safety and why it matters - BAAISH - Buenos Aires AI Safety Hub">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lucadeleo.github.io/aisafetysite/about.html">
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/language-toggle.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.svg" alt="BAAISH Logo" class="logo-img">
-                    <span class="logo-text">BAAISH - Buenos Aires AI Safety Hub</span>
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
-                    <li><a href="activities.html" data-i18n="nav.activities">Activities</a></li>
-                    <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
-                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="language-toggle">
-                <button id="lang-en" class="language-toggle-btn active">EN</button>
-                <span class="language-toggle-separator">|</span>
-                <button id="lang-es" class="language-toggle-btn">ES</button>
-            </div>
-            <a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs">Join Us</a>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About AI Safety - BAISH - Buenos Aires AI Safety Hub</title>
+		<meta
+			name="description"
+			content="Learn about AI Safety and why it matters - BAISH - Buenos Aires AI Safety Hub"
+		/>
+		<!-- Open Graph tags for social sharing -->
+		<meta
+			property="og:title"
+			content="About AI Safety - BAISH - Buenos Aires AI Safety Hub"
+		/>
+		<meta
+			property="og:description"
+			content="Learn about AI Safety and why it matters - BAISH - Buenos Aires AI Safety Hub"
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://lucadeleo.github.io/aisafetysite/about.html"
+		/>
+		<!-- Favicon -->
+		<link rel="icon" href="img/favicon.ico" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/language-toggle.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="BAISH Logo" class="logo-img" />
+						<span class="logo-text">BAISH - Buenos Aires AI Safety Hub</span>
+					</a>
+				</div>
+				<nav class="main-nav">
+					<ul>
+						<li>
+							<a href="about.html" class="active" data-i18n="nav.about"
+								>About</a
+							>
+						</li>
+						<li>
+							<a href="activities.html" data-i18n="nav.activities"
+								>Activities</a
+							>
+						</li>
+						<li>
+							<a href="resources.html" data-i18n="nav.resources">Resources</a>
+						</li>
+						<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="language-toggle">
+					<button id="lang-en" class="language-toggle-btn active">EN</button>
+					<span class="language-toggle-separator">|</span>
+					<button id="lang-es" class="language-toggle-btn">ES</button>
+				</div>
+				<a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs"
+					>Join Us</a
+				>
+			</div>
+		</header>
 
-    <section class="page-header">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a> / <span data-i18n="about.pageHeader.breadcrumb">About AI Safety</span>
-            </div>
-            <h1 data-i18n="about.pageHeader.title">Understanding AI Safety</h1>
-        </div>
-    </section>
+		<section class="page-header">
+			<div class="container">
+				<div class="breadcrumb">
+					<a href="index.html">Home</a> /
+					<span data-i18n="about.pageHeader.breadcrumb">About AI Safety</span>
+				</div>
+				<h1 data-i18n="about.pageHeader.title">Understanding AI Safety</h1>
+			</div>
+		</section>
 
-    <section class="core-concepts">
-        <div class="container">
-            <div class="two-column">
-                <div class="column">
-                    <h2 data-i18n="about.coreConcepts.whatIs.title">What is AI Safety?</h2>
-                    <p data-i18n="about.coreConcepts.whatIs.content">AI Safety is a research field focused on ensuring that advanced artificial intelligence systems remain beneficial, aligned with human values, and under human control as they become more capable. It encompasses technical research areas like alignment, interpretability, and robustness, as well as governance considerations about how AI systems should be developed and deployed.</p>
+		<section class="core-concepts">
+			<div class="container">
+				<div class="two-column">
+					<div class="column">
+						<h2 data-i18n="about.coreConcepts.whatIs.title">
+							What is AI Safety?
+						</h2>
+						<p data-i18n="about.coreConcepts.whatIs.content">
+							AI Safety is a research field focused on ensuring that advanced
+							artificial intelligence systems remain beneficial, aligned with
+							human values, and under human control as they become more capable.
+							It encompasses technical research areas like alignment,
+							interpretability, and robustness, as well as governance
+							considerations about how AI systems should be developed and
+							deployed.
+						</p>
 
-                    <h2 data-i18n="about.coreConcepts.whyMatters.title">Why It Matters</h2>
-                    <p data-i18n="about.coreConcepts.whyMatters.content">As AI systems become more powerful and autonomous, they may develop capabilities that could lead to unintended consequences if not properly designed and controlled. The stakes are high: advanced AI could help solve humanity's greatest challenges, but also poses significant risks if developed without adequate safety measures. The field aims to maximize the benefits while minimizing potential harms.</p>
-                </div>
-                <div class="column">
-                    <h2 data-i18n="about.coreConcepts.challenges.title">Key Risks & Challenges</h2>
-                    <ul class="challenges-list">
-                        <li>
-                            <strong data-i18n="about.coreConcepts.challenges.alignment.title">Alignment Problem</strong>
-                            <p data-i18n="about.coreConcepts.challenges.alignment.content">Ensuring AI systems pursue goals aligned with human values and intentions, even as they become more capable.</p>
-                        </li>
-                        <li>
-                            <strong data-i18n="about.coreConcepts.challenges.interpretability.title">Interpretability</strong>
-                            <p data-i18n="about.coreConcepts.challenges.interpretability.content">Developing techniques to understand how AI systems make decisions and represent knowledge.</p>
-                        </li>
-                        <li>
-                            <strong data-i18n="about.coreConcepts.challenges.robustness.title">Robustness</strong>
-                            <p data-i18n="about.coreConcepts.challenges.robustness.content">Creating systems that behave safely even when deployed in new environments or facing unexpected situations.</p>
-                        </li>
-                        <li>
-                            <strong data-i18n="about.coreConcepts.challenges.powerSeeking.title">Power-seeking Behavior</strong>
-                            <p data-i18n="about.coreConcepts.challenges.powerSeeking.content">Preventing AI systems from developing instrumental goals that conflict with human welfare.</p>
-                        </li>
-                        <li>
-                            <strong data-i18n="about.coreConcepts.challenges.coordination.title">Coordination Challenges</strong>
-                            <p data-i18n="about.coreConcepts.challenges.coordination.content">Ensuring that safety standards are maintained across all major AI development efforts globally.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+						<h2 data-i18n="about.coreConcepts.whyMatters.title">
+							Why It Matters
+						</h2>
+						<p data-i18n="about.coreConcepts.whyMatters.content">
+							As AI systems become more powerful and autonomous, they may
+							develop capabilities that could lead to unintended consequences if
+							not properly designed and controlled. The stakes are high:
+							advanced AI could help solve humanity's greatest challenges, but
+							also poses significant risks if developed without adequate safety
+							measures. The field aims to maximize the benefits while minimizing
+							potential harms.
+						</p>
+					</div>
+					<div class="column">
+						<h2 data-i18n="about.coreConcepts.challenges.title">
+							Key Risks & Challenges
+						</h2>
+						<ul class="challenges-list">
+							<li>
+								<strong
+									data-i18n="about.coreConcepts.challenges.alignment.title"
+									>Alignment Problem</strong
+								>
+								<p data-i18n="about.coreConcepts.challenges.alignment.content">
+									Ensuring AI systems pursue goals aligned with human values and
+									intentions, even as they become more capable.
+								</p>
+							</li>
+							<li>
+								<strong
+									data-i18n="about.coreConcepts.challenges.interpretability.title"
+									>Interpretability</strong
+								>
+								<p
+									data-i18n="about.coreConcepts.challenges.interpretability.content"
+								>
+									Developing techniques to understand how AI systems make
+									decisions and represent knowledge.
+								</p>
+							</li>
+							<li>
+								<strong
+									data-i18n="about.coreConcepts.challenges.robustness.title"
+									>Robustness</strong
+								>
+								<p data-i18n="about.coreConcepts.challenges.robustness.content">
+									Creating systems that behave safely even when deployed in new
+									environments or facing unexpected situations.
+								</p>
+							</li>
+							<li>
+								<strong
+									data-i18n="about.coreConcepts.challenges.powerSeeking.title"
+									>Power-seeking Behavior</strong
+								>
+								<p
+									data-i18n="about.coreConcepts.challenges.powerSeeking.content"
+								>
+									Preventing AI systems from developing instrumental goals that
+									conflict with human welfare.
+								</p>
+							</li>
+							<li>
+								<strong
+									data-i18n="about.coreConcepts.challenges.coordination.title"
+									>Coordination Challenges</strong
+								>
+								<p
+									data-i18n="about.coreConcepts.challenges.coordination.content"
+								>
+									Ensuring that safety standards are maintained across all major
+									AI development efforts globally.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="external-resources">
-        <div class="container">
-            <h2 data-i18n="about.externalResources.title">Learn More About AI Safety</h2>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">🔍</div>
-                    <h3 data-i18n="about.externalResources.cards.alignmentForum.title">Alignment Forum</h3>
-                    <p data-i18n="about.externalResources.cards.alignmentForum.description">A forum dedicated to technical research in AI alignment, with papers and discussions from leading researchers.</p>
-                    <span class="difficulty" data-i18n="about.externalResources.cards.alignmentForum.difficulty">Technical</span>
-                    <a href="https://alignmentforum.org/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="about.externalResources.cards.alignmentForum.cta">Visit</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-icon">💡</div>
-                    <h3 data-i18n="about.externalResources.cards.lessWrong.title">LessWrong</h3>
-                    <p data-i18n="about.externalResources.cards.lessWrong.description">A community blog focused on human rationality and the implications of artificial intelligence.</p>
-                    <span class="difficulty" data-i18n="about.externalResources.cards.lessWrong.difficulty">Intermediate</span>
-                    <a href="https://www.lesswrong.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="about.externalResources.cards.lessWrong.cta">Visit</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-icon">🧠</div>
-                    <h3 data-i18n="about.externalResources.cards.eightyThousandHours.title">80,000 Hours</h3>
-                    <p data-i18n="about.externalResources.cards.eightyThousandHours.description">Career guidance for working on the world's most pressing problems, including AI safety.</p>
-                    <span class="difficulty" data-i18n="about.externalResources.cards.eightyThousandHours.difficulty">Introductory</span>
-                    <a href="https://80000hours.org/problem-profiles/artificial-intelligence/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="about.externalResources.cards.eightyThousandHours.cta">Visit</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-icon">📚</div>
-                    <h3 data-i18n="about.externalResources.cards.stampy.title">Stampy's Wiki</h3>
-                    <p data-i18n="about.externalResources.cards.stampy.description">A collaborative wiki providing accessible explanations of AI alignment concepts.</p>
-                    <span class="difficulty" data-i18n="about.externalResources.cards.stampy.difficulty">Introductory</span>
-                    <a href="https://aisafety.info/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="about.externalResources.cards.stampy.cta">Visit</a>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="external-resources">
+			<div class="container">
+				<h2 data-i18n="about.externalResources.title">
+					Learn More About AI Safety
+				</h2>
+				<div class="resources-grid">
+					<div class="resource-card">
+						<div class="resource-icon">🔍</div>
+						<h3 data-i18n="about.externalResources.cards.alignmentForum.title">
+							Alignment Forum
+						</h3>
+						<p
+							data-i18n="about.externalResources.cards.alignmentForum.description"
+						>
+							A forum dedicated to technical research in AI alignment, with
+							papers and discussions from leading researchers.
+						</p>
+						<span
+							class="difficulty"
+							data-i18n="about.externalResources.cards.alignmentForum.difficulty"
+							>Technical</span
+						>
+						<a
+							href="https://alignmentforum.org/"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener noreferrer"
+							data-i18n="about.externalResources.cards.alignmentForum.cta"
+							>Visit</a
+						>
+					</div>
+					<div class="resource-card">
+						<div class="resource-icon">💡</div>
+						<h3 data-i18n="about.externalResources.cards.lessWrong.title">
+							LessWrong
+						</h3>
+						<p data-i18n="about.externalResources.cards.lessWrong.description">
+							A community blog focused on human rationality and the implications
+							of artificial intelligence.
+						</p>
+						<span
+							class="difficulty"
+							data-i18n="about.externalResources.cards.lessWrong.difficulty"
+							>Intermediate</span
+						>
+						<a
+							href="https://www.lesswrong.com/"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener noreferrer"
+							data-i18n="about.externalResources.cards.lessWrong.cta"
+							>Visit</a
+						>
+					</div>
+					<div class="resource-card">
+						<div class="resource-icon">🧠</div>
+						<h3
+							data-i18n="about.externalResources.cards.eightyThousandHours.title"
+						>
+							80,000 Hours
+						</h3>
+						<p
+							data-i18n="about.externalResources.cards.eightyThousandHours.description"
+						>
+							Career guidance for working on the world's most pressing problems,
+							including AI safety.
+						</p>
+						<span
+							class="difficulty"
+							data-i18n="about.externalResources.cards.eightyThousandHours.difficulty"
+							>Introductory</span
+						>
+						<a
+							href="https://80000hours.org/problem-profiles/artificial-intelligence/"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener noreferrer"
+							data-i18n="about.externalResources.cards.eightyThousandHours.cta"
+							>Visit</a
+						>
+					</div>
+					<div class="resource-card">
+						<div class="resource-icon">📚</div>
+						<h3 data-i18n="about.externalResources.cards.stampy.title">
+							Stampy's Wiki
+						</h3>
+						<p data-i18n="about.externalResources.cards.stampy.description">
+							A collaborative wiki providing accessible explanations of AI
+							alignment concepts.
+						</p>
+						<span
+							class="difficulty"
+							data-i18n="about.externalResources.cards.stampy.difficulty"
+							>Introductory</span
+						>
+						<a
+							href="https://aisafety.info/"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener noreferrer"
+							data-i18n="about.externalResources.cards.stampy.cta"
+							>Visit</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="our-approach">
-        <div class="container">
-            <h2 data-i18n="about.ourApproach.title">Our Approach</h2>
-            <div class="two-column">
-                <div class="column">
-                    <h3 data-i18n="about.ourApproach.focusAreas.title">Focus Areas</h3>
-                    <p data-i18n="about.ourApproach.focusAreas.intro">At BAAISH - Buenos Aires AI Safety Hub, we focus on several key areas within AI safety research:</p>
-                    <ul>
-                        <li data-i18n="about.ourApproach.focusAreas.areas.0">Mechanistic interpretability of neural networks</li>
-                        <li data-i18n="about.ourApproach.focusAreas.areas.1">Alignment techniques for large language models</li>
-                        <li data-i18n="about.ourApproach.focusAreas.areas.2">Robust training methodologies</li>
-                        <li data-i18n="about.ourApproach.focusAreas.areas.3">Value learning and preference inference</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3 data-i18n="about.ourApproach.contributions.title">Our Contribution</h3>
-                    <p data-i18n="about.ourApproach.contributions.intro">We contribute to the field through:</p>
-                    <ul>
-                        <li data-i18n="about.ourApproach.contributions.items.0">Supporting student research projects</li>
-                        <li data-i18n="about.ourApproach.contributions.items.1">Developing educational resources in Spanish</li>
-                        <li data-i18n="about.ourApproach.contributions.items.2">Building a regional community of AI safety researchers</li>
-                        <li data-i18n="about.ourApproach.contributions.items.3">Organizing workshops and training programs</li>
-                        <li data-i18n="about.ourApproach.contributions.items.4">Mentoring students interested in AI safety careers</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="our-approach">
+			<div class="container">
+				<h2 data-i18n="about.ourApproach.title">Our Approach</h2>
+				<div class="two-column">
+					<div class="column">
+						<h3 data-i18n="about.ourApproach.focusAreas.title">Focus Areas</h3>
+						<p data-i18n="about.ourApproach.focusAreas.intro">
+							At BAISH - Buenos Aires AI Safety Hub, we focus on several key
+							areas within AI safety research:
+						</p>
+						<ul>
+							<li data-i18n="about.ourApproach.focusAreas.areas.0">
+								Mechanistic interpretability of neural networks
+							</li>
+							<li data-i18n="about.ourApproach.focusAreas.areas.1">
+								Alignment techniques for large language models
+							</li>
+							<li data-i18n="about.ourApproach.focusAreas.areas.2">
+								Robust training methodologies
+							</li>
+							<li data-i18n="about.ourApproach.focusAreas.areas.3">
+								Value learning and preference inference
+							</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h3 data-i18n="about.ourApproach.contributions.title">
+							Our Contribution
+						</h3>
+						<p data-i18n="about.ourApproach.contributions.intro">
+							We contribute to the field through:
+						</p>
+						<ul>
+							<li data-i18n="about.ourApproach.contributions.items.0">
+								Supporting student research projects
+							</li>
+							<li data-i18n="about.ourApproach.contributions.items.1">
+								Developing educational resources in Spanish
+							</li>
+							<li data-i18n="about.ourApproach.contributions.items.2">
+								Building a regional community of AI safety researchers
+							</li>
+							<li data-i18n="about.ourApproach.contributions.items.3">
+								Organizing workshops and training programs
+							</li>
+							<li data-i18n="about.ourApproach.contributions.items.4">
+								Mentoring students interested in AI safety careers
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="team">
-        <div class="container">
-            <h2 data-i18n="about.team.title">Core Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h3 data-i18n="about.team.members.eitan.name">Eitan Sprejer</h3>
-                    <p class="member-title" data-i18n="about.team.members.eitan.title">Co-founding Director</p>
-                    <p class="member-bio" data-i18n="about.team.members.eitan.bio">Physics student with a passion for AI safety and alignment.</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h3 data-i18n="about.team.members.luca.name">Luca De Leo</h3>
-                    <p class="member-title" data-i18n="about.team.members.luca.title">Co-founding Director</p>
-                    <p class="member-bio" data-i18n="about.team.members.luca.bio">Operations Generalist with experience working in AI Safety Organizations</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h3 data-i18n="about.team.members.lucas.name">Lucas Vitali</h3>
-                    <p class="member-title" data-i18n="about.team.members.lucas.title">Communications Director</p>
-                    <p class="member-bio" data-i18n="about.team.members.lucas.bio">Computer Science student with a passion for science communications</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h3 data-i18n="about.team.members.sergio.name">Sergio Abriola, PhD</h3>
-                    <p class="member-title" data-i18n="about.team.members.sergio.title">Research Director</p>
-                    <p class="member-bio" data-i18n="about.team.members.sergio.bio">Mathematics PhD and professor with a passion for AI Safety</p>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="team">
+			<div class="container">
+				<h2 data-i18n="about.team.title">Core Team</h2>
+				<div class="team-grid">
+					<div class="team-member">
+						<div class="member-photo"></div>
+						<h3 data-i18n="about.team.members.eitan.name">Eitan Sprejer</h3>
+						<p class="member-title" data-i18n="about.team.members.eitan.title">
+							Co-founding Director
+						</p>
+						<p class="member-bio" data-i18n="about.team.members.eitan.bio">
+							Physics student with a passion for AI safety and alignment.
+						</p>
+					</div>
+					<div class="team-member">
+						<div class="member-photo"></div>
+						<h3 data-i18n="about.team.members.luca.name">Luca De Leo</h3>
+						<p class="member-title" data-i18n="about.team.members.luca.title">
+							Co-founding Director
+						</p>
+						<p class="member-bio" data-i18n="about.team.members.luca.bio">
+							Operations Generalist with experience working in AI Safety
+							Organizations
+						</p>
+					</div>
+					<div class="team-member">
+						<div class="member-photo"></div>
+						<h3 data-i18n="about.team.members.lucas.name">Lucas Vitali</h3>
+						<p class="member-title" data-i18n="about.team.members.lucas.title">
+							Communications Director
+						</p>
+						<p class="member-bio" data-i18n="about.team.members.lucas.bio">
+							Computer Science student with a passion for science communications
+						</p>
+					</div>
+					<div class="team-member">
+						<div class="member-photo"></div>
+						<h3 data-i18n="about.team.members.sergio.name">
+							Sergio Abriola, PhD
+						</h3>
+						<p class="member-title" data-i18n="about.team.members.sergio.title">
+							Research Director
+						</p>
+						<p class="member-bio" data-i18n="about.team.members.sergio.bio">
+							Mathematics PhD and professor with a passion for AI Safety
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/logo.svg" alt="BAAISH - Buenos Aires AI Safety Hub" class="footer-logo-img">
-                    <div class="tagline">Buenos Aires AI Safety Hub</div>
-                </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Pages</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="activities.html">Activities</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
-                            <li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 BAAISH - Buenos Aires AI Safety Hub. A student initiative at the University of Buenos Aires.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Scripts -->
-    <script src="js/translations.js"></script>
-    <script src="js/language-toggle.js"></script>
-</body>
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-logo">
+						<img
+							src="img/logo.svg"
+							alt="BAISH - Buenos Aires AI Safety Hub"
+							class="footer-logo-img"
+						/>
+						<div class="tagline">Buenos Aires AI Safety Hub</div>
+					</div>
+					<div class="footer-links">
+						<div class="link-group">
+							<h4>Pages</h4>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="activities.html">Activities</a></li>
+								<li><a href="resources.html">Resources</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+						<div class="link-group">
+							<h4>Connect</h4>
+							<ul>
+								<li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
+								<li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>
+						&copy; 2025 BAISH - Buenos Aires AI Safety Hub. A student initiative
+						at the University of Buenos Aires.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- Scripts -->
+		<script src="js/translations.js"></script>
+		<script src="js/language-toggle.js"></script>
+	</body>
 </html>

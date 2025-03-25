@@ -9,7 +9,7 @@
 .language-toggle-btn {
 	background: none;
 	border: none;
-	color: var(--color-text);
+	color: var(--text-secondary);
 	font-size: 0.9rem;
 	font-weight: 500;
 	padding: 5px 8px;
@@ -21,11 +21,13 @@
 
 .language-toggle-btn:hover {
 	opacity: 1;
+	color: var(--primary);
 }
 
 .language-toggle-btn.active {
 	opacity: 1;
 	font-weight: 600;
+	color: var(--primary);
 }
 
 .language-toggle-btn.active::after {
@@ -35,13 +37,13 @@
 	left: 8px;
 	right: 8px;
 	height: 2px;
-	background-color: var(--color-primary);
+	background-color: var(--primary);
 	border-radius: 1px;
 }
 
 .language-toggle-separator {
 	margin: 0 5px;
-	color: var(--color-text);
+	color: var(--text-muted);
 	opacity: 0.5;
 }
 

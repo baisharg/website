@@ -1,6 +1,6 @@
-# BAAISH Website
+# BAISH Website
 
-The official website for BAAISH (Buenos Aires AI Safety Hub), a student-led organization focused on AI safety research and education.
+The official website for BAISH (Buenos Aires AI Safety Hub), a student-led organization focused on AI safety research and education.
 
 ## Language Toggle System
 
