@@ -223,24 +223,32 @@
 		<section class="feedback-form alt-bg">
 			<div class="container">
 				<div class="contact-form-container">
-					<h2>Contact Us</h2>
-					<p>Leave us any question or inquiry.</p>
+					<h2 data-i18n="contact.pageHeader.title">Contact Us</h2>
+					<p data-i18n="contact.pageHeader.subtitle">
+						Get in touch with our team and join our community
+					</p>
 
 					<hr />
 
 					<form action="https://formspree.io/f/xjkyoknb" method="POST">
 						<div class="form-group">
-							<label for="name">What is your name?</label>
+							<label for="name" data-i18n="contact.form.name"
+								>What is your name?</label
+							>
 							<input type="text" name="name" id="name" required />
 						</div>
 
 						<div class="form-group">
-							<label for="email">What is your email?</label>
+							<label for="email" data-i18n="contact.form.email"
+								>What is your email?</label
+							>
 							<input type="email" name="email" id="email" required />
 						</div>
 
 						<div class="form-group">
-							<label for="message">Message</label>
+							<label for="message" data-i18n="contact.form.message"
+								>Message</label
+							>
 							<textarea
 								name="message"
 								id="message"
@@ -251,16 +259,16 @@
 
 						<div class="form-actions">
 							<button type="reset" class="clear-form">
-								<span class="icon">↺</span> Clear form
+								<span class="icon">↺</span>
+								<span data-i18n="contact.form.clear">Clear form</span>
 							</button>
-							<button type="submit" class="submit-btn">Submit</button>
-						</div>
-
-						<div class="form-footer">
-							<p>
-								Do not submit passwords through this form.
-								<a href="#">Report malicious form</a>
-							</p>
+							<button
+								type="submit"
+								class="submit-btn"
+								data-i18n="contact.form.submit"
+							>
+								Submit
+							</button>
 						</div>
 					</form>
 				</div>
@@ -368,22 +376,6 @@
 
 					.submit-btn:hover {
 						background-color: #dd85f7;
-					}
-
-					.form-footer {
-						margin-top: 30px;
-						font-size: 0.8rem;
-						color: #8792a8;
-					}
-
-					.form-footer a {
-						color: #4a93fb;
-						text-decoration: none;
-						transition: color 0.3s;
-					}
-
-					.form-footer a:hover {
-						color: #dd85f7;
 					}
 
 					/* Make sure the form works well on dark backgrounds */

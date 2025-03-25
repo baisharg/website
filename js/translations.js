@@ -608,6 +608,13 @@ const translations = {
           title: 'Join our Mailing List',
           description:
             'Stay updated with our events, activities, and opportunities by subscribing to our mailing list. We send monthly newsletters and important announcements.'
+        },
+        form: {
+          name: 'What is your name?',
+          email: 'What is your email?',
+          message: 'Message',
+          clear: 'Clear form',
+          submit: 'Submit'
         }
       },
       faq: {
@@ -1324,6 +1331,13 @@ const translations = {
           title: 'Suscribite a Nuestra Lista de Correo',
           description:
             'Mantenete al día con nuestros eventos, actividades y oportunidades suscribiéndote a nuestra lista de correo. Te enviamos newsletters mensuales y anuncios importantes.'
+        },
+        form: {
+          name: '¿Cuál es tu nombre?',
+          email: '¿Cuál es tu correo electrónico?',
+          message: 'Mensaje',
+          clear: 'Limpiar formulario',
+          submit: 'Enviar'
         }
       },
       faq: {
