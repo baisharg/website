@@ -1,554 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Resources - BAAISH - Buenos Aires AI Safety Hub</title>
-		<meta
-			name="description"
-			content="Learning resources and past newsletters from the BAAISH - Buenos Aires AI Safety Hub"
-		/>
-		<!-- Open Graph tags for social sharing -->
-		<meta
-			property="og:title"
-			content="Resources - BAAISH - Buenos Aires AI Safety Hub"
-		/>
-		<meta
-			property="og:description"
-			content="Learning resources and past newsletters from the BAAISH - Buenos Aires AI Safety Hub"
-		/>
-		<meta property="og:type" content="website" />
-		<meta
-			property="og:url"
-			content="https://lucadeleo.github.io/aisafetysite/resources.html"
-		/>
-		<!-- Favicon -->
-		<link rel="icon" href="img/logo.svg" type="image/svg+xml" />
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/language-toggle.css" />
-	</head>
-	<body>
-		<header class="site-header">
-			<div class="container">
-				<div class="logo">
-					<a href="index.html">
-						<img src="img/logo.svg" alt="BAAISH Logo" class="logo-img" />
-						<span class="logo-text">BAAISH - Buenos Aires AI Safety Hub</span>
-					</a>
-				</div>
-				<nav class="main-nav">
-					<ul>
-						<li><a href="about.html" data-i18n="nav.about">About</a></li>
-						<li>
-							<a href="activities.html" data-i18n="nav.activities"
-								>Activities</a
-							>
-						</li>
-						<li>
-							<a href="resources.html" class="active" data-i18n="nav.resources"
-								>Resources</a
-							>
-						</li>
-						<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-					</ul>
-				</nav>
-				<div class="language-toggle">
-					<button id="lang-en" class="language-toggle-btn active">EN</button>
-					<span class="language-toggle-separator">|</span>
-					<button id="lang-es" class="language-toggle-btn">ES</button>
-				</div>
-				<a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs"
-					>Join Us</a
-				>
-			</div>
-		</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - BAAISH - Buenos Aires AI Safety Hub</title>
+    <meta name="description" content="Learning resources and past newsletters from the BAAISH - Buenos Aires AI Safety Hub">
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Resources - BAAISH - Buenos Aires AI Safety Hub">
+    <meta property="og:description" content="Learning resources and past newsletters from the BAAISH - Buenos Aires AI Safety Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lucadeleo.github.io/aisafetysite/resources.html">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/language-toggle.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="BAAISH Logo" class="logo-img">
+                    <span class="logo-text">BAAISH - Buenos Aires AI Safety Hub</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="activities.html" data-i18n="nav.activities">Activities</a></li>
+                    <li><a href="resources.html" class="active" data-i18n="nav.resources">Resources</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <button id="lang-en" class="language-toggle-btn active">EN</button>
+                <span class="language-toggle-separator">|</span>
+                <button id="lang-es" class="language-toggle-btn">ES</button>
+            </div>
+            <a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs">Join Us</a>
+        </div>
+    </header>
 
-		<section class="page-header">
-			<div class="container">
-				<div class="breadcrumb">
-					<a href="index.html">Home</a> /
-					<span data-i18n="resources.pageHeader.breadcrumb">Resources</span>
-				</div>
-				<h1 data-i18n="resources.pageHeader.title">Learning Resources</h1>
-				<p class="subtitle" data-i18n="resources.pageHeader.subtitle">
-					Curated materials for exploring AI safety concepts and our newsletter
-					archive
-				</p>
-			</div>
-		</section>
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span data-i18n="resources.pageHeader.breadcrumb">Resources</span>
+            </div>
+            <h1 data-i18n="resources.pageHeader.title">Learning Resources</h1>
+            <p class="subtitle" data-i18n="resources.pageHeader.subtitle">Curated materials for exploring AI safety concepts and our newsletter archive</p>
+        </div>
+    </section>
 
-		<section class="learning-pathways">
-			<div class="container">
-				<h2 data-i18n="resources.learningPathways.title">Learning Pathways</h2>
-				<p class="section-intro" data-i18n="resources.learningPathways.intro">
-					We've organized resources into three learning paths depending on your
-					background and experience level.
-				</p>
+    <section class="learning-pathways">
+        <div class="container">
+            <h2 data-i18n="resources.learningPathways.title">Learning Pathways</h2>
+            <p class="section-intro" data-i18n="resources.learningPathways.intro">We've organized resources into three learning paths depending on your background and experience level.</p>
 
-				<div class="pathways-container">
-					<div class="pathway">
-						<div class="pathway-header">
-							<h3
-								data-i18n="resources.learningPathways.pathways.beginners.title"
-							>
-								Beginners
-							</h3>
-							<span
-								class="difficulty beginner"
-								data-i18n="resources.learningPathways.pathways.beginners.difficulty"
-								>Accessible to All</span
-							>
-						</div>
-						<p
-							class="pathway-description"
-							data-i18n="resources.learningPathways.pathways.beginners.description"
-						>
-							For those new to AI safety concepts who want to understand the key
-							ideas and concerns.
-						</p>
-						<ul class="resource-list">
-							<li>
-								<a
-									href="https://futureoflife.org/ai-risk/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource1.title"
-									>Future of Life Institute: AI Risk Introduction</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource1.type"
-									>Overview</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.cold-takes.com/transformative-ai-timelines-part-1-of-4-what-kind-of-ai/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource2.title"
-									>Cold Takes: Transformative AI series</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource2.type"
-									>Blog Series</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.youtube.com/watch?v=pYXy-A4siMw"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource3.title"
-									>Rob Miles: AI Safety Intro</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource3.type"
-									>Video</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://80000hours.org/problem-profiles/artificial-intelligence/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource4.title"
-									>80,000 Hours: AI Risk Problem Profile</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource4.type"
-									>Overview</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.aisafety.info/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource5.title"
-									>Stampy's AI Safety Wiki</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.beginners.resources.resource5.type"
-									>Wiki</span
-								>
-							</li>
-						</ul>
-						<a
-							href="contact.html#beginner-resources"
-							class="btn btn-secondary"
-							data-i18n="resources.learningPathways.pathways.beginners.button"
-							>Get Beginner Recommendations</a
-						>
-					</div>
+            <div class="pathways-container">
+                <div class="pathway">
+                    <div class="pathway-header">
+                        <h3 data-i18n="resources.learningPathways.pathways.beginners.title">Beginners</h3>
+                        <span class="difficulty beginner" data-i18n="resources.learningPathways.pathways.beginners.difficulty">Accessible to All</span>
+                    </div>
+                    <p class="pathway-description" data-i18n="resources.learningPathways.pathways.beginners.description">For those new to AI safety concepts who want to understand the key ideas and concerns.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="https://futureoflife.org/ai-risk/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.beginners.resources.resource1.title">Future of Life Institute: AI Risk Introduction</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.beginners.resources.resource1.type">Overview</span>
+                        </li>
+                        <li>
+                            <a href="https://www.cold-takes.com/transformative-ai-timelines-part-1-of-4-what-kind-of-ai/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.beginners.resources.resource2.title">Cold Takes: Transformative AI series</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.beginners.resources.resource2.type">Blog Series</span>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=pYXy-A4siMw" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.beginners.resources.resource3.title">Rob Miles: AI Safety Intro</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.beginners.resources.resource3.type">Video</span>
+                        </li>
+                        <li>
+                            <a href="https://80000hours.org/problem-profiles/artificial-intelligence/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.beginners.resources.resource4.title">80,000 Hours: AI Risk Problem Profile</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.beginners.resources.resource4.type">Overview</span>
+                        </li>
+                        <li>
+                            <a href="https://www.aisafety.info/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.beginners.resources.resource5.title">Stampy's AI Safety Wiki</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.beginners.resources.resource5.type">Wiki</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html#beginner-resources" class="btn btn-secondary" data-i18n="resources.learningPathways.pathways.beginners.button">Get Beginner Recommendations</a>
+                </div>
 
-					<div class="pathway">
-						<div class="pathway-header">
-							<h3
-								data-i18n="resources.learningPathways.pathways.intermediate.title"
-							>
-								Intermediate
-							</h3>
-							<span
-								class="difficulty intermediate"
-								data-i18n="resources.learningPathways.pathways.intermediate.difficulty"
-								>Some Technical Background</span
-							>
-						</div>
-						<p
-							class="pathway-description"
-							data-i18n="resources.learningPathways.pathways.intermediate.description"
-						>
-							For those with some understanding of machine learning who want to
-							explore core AI safety challenges.
-						</p>
-						<ul class="resource-list">
-							<li>
-								<a
-									href="https://www.alignmentforum.org/s/mzgtmmTKKn5MuCzFJ"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource1.title"
-									>AGI Safety Fundamentals Curriculum</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource1.type"
-									>Course Materials</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.lesswrong.com/posts/uMQ3cqWDPHhjtiesc/agi-safety-fundamentals-technical-alignment-curriculum"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource2.title"
-									>Technical Alignment Fundamentals</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource2.type"
-									>Reading List</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.anthropic.com/index/core-views-on-ai-safety"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource3.title"
-									>Anthropic: Core Views on AI Safety</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource3.type"
-									>Company Perspective</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://arxiv.org/abs/2209.00626"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource4.title"
-									>Training Language Models to Follow Instructions</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource4.type"
-									>Research Paper</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.deeplearning.ai/short-courses/alignment-techniques-for-llms/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource5.title"
-									>DeepLearning.AI: Alignment Techniques for LLMs</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.intermediate.resources.resource5.type"
-									>Course</span
-								>
-							</li>
-						</ul>
-						<a
-							href="contact.html#intermediate-resources"
-							class="btn btn-secondary"
-							data-i18n="resources.learningPathways.pathways.intermediate.button"
-							>Get Intermediate Recommendations</a
-						>
-					</div>
+                <div class="pathway">
+                    <div class="pathway-header">
+                        <h3 data-i18n="resources.learningPathways.pathways.intermediate.title">Intermediate</h3>
+                        <span class="difficulty intermediate" data-i18n="resources.learningPathways.pathways.intermediate.difficulty">Some Technical Background</span>
+                    </div>
+                    <p class="pathway-description" data-i18n="resources.learningPathways.pathways.intermediate.description">For those with some understanding of machine learning who want to explore core AI safety challenges.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="https://www.alignmentforum.org/s/mzgtmmTKKn5MuCzFJ" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource1.title">AGI Safety Fundamentals Curriculum</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource1.type">Course Materials</span>
+                        </li>
+                        <li>
+                            <a href="https://www.lesswrong.com/posts/uMQ3cqWDPHhjtiesc/agi-safety-fundamentals-technical-alignment-curriculum" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource2.title">Technical Alignment Fundamentals</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource2.type">Reading List</span>
+                        </li>
+                        <li>
+                            <a href="https://www.anthropic.com/index/core-views-on-ai-safety" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource3.title">Anthropic: Core Views on AI Safety</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource3.type">Company Perspective</span>
+                        </li>
+                        <li>
+                            <a href="https://arxiv.org/abs/2209.00626" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource4.title">Training Language Models to Follow Instructions</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource4.type">Research Paper</span>
+                        </li>
+                        <li>
+                            <a href="https://www.deeplearning.ai/short-courses/alignment-techniques-for-llms/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource5.title">DeepLearning.AI: Alignment Techniques for LLMs</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.intermediate.resources.resource5.type">Course</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html#intermediate-resources" class="btn btn-secondary" data-i18n="resources.learningPathways.pathways.intermediate.button">Get Intermediate Recommendations</a>
+                </div>
 
-					<div class="pathway">
-						<div class="pathway-header">
-							<h3
-								data-i18n="resources.learningPathways.pathways.advanced.title"
-							>
-								Advanced
-							</h3>
-							<span
-								class="difficulty advanced"
-								data-i18n="resources.learningPathways.pathways.advanced.difficulty"
-								>Strong Technical Background</span
-							>
-						</div>
-						<p
-							class="pathway-description"
-							data-i18n="resources.learningPathways.pathways.advanced.description"
-						>
-							For those with strong ML/AI knowledge who want to engage with
-							cutting-edge research.
-						</p>
-						<ul class="resource-list">
-							<li>
-								<a
-									href="https://distill.pub/2020/circuits/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource1.title"
-									>Distill: Circuits Thread</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource1.type"
-									>Interpretability Research</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://transformer-circuits.pub/"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource2.title"
-									>Anthropic: Transformer Circuits</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource2.type"
-									>Research Series</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://arxiv.org/abs/2212.03827"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource3.title"
-									>Discovering Latent Knowledge in Language Models</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource3.type"
-									>Research Paper</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://arxiv.org/abs/2312.11805"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource4.title"
-									>Language Agents for Alignment Research</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource4.type"
-									>Research Paper</span
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.alignmentforum.org/posts/pRkFkzwKZ2zfa3R6H/without-specific-countermeasures-the-easiest-path-to"
-									target="_blank"
-									rel="noopener noreferrer"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource5.title"
-									>Alignment Forum: Advanced Concepts</a
-								>
-								<span
-									class="resource-type"
-									data-i18n="resources.learningPathways.pathways.advanced.resources.resource5.type"
-									>Technical Discussion</span
-								>
-							</li>
-						</ul>
-						<a
-							href="contact.html#advanced-resources"
-							class="btn btn-secondary"
-							data-i18n="resources.learningPathways.pathways.advanced.button"
-							>Get Advanced Recommendations</a
-						>
-					</div>
-				</div>
-			</div>
-		</section>
+                <div class="pathway">
+                    <div class="pathway-header">
+                        <h3 data-i18n="resources.learningPathways.pathways.advanced.title">Advanced</h3>
+                        <span class="difficulty advanced" data-i18n="resources.learningPathways.pathways.advanced.difficulty">Strong Technical Background</span>
+                    </div>
+                    <p class="pathway-description" data-i18n="resources.learningPathways.pathways.advanced.description">For those with strong ML/AI knowledge who want to engage with cutting-edge research.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="https://distill.pub/2020/circuits/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.advanced.resources.resource1.title">Distill: Circuits Thread</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.advanced.resources.resource1.type">Interpretability Research</span>
+                        </li>
+                        <li>
+                            <a href="https://transformer-circuits.pub/" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.advanced.resources.resource2.title">Anthropic: Transformer Circuits</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.advanced.resources.resource2.type">Research Series</span>
+                        </li>
+                        <li>
+                            <a href="https://arxiv.org/abs/2212.03827" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.advanced.resources.resource3.title">Discovering Latent Knowledge in Language Models</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.advanced.resources.resource3.type">Research Paper</span>
+                        </li>
+                        <li>
+                            <a href="https://arxiv.org/abs/2312.11805" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.advanced.resources.resource4.title">Language Agents for Alignment Research</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.advanced.resources.resource4.type">Research Paper</span>
+                        </li>
+                        <li>
+                            <a href="https://www.alignmentforum.org/posts/pRkFkzwKZ2zfa3R6H/without-specific-countermeasures-the-easiest-path-to" target="_blank" rel="noopener noreferrer" data-i18n="resources.learningPathways.pathways.advanced.resources.resource5.title">Alignment Forum: Advanced Concepts</a>
+                            <span class="resource-type" data-i18n="resources.learningPathways.pathways.advanced.resources.resource5.type">Technical Discussion</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html#advanced-resources" class="btn btn-secondary" data-i18n="resources.learningPathways.pathways.advanced.button">Get Advanced Recommendations</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<section class="recommended-reading alt-bg">
-			<div class="container">
-				<h2 data-i18n="resources.recommendedBooks.title">Recommended Books</h2>
-				<div class="books-grid">
-					<div class="book-card">
-						<div class="book-cover"></div>
-						<h3 data-i18n="resources.recommendedBooks.books.book1.title">
-							Uncontrollable
-						</h3>
-						<p
-							class="book-author"
-							data-i18n="resources.recommendedBooks.books.book1.author"
-						>
-							Darren McKee (2023)
-						</p>
-						<p
-							class="book-description"
-							data-i18n="resources.recommendedBooks.books.book1.description"
-						>
-							Uncontrollable uses engaging analogies and relatable examples to
-							summarize AI for beginners, and unpacks AI risk and safety for
-							readers without a technical background.
-						</p>
-					</div>
+    <section class="recommended-reading alt-bg">
+        <div class="container">
+            <h2 data-i18n="resources.recommendedBooks.title">Recommended Books</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <h3 data-i18n="resources.recommendedBooks.books.book1.title">Uncontrollable</h3>
+                    <p class="book-author" data-i18n="resources.recommendedBooks.books.book1.author">Darren McKee (2023)</p>
+                    <p class="book-description" data-i18n="resources.recommendedBooks.books.book1.description">Uncontrollable uses engaging analogies and relatable examples to summarize AI for beginners, and unpacks AI risk and safety for readers without a technical background.</p>
+                </div>
 
-					<div class="book-card">
-						<div class="book-cover"></div>
-						<h3 data-i18n="resources.recommendedBooks.books.book2.title">
-							Human Compatible
-						</h3>
-						<p
-							class="book-author"
-							data-i18n="resources.recommendedBooks.books.book2.author"
-						>
-							Stuart Russell (2019)
-						</p>
-						<p
-							class="book-description"
-							data-i18n="resources.recommendedBooks.books.book2.description"
-						>
-							A leading AI researcher's compelling case for how to ensure that
-							artificial intelligence remains beneficial to humanity.
-						</p>
-					</div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <h3 data-i18n="resources.recommendedBooks.books.book2.title">Human Compatible</h3>
+                    <p class="book-author" data-i18n="resources.recommendedBooks.books.book2.author">Stuart Russell (2019)</p>
+                    <p class="book-description" data-i18n="resources.recommendedBooks.books.book2.description">A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity.</p>
+                </div>
 
-					<div class="book-card">
-						<div class="book-cover"></div>
-						<h3 data-i18n="resources.recommendedBooks.books.book3.title">
-							Superintelligence
-						</h3>
-						<p
-							class="book-author"
-							data-i18n="resources.recommendedBooks.books.book3.author"
-						>
-							Nick Bostrom (2014)
-						</p>
-						<p
-							class="book-description"
-							data-i18n="resources.recommendedBooks.books.book3.description"
-						>
-							Explores the potential risks and paths to superintelligent AI,
-							addressing key questions about the future of intelligence.
-						</p>
-					</div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <h3 data-i18n="resources.recommendedBooks.books.book3.title">Superintelligence</h3>
+                    <p class="book-author" data-i18n="resources.recommendedBooks.books.book3.author">Nick Bostrom (2014)</p>
+                    <p class="book-description" data-i18n="resources.recommendedBooks.books.book3.description">Explores the potential risks and paths to superintelligent AI, addressing key questions about the future of intelligence.</p>
+                </div>
 
-					<div class="book-card">
-						<div class="book-cover"></div>
-						<h3 data-i18n="resources.recommendedBooks.books.book4.title">
-							The Alignment Problem
-						</h3>
-						<p
-							class="book-author"
-							data-i18n="resources.recommendedBooks.books.book4.author"
-						>
-							Brian Christian (2020)
-						</p>
-						<p
-							class="book-description"
-							data-i18n="resources.recommendedBooks.books.book4.description"
-						>
-							An exploration of the growing field of AI alignment, explaining
-							technical concepts in an accessible way.
-						</p>
-					</div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <h3 data-i18n="resources.recommendedBooks.books.book4.title">The Alignment Problem</h3>
+                    <p class="book-author" data-i18n="resources.recommendedBooks.books.book4.author">Brian Christian (2020)</p>
+                    <p class="book-description" data-i18n="resources.recommendedBooks.books.book4.description">An exploration of the growing field of AI alignment, explaining technical concepts in an accessible way.</p>
+                </div>
 
-					<div class="book-card">
-						<div class="book-cover"></div>
-						<h3 data-i18n="resources.recommendedBooks.books.book5.title">
-							Life 3.0
-						</h3>
-						<p
-							class="book-author"
-							data-i18n="resources.recommendedBooks.books.book5.author"
-						>
-							Max Tegmark (2017)
-						</p>
-						<p
-							class="book-description"
-							data-i18n="resources.recommendedBooks.books.book5.description"
-						>
-							Examines how artificial intelligence might affect life in the
-							future and what choices we face in shaping that future.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <h3 data-i18n="resources.recommendedBooks.books.book5.title">Life 3.0</h3>
+                    <p class="book-author" data-i18n="resources.recommendedBooks.books.book5.author">Max Tegmark (2017)</p>
+                    <p class="book-description" data-i18n="resources.recommendedBooks.books.book5.description">Examines how artificial intelligence might affect life in the future and what choices we face in shaping that future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<footer class="site-footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-logo">
-						<img
-							src="img/logo.svg"
-							alt="BAAISH - Buenos Aires AI Safety Hub"
-							class="footer-logo-img"
-						/>
-						<div class="tagline">Buenos Aires AI Safety Hub</div>
-					</div>
-					<div class="footer-links">
-						<div class="link-group">
-							<h4>Pages</h4>
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="activities.html">Activities</a></li>
-								<li><a href="resources.html">Resources</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-						<div class="link-group">
-							<h4>Connect</h4>
-							<ul>
-								<li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
-								<li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
-								<li>
-									<a href="https://www.instagram.com/aisafetyarg">Instagram</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<p>
-						&copy; 2025 BAAISH - Buenos Aires AI Safety Hub. A student
-						initiative at the University of Buenos Aires.
-					</p>
-				</div>
-			</div>
-		</footer>
-		<!-- Scripts -->
-		<script src="js/translations.js"></script>
-		<script src="js/language-toggle.js"></script>
-	</body>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="BAAISH - Buenos Aires AI Safety Hub" class="footer-logo-img">
+                    <div class="tagline">Buenos Aires AI Safety Hub</div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Pages</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="activities.html">Activities</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:aisafetyarg@gmail.com">Email</a></li>
+                            <li><a href="https://t.me/+zfvMHU8TaAhjNjVh">Telegram</a></li>
+                            <li><a href="https://www.instagram.com/aisafetyarg">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BAAISH - Buenos Aires AI Safety Hub. A student initiative at the University of Buenos Aires.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/language-toggle.js"></script>
+</body>
 </html>
