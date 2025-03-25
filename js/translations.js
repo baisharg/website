@@ -3,12 +3,20 @@ const translations = {
   en: {
     // Navigation
     nav: {
+      home: 'Home',
       about: 'About',
       activities: 'Activities',
       research: 'Research',
       resources: 'Resources',
       contact: 'Contact',
       joinUs: 'Join Us'
+    },
+
+    // Footer
+    footer: {
+      privacyPolicy: 'Privacy Policy',
+      copyright: '© 2024 BAISH - Buenos Aires AI Safety Hub',
+      tagline: 'Buenos Aires AI Safety Hub'
     },
 
     // Home page
@@ -663,12 +671,20 @@ const translations = {
   es: {
     // Navigation
     nav: {
+      home: 'Inicio',
       about: 'Quiénes Somos',
       activities: 'Actividades',
       research: 'Investigación',
       resources: 'Recursos',
       contact: 'Contacto',
       joinUs: 'Sumate'
+    },
+
+    // Footer
+    footer: {
+      privacyPolicy: 'Política de Privacidad',
+      copyright: '© 2024 BAISH - Centro de Seguridad de IA de Buenos Aires',
+      tagline: 'Centro de Seguridad de IA de Buenos Aires'
     },
 
     // Home page
