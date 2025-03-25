@@ -85,6 +85,15 @@ function applyTranslations () {
         const targetAttr =
           element.getAttribute('data-i18n-attr') || 'placeholder'
         element.setAttribute(targetAttr, text)
+      } else if (element.tagName === 'BUTTON') {
+        // For button elements, check if it has children with data-i18n
+        // If it doesn't have children with data-i18n, update the button text
+        if (element.querySelectorAll('[data-i18n]').length === 0) {
+          element.textContent = text
+        }
+      } else if (element.tagName === 'LABEL') {
+        // For label elements, update the text content
+        element.textContent = text
       } else {
         // For other elements, update the inner text
         element.textContent = text

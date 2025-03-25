@@ -262,12 +262,8 @@
 								<span class="icon">↺</span>
 								<span data-i18n="contact.form.clear">Clear form</span>
 							</button>
-							<button
-								type="submit"
-								class="submit-btn"
-								data-i18n="contact.form.submit"
-							>
-								Submit
+							<button type="submit" class="submit-btn">
+								<span data-i18n="contact.form.submit">Submit</span>
 							</button>
 						</div>
 					</form>
@@ -600,5 +596,66 @@
 		<!-- Scripts -->
 		<script src="js/translations.js"></script>
 		<script src="js/language-toggle.js"></script>
+		<script>
+			// Ensure form translations are applied after page load
+			document.addEventListener("DOMContentLoaded", function () {
+				// Initial translation update
+				setTimeout(function () {
+					if (typeof applyTranslations === "function") {
+						applyTranslations();
+					}
+				}, 100);
+
+				// Add event listeners to language buttons to update form translations
+				document
+					.getElementById("lang-en")
+					.addEventListener("click", updateFormTranslations);
+				document
+					.getElementById("lang-es")
+					.addEventListener("click", updateFormTranslations);
+
+				// Function to specifically update form translations
+				function updateFormTranslations() {
+					setTimeout(function () {
+						// Get current language
+						const lang = localStorage.getItem("language") || "es";
+						const formLabels = {
+							name: {
+								en: "What is your name?",
+								es: "¿Cuál es tu nombre?",
+							},
+							email: {
+								en: "What is your email?",
+								es: "¿Cuál es tu correo electrónico?",
+							},
+							message: {
+								en: "Message",
+								es: "Mensaje",
+							},
+							clear: {
+								en: "Clear form",
+								es: "Limpiar formulario",
+							},
+							submit: {
+								en: "Submit",
+								es: "Enviar",
+							},
+						};
+
+						// Update form elements directly
+						document.querySelector('label[for="name"]').textContent =
+							formLabels.name[lang];
+						document.querySelector('label[for="email"]').textContent =
+							formLabels.email[lang];
+						document.querySelector('label[for="message"]').textContent =
+							formLabels.message[lang];
+						document.querySelector(".clear-form span:not(.icon)").textContent =
+							formLabels.clear[lang];
+						document.querySelector(".submit-btn span").textContent =
+							formLabels.submit[lang];
+					}, 100);
+				}
+			});
+		</script>
 	</body>
 </html>
