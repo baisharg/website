@@ -3,7 +3,8 @@
 .language-toggle {
 	display: flex;
 	align-items: center;
-	margin-left: 20px;
+	margin-left: 15px;
+	flex-shrink: 0; /* Prevent from shrinking */
 }
 
 .language-toggle-btn {
@@ -12,7 +13,7 @@
 	color: var(--text-secondary);
 	font-size: 0.9rem;
 	font-weight: 500;
-	padding: 5px 8px;
+	padding: 5px 6px;
 	cursor: pointer;
 	opacity: 0.7;
 	transition: all 0.2s ease;
@@ -51,9 +52,8 @@
 @media (max-width: 768px) {
 	.language-toggle {
 		margin-left: 0;
-		position: absolute;
-		top: 15px;
-		right: 80px;
+		margin-right: var(--spacing-md);
+		order: 1; /* Place next to the button */
 	}
 }
 

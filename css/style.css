@@ -649,15 +649,34 @@
 	.site-header .container {
 		flex-direction: column;
 		align-items: flex-start;
+		gap: var(--spacing-md);
+		padding: var(--spacing-md);
+	}
+
+	.logo {
+		margin-bottom: var(--spacing-xs);
 	}
 
 	.logo-text {
 		display: none;
 	}
 
+	.main-nav {
+		width: 100%;
+		justify-content: flex-start;
+		order: 3; /* Move navigation below other elements */
+	}
+
 	.main-nav ul {
-		flex-direction: column;
-		gap: var(--spacing-xs);
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--spacing-md);
+		width: 100%;
+	}
+
+	.site-header .btn {
+		margin-left: auto; /* Push button to the right */
+		order: 2; /* Place button next to language toggle */
 	}
 
 	.hero {
@@ -797,7 +816,7 @@
 	--spacing-xxl: 5rem;
 
 	/* Layout */
-	--container-max-width: 1200px;
+	--container-max-width: 1300px;
 	--border-radius: 6px;
 	--box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -912,13 +931,15 @@ section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--spacing-md) var(--spacing-lg);
+	padding: var(--spacing-md) var(--spacing-md);
+	max-width: 1300px; /* Wider container for the header */
 }
 
 .logo {
 	font-size: 1.2rem;
 	font-weight: 700;
 	color: var(--primary);
+	flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 .logo a {
@@ -935,23 +956,32 @@ section {
 }
 
 .logo-text {
-	font-size: 1.2rem;
+	font-size: 1.1rem; /* Slightly smaller font for logo text */
 	font-weight: 700;
+	white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.main-nav {
+	flex-grow: 1; /* Allow nav to take available space */
+	display: flex;
+	justify-content: center; /* Center the navigation */
 }
 
 .main-nav ul {
 	display: flex;
 	list-style: none;
 	margin: 0;
-	gap: var(--spacing-lg);
+	gap: var(--spacing-md); /* Slightly reduced gap between nav items */
+	flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .main-nav a {
 	color: var(--text-secondary);
 	text-decoration: none;
 	font-weight: 500;
-	padding: var(--spacing-sm) 0;
+	padding: var(--spacing-sm) var(--spacing-xs); /* Reduced horizontal padding */
 	position: relative;
+	white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .main-nav a:hover,
@@ -980,6 +1010,14 @@ section {
 	cursor: pointer;
 	border: none;
 	transition: all 0.3s ease;
+}
+
+/* Header specific button styles */
+.site-header .btn {
+	padding: 0.4rem 1rem;
+	font-size: 0.9rem;
+	white-space: nowrap; /* Prevent button text from wrapping */
+	flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .btn-primary {

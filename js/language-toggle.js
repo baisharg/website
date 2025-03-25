@@ -1,7 +1,7 @@
 // Language toggle functionality
 
 // Set default language and get stored language preference
-let currentLanguage = localStorage.getItem('language') || 'en'
+let currentLanguage = localStorage.getItem('language') || 'es'
 
 // Initialize the page with the correct language
 document.addEventListener('DOMContentLoaded', () => {
