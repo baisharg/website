@@ -15,7 +15,7 @@ const translations = {
     // Footer
     footer: {
       privacyPolicy: 'Privacy Policy',
-      copyright: '© 2024 BAISH - Buenos Aires AI Safety Hub',
+      copyright: '© 2025 BAISH - Buenos Aires AI Safety Hub',
       tagline: 'Buenos Aires AI Safety Hub'
     },
 
@@ -733,7 +733,7 @@ const translations = {
     // Footer
     footer: {
       privacyPolicy: 'Política de Privacidad',
-      copyright: '© 2024 BAISH - Buenos Aires AI Safety Hub',
+      copyright: '© 2025 BAISH - Buenos Aires AI Safety Hub',
       tagline: 'Buenos Aires AI Safety Hub'
     },
 
