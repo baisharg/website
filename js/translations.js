@@ -19,6 +19,49 @@ const translations = {
       tagline: 'Buenos Aires AI Safety Hub'
     },
 
+    // Privacy Policy page
+    privacy: {
+      pageHeader: {
+        breadcrumb: 'Privacy Policy',
+        title: 'Privacy Policy'
+      },
+      intro: {
+        title: 'Our Approach to Privacy',
+        content:
+          'At BAISH (Buenos Aires AI Safety Hub), we are committed to respecting your privacy. This Privacy Policy outlines our practices regarding the collection, use, and protection of your information when you use our website and services.'
+      },
+      dataCollection: {
+        title: 'Data Collection',
+        content:
+          'We collect minimal personal information. The only personal data we collect is email addresses when users voluntarily sign up for our newsletter through Substack. This information is stored and managed by Substack according to their privacy policy.'
+      },
+      noTracking: {
+        title: 'No Tracking or Cookies',
+        content:
+          'We do not use cookies, analytics, tracking tools, or any other technology to collect data about you. We do not monitor your browsing activities or gather information about your online behaviors.'
+      },
+      thirdParty: {
+        title: 'Third-Party Services',
+        content:
+          "Our newsletter is managed through Substack. When you subscribe to our newsletter, your email address is shared with and stored by Substack. Please refer to Substack's Privacy Policy to understand how they handle your information."
+      },
+      yourRights: {
+        title: 'Your Rights',
+        content:
+          'You have the right to unsubscribe from our newsletter at any time by clicking the unsubscribe link in any of our emails or by contacting us directly. If you have any questions about your data or wish to access, correct, or delete your information, please contact us.'
+      },
+      changes: {
+        title: 'Changes to This Policy',
+        content:
+          'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.'
+      },
+      contact: {
+        title: 'Contact Us',
+        content:
+          'If you have any questions about this Privacy Policy, please contact us through our Contact page.'
+      }
+    },
+
     // Home page
     home: {
       hero: {
@@ -683,8 +726,51 @@ const translations = {
     // Footer
     footer: {
       privacyPolicy: 'Política de Privacidad',
-      copyright: '© 2024 BAISH - Centro de Seguridad de IA de Buenos Aires',
-      tagline: 'Centro de Seguridad de IA de Buenos Aires'
+      copyright: '© 2024 BAISH - Buenos Aires AI Safety Hub',
+      tagline: 'Buenos Aires AI Safety Hub'
+    },
+
+    // Privacy Policy page
+    privacy: {
+      pageHeader: {
+        breadcrumb: 'Política de Privacidad',
+        title: 'Política de Privacidad'
+      },
+      intro: {
+        title: 'Nuestro Enfoque en la Privacidad',
+        content:
+          'En BAISH (Buenos Aires AI Safety Hub), nos comprometemos a respetar su privacidad. Esta Política de Privacidad describe nuestras prácticas respecto a la recopilación, uso y protección de su información cuando utiliza nuestro sitio web y servicios.'
+      },
+      dataCollection: {
+        title: 'Recopilación de Datos',
+        content:
+          'Recopilamos información personal mínima. La única información personal que recopilamos es direcciones de correo electrónico cuando los usuarios se suscriben voluntariamente a nuestro boletín informativo a través de Substack. Esta información se almacena y gestiona de acuerdo con la política de privacidad de Substack.'
+      },
+      noTracking: {
+        title: 'Sin Rastreo ni Cookies',
+        content:
+          'No utilizamos cookies, herramientas de análisis, herramientas de seguimiento o cualquier otra tecnología para recoger datos sobre usted. No monitoreamos sus actividades en línea ni recopilamos información sobre su comportamiento en línea.'
+      },
+      thirdParty: {
+        title: 'Servicios de Terceros',
+        content:
+          'Nuestro boletín informativo se gestiona a través de Substack. Al suscribirse a nuestro boletín informativo, su dirección de correo electrónico se comparte y almacena con Substack. Por favor, refiérase a la Política de Privacidad de Substack para entender cómo manejan su información.'
+      },
+      yourRights: {
+        title: 'Sus Derechos',
+        content:
+          'Tiene derecho a darse de baja de nuestro boletín informativo en cualquier momento haciendo clic en el enlace de desuscripción en cualquier correo electrónico de nosotros o contactándonos directamente. Si tiene alguna pregunta sobre sus datos o desea acceder, corregir o eliminar su información, por favor contáctenos.'
+      },
+      changes: {
+        title: 'Cambios a Esta Política',
+        content:
+          'Podemos actualizar esta Política de Privacidad en cualquier momento. Le notificaremos de cualquier cambio publicando la nueva Política de Privacidad en esta página.'
+      },
+      contact: {
+        title: 'Contáctenos',
+        content:
+          'Si tiene alguna pregunta sobre esta Política de Privacidad, por favor contáctenos a través de la página de Contacto.'
+      }
     },
 
     // Home page

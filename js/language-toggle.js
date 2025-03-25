@@ -5,6 +5,11 @@ let currentLanguage = localStorage.getItem('language') || 'es'
 
 // Initialize the page with the correct language
 document.addEventListener('DOMContentLoaded', () => {
+  // Force the default language if none is stored
+  if (!localStorage.getItem('language')) {
+    localStorage.setItem('language', 'es')
+  }
+
   // Set language toggle button states
   updateLanguageToggleUI()
 
