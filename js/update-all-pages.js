@@ -32,7 +32,7 @@ pages.forEach(page => {
   // Add CSS link in head
   content = content.replace(
     /<link rel="stylesheet" href="css\/style.css">/,
-    '<link rel="stylesheet" href="css/main.css">\n    <link rel="stylesheet" href="css/language-toggle.css">'
+    '<link rel="stylesheet" href="css/style.css">\n    <link rel="stylesheet" href="css/language-toggle.css">'
   )
 
   // Add language toggle in header
