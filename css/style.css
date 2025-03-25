@@ -451,9 +451,20 @@
 }
 
 .book-cover {
-	height: 200px;
+	height: 250px;
 	background-color: var(--medium-gray);
 	margin-bottom: var(--spacing-md);
+	border-radius: var(--border-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.book-image {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
 	border-radius: var(--border-radius);
 }
 
@@ -757,6 +768,10 @@
 
 	.logo-text {
 		font-size: 0.9rem;
+	}
+
+	.book-cover {
+		height: 200px;
 	}
 
 	.cta-buttons,
