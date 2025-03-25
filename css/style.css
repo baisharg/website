@@ -1283,14 +1283,20 @@ section {
 }
 
 .btn-primary {
-	background-color: var(--primary);
-	color: #fff;
+	background-color: #ffffff;
+	color: var(--bg-dark);
+	border: 2px solid #ffffff;
+	font-weight: 600;
+	text-shadow: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary:hover {
-	background-color: var(--primary-light);
+	background-color: var(--primary);
+	color: #ffffff;
+	border-color: #ffffff;
 	transform: translateY(-1px);
-	box-shadow: var(--shadow-sm);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 	text-decoration: none;
 }
 
@@ -1986,4 +1992,113 @@ section {
 
 .gradient-purple-blue {
 	background: linear-gradient(135deg, #9275e5 0%, #4a93fb 100%);
+}
+
+/* Special styling for buttons on hero gradients */
+.hero .btn-primary {
+	background-color: #ffffff;
+	color: var(--primary-dark);
+	font-size: 1.1rem;
+	padding: 0.6rem 1.5rem;
+	font-weight: 600;
+	border: 2px solid #ffffff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	text-transform: uppercase;
+}
+
+.hero .btn-primary:hover {
+	background-color: transparent;
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+/* Specific styling for the Sumate button on gradient backgrounds */
+a[data-i18n="home.hero.cta"],
+a[data-i18n="nav.joinUs"] {
+	background-color: #ffffff;
+	color: var(--primary-dark);
+	border: 2px solid #ffffff;
+	font-weight: 600;
+	text-shadow: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+a[data-i18n="home.hero.cta"]:hover,
+a[data-i18n="nav.joinUs"]:hover {
+	background-color: transparent;
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+/* Make standalone Sumate buttons more prominent */
+.hero a[data-i18n="home.hero.cta"] {
+	font-size: 1.1rem;
+	padding: 0.7rem 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+	/* Ensure buttons are extra visible on mobile */
+	a[data-i18n="home.hero.cta"],
+	a[data-i18n="nav.joinUs"] {
+		padding: 0.8rem 1.5rem;
+		font-size: 1rem;
+		margin: 0.5rem 0;
+		display: inline-block;
+		min-width: 150px;
+		text-align: center;
+	}
+}
+
+/* Gradient background section buttons need higher contrast */
+section[class*="gradient"] .btn,
+.gradient-purple .btn,
+.gradient-purple-blue .btn {
+	background-color: #ffffff;
+	color: var(--primary-dark);
+	border: 2px solid #ffffff;
+	font-weight: 600;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+section[class*="gradient"] .btn:hover,
+.gradient-purple .btn:hover,
+.gradient-purple-blue .btn:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* For any button with text "Sumate" inside it that the translation system will render */
+.btn[data-i18n*="sumate"],
+.btn[data-i18n*="Sumate"] {
+	background-color: #ffffff;
+	color: var(--primary-dark);
+	border: 2px solid #ffffff;
+	font-weight: 600;
+	font-size: 1.1rem;
+	padding: 0.6rem 1.5rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+/* Ensure all buttons in hero sections are highly visible */
+.hero .btn {
+	font-size: 1.1rem;
+	padding: 0.7rem 2rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	/* Make buttons larger on mobile for touch targets */
+	.hero .btn,
+	.btn[data-i18n*="sumate"],
+	.btn[data-i18n*="Sumate"] {
+		padding: 0.9rem 2rem;
+		min-width: 180px;
+		font-size: 1.2rem;
+	}
 }
