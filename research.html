@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Research - BAISH - Buenos Aires AI Safety Hub</title>
+		<meta
+			name="description"
+			content="Explore our AI safety research projects and publications - BAISH - Buenos Aires AI Safety Hub"
+		/>
+		<!-- Open Graph tags for social sharing -->
+		<meta
+			property="og:title"
+			content="Research - BAISH - Buenos Aires AI Safety Hub"
+		/>
+		<meta
+			property="og:description"
+			content="Explore our AI safety research projects and publications - BAISH - Buenos Aires AI Safety Hub"
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://lucadeleo.github.io/aisafetysite/research.html"
+		/>
+		<!-- Favicon -->
+		<link rel="icon" href="img/favicon.ico" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/language-toggle.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="BAISH Logo" class="logo-img" />
+						<span class="logo-text">BAISH - Buenos Aires AI Safety Hub</span>
+					</a>
+				</div>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="about.html" data-i18n="nav.about">About</a></li>
+						<li>
+							<a href="activities.html" data-i18n="nav.activities"
+								>Activities</a
+							>
+						</li>
+						<li>
+							<a href="research.html" class="active" data-i18n="nav.research"
+								>Research</a
+							>
+						</li>
+						<li>
+							<a href="resources.html" data-i18n="nav.resources">Resources</a>
+						</li>
+						<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="language-toggle">
+					<button id="lang-en" class="language-toggle-btn active">EN</button>
+					<span class="language-toggle-separator">|</span>
+					<button id="lang-es" class="language-toggle-btn">ES</button>
+				</div>
+				<a href="contact.html" class="btn btn-primary" data-i18n="nav.joinUs"
+					>Join Us</a
+				>
+			</div>
+		</header>
+
+		<section class="page-header">
+			<div class="container">
+				<div class="breadcrumb">
+					<a href="index.html">Home</a> /
+					<span data-i18n="research.pageHeader.breadcrumb">Research</span>
+				</div>
+				<h1 data-i18n="research.pageHeader.title">Our Research</h1>
+				<p class="subtitle" data-i18n="research.pageHeader.subtitle">
+					Student-led projects exploring critical AI safety challenges
+				</p>
+			</div>
+		</section>
+
+		<section class="research-overview">
+			<div class="container">
+				<div class="two-column">
+					<div class="column">
+						<h2 data-i18n="research.overview.approach.title">
+							Research Approach
+						</h2>
+						<p data-i18n="research.overview.approach.paragraph1">
+							At BAISH - Buenos Aires AI Safety Hub, we support student-led
+							research into core AI safety challenges. Our projects range from
+							technical work on interpretability and alignment to more
+							conceptual explorations of AI governance and ethics.
+						</p>
+						<p data-i18n="research.overview.approach.paragraph2">
+							Research projects are typically conducted through our Research
+							Fellowship program or as collaborations between students and
+							faculty members. We encourage rigorous methods, creative thinking,
+							and interdisciplinary approaches.
+						</p>
+					</div>
+					<div class="column">
+						<h2 data-i18n="research.overview.focusAreas.title">Focus Areas</h2>
+						<ul class="research-areas">
+							<li data-i18n="research.overview.focusAreas.interpretability">
+								<strong>Interpretability and Transparency</strong> -
+								Understanding how neural networks represent and process
+								information
+							</li>
+							<li data-i18n="research.overview.focusAreas.alignment">
+								<strong>Alignment Techniques</strong> - Developing methods to
+								align AI systems with human values and intentions
+							</li>
+							<li data-i18n="research.overview.focusAreas.robustness">
+								<strong>Robustness</strong> - Creating AI systems that maintain
+								safe behavior in new environments
+							</li>
+							<li data-i18n="research.overview.focusAreas.valueLearning">
+								<strong>Value Learning</strong> - Inferring human preferences
+								from feedback and demonstration
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="research-projects">
+			<div class="container">
+				<h2 data-i18n="research.projects.title">Research Projects</h2>
+				<div class="filter-controls">
+					<span data-i18n="research.projects.filterBy">Filter by:</span>
+					<button
+						class="filter-btn active"
+						data-filter="all"
+						data-i18n="research.projects.filters.all"
+					>
+						All
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="interpretability"
+						data-i18n="research.projects.filters.interpretability"
+					>
+						Interpretability
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="alignment"
+						data-i18n="research.projects.filters.alignment"
+					>
+						Alignment
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="robustness"
+						data-i18n="research.projects.filters.robustness"
+					>
+						Robustness
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="value-learning"
+						data-i18n="research.projects.filters.valueLearning"
+					>
+						Value Learning
+					</button>
+				</div>
+				<div class="projects-grid">
+					<div class="project-card" data-category="interpretability">
+						<div class="project-header">
+							<h3>Exploring Adversarial Examples in Large Language Models</h3>
+							<span class="project-year">2024</span>
+						</div>
+						<p class="researchers">Maria Garcia, Juan Rodriguez</p>
+						<p class="abstract">
+							This research investigates novel methods for generating and
+							detecting adversarial prompts that cause large language models to
+							produce harmful or unaligned outputs. We demonstrate several new
+							attack vectors and propose defensive techniques to mitigate these
+							vulnerabilities.
+						</p>
+						<div class="project-footer">
+							<span class="project-tag">Interpretability</span>
+							<a href="#" class="project-link">Read Paper</a>
+						</div>
+					</div>
+
+					<div class="project-card" data-category="alignment">
+						<div class="project-header">
+							<h3>Preference Learning from Sparse Human Feedback</h3>
+							<span class="project-year">2024</span>
+						</div>
+						<p class="researchers">Carlos Mendez, Sofia Rodriguez</p>
+						<p class="abstract">
+							We propose a new algorithm for learning human preferences from
+							minimal feedback. Our approach significantly reduces the amount of
+							human input needed to train aligned AI systems while maintaining
+							high accuracy in preference modeling.
+						</p>
+						<div class="project-footer">
+							<span class="project-tag">Alignment</span>
+							<a href="#" class="project-link">Read Paper</a>
+						</div>
+					</div>
+
+					<div class="project-card" data-category="robustness">
+						<div class="project-header">
+							<h3>Evaluating Robustness of Safety Guardrails in LLMs</h3>
+							<span class="project-year">2023</span>
+						</div>
+						<p class="researchers">Martin Lopez, Ana Martinez</p>
+						<p class="abstract">
+							This study presents a comprehensive evaluation framework for
+							assessing the robustness of safety mechanisms in large language
+							models. We test guardrails under various context shifts and
+							perturbations to identify failure modes and improvement
+							opportunities.
+						</p>
+						<div class="project-footer">
+							<span class="project-tag">Robustness</span>
+							<a href="#" class="project-link">Read Paper</a>
+						</div>
+					</div>
+
+					<div class="project-card" data-category="interpretability">
+						<div class="project-header">
+							<h3>Circuit Analysis of Attention Heads in Transformer Models</h3>
+							<span class="project-year">2023</span>
+						</div>
+						<p class="researchers">Laura Fernandez, Carlos Mendez</p>
+						<p class="abstract">
+							We analyze the functional role of specific attention heads in
+							transformer-based language models, identifying circuits
+							responsible for key capabilities. Our findings provide insights
+							into how these models process and represent information
+							internally.
+						</p>
+						<div class="project-footer">
+							<span class="project-tag">Interpretability</span>
+							<a href="#" class="project-link">Read Paper</a>
+						</div>
+					</div>
+
+					<div class="project-card" data-category="value-learning">
+						<div class="project-header">
+							<h3>
+								Value Pluralism in AI Systems: A Framework for Handling
+								Conflicting Human Values
+							</h3>
+							<span class="project-year">2023</span>
+						</div>
+						<p class="researchers">Sofia Rodriguez, Juan Rodriguez</p>
+						<p class="abstract">
+							This theoretical paper presents a framework for managing
+							conflicting human values in AI systems. We propose methods for
+							representing diverse and sometimes contradictory value systems
+							while avoiding simplistic aggregation approaches.
+						</p>
+						<div class="project-footer">
+							<span class="project-tag">Value Learning</span>
+							<a href="#" class="project-link">Read Paper</a>
+						</div>
+					</div>
+
+					<div class="project-card" data-category="alignment">
+						<div class="project-header">
+							<h3>
+								Improving Factuality in Language Models through Guided
+								Generation
+							</h3>
+							<span class="project-year">2022</span>
+						</div>
+						<p class="researchers">Martin Lopez, Maria Garcia</p>
+						<p class="abstract">
+							We develop a novel guided generation technique that improves
+							factual accuracy in language model outputs without requiring
+							extensive retraining. Our method combines retrieval-augmented
+							generation with specialized prompting strategies.
+						</p>
+						<div class="project-footer">
+							<span class="project-tag">Alignment</span>
+							<a href="#" class="project-link">Read Paper</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="publications alt-bg">
+			<div class="container">
+				<h2 data-i18n="research.publications.title">Publications</h2>
+				<p class="section-intro" data-i18n="research.publications.intro">
+					Selected publications by our members in peer-reviewed venues.
+				</p>
+
+				<div class="publications-list">
+					<div class="publication-item">
+						<div class="publication-info">
+							<h3>Circuit Analysis of Attention Heads in Transformer Models</h3>
+							<p class="authors">Fernandez, L., Mendez, C.</p>
+							<p class="venue">
+								Presented at the Mechanistic Interpretability Workshop, NeurIPS
+								2023
+							</p>
+						</div>
+						<div class="publication-links">
+							<a href="#" class="pub-link">PDF</a>
+							<a href="#" class="pub-link">Code</a>
+						</div>
+					</div>
+
+					<div class="publication-item">
+						<div class="publication-info">
+							<h3>Evaluating Robustness of Safety Guardrails in LLMs</h3>
+							<p class="authors">Lopez, M., Martinez, A.</p>
+							<p class="venue">
+								To appear in Proceedings of the Conference on AI Safety (CAIS),
+								2025
+							</p>
+						</div>
+						<div class="publication-links">
+							<a href="#" class="pub-link">Preprint</a>
+						</div>
+					</div>
+
+					<div class="publication-item">
+						<div class="publication-info">
+							<h3>
+								Improving Factuality in Language Models through Guided
+								Generation
+							</h3>
+							<p class="authors">Lopez, M., Garcia, M.</p>
+							<p class="venue">
+								Journal of Machine Learning Research, Vol. 24, 2023
+							</p>
+						</div>
+						<div class="publication-links">
+							<a href="#" class="pub-link">PDF</a>
+							<a href="#" class="pub-link">Code</a>
+							<a href="#" class="pub-link">Journal</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ongoing-research">
+			<div class="container">
+				<h2 data-i18n="research.ongoingResearch.title">Ongoing Research</h2>
+				<p class="section-intro" data-i18n="research.ongoingResearch.intro">
+					Current projects under development by our research fellows and
+					collaborators.
+				</p>
+
+				<div class="ongoing-projects">
+					<div class="ongoing-project">
+						<h3>Scaling Laws for Interpretability</h3>
+						<div class="project-meta">
+							<span class="researchers">Carlos Mendez, Sofia Rodriguez</span>
+							<span class="progress">70% Complete</span>
+						</div>
+						<p class="project-description">
+							Investigating how interpretability methods scale with model size
+							and complexity. This project aims to establish empirical laws that
+							predict when certain interpretability techniques will succeed or
+							fail as models grow larger.
+						</p>
+						<div class="project-timeline">
+							<div class="timeline-milestone">
+								<span class="milestone-label">Started</span>
+								<span class="milestone-date">November 2024</span>
+							</div>
+							<div class="timeline-milestone">
+								<span class="milestone-label">Expected Completion</span>
+								<span class="milestone-date">April 2025</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="ongoing-project">
+						<h3>Multi-Agent Value Alignment</h3>
+						<div class="project-meta">
+							<span class="researchers">Juan Rodriguez, Ana Martinez</span>
+							<span class="progress">40% Complete</span>
+						</div>
+						<p class="project-description">
+							Developing frameworks for aligning AI systems in multi-agent
+							environments where different agents may have competing objectives.
+							This work focuses on cooperative mechanisms that prevent
+							adversarial dynamics while preserving agent autonomy.
+						</p>
+						<div class="project-timeline">
+							<div class="timeline-milestone">
+								<span class="milestone-label">Started</span>
+								<span class="milestone-date">January 2025</span>
+							</div>
+							<div class="timeline-milestone">
+								<span class="milestone-label">Expected Completion</span>
+								<span class="milestone-date">August 2025</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="ongoing-project">
+						<h3>Causal Intervention Methods for LLM Editing</h3>
+						<div class="project-meta">
+							<span class="researchers">Maria Garcia, Martin Lopez</span>
+							<span class="progress">25% Complete</span>
+						</div>
+						<p class="project-description">
+							This project explores causal mechanisms for precise editing of
+							knowledge in large language models. The goal is to develop
+							techniques that can update factual information or remove harmful
+							associations without disrupting other model capabilities.
+						</p>
+						<div class="project-timeline">
+							<div class="timeline-milestone">
+								<span class="milestone-label">Started</span>
+								<span class="milestone-date">February 2025</span>
+							</div>
+							<div class="timeline-milestone">
+								<span class="milestone-label">Expected Completion</span>
+								<span class="milestone-date">December 2025</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="join-research">
+			<div class="container">
+				<div class="cta-box">
+					<h2 data-i18n="research.joinResearch.title">
+						Interested in Conducting Research with Us?
+					</h2>
+					<p data-i18n="research.joinResearch.description">
+						We welcome students from Computer Science, Mathematics, Physics, and
+						related fields to join our research efforts. Whether you're an
+						undergraduate looking for research experience or a graduate student
+						interested in AI safety, we have opportunities for you.
+					</p>
+					<div class="cta-buttons">
+						<a
+							href="activities.html#research-fellowship"
+							class="btn btn-primary"
+							data-i18n="research.joinResearch.buttons.fellowships"
+						>
+							Learn About Research Fellowships
+						</a>
+						<a
+							href="contact.html#research"
+							class="btn btn-secondary"
+							data-i18n="research.joinResearch.buttons.contact"
+						>
+							Contact Research Coordinators
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-logo">
+						<img
+							src="img/logo.svg"
+							alt="BAISH - Buenos Aires AI Safety Hub"
+							class="footer-logo-img"
+						/>
+						<div class="tagline">Buenos Aires AI Safety Hub</div>
+					</div>
+					<div class="footer-links">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="activities.html">Activities</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="resources.html">Resources</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+					<div class="social-links">
+						<a
+							href="https://www.instagram.com/aisafetyarg"
+							aria-label="Instagram"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather"
+							>
+								<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+								<path
+									d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+								></path>
+								<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+							</svg>
+						</a>
+						<a
+							href="https://www.linkedin.com/company/aisafetyarg"
+							aria-label="LinkedIn"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather"
+							>
+								<path
+									d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+								></path>
+								<rect x="2" y="9" width="4" height="12"></rect>
+								<circle cx="4" cy="4" r="2"></circle>
+							</svg>
+						</a>
+						<a href="https://t.me/+zfvMHU8TaAhjNjVh" aria-label="Telegram">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather"
+							>
+								<line x1="22" y1="2" x2="11" y2="13"></line>
+								<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="footer-nav">
+					<div class="footer-nav-left">
+						<a href="#">Privacy policy</a>
+					</div>
+					<div class="footer-nav-right">
+						<p>&copy; 2024 BAISH - Buenos Aires AI Safety Hub</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="js/translations.js"></script>
+		<script src="js/language-toggle.js"></script>
+		<script>
+			// Simple filter functionality for research projects
+			document.addEventListener("DOMContentLoaded", function () {
+				const filterButtons = document.querySelectorAll(".filter-btn");
+				const projectCards = document.querySelectorAll(".project-card");
+
+				filterButtons.forEach((button) => {
+					button.addEventListener("click", function () {
+						// Remove active class from all buttons
+						filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+						// Add active class to clicked button
+						this.classList.add("active");
+
+						// Get filter value
+						const filterValue = this.getAttribute("data-filter");
+
+						// Show/hide projects based on filter
+						projectCards.forEach((card) => {
+							if (
+								filterValue === "all" ||
+								card.getAttribute("data-category") === filterValue
+							) {
+								card.style.display = "block";
+							} else {
+								card.style.display = "none";
+							}
+						});
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

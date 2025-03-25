@@ -5,6 +5,7 @@ const translations = {
     nav: {
       about: 'About',
       activities: 'Activities',
+      research: 'Research',
       resources: 'Resources',
       contact: 'Contact',
       joinUs: 'Join Us'
@@ -591,6 +592,56 @@ const translations = {
       }
     },
 
+    // Research page
+    research: {
+      pageHeader: {
+        breadcrumb: 'Research',
+        title: 'Our Research',
+        subtitle: 'Student-led projects exploring critical AI safety challenges'
+      },
+      overview: {
+        approach: {
+          title: 'Research Approach',
+          paragraph1: 'At BAISH - Buenos Aires AI Safety Hub, we support student-led research into core AI safety challenges. Our projects range from technical work on interpretability and alignment to more conceptual explorations of AI governance and ethics.',
+          paragraph2: 'Research projects are typically conducted through our Research Fellowship program or as collaborations between students and faculty members. We encourage rigorous methods, creative thinking, and interdisciplinary approaches.'
+        },
+        focusAreas: {
+          title: 'Focus Areas',
+          interpretability: '<strong>Interpretability and Transparency</strong> - Understanding how neural networks represent and process information',
+          alignment: '<strong>Alignment Techniques</strong> - Developing methods to align AI systems with human values and intentions',
+          robustness: '<strong>Robustness</strong> - Creating AI systems that maintain safe behavior in new environments',
+          valueLearning: '<strong>Value Learning</strong> - Inferring human preferences from feedback and demonstration'
+        }
+      },
+      projects: {
+        title: 'Research Projects',
+        filterBy: 'Filter by:',
+        filters: {
+          all: 'All',
+          interpretability: 'Interpretability',
+          alignment: 'Alignment',
+          robustness: 'Robustness',
+          valueLearning: 'Value Learning'
+        }
+      },
+      publications: {
+        title: 'Publications',
+        intro: 'Selected publications by our members in peer-reviewed venues.'
+      },
+      ongoingResearch: {
+        title: 'Ongoing Research',
+        intro: 'Current projects under development by our research fellows and collaborators.'
+      },
+      joinResearch: {
+        title: 'Interested in Conducting Research with Us?',
+        description: 'We welcome students from Computer Science, Mathematics, Physics, and related fields to join our research efforts. Whether you're an undergraduate looking for research experience or a graduate student interested in AI safety, we have opportunities for you.',
+        buttons: {
+          fellowships: 'Learn About Research Fellowships',
+          contact: 'Contact Research Coordinators'
+        }
+      }
+    },
+
     // Common elements
     common: {
       learnMore: 'Learn More',
@@ -606,6 +657,7 @@ const translations = {
     nav: {
       about: 'Quiénes Somos',
       activities: 'Actividades',
+      research: 'Investigación',
       resources: 'Recursos',
       contact: 'Contacto',
       joinUs: 'Sumate'
@@ -1194,6 +1246,56 @@ const translations = {
             answer:
               '¡Por supuesto! Estamos siempre abiertos a nuevas ideas. Contáctanos en aisafetyarg@gmail.com con tu propuesta y uno de nuestros coordinadores te lo discutirá con vos.'
           }
+        }
+      }
+    },
+
+    // Research page
+    research: {
+      pageHeader: {
+        breadcrumb: 'Investigación',
+        title: 'Nuestra Investigación',
+        subtitle: 'Proyectos dirigidos por estudiantes que exploran desafíos críticos de la seguridad de la IA'
+      },
+      overview: {
+        approach: {
+          title: 'Enfoque de Investigación',
+          paragraph1: 'En BAISH - Buenos Aires AI Safety Hub, apoyamos la investigación liderada por estudiantes sobre los desafíos fundamentales de la seguridad de la IA. Nuestros proyectos van desde el trabajo técnico en interpretabilidad y alineación hasta exploraciones más conceptuales de gobernanza y ética de la IA.',
+          paragraph2: 'Los proyectos de investigación se realizan típicamente a través de nuestro programa de Becas de Investigación o como colaboraciones entre estudiantes y profesores. Fomentamos métodos rigurosos, pensamiento creativo y enfoques interdisciplinarios.'
+        },
+        focusAreas: {
+          title: 'Áreas de Enfoque',
+          interpretability: '<strong>Interpretabilidad y Transparencia</strong> - Entender cómo las redes neuronales representan y procesan información',
+          alignment: '<strong>Técnicas de Alineación</strong> - Desarrollar métodos para alinear sistemas de IA con valores e intenciones humanas',
+          robustness: '<strong>Robustez</strong> - Crear sistemas de IA que mantengan un comportamiento seguro en nuevos entornos',
+          valueLearning: '<strong>Aprendizaje de Valores</strong> - Inferir preferencias humanas a partir de retroalimentación y demostración'
+        }
+      },
+      projects: {
+        title: 'Proyectos de Investigación',
+        filterBy: 'Filtrar por:',
+        filters: {
+          all: 'Todos',
+          interpretability: 'Interpretabilidad',
+          alignment: 'Alineación',
+          robustness: 'Robustez',
+          valueLearning: 'Aprendizaje de Valores'
+        }
+      },
+      publications: {
+        title: 'Publicaciones',
+        intro: 'Publicaciones seleccionadas de nuestros miembros en revistas revisadas por pares.'
+      },
+      ongoingResearch: {
+        title: 'Investigación en Curso',
+        intro: 'Proyectos actuales en desarrollo por nuestros becarios de investigación y colaboradores.'
+      },
+      joinResearch: {
+        title: '¿Interesado en Realizar Investigación con Nosotros?',
+        description: 'Damos la bienvenida a estudiantes de Ciencias de la Computación, Matemáticas, Física y campos relacionados para unirse a nuestros esfuerzos de investigación. Ya sea que seas un estudiante de pregrado buscando experiencia en investigación o un estudiante de posgrado interesado en la seguridad de la IA, tenemos oportunidades para ti.',
+        buttons: {
+          fellowships: 'Conoce las Becas de Investigación',
+          contact: 'Contacta a los Coordinadores de Investigación'
         }
       }
     },

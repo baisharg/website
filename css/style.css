@@ -1556,30 +1556,39 @@ section {
 }
 
 .filter-controls {
-	margin-bottom: var(--spacing-lg);
 	display: flex;
-	align-items: center;
 	flex-wrap: wrap;
+	align-items: center;
 	gap: var(--spacing-sm);
+	margin-bottom: var(--spacing-lg);
 }
 
 .filter-btn {
-	display: inline-block;
-	padding: 0.3rem 0.8rem;
-	border-radius: var(--border-radius);
 	background-color: var(--bg-surface);
-	color: var(--text-secondary);
-	text-decoration: none;
-	margin-right: var(--spacing-xs);
-	margin-bottom: var(--spacing-xs);
-	transition: all 0.3s ease;
 	border: 1px solid var(--border);
+	border-radius: var(--border-radius);
+	padding: 0.4rem 0.8rem;
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
-.filter-btn:hover,
+.filter-btn:hover {
+	background-color: var(--hover);
+}
+
 .filter-btn.active {
 	background-color: var(--primary);
-	color: var(--bg-dark);
-	text-decoration: none;
+	color: var(--white);
 	border-color: var(--primary);
+}
+
+.research-areas {
+	padding-left: var(--spacing-md);
+	margin-top: var(--spacing-md);
+}
+
+.research-areas li {
+	margin-bottom: var(--spacing-md);
+	line-height: 1.5;
 }
