@@ -1166,6 +1166,7 @@ section {
 .activity-link {
 	font-weight: 500;
 	font-size: 0.9rem;
+	margin-top: var(--spacing-lg);
 }
 
 /* ======= Get Involved Section ======= */
