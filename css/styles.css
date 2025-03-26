@@ -50,3 +50,62 @@
 .social-icon:hover {
   opacity: 0.7;
 }
+
+/* Updated Team Member Styles */
+.team-member {
+  background: #1e1e2e; /* Dark background to match the image */
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 280px; /* Increased width */
+  margin: 0 auto 30px;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.member-photo {
+  width: 180px; /* Larger image */
+  height: 180px; /* Larger image */
+  border-radius: 50%;
+  background-color: #333344; /* Placeholder color */
+  margin: 0 auto 15px;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 22px; /* Larger font */
+  color: white;
+}
+
+.team-member .member-title {
+  color: #aaa;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Remove the bio section */
+.team-member .member-bio {
+  display: none;
+}
+
+/* Social Links Styles */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+  filter: invert(1); /* Make icons white to match the dark theme */
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
