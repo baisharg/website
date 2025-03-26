@@ -191,6 +191,7 @@ h2 {
 .main-nav ul li a {
 	transition: color var(--transition-fast), transform var(--transition-fast);
 	position: relative;
+	display: inline-block;
 }
 
 .main-nav ul li a::after {
@@ -199,16 +200,17 @@ h2 {
 	width: 0;
 	height: 2px;
 	bottom: -5px;
-	left: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	background: var(--primary-gradient);
-	transition: all var(--transition-medium);
-	transform: translateX(-50%);
+	transition: width var(--transition-medium);
 	opacity: 0;
 }
 
 .main-nav ul li a:hover::after,
 .main-nav ul li a.active::after {
-	width: 80%;
+	width: 100%;
 	opacity: 1;
 }
 
@@ -239,27 +241,26 @@ h2 {
 }
 
 .hero-content h1 {
-	background: var(--primary-gradient);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+	color: var(--primary-dark);
 	display: inline-block;
 	position: relative;
 	font-size: 2.75rem;
 	margin-bottom: 1.5rem;
-	text-shadow: 0 2px 15px rgba(146, 117, 229, 0.8);
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	letter-spacing: 0.01em;
 	font-weight: 700;
+	border-left: 4px solid var(--primary-dark);
+	padding-left: 16px;
 }
 
 .hero-content h1::after {
 	content: "";
 	position: absolute;
 	bottom: -10px;
-	left: 0;
-	width: 120px;
-	height: 4px;
-	background: var(--primary-gradient);
+	left: 16px;
+	width: 100px;
+	height: 3px;
+	background: var(--primary-dark);
 	border-radius: 2px;
 }
 
