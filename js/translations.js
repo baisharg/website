@@ -65,11 +65,14 @@ const translations = {
     // Home page
     home: {
       hero: {
-        title: "Ensuring AI Benefits Humanity",
-        paragraph1: "As artificial intelligence models advance in capabilities<sup>1</sup>, we expect them to have an increasingly profound impact on our society<sup>2</sup>. It is essential that this impact is positive, and that the decisions made by these systems are transparent, reliable, and accountable<sup>3</sup> to the people affected by them.",
-        paragraph2: "We believe that reducing the risks associated with advanced AI models<sup>4</sup> is one of the most important challenges of our time. We also believe it is an open and exciting problem<sup>5</sup>, with ample opportunities for more researchers to advance in this field<sup>6</sup>.",
-        paragraph3: "BAISH's mission is to support students in entering this field and conducting research on this topic.",
-        cta: "Get Involved"
+        title: 'Ensuring AI Benefits Humanity',
+        paragraph1:
+          'As artificial intelligence models advance in capabilities<sup>1</sup>, we expect them to have an increasingly profound impact on our society<sup>2</sup>. It is essential that this impact is positive, and that the decisions made by these systems are transparent, reliable, and accountable<sup>3</sup> to the people affected by them.',
+        paragraph2:
+          'We believe that reducing the risks associated with advanced AI models<sup>4</sup> is one of the most important challenges of our time. We also believe it is an open and exciting problem<sup>5</sup>, with ample opportunities for more researchers to advance in this field<sup>6</sup>.',
+        paragraph3:
+          "BAISH's mission is to support students in entering this field and conducting research on this topic.",
+        cta: 'Get Involved'
       },
       intro: {
         title: 'Why AI Safety Matters',
@@ -84,11 +87,11 @@ const translations = {
         learnMore: 'Learn more about AI Safety →'
       },
       upcomingEvent: {
-        title: 'Weekly Discussion Group: Interpretability Methods',
-        time: '18:00 - 19:30',
+        title: 'Weekly Discussion Group',
+        time: '14:30 - 17:00',
         location: 'Pabellon 0+inf, Room 1603, Ciudad Universitaria',
         description:
-          'Join us for an interactive discussion on recent advances in neural network interpretability methods and their implications for AI alignment.',
+          'Join us for our weekly discussion group on AI safety topics.',
         rsvp: 'RSVP Now'
       },
       activities: {
@@ -97,21 +100,21 @@ const translations = {
           title: 'AGI Safety Fundamentals Cohort',
           description:
             'An 8-week guided course covering the essential concepts in AI alignment and safety.',
-          status: 'Currently Active',
+          status: 'Starts second semester 2025',
           link: 'Learn More →'
         },
         card2: {
           title: 'Weekly Discussion Group',
           description:
             'Weekly meetings to discuss recent papers, concepts, and developments in AI safety.',
-          status: 'Every Tuesday @ 18:00',
+          status: 'Every Friday @ 2:30pm - 5:00pm',
           link: 'Learn More →'
         },
         card3: {
           title: 'Paper Reading Club',
           description:
             'Deep dives into foundational and recent papers in AI safety research.',
-          status: 'Every Friday @ 17:00',
+          status: 'Every Thursday @ 2:00pm - 3:00pm',
           link: 'Learn More →'
         },
         card4: {
@@ -303,7 +306,7 @@ const translations = {
       },
       weeklyDiscussion: {
         title: 'Weekly Discussion Group',
-        status: 'Every Tuesday @ 18:00',
+        status: 'Every Friday @ 2:30pm - 5:00pm',
         description:
           'Our Weekly Discussion Group provides a casual forum to discuss recent papers, concepts, and developments in AI safety. These sessions are open to anyone interested in the field, regardless of prior knowledge.',
         description2:
@@ -325,13 +328,13 @@ const translations = {
         nextDiscussion: {
           title: 'Next Discussion',
           date: 'Date:',
-          dateValue: 'March 25, 2025',
+          dateValue: 'March 28, 2025',
           time: 'Time:',
-          timeValue: '18:00 - 19:30',
+          timeValue: '14:30 - 17:00',
           location: 'Location:',
           locationValue: 'Pabellón 0+inf, Room 1603, Ciudad Universitaria',
           topic: 'Topic:',
-          topicValue: 'Interpretability Methods',
+          topicValue: 'To be announced',
           facilitator: 'Facilitator:',
           facilitatorValue: 'Eitan Sprejer',
           button: 'Join Telegram for Updates'
@@ -339,7 +342,7 @@ const translations = {
       },
       paperReading: {
         title: 'Paper Reading Club',
-        status: 'Every Friday @ 17:00',
+        status: 'Every Thursday @ 2:00pm - 3:00pm',
         description:
           'The Paper Reading Club conducts deep dives into foundational and recent papers in AI safety research. Unlike the more casual discussion group, this activity involves a close examination of specific research papers.',
         description2:
@@ -784,11 +787,14 @@ const translations = {
     // Home page
     home: {
       hero: {
-        title: "Asegurando que la IA Beneficie a la Humanidad",
-        paragraph1: "A medida que los modelos de inteligencia artificial avanzan en capacidades<sup>1</sup>, esperamos que tengan un impacto cada vez más profundo en nuestra sociedad<sup>2</sup>. Es esencial que este impacto sea positivo, y que las decisiones tomadas por estos sistemas sean transparentes, confiables y responsables<sup>3</sup> ante las personas afectadas por ellos.",
-        paragraph2: "Creemos que reducir los riesgos asociados a modelos avanzados de IA<sup>4</sup> es uno de los desafíos más importantes de nuestro tiempo. También creemos que es un problema abierto y apasionante<sup>5</sup>, con amplias oportunidades para que más investigadores avancen en este campo<sup>6</sup>.",
-        paragraph3: "La misión de BAISH es apoyar a estudiantes a entrar a este campo y a realizar investigaciones sobre este tema.",
-        cta: "Participa"
+        title: 'Asegurando que la IA Beneficie a la Humanidad',
+        paragraph1:
+          'A medida que los modelos de inteligencia artificial avanzan en capacidades<sup>1</sup>, esperamos que tengan un impacto cada vez más profundo en nuestra sociedad<sup>2</sup>. Es esencial que este impacto sea positivo, y que las decisiones tomadas por estos sistemas sean transparentes, confiables y responsables<sup>3</sup> ante las personas afectadas por ellos.',
+        paragraph2:
+          'Creemos que reducir los riesgos asociados a modelos avanzados de IA<sup>4</sup> es uno de los desafíos más importantes de nuestro tiempo. También creemos que es un problema abierto y apasionante<sup>5</sup>, con amplias oportunidades para que más investigadores avancen en este campo<sup>6</sup>.',
+        paragraph3:
+          'La misión de BAISH es apoyar a estudiantes a entrar a este campo y a realizar investigaciones sobre este tema.',
+        cta: 'Participa'
       },
       intro: {
         title: '¿Por qué es Importante la Seguridad de la IA?',
@@ -803,11 +809,11 @@ const translations = {
         learnMore: 'Más sobre Seguridad en IA →'
       },
       upcomingEvent: {
-        title: 'Grupo de Discusión Semanal: Métodos de Interpretabilidad',
-        time: '18:00 - 19:30',
+        title: 'Grupo de Discusión Semanal',
+        time: '14:30 - 17:00',
         location: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
         description:
-          'Sumate a una discusión interactiva sobre avances recientes en métodos de interpretabilidad de redes neuronales y sus implicaciones para el alineamiento de la IA.',
+          'Sumate a nuestro grupo de discusión semanal sobre temas de seguridad en IA.',
         rsvp: 'Agregalo a tu calendario'
       },
       activities: {
@@ -816,27 +822,27 @@ const translations = {
           title: 'Cohorte de Fundamentos de Seguridad en AGI',
           description:
             'Un curso guiado de 8 semanas cubriendo los conceptos esenciales en alineamiento y seguridad de IA.',
-          status: 'Actualmente Activo',
+          status: 'Comienza segundo semestre 2025',
           link: 'Ver Más →'
         },
         card2: {
           title: 'Grupo de Discusión Semanal',
           description:
             'Reuniones semanales para discutir papers recientes, conceptos y avances en seguridad de IA.',
-          status: 'Cada Martes @ 18:00',
+          status: 'Cada Viernes @ 14:30 - 17:00',
           link: 'Ver Más →'
         },
         card3: {
           title: 'Club de Lectura de Papers',
           description:
             'Análisis profundos de papers fundamentales y recientes en investigación de seguridad de IA.',
-          status: 'Cada Viernes @ 17:00',
+          status: 'Cada Jueves @ 14:00 - 15:00',
           link: 'Ver Más →'
         },
         card4: {
           title: 'Curso de Interpretabilidad Mecanística',
           description:
-            'Curso intensivo de 1 mes sobre métodos de interpretabilidad mecánica.',
+            'Curso intensivo de 1 mes sobre métodos de interpretabilidad mecánistica.',
           status: 'Comienza en fines de Abril 2025',
           link: 'Ver Más →'
         }
@@ -943,7 +949,7 @@ const translations = {
           intro:
             'En BAISH - Buenos Aires AI Safety Hub, nos enfocamos en varias áreas clave dentro de la investigación de seguridad en IA:',
           areas: [
-            'Interpretabilidad mecánica de redes neuronales',
+            'Interpretabilidad mecánistica de redes neuronales',
             'Técnicas de alineamiento para modelos grandes de lenguaje',
             'Metodologías de entrenamiento robustas',
             'Aprendizaje de valores e inferencia de preferencias'
@@ -998,11 +1004,11 @@ const translations = {
       },
       agiFundamentals: {
         title: 'Cohorte de Fundamentos de Seguridad en AGI',
-        status: 'Actualmente Activo',
+        status: 'Currently Active',
         description:
-          'La cohorte de Fundamentos de Seguridad en AGI es un curso guiado de 8 semanas que cubre los conceptos esenciales en alineamiento y seguridad de IA. Los participantes leen materiales seleccionados y se reúnen semanalmente para discutir las lecturas con un facilitador.',
+          'The AGI Safety Fundamentals cohort is an 8-week guided course covering the essential concepts in AI alignment and safety. Participants read curated materials and meet weekly to discuss the readings with a facilitator.',
         description2:
-          'Este programa está basado en el plan de estudios de Fundamentos de Seguridad en AGI de BlueDot y proporciona una introducción estructurada al campo de la seguridad en IA.',
+          'This program is based on the BlueDot AGI Safety Fundamentals curriculum and provides a structured introduction to the field of AI safety.',
         whatToExpect: {
           title: 'Qué Esperar',
           items: [
@@ -1023,7 +1029,7 @@ const translations = {
       },
       weeklyDiscussion: {
         title: 'Grupo de Discusión Semanal',
-        status: 'Cada Martes @ 18:00',
+        status: 'Cada Viernes @ 14:30 - 17:00',
         description:
           'Nuestro Grupo de Discusión Semanal proporciona un foro casual para discutir papers recientes, conceptos y avances en seguridad de IA. Estas sesiones están abiertas a cualquier persona interesada en el campo, independientemente de conocimientos previos.',
         description2:
@@ -1045,13 +1051,13 @@ const translations = {
         nextDiscussion: {
           title: 'Próxima Discusión',
           date: 'Fecha:',
-          dateValue: '25 de Marzo, 2025',
+          dateValue: '28 de Marzo, 2025',
           time: 'Hora:',
-          timeValue: '18:00 - 19:30',
+          timeValue: '14:30 - 17:00',
           location: 'Ubicación:',
           locationValue: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
           topic: 'Tema:',
-          topicValue: 'Métodos de Interpretabilidad',
+          topicValue: 'A anunciar',
           facilitator: 'Facilitador:',
           facilitatorValue: 'Eitan Sprejer',
           button: 'Unite al Telegram para Actualizaciones'
@@ -1059,11 +1065,11 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Cada Viernes @ 17:00',
+        status: 'Cada Jueves @ 14:00 - 15:00',
         description:
           'El Club de Lectura de Papers realiza análisis profundos de papers fundamentales y recientes en investigación de seguridad en IA. A diferencia del grupo de discusión más casual, esta actividad implica un examen minucioso de papers de investigación específicos.',
         description2:
-          'Se espera que los participantes lean el paper seleccionado con anticipación y vengan preparados para discutir sus métodos, resultados e implicaciones.',
+          'Participants are expected to read the selected paper in advance and come prepared to discuss its methods, results, and implications.',
         selectionCriteria: {
           title: 'Criterios de Selección de Papers',
           items: [
@@ -1105,7 +1111,7 @@ const translations = {
         description:
           'El Curso de Interpretabilidad Mecanística es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
         description2:
-          'La interpretabilidad mecánica es un área clave de la investigación en seguridad de IA, que busca hacer que los sistemas de IA sean más transparentes y comprensibles.',
+          'La interpretabilidad mecánistica es un área clave de la investigación en seguridad de IA, que busca hacer que los sistemas de IA sean más transparentes y comprensibles.',
         curriculum: {
           title: 'Descripción General del Plan de Estudios',
           items: [

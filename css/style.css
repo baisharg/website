@@ -1548,6 +1548,12 @@ section {
 	border: 1px solid rgba(255, 190, 77, 0.3);
 }
 
+.status.semester {
+	background-color: rgba(255, 190, 77, 0.2);
+	color: var(--warning);
+	border: 1px solid rgba(255, 190, 77, 0.3);
+}
+
 .activity-link {
 	font-weight: 500;
 	font-size: 0.9rem;
