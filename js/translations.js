@@ -8,6 +8,7 @@ const translations = {
       activities: 'Activities',
       research: 'Research',
       resources: 'Resources',
+      mechInterpCourse: 'Mech Interp Course',
       contact: 'Contact',
       joinUs: 'Join Us'
     },
@@ -428,7 +429,8 @@ const translations = {
           instructors: 'Instructors:',
           instructorsValue: 'Dr. Laura Fernandez, Carlos Mendez',
           button: 'Express Interest'
-        }
+        },
+        viewCourseButton: "View Detailed Course Information"
       },
       calendar: {
         title: 'Upcoming Events Calendar',
@@ -715,6 +717,274 @@ const translations = {
       upcoming: 'Upcoming',
       active: 'Active',
       completed: 'Completed'
+    },
+
+    // Mech Interp Course page
+    mechInterpCourse: {
+      pageHeader: {
+        title: "Mechanistic Interpretability Course",
+        subtitle: "A comprehensive introduction to Mechanistic Interpretability for Large Language Models"
+      },
+      backToHome: "← Back to Home",
+      intro: {
+        paragraph1: "This is a quick 4-session course designed to introduce the field of Mechanistic Interpretability for Large Language Models (LLMs). The course includes theoretical materials, introduces Python libraries for interpretability, discusses recent papers in the field (published by organizations such as Anthropic and Google DeepMind), and provides practical exercises.",
+        paragraph2: "The field of Mechanistic Interpretability has rapidly gained popularity in recent years, with more than 90 papers accepted at ICML 2024. Its main goal is to understand the logic behind the decisions of machine learning models. This knowledge can be applied to improve transparency and trust in existing models, as well as to better understand how these models learn.",
+        paragraph3: "Shortly after the completion of this course, BAISH will organize a Mechanistic Interpretability Hackathon at FGV — details to be announced! We strongly recommend that anyone interested in participating in the Hackathon complete this course as an introduction to the topic, which will also increase their chances of receiving an award in the competition."
+      },
+      schedule: {
+        title: "Course Schedule",
+        session1: {
+          title: "Session 1 - Transformers and Interpretability",
+          date: "August 23, Friday, starting at 2:30 PM",
+          location: "Auditorium 537",
+          scheduleTitle: "Schedule:",
+          preparationTitle: "Preparation:",
+          preparation: "Handbook Chapters 2 and 3",
+          part1: "45 min: Introduction to transformers and attention",
+          part2: "20 min: Coffee break",
+          part3: "45 min: Introduction to Mechanistic Interpretability",
+          part4: "30 min: Coding: PyTorch and TransformerLens",
+          materialsTitle: "Materials:",
+          handbookTitle: "Handbook:",
+          papersTitle: "Papers:",
+          codingTitle: "Coding:",
+          videosTitle: "Videos:"
+        },
+        session2: {
+          title: "Session 2 - Circuits",
+          date: "August 30, Friday, starting at 2:30 PM",
+          location: "Auditorium 418",
+          scheduleTitle: "Schedule:",
+          preparationTitle: "Preparation:",
+          preparation: "Handbook Chapters 3 and 4",
+          part1: "40 min: Circuits and the induction circuit",
+          part2: "20 min: Exploration of the paper \"A Mathematical Framework for Transformer Circuits\"",
+          part3: "20 min: Coffee break",
+          part4: "60 min: Coding: circuit discovery"
+        },
+        session3: {
+          title: "Session 3 - Superposition",
+          date: "September 6, Friday, starting at 2:30 PM",
+          location: "Auditorium 537",
+          scheduleTitle: "Schedule:",
+          preparationTitle: "Preparation:",
+          preparation: "Handbook Chapter 5",
+          part1: "30 min: Superposition",
+          part2: "30 min: 3Blue1Brown video \"How might LLMs store facts\" and discussion",
+          part3: "20 min: Coffee break",
+          part4: "60 min: Coding: superposition in toy models"
+        },
+        session4: {
+          title: "Session 4 - Sparse Autoencoders (SAE)",
+          date: "September 13, Friday, starting at 3:00 PM",
+          location: "Auditorium 418",
+          scheduleTitle: "Schedule:",
+          preparationTitle: "Preparation:",
+          preparation: "Handbook Chapter 6",
+          part1: "30 min: Sparse Autoencoders (SAE) and practical exploration",
+          part2: "30 min: Exploration of the papers \"Towards Monosemanticity: Decomposing Language Models With Dictionary Learning\" and \"Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet\"",
+          part3: "20 min: Coffee break",
+          part4: "40 min: Coding: Using SAEs",
+          part5: "30 min: New areas of exploration and tips for the Hackathon!"
+        }
+      },
+      resources: {
+        title: "Additional Resources",
+        opportunitiesTitle: "Opportunities",
+        arenaTitle: "ARENA",
+        arenaDescription: "Opportunity to spend 4 weeks in London studying practical content relevant to AI Safety research",
+        arenaButton: "Learn More",
+        matsTitle: "MATS",
+        matsDescription: "Program to start research in AI Safety with guidance from mentors with extensive experience in the field. Several authors of papers used in this course are MATS mentors.",
+        matsButton: "View Mentors"
+      }
+    },
+
+    // Handbook common elements
+    handbook: {
+      tableOfContents: "Table of Contents",
+      prevChapter: "← Previous Chapter",
+      nextChapter: "Next Chapter →",
+      noNextChapter: "End of Handbook",
+      furtherReading: "Further Reading",
+      backToHome: "← Back to Course",
+      
+      // Chapter 4: Circuits
+      chapter4: {
+        title: "Chapter 4: Circuits",
+        subtitle: "Understanding circuit-based interpretability in neural networks",
+        sections: {
+          intro: "Introduction to Circuits",
+          defining: "Defining Neural Circuits",
+          induction: "The Induction Circuit",
+          discovery: "Circuit Discovery Methods",
+          examples: "Practical Examples",
+          conclusion: "Conclusion"
+        },
+        intro: {
+          p1: "The \"circuits\" framework is a key concept in mechanistic interpretability, offering a way to understand how neural networks process information through connected components that collectively implement specific functions.",
+          p2: "This chapter explores how circuit-based interpretability helps us reverse-engineer the computations performed by neural networks, with a focus on transformer architectures used in large language models."
+        },
+        defining: {
+          p1: "A neural circuit is a subset of a neural network that implements a specific, identifiable function. Circuits consist of neurons (or groups of neurons) connected across layers that collectively perform a computation.",
+          p2: "Key properties of circuits include:",
+          list1: "Modularity: Circuits can be studied in isolation from the rest of the network",
+          list2: "Functionality: Circuits implement specific, meaningful computations",
+          list3: "Composition: Complex behaviors emerge from combinations of simpler circuits",
+          list4: "Distributed representation: Information is often represented across multiple neurons rather than in individual neurons"
+        },
+        induction: {
+          p1: "The induction circuit is one of the most well-studied circuits in transformer models. This circuit enables language models to continue patterns like \"A, B, A, B, A, ?\" with \"B\".",
+          p2: "The circuit works by:",
+          step1: "Detecting when a token has appeared previously in the sequence",
+          step2: "Identifying what token came after it in that previous occurrence",
+          step3: "Predicting that the same token will follow in the current context",
+          p3: "This circuit involves specific attention heads working together across layers:",
+          component1: "Previous token detection: Attention heads that look for repeated tokens",
+          component2: "Information copying: Mechanisms to retrieve what followed the previous occurrence",
+          component3: "Output projection: Components that influence the final prediction"
+        },
+        discovery: {
+          p1: "Identifying circuits within neural networks involves several techniques:",
+          method1title: "Activation Patching",
+          method1: "This involves replacing activations at specific locations in the network when processing one input with activations from another input, then observing how the output changes. It helps identify which components are causally important for a given task.",
+          method2title: "Causal Mediation Analysis",
+          method2: "This approach quantifies how much specific paths in the network contribute to a particular prediction, helping identify the most important connections.",
+          method3title: "Attention Analysis",
+          method3: "Examining attention patterns can reveal which parts of the input sequence influence other parts, providing insights into information flow."
+        },
+        examples: {
+          p1: "Beyond induction, researchers have identified several other circuits:",
+          circuit1: "Indirect Object Identification: Circuits that track relationships between subjects, verbs, and objects in sentences",
+          circuit2: "Negation Circuits: Components that detect and process negation in text",
+          circuit3: "Name Mover Circuits: Mechanisms for tracking and referencing entities throughout a text",
+          p2: "These examples demonstrate how complex language understanding emerges from specific circuit implementations."
+        },
+        conclusion: {
+          p1: "The circuits framework provides a powerful approach for understanding how neural networks implement specific functions. By identifying and studying these circuits, researchers can gain insights into how models process information and make predictions.",
+          p2: "This understanding is crucial for improving interpretability, enhancing model safety, and developing more reliable AI systems. The next chapter will explore how neural networks handle information when they have limited capacity through the concept of superposition."
+        },
+        reading1: "In-context Learning and Induction Heads",
+        reading2: "A Mathematical Framework for Transformer Circuits",
+        reading3: "Zoom In: An Introduction to Circuits"
+      },
+      
+      // Chapter 5: Superposition
+      chapter5: {
+        title: "Chapter 5: Superposition",
+        subtitle: "Understanding how neural networks represent more features than they have dimensions",
+        sections: {
+          intro: "Introduction to Superposition",
+          competition: "Feature Competition",
+          polysemanticity: "Polysemanticity",
+          toyModels: "Toy Models of Superposition",
+          implications: "Implications for Interpretability",
+          conclusion: "Conclusion"
+        },
+        intro: {
+          p1: "Superposition refers to the phenomenon where neural networks represent more features than they have neurons or dimensions. This occurs because networks often need to track many more features than they have parameters available to represent them individually.",
+          p2: "The concept was formalized in the paper \"Toy Models of Superposition\" by Anthropic, which demonstrated how networks can encode multiple features in a lower-dimensional space by exploiting the geometry of feature co-occurrence patterns."
+        },
+        competition: {
+          p1: "When a neural network has fewer dimensions than the features it needs to represent, these features must \"compete\" for representation space. The network learns to allocate its limited representational capacity efficiently.",
+          p2: "Key factors that influence which features get represented include:",
+          list1: "Frequency: More common features are more likely to be represented",
+          list2: "Importance: Features that strongly affect the loss function are prioritized",
+          list3: "Correlation: Features that often co-occur can share representation space",
+          list4: "Orthogonality: Features that can be represented in orthogonal directions are easier to separate"
+        },
+        polysemanticity: {
+          p1: "Polysemanticity is a direct consequence of superposition. It refers to the phenomenon where individual neurons or network directions respond to multiple unrelated features.",
+          p2: "In a polysemantic network:",
+          list1: "Single neurons may respond to multiple semantically distinct concepts",
+          list2: "Feature representations are distributed across many neurons",
+          list3: "There may not be a clear one-to-one mapping between network components and human-interpretable concepts",
+          p3: "This makes interpretation challenging, as we cannot simply analyze individual neurons to understand what the network is representing."
+        },
+        toyModels: {
+          p1: "Researchers have developed simplified models to study superposition. These toy models help illustrate how networks can embed many features in lower-dimensional spaces.",
+          p2: "A typical toy model might involve:",
+          step1: "Generating synthetic data with a known number of sparse features",
+          step2: "Training a model with fewer dimensions than features",
+          step3: "Analyzing how the model represents these features in its limited space",
+          p3: "These experiments have revealed that networks can use clever geometric arrangements to encode features efficiently, often exploiting properties like sparsity (features rarely appearing simultaneously)."
+        },
+        implications: {
+          p1: "Superposition poses several challenges for interpretability research:",
+          list1: "Direct neuron analysis may reveal misleading or incomplete information",
+          list2: "Features may be encoded in complex, distributed patterns across many neurons",
+          list3: "Simple linear probing techniques may fail to detect important features",
+          p2: "However, understanding superposition also provides opportunities:",
+          list4: "It suggests focusing on finding the right basis for analysis, rather than examining individual neurons",
+          list5: "Techniques like Sparse Autoencoders (covered in the next chapter) can help extract features from superposed representations",
+          list6: "Knowledge of superposition patterns can inform better training and architecture design"
+        },
+        conclusion: {
+          p1: "Superposition is a fundamental property of neural networks that arises when they need to represent more features than they have dimensions. This leads to polysemantic neurons and distributed representations that complicate interpretability efforts.",
+          p2: "Understanding superposition is essential for developing effective methods to interpret neural networks, especially large language models with billions of parameters tracking potentially trillions of features. The next chapter will explore how Sparse Autoencoders can help address this challenge by disentangling these superposed representations."
+        },
+        reading1: "Toy Models of Superposition (Anthropic)",
+        reading2: "Progress Measures for Grokking via Mechanistic Interpretability",
+        reading3: "3Blue1Brown: How LLMs might store facts?"
+      },
+      
+      // Chapter 6: Sparse Autoencoders
+      chapter6: {
+        title: "Chapter 6: Sparse Autoencoders",
+        subtitle: "Using Sparse Autoencoders to disentangle superposition in neural networks",
+        sections: {
+          intro: "Introduction to Sparse Autoencoders",
+          architecture: "Architecture and Training",
+          features: "Feature Extraction",
+          applications: "Applications in Interpretability",
+          research: "Recent Research",
+          conclusion: "Conclusion"
+        },
+        intro: {
+          p1: "As we saw in the previous chapter, neural networks often represent information in a superposed manner, with many features sharing the same neurons or dimensions. This polysemanticity makes interpretation challenging. Sparse Autoencoders (SAEs) are a powerful tool designed to address this challenge by disentangling these superposed representations.",
+          p2: "The goal of an SAE is to transform the polysemantic, distributed representations in a neural network into a monosemantic, sparse representation, where each feature corresponds to a specific, interpretable concept."
+        },
+        architecture: {
+          p1: "A Sparse Autoencoder consists of:",
+          list1: "An encoder network that maps the original neural network's activations to a higher-dimensional, sparse space",
+          list2: "A decoder network that reconstructs the original activations from this sparse representation",
+          p2: "The key constraints in training an SAE are:",
+          constraint1: "Reconstruction loss: The decoder should accurately reconstruct the original activations",
+          constraint2: "Sparsity constraint: Each input should activate only a small number of features in the encoded representation",
+          p3: "These constraints ensure that the SAE learns a dictionary of interpretable features that can be activated individually or in small groups to represent the network's internal states."
+        },
+        features: {
+          p1: "After training an SAE on a large dataset of activations from a neural network, we can analyze the features it has learned:",
+          list1: "Each feature can be visualized by examining what types of inputs most strongly activate it",
+          list2: "Features can be named based on the patterns they recognize (e.g., \"quotes detector\" or \"multiplication operator\")",
+          list3: "The dictionary of features provides a new basis for understanding the network's internal representations",
+          p2: "Unlike analyzing individual neurons, SAE features often correspond to meaningful, human-interpretable concepts because they're designed to disentangle the superposed representations."
+        },
+        applications: {
+          p1: "Sparse Autoencoders can be used for various interpretability tasks:",
+          task1title: "Circuit Discovery",
+          task1: "By tracking which SAE features activate in response to specific inputs, researchers can identify the computational circuits within the network.",
+          task2title: "Feature Attribution",
+          task2: "SAEs can help determine which features contribute to specific predictions, providing insight into how the model makes decisions.",
+          task3title: "Editing Model Behavior",
+          task3: "Once interpretable features are identified, it's possible to modify the model's behavior by intervening on specific features, potentially enabling safer AI systems."
+        },
+        research: {
+          p1: "Recent advances in SAE research include:",
+          advance1: "Scaling SAEs to larger models, such as Claude 3 Sonnet by Anthropic",
+          advance2: "Improving training techniques to identify more interpretable features",
+          advance3: "Developing automatic methods to name and categorize the discovered features",
+          advance4: "Using SAEs to understand higher-level abstractions in language models",
+          p2: "Papers like \"Towards Monosemanticity: Decomposing Language Models With Dictionary Learning\" and \"Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet\" demonstrate the potential of SAEs for understanding increasingly complex models."
+        },
+        conclusion: {
+          p1: "Sparse Autoencoders represent one of the most promising approaches for addressing the superposition problem in neural networks. By transforming polysemantic representations into monosemantic features, SAEs provide a powerful tool for mechanistic interpretability.",
+          p2: "As research in this area continues to advance, SAEs may play a crucial role in building more transparent, trustworthy, and alignable AI systems. Understanding the internal workings of neural networks is not just an academic pursuit but a practical necessity as these systems become increasingly powerful and integrated into our society."
+        },
+        reading1: "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+        reading2: "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+        reading3: "SolidGoldMagikarp & Indirect Object Identification"
+      }
     }
   },
 
@@ -726,6 +996,7 @@ const translations = {
       activities: 'Actividades',
       research: 'Investigación',
       resources: 'Recursos',
+      mechInterpCourse: 'Curso de Interpretabilidad',
       contact: 'Contacto',
       joinUs: 'Sumate'
     },
@@ -929,7 +1200,7 @@ const translations = {
             title: 'Wiki de Stampy',
             description:
               'Una wiki colaborativa que proporciona explicaciones accesibles de conceptos de alineamiento de IA.',
-            difficulty: 'Introductorio',
+            difficulty: 'Introductory',
             cta: 'Visitar'
           }
         }
@@ -1148,7 +1419,8 @@ const translations = {
           instructors: 'Instructores:',
           instructorsValue: 'Dra. Laura Fernandez, Carlos Mendez',
           button: 'Expresar Interés'
-        }
+        },
+        viewCourseButton: "Ver Información Detallada del Curso"
       },
       calendar: {
         title: 'Calendario de Próximos Eventos',
@@ -1311,8 +1583,7 @@ const translations = {
         },
         telegram: {
           title: 'Telegram',
-          description:
-            'Únete al canal de la comunidad para discusiones y actualizaciones:'
+          description: 'Join our community channel for discussions and updates:'
         },
         location: {
           title: 'Ubicación',
@@ -1442,6 +1713,274 @@ const translations = {
       upcoming: 'Próximamente',
       active: 'Activo',
       completed: 'Finalizado'
+    },
+
+    // Mech Interp Course page
+    mechInterpCourse: {
+      pageHeader: {
+        title: "Curso de Interpretabilidad Mecanística",
+        subtitle: "Una introducción completa a la Interpretabilidad Mecanística para Modelos de Lenguaje Grande"
+      },
+      backToHome: "← Volver al Inicio",
+      intro: {
+        paragraph1: "Este es un curso rápido de 4 sesiones diseñado para introducir el campo de la Interpretabilidad Mecanística para Modelos de Lenguaje Grandes (LLMs). El curso incluye materiales teóricos, introduces Python libraries for interpretability, discusses recent papers in the field (published by organizations such as Anthropic and Google DeepMind), and provides practical exercises.",
+        paragraph2: "El campo de la Interpretabilidad Mecanística ha ganado popularidad rápidamente en los últimos años, con más de 90 artículos aceptados en ICML 2024. Su objetivo principal es entender la lógica detrás de las decisiones de los modelos de aprendizaje automático. Este conocimiento puede aplicarse para mejorar la transparencia y la confianza en los modelos existentes, así como para entender mejor cómo estos modelos aprenden.",
+        paragraph3: "Poco después de la finalización de este curso, BAISH organizará un Hackathon de Interpretabilidad Mecanística en la FGV — ¡detalles por anunciar! Recomendamos encarecidamente que cualquier persona interesada en participar en el Hackathon complete este curso como introducción al tema, lo que también aumentará sus posibilidades de recibir un premio en la competición."
+      },
+      schedule: {
+        title: "Programa del Curso",
+        session1: {
+          title: "Sesión 1 - Transformers e Interpretabilidad",
+          date: "23 de agosto, viernes, a partir de las 14:30",
+          location: "Auditorio 537",
+          scheduleTitle: "Programa:",
+          preparationTitle: "Preparación:",
+          preparation: "Handbook Chapters 2 and 3",
+          part1: "45 min: Introducción a transformers y atención",
+          part2: "20 min: Coffee break",
+          part3: "45 min: Introducción a la Interpretabilidad Mecanística",
+          part4: "30 min: Coding: PyTorch and TransformerLens",
+          materialsTitle: "Materiales:",
+          handbookTitle: "Handbook:",
+          papersTitle: "Artículos:",
+          codingTitle: "Codificación:",
+          videosTitle: "Videos:"
+        },
+        session2: {
+          title: "Sesión 2 - Circuits",
+          date: "30 de agosto, viernes, a partir de las 14:30",
+          location: "Auditorio 418",
+          scheduleTitle: "Programa:",
+          preparationTitle: "Preparación:",
+          preparation: "Handbook Chapters 3 and 4",
+          part1: "40 min: Circuits and the induction circuit",
+          part2: "20 min: Exploration of the paper \"A Mathematical Framework for Transformer Circuits\"",
+          part3: "20 min: Coffee break",
+          part4: "60 min: Coding: circuit discovery"
+        },
+        session3: {
+          title: "Sesión 3 - Superposición",
+          date: "6 de septiembre, viernes, a partir de las 14:30",
+          location: "Auditorio 537",
+          scheduleTitle: "Programa:",
+          preparationTitle: "Preparación:",
+          preparation: "Handbook Chapter 5",
+          part1: "30 min: Superposition",
+          part2: "30 min: 3Blue1Brown video \"How might LLMs store facts\" and discussion",
+          part3: "20 min: Coffee break",
+          part4: "60 min: Coding: superposition in toy models"
+        },
+        session4: {
+          title: "Sesión 4 - Sparse Autoencoders (SAE)",
+          date: "13 de septiembre, viernes, a partir de las 15:00",
+          location: "Auditorio 418",
+          scheduleTitle: "Programa:",
+          preparationTitle: "Preparación:",
+          preparation: "Handbook Chapter 6",
+          part1: "30 min: Sparse Autoencoders (SAE) and practical exploration",
+          part2: "30 min: Exploration of the papers \"Towards Monosemanticity: Decomposing Language Models With Dictionary Learning\" and \"Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet\"",
+          part3: "20 min: Coffee break",
+          part4: "40 min: Coding: Using SAEs",
+          part5: "30 min: New areas of exploration and tips for the Hackathon!"
+        }
+      },
+      resources: {
+        title: "Recursos Adicionales",
+        opportunitiesTitle: "Oportunidades",
+        arenaTitle: "ARENA",
+        arenaDescription: "Opportunity to spend 4 weeks in London studying practical content relevant to AI Safety research",
+        arenaButton: "Más Información",
+        matsTitle: "MATS",
+        matsDescription: "Programa para iniciar investigación en Seguridad de IA con la orientación de mentores con amplia experiencia en el campo. Varios autores de artículos utilizados en este curso son mentores de MATS.",
+        matsButton: "Ver Mentores"
+      }
+    },
+
+    // Handbook common elements
+    handbook: {
+      tableOfContents: "Índice de Contenidos",
+      prevChapter: "← Capítulo Anterior",
+      nextChapter: "Siguiente Capítulo →",
+      noNextChapter: "Fin del Manual",
+      furtherReading: "Lecturas Adicionales",
+      backToHome: "← Volver al Curso",
+      
+      // Chapter 4: Circuits
+      chapter4: {
+        title: "Capítulo 4: Circuitos",
+        subtitle: "Entendiendo la interpretabilidad basada en circuitos en redes neuronales",
+        sections: {
+          intro: "Introducción a los Circuitos",
+          defining: "Definiendo Circuitos Neuronales",
+          induction: "El Circuito de Inducción",
+          discovery: "Métodos de Descubrimiento de Circuitos",
+          examples: "Ejemplos Prácticos",
+          conclusion: "Conclusión"
+        },
+        intro: {
+          p1: "El marco de \"circuitos\" es un concepto clave en interpretabilidad mecanística, ofreciendo una manera de entender cómo las redes neuronales procesan información a través de componentes conectados que colectivamente implementan funciones específicas.",
+          p2: "Este capítulo explora cómo la interpretabilidad basada en circuitos nos ayuda a hacer ingeniería inversa de los cálculos realizados por redes neuronales, con un enfoque en arquitecturas transformer utilizadas en modelos de lenguaje grandes."
+        },
+        defining: {
+          p1: "Un circuito neuronal es un subconjunto de una red neuronal que implementa una función específica e identificable. Los circuitos consisten en neuronas (o grupos de neuronas) conectadas a través de capas que colectivamente realizan un cálculo.",
+          p2: "Las propiedades clave de los circuitos incluyen:",
+          list1: "Modularidad: Los circuitos pueden estudiarse de forma aislada del resto de la red",
+          list2: "Funcionalidad: Los circuitos implementan cálculos específicos y significativos",
+          list3: "Composición: Los comportamientos complejos emergen de combinaciones de circuitos más simples",
+          list4: "Representación distribuida: La información a menudo se representa a través de múltiples neuronas en lugar de en neuronas individuales"
+        },
+        induction: {
+          p1: "El circuito de inducción es uno de los circuitos más estudiados en modelos transformer. Este circuito permite a los modelos de lenguaje continuar patrones como \"A, B, A, B, A, ?\" con \"B\".",
+          p2: "El circuito funciona mediante:",
+          step1: "Detectar cuando un token ha aparecido previamente en la secuencia",
+          step2: "Identificar qué token vino después en esa ocurrencia previa",
+          step3: "Predecir que el mismo token seguirá en el contexto actual",
+          p3: "Este circuito involucra cabezas de atención específicas trabajando juntas a través de capas:",
+          component1: "Detección de token previo: Cabezas de atención que buscan tokens repetidos",
+          component2: "Copia de información: Mecanismos para recuperar lo que siguió a la ocurrencia previa",
+          component3: "Proyección de salida: Componentes que influyen en la predicción final"
+        },
+        discovery: {
+          p1: "Identificar circuitos dentro de redes neuronales implica varias técnicas:",
+          method1title: "Parcheo de Activaciones",
+          method1: "Esto implica reemplazar activaciones en ubicaciones específicas de la red al procesar una entrada con activaciones de otra entrada, y luego observar cómo cambia la salida. Ayuda a identificar qué componentes son causalmente importantes para una tarea determinada.",
+          method2title: "Análisis de Mediación Causal",
+          method2: "Este enfoque cuantifica cuánto contribuyen caminos específicos en la red a una predicción particular, ayudando a identificar las conexiones más importantes.",
+          method3title: "Análisis de Atención",
+          method3: "Examinar patrones de atención puede revelar qué partes de la secuencia de entrada influyen en otras partes, proporcionando información sobre el flujo de información."
+        },
+        examples: {
+          p1: "Más allá de la inducción, los investigadores han identificado varios otros circuitos:",
+          circuit1: "Identificación de Objetos Indirectos: Circuitos que rastrean relaciones entre sujetos, verbos y objetos en oraciones",
+          circuit2: "Circuitos de Negación: Componentes que detectan y procesan la negación en el texto",
+          circuit3: "Circuitos de Movimiento de Nombres: Mecanismos para rastrear y referenciar entidades a lo largo de un texto",
+          p2: "Estos ejemplos demuestran cómo la comprensión compleja del lenguaje emerge de implementaciones específicas de circuitos."
+        },
+        conclusion: {
+          p1: "El marco de circuitos proporciona un enfoque poderoso para entender cómo las redes neuronales implementan funciones específicas. Al identificar y estudiar estos circuitos, los investigadores pueden obtener información sobre cómo los modelos procesan información y hacen predicciones.",
+          p2: "Esta comprensión es crucial para mejorar la interpretabilidad, aumentar la seguridad del modelo y desarrollar sistemas de IA más confiables. El próximo capítulo explorará cómo las redes neuronales manejan la información cuando tienen capacidad limitada a través del concepto de superposición."
+        },
+        reading1: "Aprendizaje en Contexto y Cabezas de Inducción",
+        reading2: "Un Marco Matemático para Circuitos Transformer",
+        reading3: "Acercamiento: Una Introducción a los Circuitos"
+      },
+      
+      // Chapter 5: Superposition
+      chapter5: {
+        title: "Capítulo 5: Superposición",
+        subtitle: "Entendiendo cómo las redes neuronales representan más características de las que tienen dimensiones",
+        sections: {
+          intro: "Introducción a la Superposición",
+          competition: "Competencia de Características",
+          polysemanticity: "Polisemántica",
+          toyModels: "Modelos Simplificados de Superposición",
+          implications: "Implicaciones para la Interpretabilidad",
+          conclusion: "Conclusión"
+        },
+        intro: {
+          p1: "La superposición se refiere al fenómeno donde las redes neuronales representan más características de las que tienen neuronas o dimensiones. Esto ocurre porque las redes a menudo necesitan rastrear muchas más características de las que tienen parámetros disponibles para representarlas individualmente.",
+          p2: "El concepto fue formalizado en el artículo \"Modelos Simplificados de Superposición\" por Anthropic, que demostró cómo las redes pueden codificar múltiples características en un espacio de menor dimensión aprovechando la geometría de los patrones de co-ocurrencia de características."
+        },
+        competition: {
+          p1: "Cuando una red neuronal tiene menos dimensiones que las características que necesita representar, estas características deben \"competir\" por el espacio de representación. La red aprende a asignar su capacidad de representación limitada de manera eficiente.",
+          p2: "Los factores clave que influyen en qué características se representan incluyen:",
+          list1: "Frecuencia: Las características más comunes tienen más probabilidades de ser representadas",
+          list2: "Importancia: Se priorizan las características que afectan fuertemente a la función de pérdida",
+          list3: "Correlación: Las características que a menudo co-ocurren pueden compartir espacio de representación",
+          list4: "Ortogonalidad: Las características que pueden representarse en direcciones ortogonales son más fáciles de separar"
+        },
+        polysemanticity: {
+          p1: "La polisemántica es una consecuencia directa de la superposición. Se refiere al fenómeno donde neuronas individuales o direcciones de la red responden a múltiples características no relacionadas.",
+          p2: "En una red polisemántica:",
+          list1: "Las neuronas individuales pueden responder a múltiples conceptos semánticamente distintos",
+          list2: "Las representaciones de características se distribuyen a través de muchas neuronas",
+          list3: "Puede no haber una correspondencia clara uno a uno entre los componentes de la red y los conceptos interpretables por humanos",
+          p3: "Esto hace que la interpretación sea desafiante, ya que no podemos simplemente analizar neuronas individuales para entender lo que la red está representando."
+        },
+        toyModels: {
+          p1: "Los investigadores han desarrollado modelos simplificados para estudiar la superposición. Estos modelos ayudan a ilustrar cómo las redes pueden incorporar muchas características en espacios de dimensiones más bajas.",
+          p2: "Un modelo simplificado típico podría involucrar:",
+          step1: "Generar datos sintéticos con un número conocido de características dispersas",
+          step2: "Entrenar un modelo con menos dimensiones que características",
+          step3: "Analizar cómo el modelo representa estas características en su espacio limitado",
+          p3: "Estos experimentos han revelado que las redes pueden usar disposiciones geométricas inteligentes para codificar características de manera eficiente, a menudo aprovechando propiedades como la dispersión (características que rara vez aparecen simultáneamente)."
+        },
+        implications: {
+          p1: "La superposición plantea varios desafíos para la investigación de interpretabilidad:",
+          list1: "El análisis directo de neuronas puede revelar información engañosa o incompleta",
+          list2: "Las características pueden estar codificadas en patrones complejos distribuidos a través de muchas neuronas",
+          list3: "Las técnicas simples de sondeo lineal pueden fallar en detectar características importantes",
+          p2: "Sin embargo, entender la superposición también ofrece oportunidades:",
+          list4: "Sugiere enfocarse en encontrar la base correcta para el análisis, en lugar de examinar neuronas individuales",
+          list5: "Técnicas como los Autoencoders Dispersos (cubiertos en el próximo capítulo) pueden ayudar a extraer características de representaciones superpuestas",
+          list6: "El conocimiento de los patrones de superposición puede informar un mejor diseño y entrenamiento de arquitecturas"
+        },
+        conclusion: {
+          p1: "La superposición es una propiedad fundamental de las redes neuronales que surge cuando necesitan representar más características de las que tienen dimensiones. Esto lleva a neuronas polisemánticas y representaciones distribuidas que complican los esfuerzos de interpretabilidad.",
+          p2: "Entender la superposición es esencial para desarrollar métodos efectivos para interpretar redes neuronales, especialmente modelos de lenguaje grandes con miles de millones de parámetros que rastrean potencialmente billones de características. El próximo capítulo explorará cómo los Autoencoders Dispersos pueden ayudar a abordar este desafío desenredando estas representaciones superpuestas."
+        },
+        reading1: "Modelos Simplificados de Superposición (Anthropic)",
+        reading2: "Medidas de Progreso para la Comprensión Profunda mediante Interpretabilidad Mecanística",
+        reading3: "3Blue1Brown: ¿Cómo los LLMs podrían almacenar hechos?"
+      },
+      
+      // Chapter 6: Sparse Autoencoders
+      chapter6: {
+        title: "Capítulo 6: Autoencoders Dispersos",
+        subtitle: "Usando Autoencoders Dispersos para desenredar la superposición en redes neuronales",
+        sections: {
+          intro: "Introducción a los Autoencoders Dispersos",
+          architecture: "Arquitectura y Entrenamiento",
+          features: "Extracción de Características",
+          applications: "Aplicaciones en Interpretabilidad",
+          research: "Investigación Reciente",
+          conclusion: "Conclusión"
+        },
+        intro: {
+          p1: "Como vimos en el capítulo anterior, las redes neuronales a menudo representan información de manera superpuesta, con muchas características compartiendo las mismas neuronas o dimensiones. Esta polisemántica hace que la interpretación sea desafiante. Los Autoencoders Dispersos (SAEs) son una herramienta poderosa diseñada para abordar este desafío desenredando estas representaciones superpuestas.",
+          p2: "El objetivo de un SAE es transformar las representaciones polisemánticas y distribuidas en una red neuronal en una representación monosemántica y dispersa, donde cada característica corresponde a un concepto específico e interpretable."
+        },
+        architecture: {
+          p1: "Un Autoencoder Disperso consiste en:",
+          list1: "Una red codificadora que mapea las activaciones de la red neuronal original a un espacio disperso de mayor dimensión",
+          list2: "Una red decodificadora que reconstruye las activaciones originales a partir de esta representación dispersa",
+          p2: "Las restricciones clave en el entrenamiento de un SAE son:",
+          constraint1: "Pérdida de reconstrucción: El decodificador debe reconstruir con precisión las activaciones originales",
+          constraint2: "Restricción de dispersión: Cada entrada debe activar solo un pequeño número de características en la representación codificada",
+          p3: "Estas restricciones aseguran que el SAE aprenda un diccionario de características interpretables que pueden activarse individualmente o en pequeños grupos para representar los estados internos de la red."
+        },
+        features: {
+          p1: "Después de entrenar un SAE en un gran conjunto de datos de activaciones de una red neuronal, podemos analizar las características que ha aprendido:",
+          list1: "Cada característica puede visualizarse examinando qué tipos de entradas la activan más fuertemente",
+          list2: "Las características pueden nombrarse según los patrones que reconocen (por ejemplo, \"detector de comillas\" u \"operador de multiplicación\")",
+          list3: "El diccionario de características proporciona una nueva base para entender las representaciones internas de la red",
+          p2: "A diferencia del análisis de neuronas individuales, las características del SAE a menudo corresponden a conceptos significativos e interpretables por humanos porque están diseñadas para desenredar las representaciones superpuestas."
+        },
+        applications: {
+          p1: "Los Autoencoders Dispersos pueden usarse para varias tareas de interpretabilidad:",
+          task1title: "Descubrimiento de Circuitos",
+          task1: "Al rastrear qué características del SAE se activan en respuesta a entradas específicas, los investigadores pueden identificar los circuitos computacionales dentro de la red.",
+          task2title: "Atribución de Características",
+          task2: "Los SAEs pueden ayudar a determinar qué características contribuyen a predicciones específicas, proporcionando información sobre cómo el modelo toma decisiones.",
+          task3title: "Edición del Comportamiento del Modelo",
+          task3: "Una vez que se identifican características interpretables, es posible modificar el comportamiento del modelo interviniendo en características específicas, potencialmente habilitando sistemas de IA más seguros."
+        },
+        research: {
+          p1: "Los avances recientes en la investigación de SAE incluyen:",
+          advance1: "Escalar SAEs a modelos más grandes, como Claude 3 Sonnet de Anthropic",
+          advance2: "Mejorar las técnicas de entrenamiento para identificar características más interpretables",
+          advance3: "Desarrollar métodos automáticos para nombrar y categorizar las características descubiertas",
+          advance4: "Usar SAEs para entender abstracciones de nivel superior en modelos de lenguaje",
+          p2: "Artículos como \"Hacia la Monosemántica: Descomponiendo Modelos de Lenguaje con Aprendizaje de Diccionario\" y \"Escalando la Monosemántica: Extrayendo Características Interpretables de Claude 3 Sonnet\" demuestran el potencial de los SAEs para entender modelos cada vez más complejos."
+        },
+        conclusion: {
+          p1: "Los Autoencoders Dispersos representan uno de los enfoques más prometedores para abordar el problema de superposición en redes neuronales. Al transformar representaciones polisemánticas en características monosemánticas, los SAEs proporcionan una herramienta poderosa para la interpretabilidad mecanística.",
+          p2: "A medida que la investigación en esta área continúa avanzando, los SAEs pueden jugar un papel crucial en la construcción de sistemas de IA más transparentes, confiables y alineables. Entender el funcionamiento interno de las redes neuronales no es solo una búsqueda académica sino una necesidad práctica a medida que estos sistemas se vuelven cada vez más poderosos e integrados en nuestra sociedad."
+        },
+        reading1: "Hacia la Monosemántica: Descomponiendo Modelos de Lenguaje con Aprendizaje de Diccionario",
+        reading2: "Escalando la Monosemántica: Extrayendo Características Interpretables de Claude 3 Sonnet",
+        reading3: "SolidGoldMagikarp e Identificación de Objetos Indirectos"
+      }
     }
   }
 }

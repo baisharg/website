@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+		<title>Chapter 4: Circuits - BAISH Mech Interp Handbook</title>
+		<meta
+			name="description"
+			content="Circuits in Neural Networks - BAISH Mechanistic Interpretability Handbook"
+		/>
+		<!-- Favicon -->
+		<link rel="icon" href="../img/favicon.ico" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/language-toggle.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container">
+				<div class="logo">
+					<a href="../index.html">
+						<img src="../img/logo.svg" alt="BAISH Logo" class="logo-img" />
+						<span class="logo-text">BAISH - Buenos Aires AI Safety Hub</span>
+					</a>
+				</div>
+				<button class="mobile-menu-button" aria-label="Toggle menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="../about.html" data-i18n="nav.about">About</a></li>
+						<li>
+							<a href="../activities.html" data-i18n="nav.activities"
+								>Activities</a
+							>
+						</li>
+						<li>
+							<a href="../research.html" data-i18n="nav.research">Research</a>
+						</li>
+						<li>
+							<a href="../resources.html" data-i18n="nav.resources">Resources</a>
+						</li>
+						<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="language-toggle">
+					<button id="lang-es" class="language-toggle-btn active">ES</button>
+					<span class="language-toggle-separator">|</span>
+					<button id="lang-en" class="language-toggle-btn">EN</button>
+				</div>
+				<a href="../contact.html" class="btn btn-primary" data-i18n="nav.joinUs"
+					>Join Us</a
+				>
+			</div>
+		</header>
+
+		<section class="page-header">
+			<div class="container">
+				<div class="breadcrumb" style="margin-bottom: 1rem;">
+					<a href="../mech-interp-course.html" class="btn btn-secondary" style="margin-right: 1rem;" data-i18n="mechInterpCourse.backToHome">← Back to Course</a>
+				</div>
+				<h1 data-i18n="handbook.chapter4.title">Chapter 4: Circuits</h1>
+				<p class="subtitle" data-i18n="handbook.chapter4.subtitle">
+					Understanding circuit-based interpretability in neural networks
+				</p>
+			</div>
+		</section>
+
+		<section class="handbook-content">
+			<div class="container">
+				<div class="handbook-navigation">
+					<div class="handbook-toc">
+						<h3 data-i18n="handbook.tableOfContents">Table of Contents</h3>
+						<ul>
+							<li><a href="#introduction" data-i18n="handbook.chapter4.sections.intro">Introduction to Circuits</a></li>
+							<li><a href="#defining-circuits" data-i18n="handbook.chapter4.sections.defining">Defining Neural Circuits</a></li>
+							<li><a href="#induction-circuit" data-i18n="handbook.chapter4.sections.induction">The Induction Circuit</a></li>
+							<li><a href="#circuit-discovery" data-i18n="handbook.chapter4.sections.discovery">Circuit Discovery Methods</a></li>
+							<li><a href="#practical-examples" data-i18n="handbook.chapter4.sections.examples">Practical Examples</a></li>
+							<li><a href="#conclusion" data-i18n="handbook.chapter4.sections.conclusion">Conclusion</a></li>
+						</ul>
+					</div>
+					<div class="chapter-navigation">
+						<a href="chapter3.html" class="prev-chapter" data-i18n="handbook.prevChapter">← Previous Chapter: Interpretability</a>
+						<a href="chapter5.html" class="next-chapter" data-i18n="handbook.nextChapter">Next Chapter: Superposition →</a>
+					</div>
+				</div>
+				
+				<div class="handbook-main">
+					<h2 id="introduction" data-i18n="handbook.chapter4.sections.intro">Introduction to Circuits</h2>
+					<p data-i18n="handbook.chapter4.intro.p1">
+						The "circuits" framework is a key concept in mechanistic interpretability, offering a way to understand how neural networks process information through connected components that collectively implement specific functions.
+					</p>
+					<p data-i18n="handbook.chapter4.intro.p2">
+						This chapter explores how circuit-based interpretability helps us reverse-engineer the computations performed by neural networks, with a focus on transformer architectures used in large language models.
+					</p>
+					
+					<h2 id="defining-circuits" data-i18n="handbook.chapter4.sections.defining">Defining Neural Circuits</h2>
+					<p data-i18n="handbook.chapter4.defining.p1">
+						A neural circuit is a subset of a neural network that implements a specific, identifiable function. Circuits consist of neurons (or groups of neurons) connected across layers that collectively perform a computation.
+					</p>
+					<p data-i18n="handbook.chapter4.defining.p2">
+						Key properties of circuits include:
+					</p>
+					<ul>
+						<li data-i18n="handbook.chapter4.defining.list1">Modularity: Circuits can be studied in isolation from the rest of the network</li>
+						<li data-i18n="handbook.chapter4.defining.list2">Functionality: Circuits implement specific, meaningful computations</li>
+						<li data-i18n="handbook.chapter4.defining.list3">Composition: Complex behaviors emerge from combinations of simpler circuits</li>
+						<li data-i18n="handbook.chapter4.defining.list4">Distributed representation: Information is often represented across multiple neurons rather than in individual neurons</li>
+					</ul>
+					
+					<h2 id="induction-circuit" data-i18n="handbook.chapter4.sections.induction">The Induction Circuit</h2>
+					<p data-i18n="handbook.chapter4.induction.p1">
+						The induction circuit is one of the most well-studied circuits in transformer models. This circuit enables language models to continue patterns like "A, B, A, B, A, ?" with "B".
+					</p>
+					<p data-i18n="handbook.chapter4.induction.p2">
+						The circuit works by:
+					</p>
+					<ol>
+						<li data-i18n="handbook.chapter4.induction.step1">Detecting when a token has appeared previously in the sequence</li>
+						<li data-i18n="handbook.chapter4.induction.step2">Identifying what token came after it in that previous occurrence</li>
+						<li data-i18n="handbook.chapter4.induction.step3">Predicting that the same token will follow in the current context</li>
+					</ol>
+					<p data-i18n="handbook.chapter4.induction.p3">
+						This circuit involves specific attention heads working together across layers:
+					</p>
+					<ul>
+						<li data-i18n="handbook.chapter4.induction.component1">Previous token detection: Attention heads that look for repeated tokens</li>
+						<li data-i18n="handbook.chapter4.induction.component2">Information copying: Mechanisms to retrieve what followed the previous occurrence</li>
+						<li data-i18n="handbook.chapter4.induction.component3">Output projection: Components that influence the final prediction</li>
+					</ul>
+					
+					<h2 id="circuit-discovery" data-i18n="handbook.chapter4.sections.discovery">Circuit Discovery Methods</h2>
+					<p data-i18n="handbook.chapter4.discovery.p1">
+						Identifying circuits within neural networks involves several techniques:
+					</p>
+					<h3 data-i18n="handbook.chapter4.discovery.method1title">Activation Patching</h3>
+					<p data-i18n="handbook.chapter4.discovery.method1">
+						This involves replacing activations at specific locations in the network when processing one input with activations from another input, then observing how the output changes. It helps identify which components are causally important for a given task.
+					</p>
+					
+					<h3 data-i18n="handbook.chapter4.discovery.method2title">Causal Mediation Analysis</h3>
+					<p data-i18n="handbook.chapter4.discovery.method2">
+						This approach quantifies how much specific paths in the network contribute to a particular prediction, helping identify the most important connections.
+					</p>
+					
+					<h3 data-i18n="handbook.chapter4.discovery.method3title">Attention Analysis</h3>
+					<p data-i18n="handbook.chapter4.discovery.method3">
+						Examining attention patterns can reveal which parts of the input sequence influence other parts, providing insights into information flow.
+					</p>
+					
+					<h2 id="practical-examples" data-i18n="handbook.chapter4.sections.examples">Practical Examples</h2>
+					<p data-i18n="handbook.chapter4.examples.p1">
+						Beyond induction, researchers have identified several other circuits:
+					</p>
+					<ul>
+						<li data-i18n="handbook.chapter4.examples.circuit1">Indirect Object Identification: Circuits that track relationships between subjects, verbs, and objects in sentences</li>
+						<li data-i18n="handbook.chapter4.examples.circuit2">Negation Circuits: Components that detect and process negation in text</li>
+						<li data-i18n="handbook.chapter4.examples.circuit3">Name Mover Circuits: Mechanisms for tracking and referencing entities throughout a text</li>
+					</ul>
+					<p data-i18n="handbook.chapter4.examples.p2">
+						These examples demonstrate how complex language understanding emerges from specific circuit implementations.
+					</p>
+					
+					<h2 id="conclusion" data-i18n="handbook.chapter4.sections.conclusion">Conclusion</h2>
+					<p data-i18n="handbook.chapter4.conclusion.p1">
+						The circuits framework provides a powerful approach for understanding how neural networks implement specific functions. By identifying and studying these circuits, researchers can gain insights into how models process information and make predictions.
+					</p>
+					<p data-i18n="handbook.chapter4.conclusion.p2">
+						This understanding is crucial for improving interpretability, enhancing model safety, and developing more reliable AI systems. The next chapter will explore how neural networks handle information when they have limited capacity through the concept of superposition.
+					</p>
+					
+					<div class="further-reading">
+						<h3 data-i18n="handbook.furtherReading">Further Reading</h3>
+						<ul>
+							<li><a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html" target="_blank" data-i18n="handbook.chapter4.reading1">In-context Learning and Induction Heads</a></li>
+							<li><a href="https://transformer-circuits.pub/2021/framework/index.html" target="_blank" data-i18n="handbook.chapter4.reading2">A Mathematical Framework for Transformer Circuits</a></li>
+							<li><a href="https://distill.pub/2020/circuits/zoom-in/" target="_blank" data-i18n="handbook.chapter4.reading3">Zoom In: An Introduction to Circuits</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-logo">
+						<img src="../img/logo.svg" alt="BAISH Logo" class="footer-logo-img" />
+						<p class="tagline" data-i18n="footer.tagline">
+							Ensuring AI benefits humanity through research, education, and
+							community
+						</p>
+					</div>
+					<div class="footer-links">
+						<ul>
+							<li><a href="../about.html" data-i18n="nav.about">About</a></li>
+							<li>
+								<a href="../activities.html" data-i18n="nav.activities"
+									>Activities</a
+								>
+							</li>
+							<li>
+								<a href="../research.html" data-i18n="nav.research">Research</a>
+							</li>
+							<li>
+								<a href="../resources.html" data-i18n="nav.resources"
+									>Resources</a
+								>
+							</li>
+							<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-nav">
+					<div class="footer-nav-left">
+						<span data-i18n="footer.copyright"
+							>&copy; 2024 BAISH - Buenos Aires AI Safety Hub</span
+						>
+						<a href="../privacy-policy.html" data-i18n="footer.privacy"
+							>Privacy Policy</a
+						>
+					</div>
+					<div class="footer-nav-right">
+						<div class="social-links">
+							<a
+								href="https://twitter.com/baish_ai"
+								target="_blank"
+								aria-label="Twitter"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="https://github.com/BAISH-AI"
+								target="_blank"
+								aria-label="GitHub"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+									/>
+								</svg>
+							</a>
+							<a
+								href="https://www.linkedin.com/company/baish-ai"
+								target="_blank"
+								aria-label="LinkedIn"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+									/>
+									<rect x="2" y="9" width="4" height="12" />
+									<circle cx="4" cy="4" r="2" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JavaScript -->
+		<script src="../js/translations.js"></script>
+		<script src="../js/language-toggle.js"></script>
+		<script src="../js/mobile-nav.js"></script>
+		<script>
+			// Force language application on page load
+			document.addEventListener('DOMContentLoaded', function() {
+				// Apply translations based on stored language
+				const storedLang = localStorage.getItem('language') || 'es';
+				currentLanguage = storedLang;
+				updateLanguageToggleUI();
+				applyTranslations();
+			});
+		</script>
+	</body>
+</html> 
