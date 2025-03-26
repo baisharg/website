@@ -134,12 +134,35 @@ h2 {
 .btn-primary {
 	background: var(--primary-gradient);
 	border: none;
+	box-shadow: 0 4px 15px rgba(146, 117, 229, 0.4);
+	padding: 0.7rem 1.5rem;
+	position: relative;
+	z-index: 1;
+	border: 2px solid transparent;
+	background-clip: padding-box;
+}
+
+.btn-primary::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: var(--alternate-gradient);
+	z-index: -1;
+	border-radius: 10px;
+	opacity: 0;
+	transition: opacity var(--transition-medium);
 }
 
 .btn-primary:hover {
 	transform: translateY(-2px);
-	box-shadow: var(--shadow-md);
-	filter: brightness(1.1);
+	box-shadow: 0 6px 20px rgba(146, 117, 229, 0.6);
+}
+
+.btn-primary:hover::before {
+	opacity: 1;
 }
 
 .btn-primary:active {
@@ -221,6 +244,39 @@ h2 {
 	background-clip: text;
 	color: transparent;
 	display: inline-block;
+	text-shadow: 0 2px 10px rgba(146, 117, 229, 0.5);
+	font-size: 2.75rem;
+	position: relative;
+}
+
+.hero-content h1::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 80px;
+	height: 4px;
+	background: var(--primary-gradient);
+	border-radius: 2px;
+}
+
+/* SUMATE button (Spanish version of "Get Involved/Join Us") */
+.hero .btn-primary,
+[data-i18n="home.hero.cta"] {
+	font-size: 1.1rem;
+	padding: 0.8rem 2rem;
+	margin-top: 1rem;
+	font-weight: 600;
+	box-shadow: 0 4px 20px rgba(146, 117, 229, 0.6);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.hero .btn-primary:hover,
+[data-i18n="home.hero.cta"]:hover {
+	box-shadow: 0 6px 25px rgba(146, 117, 229, 0.8);
+	border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 /* Form Fields Enhancement */
@@ -306,7 +362,8 @@ select:focus {
 	box-shadow: var(--shadow-md);
 	border: 1px solid var(--border);
 	padding: var(--spacing-lg);
-	transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+	transition: transform var(--transition-medium),
+		box-shadow var(--transition-medium);
 	position: relative;
 }
 
@@ -405,7 +462,7 @@ select:focus {
 }
 
 .footer-nav ul li a::before {
-	content: '→';
+	content: "→";
 	position: absolute;
 	left: 0;
 	opacity: 0;
@@ -427,7 +484,7 @@ select:focus {
 }
 
 .footer-bottom::before {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 0;
 	left: 20%;
