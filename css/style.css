@@ -2276,3 +2276,23 @@ section[class*="gradient"] .btn:hover,
 	border-color: var(--primary);
 	text-decoration: none;
 }
+
+/* Reference superscript styling */
+.reference {
+	text-decoration: none;
+	color: inherit;
+}
+
+.reference sup {
+	font-size: 0.75em;
+	vertical-align: super;
+	line-height: 0;
+	color: #5A9FFF;
+}
+
+.hero-text {
+	margin-bottom: 1.2rem;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #e0e0e0;
+}

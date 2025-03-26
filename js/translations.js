@@ -65,10 +65,11 @@ const translations = {
     // Home page
     home: {
       hero: {
-        title: 'Ensuring AI Benefits Humanity',
-        subtitle:
-          "BAISH's student-led initiative exploring safe and beneficial AI development",
-        cta: 'Get Involved'
+        title: "Ensuring AI Benefits Humanity",
+        paragraph1: "As artificial intelligence models advance in capabilities<sup>1</sup>, we expect them to have an increasingly profound impact on our society<sup>2</sup>. It is essential that this impact is positive, and that the decisions made by these systems are transparent, reliable, and accountable<sup>3</sup> to the people affected by them.",
+        paragraph2: "We believe that reducing the risks associated with advanced AI models<sup>4</sup> is one of the most important challenges of our time. We also believe it is an open and exciting problem<sup>5</sup>, with ample opportunities for more researchers to advance in this field<sup>6</sup>.",
+        paragraph3: "BAISH's mission is to support students in entering this field and conducting research on this topic.",
+        cta: "Get Involved"
       },
       intro: {
         title: 'Why AI Safety Matters',
@@ -783,10 +784,11 @@ const translations = {
     // Home page
     home: {
       hero: {
-        title: 'Asegurando que la IA Beneficie a la Humanidad',
-        subtitle:
-          'Iniciativa estudiantil de BAISH explorando el desarrollo seguro y beneficioso de la IA',
-        cta: 'Sumate'
+        title: "Asegurando que la IA Beneficie a la Humanidad",
+        paragraph1: "A medida que los modelos de inteligencia artificial avanzan en capacidades<sup>1</sup>, esperamos que tengan un impacto cada vez más profundo en nuestra sociedad<sup>2</sup>. Es esencial que este impacto sea positivo, y que las decisiones tomadas por estos sistemas sean transparentes, confiables y responsables<sup>3</sup> ante las personas afectadas por ellos.",
+        paragraph2: "Creemos que reducir los riesgos asociados a modelos avanzados de IA<sup>4</sup> es uno de los desafíos más importantes de nuestro tiempo. También creemos que es un problema abierto y apasionante<sup>5</sup>, con amplias oportunidades para que más investigadores avancen en este campo<sup>6</sup>.",
+        paragraph3: "BAISH's mission is to support students in entering this field and conducting research on this topic.",
+        cta: "Participa"
       },
       intro: {
         title: '¿Por qué es Importante la Seguridad de la IA?',
@@ -929,7 +931,7 @@ const translations = {
             title: 'Wiki de Stampy',
             description:
               'Una wiki colaborativa que proporciona explicaciones accesibles de conceptos de alineamiento de IA.',
-            difficulty: 'Introductorio',
+            difficulty: 'Introductory',
             cta: 'Visitar'
           }
         }
