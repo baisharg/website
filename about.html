@@ -37,6 +37,8 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/language-toggle.css" />
+
+		<link rel="stylesheet" href="css/baish-enhanced-theme.css" />
 	</head>
 	<body>
 		<header class="site-header">
@@ -81,7 +83,7 @@
 		</header>
 
 		<section class="page-header">
-			<div class="container">
+			<div class="container reveal">
 				<div class="breadcrumb">
 					<a href="index.html">Home</a> /
 					<span data-i18n="about.pageHeader.breadcrumb">About AI Safety</span>
@@ -192,8 +194,8 @@
 				<h2 data-i18n="about.externalResources.title">
 					Learn More About AI Safety
 				</h2>
-				<div class="resources-grid">
-					<div class="resource-card">
+				<div class="resources-grid stagger-container">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">🔍</div>
 						<h3 data-i18n="about.externalResources.cards.alignmentForum.title">
 							Alignment Forum
@@ -218,7 +220,7 @@
 							>Visit</a
 						>
 					</div>
-					<div class="resource-card">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">💡</div>
 						<h3 data-i18n="about.externalResources.cards.lessWrong.title">
 							LessWrong
@@ -241,7 +243,7 @@
 							>Visit</a
 						>
 					</div>
-					<div class="resource-card">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">🧠</div>
 						<h3
 							data-i18n="about.externalResources.cards.eightyThousandHours.title"
@@ -268,7 +270,7 @@
 							>Visit</a
 						>
 					</div>
-					<div class="resource-card">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">📚</div>
 						<h3 data-i18n="about.externalResources.cards.stampy.title">
 							Stampy's Wiki
@@ -349,52 +351,208 @@
 			</div>
 		</section>
 
-		<section class="team">
+		<section class="team-section">
 			<div class="container">
-				<h2 data-i18n="about.team.title">Core Team</h2>
-				<div class="team-grid">
+				<h2 class="section-title">Our Core Team</h2>
+				<div class="team-grid stagger-container">
 					<div class="team-member">
-						<div class="member-photo"></div>
+						<div
+							class="member-photo"
+							style="
+								height: 180px;
+								width: 180px;
+								position: relative;
+								border-radius: 50%;
+								overflow: hidden;
+								margin: 0 auto;
+							"
+						>
+							<img
+								src="img/Eitan.jpeg"
+								alt="Eitan Sprejer"
+								class="team-member-img"
+								style="
+									object-fit: cover;
+									width: 100%;
+									height: 100%;
+									object-position: center 30%;
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									right: 0;
+									margin: 0 auto;
+								"
+							/>
+						</div>
 						<h3 data-i18n="about.team.members.eitan.name">Eitan Sprejer</h3>
 						<p class="member-title" data-i18n="about.team.members.eitan.title">
 							Co-founding Director
 						</p>
-						<p class="member-bio" data-i18n="about.team.members.eitan.bio">
-							Physics student with a passion for AI safety and alignment.
-						</p>
+						<div class="social-links">
+							<a href="https://github.com/Eitan-Sprejer" target="_blank"
+								><img
+									src="img/icons/github.svg"
+									alt="GitHub"
+									class="social-icon"
+							/></a>
+							<a
+								href="https://www.linkedin.com/in/eitan-sprejer-574380204/"
+								target="_blank"
+								><img
+									src="img/icons/linkedin.svg"
+									alt="LinkedIn"
+									class="social-icon"
+							/></a>
+						</div>
 					</div>
+
 					<div class="team-member">
-						<div class="member-photo"></div>
+						<div
+							class="member-photo"
+							style="
+								height: 180px;
+								width: 180px;
+								position: relative;
+								border-radius: 50%;
+								overflow: hidden;
+								margin: 0 auto;
+							"
+						>
+							<img
+								src="img/Luca.png"
+								alt="Luca De Leo"
+								class="team-member-img"
+								style="
+									object-fit: cover;
+									width: 100%;
+									height: 100%;
+									object-position: center 40%;
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									right: 0;
+									margin: 0 auto;
+								"
+							/>
+						</div>
 						<h3 data-i18n="about.team.members.luca.name">Luca De Leo</h3>
 						<p class="member-title" data-i18n="about.team.members.luca.title">
 							Co-founding Director
 						</p>
-						<p class="member-bio" data-i18n="about.team.members.luca.bio">
-							Operations Generalist with experience working in AI Safety
-							Organizations
-						</p>
+						<div class="social-links">
+							<a href="https://github.com/lucadeleo" target="_blank"
+								><img
+									src="img/icons/github.svg"
+									alt="GitHub"
+									class="social-icon"
+							/></a>
+							<a href="https://www.linkedin.com/in/luca-de-leo/" target="_blank"
+								><img
+									src="img/icons/linkedin.svg"
+									alt="LinkedIn"
+									class="social-icon"
+							/></a>
+						</div>
 					</div>
+
 					<div class="team-member">
-						<div class="member-photo"></div>
+						<div
+							class="member-photo"
+							style="
+								height: 180px;
+								width: 180px;
+								position: relative;
+								border-radius: 50%;
+								overflow: hidden;
+								margin: 0 auto;
+							"
+						>
+							<img
+								src="img/placeholder.jpg"
+								alt="Lucas Vitali"
+								class="team-member-img"
+								style="
+									object-fit: cover;
+									width: 100%;
+									height: 100%;
+									object-position: center;
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									right: 0;
+									margin: 0 auto;
+								"
+							/>
+						</div>
 						<h3 data-i18n="about.team.members.lucas.name">Lucas Vitali</h3>
 						<p class="member-title" data-i18n="about.team.members.lucas.title">
 							Communications Director
 						</p>
-						<p class="member-bio" data-i18n="about.team.members.lucas.bio">
-							Computer Science student with a passion for science communications
-						</p>
+						<div class="social-links">
+							<a href="https://github.com/lucasvitali" target="_blank"
+								><img
+									src="img/icons/github.svg"
+									alt="GitHub"
+									class="social-icon"
+							/></a>
+							<a href="https://linkedin.com/in/lucasvitali" target="_blank"
+								><img
+									src="img/icons/linkedin.svg"
+									alt="LinkedIn"
+									class="social-icon"
+							/></a>
+						</div>
 					</div>
+
 					<div class="team-member">
-						<div class="member-photo"></div>
+						<div
+							class="member-photo"
+							style="
+								height: 180px;
+								width: 180px;
+								position: relative;
+								border-radius: 50%;
+								overflow: hidden;
+								margin: 0 auto;
+							"
+						>
+							<img
+								src="img/placeholder.jpg"
+								alt="Sergio Abriola, PhD"
+								class="team-member-img"
+								style="
+									object-fit: cover;
+									width: 100%;
+									height: 100%;
+									object-position: center;
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									right: 0;
+									margin: 0 auto;
+								"
+							/>
+						</div>
 						<h3 data-i18n="about.team.members.sergio.name">
 							Sergio Abriola, PhD
 						</h3>
 						<p class="member-title" data-i18n="about.team.members.sergio.title">
 							Advisor
 						</p>
-						<p class="member-bio" data-i18n="about.team.members.sergio.bio">
-							Mathematics PhD and professor with a passion for AI Safety
-						</p>
+						<div class="social-links">
+							<a href="https://github.com/sergioabriola" target="_blank"
+								><img
+									src="img/icons/github.svg"
+									alt="GitHub"
+									class="social-icon"
+							/></a>
+							<a href="https://linkedin.com/in/sergioabriola" target="_blank"
+								><img
+									src="img/icons/linkedin.svg"
+									alt="LinkedIn"
+									class="social-icon"
+							/></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -402,7 +560,7 @@
 
 		<footer class="site-footer">
 			<div class="container">
-				<div class="footer-content">
+				<div class="footer-content reveal">
 					<div class="footer-logo">
 						<img
 							src="img/logo.svg"
@@ -479,7 +637,7 @@
 								<circle cx="4" cy="4" r="2"></circle>
 							</svg>
 						</a>
-						<a href="https://t.me/+zfvMHU8TaAhjNjVh" aria-label="Telegram">
+						<a href="https://t.me/+zhSGhXrn56g1YjVh" aria-label="Telegram">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="20"
@@ -516,5 +674,7 @@
 		<script src="js/translations.js"></script>
 		<script src="js/language-toggle.js"></script>
 		<script src="js/mobile-nav.js"></script>
+
+		<script src="js/animation.js" defer></script>
 	</body>
 </html>
