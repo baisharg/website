@@ -66,10 +66,23 @@ const translations = {
     home: {
       hero: {
         title: 'Ensuring AI Benefits Humanity',
-        paragraph1:
-          'As artificial intelligence models advance in capabilities<sup>1</sup>, we expect them to have an increasingly profound impact on our society<sup>2</sup>. It is essential that this impact is positive, and that the decisions made by these systems are transparent, reliable, and accountable<sup>3</sup> to the people affected by them.',
-        paragraph2:
-          'We believe that reducing the risks associated with advanced AI models<sup>4</sup> is one of the most important challenges of our time. We also believe it is an open and exciting problem<sup>5</sup>, with ample opportunities for more researchers to advance in this field<sup>6</sup>.',
+        paragraph1: {
+          part1: 'As artificial intelligence models advance in capabilities',
+          part2:
+            ', we expect them to have an increasingly profound impact on our society',
+          part3:
+            '. It is essential that this impact is positive, and that the decisions made by these systems are transparent, reliable, and accountable',
+          part4: ' to the people affected by them.'
+        },
+        paragraph2: {
+          part1:
+            'We believe that reducing the risks associated with advanced AI models',
+          part2:
+            ' is one of the most important challenges of our time. We also believe it is an open and exciting problem',
+          part3:
+            ', with ample opportunities for more researchers to advance in this field',
+          part4: '.'
+        },
         paragraph3:
           "BAISH's mission is to support students in entering this field and conducting research on this topic.",
         cta: 'Get Involved'
@@ -281,7 +294,7 @@ const translations = {
       },
       agiFundamentals: {
         title: 'AGI Safety Fundamentals Cohort',
-        status: 'Currently Active',
+        status: 'Starts second semester 2025',
         description:
           'The AGI Safety Fundamentals cohort is an 8-week guided course covering the essential concepts in AI alignment and safety. Participants read curated materials and meet weekly to discuss the readings with a facilitator.',
         description2:
@@ -382,56 +395,56 @@ const translations = {
         }
       },
       mechInterp: {
-        title: 'Mechanistic Interpretability Course',
-        status: 'Starts end of April 2025',
+        title: 'Curso de Interpretabilidad Mecanística',
+        status: 'Comienza en fines de Abril 2025',
         description:
-          'The Mechanistic Interpretability Course is an intensive 1-month program focused on techniques for understanding the internal mechanisms of neural networks. This course combines theoretical learning with practical projects.',
+          'El Curso de Interpretabilidad Mecanística es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
         description2:
-          'Mechanistic interpretability is a key area of AI safety research, seeking to make AI systems more transparent and understandable.',
+          'La interpretabilidad mecánistica es un área clave de la investigación en seguridad de IA, que busca hacer que los sistemas de IA sean más transparentes y comprensibles.',
         curriculum: {
-          title: 'Curriculum Overview',
+          title: 'Descripción General del Plan de Estudios',
           items: [
-            'Fundamentals of neural network architectures',
-            'Feature visualization techniques',
-            'Circuit analysis in transformer models',
-            'Techniques for analyzing attention mechanisms',
-            'Gradient-based attribution methods',
-            'Final project: Interpreting a specific model component'
+            'Fundamentos de arquitecturas de redes neuronales',
+            'Técnicas de visualización de características',
+            'Análisis de circuitos en modelos de transformers',
+            'Técnicas para analizar mecanismos de atención',
+            'Métodos de atribución basados en gradientes',
+            'Proyecto final: Interpretación de un componente específico del modelo'
           ]
         },
         timeCommitment: {
-          title: 'Time Commitment',
+          title: 'Dedicación de Tiempo',
           items: [
-            '2 classes per week (2 hours each)',
-            '1 practical session per week (3 hours)',
-            'Individual project work (5-10 hours per week)',
-            'Final project presentation'
+            '2 clases por semana (2 horas cada una)',
+            '1 sesión práctica por semana (3 horas)',
+            'Trabajo de proyecto individual (5-10 horas por semana)',
+            'Presentación de proyecto final'
           ]
         },
         prerequisites: {
-          title: 'Prerequisites',
+          title: 'Requisitos Previos',
           items: [
-            'Strong programming skills (Python)',
-            'Experience with deep learning frameworks (preferably PyTorch)',
-            'Familiarity with basic neural network architectures',
-            'Linear algebra and calculus'
+            'Sólidas habilidades de programación (Python)',
+            'Experiencia con frameworks de deep learning (preferiblemente PyTorch)',
+            'Familiaridad con arquitecturas básicas de redes neuronales',
+            'Álgebra lineal y cálculo'
           ]
         },
         courseDetails: {
-          title: 'Course Details',
-          duration: 'Duration:',
-          durationValue: '4 weeks',
-          startDate: 'Start Date:',
-          startDateValue: 'June 2, 2025',
-          endDate: 'End Date:',
-          endDateValue: 'June 27, 2025',
-          deadline: 'Application Deadline:',
-          deadlineValue: 'May 15, 2025',
-          location: 'Location:',
-          locationValue: 'Hybrid (In-person and Zoom)',
-          instructors: 'Instructors:',
-          instructorsValue: 'Dr. Laura Fernandez, Carlos Mendez',
-          button: 'Express Interest'
+          title: 'Detalles del Curso',
+          duration: 'Duración:',
+          durationValue: '4 semanas',
+          startDate: 'Fecha de Inicio:',
+          startDateValue: '2 de Junio, 2025',
+          endDate: 'Fecha de Finalización:',
+          endDateValue: '27 de Junio, 2025',
+          deadline: 'Fecha Límite de Solicitud:',
+          deadlineValue: '15 de Mayo, 2025',
+          location: 'Ubicación:',
+          locationValue: 'Híbrido (Presencial y Zoom)',
+          instructors: 'Instructores:',
+          instructorsValue: 'Dra. Laura Fernandez, Carlos Mendez',
+          button: 'Expresar Interés'
         }
       },
       calendar: {
@@ -788,13 +801,27 @@ const translations = {
     home: {
       hero: {
         title: 'Asegurando que la IA Beneficie a la Humanidad',
-        paragraph1:
-          'A medida que los modelos de inteligencia artificial avanzan en capacidades<sup>1</sup>, esperamos que tengan un impacto cada vez más profundo en nuestra sociedad<sup>2</sup>. Es esencial que este impacto sea positivo, y que las decisiones tomadas por estos sistemas sean transparentes, confiables y responsables<sup>3</sup> ante las personas afectadas por ellos.',
-        paragraph2:
-          'Creemos que reducir los riesgos asociados a modelos avanzados de IA<sup>4</sup> es uno de los desafíos más importantes de nuestro tiempo. También creemos que es un problema abierto y apasionante<sup>5</sup>, con amplias oportunidades para que más investigadores avancen en este campo<sup>6</sup>.',
+        paragraph1: {
+          part1:
+            'A medida que los modelos de inteligencia artificial avanzan en capacidades',
+          part2:
+            ', esperamos que tengan un impacto cada vez más profundo en nuestra sociedad',
+          part3:
+            '. Es esencial que este impacto sea positivo, y que las decisiones tomadas por estos sistemas sean transparentes, confiables y responsables',
+          part4: ' ante las personas afectadas por ellos.'
+        },
+        paragraph2: {
+          part1:
+            'Creemos que reducir los riesgos asociados a modelos avanzados de IA',
+          part2:
+            ' es uno de los desafíos más importantes de nuestro tiempo. También creemos que es un problema abierto y apasionante',
+          part3:
+            ', con amplias oportunidades para que más investigadores avancen en este campo',
+          part4: '.'
+        },
         paragraph3:
           'La misión de BAISH es apoyar a estudiantes a entrar a este campo y a realizar investigaciones sobre este tema.',
-        cta: 'Participa'
+        cta: 'Sumate'
       },
       intro: {
         title: '¿Por qué es Importante la Seguridad de la IA?',
@@ -1004,7 +1031,7 @@ const translations = {
       },
       agiFundamentals: {
         title: 'Cohorte de Fundamentos de Seguridad en AGI',
-        status: 'Currently Active',
+        status: 'Comienza segundo semestre 2025',
         description:
           'The AGI Safety Fundamentals cohort is an 8-week guided course covering the essential concepts in AI alignment and safety. Participants read curated materials and meet weekly to discuss the readings with a facilitator.',
         description2:
@@ -1065,7 +1092,7 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Cada Jueves @ 14:00 - 15:00',
+        status: 'Every Thursday @ 2:00pm - 3:00pm',
         description:
           'El Club de Lectura de Papers realiza análisis profundos de papers fundamentales y recientes en investigación de seguridad en IA. A diferencia del grupo de discusión más casual, esta actividad implica un examen minucioso de papers de investigación específicos.',
         description2:
@@ -1136,7 +1163,7 @@ const translations = {
           title: 'Requisitos Previos',
           items: [
             'Sólidas habilidades de programación (Python)',
-            'Experiencia con frameworks de aprendizaje profundo (preferiblemente PyTorch)',
+            'Experiencia con frameworks de deep learning (preferiblemente PyTorch)',
             'Familiaridad con arquitecturas básicas de redes neuronales',
             'Álgebra lineal y cálculo'
           ]
