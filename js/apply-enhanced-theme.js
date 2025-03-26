@@ -8,7 +8,8 @@ const path = require('path')
 
 // Configuration
 const rootDir = '.'
-const cssLinkToAdd = '<link rel="stylesheet" href="css/enhanced-theme.css" />'
+const cssLinkToAdd =
+  '<link rel="stylesheet" href="css/baish-enhanced-theme.css" />'
 const jsScriptToAdd = '<script src="js/animation.js" defer></script>'
 
 // Function to process an HTML file
@@ -19,7 +20,7 @@ function processHtmlFile (filePath) {
   let html = fs.readFileSync(filePath, 'utf-8')
 
   // Add CSS link if not already present
-  if (!html.includes('enhanced-theme.css')) {
+  if (!html.includes('baish-enhanced-theme.css')) {
     // Insert after the last CSS link
     const cssLinkPosition = html.lastIndexOf('</link>')
     if (cssLinkPosition !== -1) {

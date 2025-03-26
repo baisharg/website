@@ -165,7 +165,7 @@ The enhanced theme includes a comprehensive animation system:
 All HTML pages have been updated to use the enhanced theme CSS and JS files:
 
 ```html
-<link rel="stylesheet" href="css/enhanced-theme.css">
+<link rel="stylesheet" href="css/baish-enhanced-theme.css">
 <script src="js/animation.js" defer></script>
 ```
 
