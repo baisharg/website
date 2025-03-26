@@ -1380,7 +1380,7 @@ section {
 }
 
 .hero-content {
-	max-width: 700px;
+	max-width: 800px;
 	margin: 0 auto;
 }
 
@@ -2277,22 +2277,40 @@ section[class*="gradient"] .btn:hover,
 	text-decoration: none;
 }
 
-/* Reference superscript styling */
+/* Enhanced reference styling with better visibility */
 .reference {
 	text-decoration: none;
 	color: inherit;
+	position: relative;
+	white-space: nowrap;
 }
 
 .reference sup {
-	font-size: 0.75em;
+	font-size: 0.8em;
 	vertical-align: super;
 	line-height: 0;
-	color: #5A9FFF;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 2px 5px;
+	background-color: rgba(255, 255, 255, 0.25);
+	border-radius: 50%;
+	margin: 0 2px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.reference:hover sup {
+	color: #121620;
+	background-color: #ffffff;
+	transform: translateY(-1px);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text {
 	margin-bottom: 1.2rem;
 	font-size: 1.1rem;
 	line-height: 1.6;
-	color: #e0e0e0;
+	color: #ffffff;
+	text-align: left;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }

@@ -787,7 +787,7 @@ const translations = {
         title: "Asegurando que la IA Beneficie a la Humanidad",
         paragraph1: "A medida que los modelos de inteligencia artificial avanzan en capacidades<sup>1</sup>, esperamos que tengan un impacto cada vez más profundo en nuestra sociedad<sup>2</sup>. Es esencial que este impacto sea positivo, y que las decisiones tomadas por estos sistemas sean transparentes, confiables y responsables<sup>3</sup> ante las personas afectadas por ellos.",
         paragraph2: "Creemos que reducir los riesgos asociados a modelos avanzados de IA<sup>4</sup> es uno de los desafíos más importantes de nuestro tiempo. También creemos que es un problema abierto y apasionante<sup>5</sup>, con amplias oportunidades para que más investigadores avancen en este campo<sup>6</sup>.",
-        paragraph3: "BAISH's mission is to support students in entering this field and conducting research on this topic.",
+        paragraph3: "La misión de BAISH es apoyar a estudiantes a entrar a este campo y a realizar investigaciones sobre este tema.",
         cta: "Participa"
       },
       intro: {
