@@ -126,6 +126,64 @@ Form elements are styled consistently:
 - **Checkboxes/Radios**: Custom styled for dark theme
 - **Selects**: Custom dropdown styling
 
+## Enhanced Theme Implementation
+
+The website features an enhanced theme with modern styling techniques and interactions:
+
+### New Typography System
+
+- **Heading Font**: Oxanium - A modern, technical typeface for headings, titles, and UI elements
+- **Body Font**: Manrope - A clean, readable sans-serif for body text and general content
+
+### Visual Enhancements
+
+#### Glassmorphism
+
+Components use a glassmorphism effect with:
+- Translucent backgrounds with `rgba(30, 30, 48, 0.8)`
+- Subtle background blur with `backdrop-filter: blur(8px)`
+- Defined border-radius of 12px
+- Refined shadow system
+
+#### Gradients & Accents
+
+- **Primary Gradient**: `linear-gradient(135deg, #9275e5 0%, #6050aa 100%)`
+- **Alternate Gradient**: `linear-gradient(135deg, #9275e5 0%, #4a93fb 100%)`
+- Applied to buttons, section accents, and interactive elements
+
+### Animations & Interactions
+
+The enhanced theme includes a comprehensive animation system:
+
+- **Reveal Animations**: Elements fade and slide in as they enter the viewport
+- **Staggered Animations**: Grid items appear sequentially with delays
+- **Hover Effects**: Subtle elevation changes, brightness adjustments, and shadow enhancements
+- **Implemented with**: Intersection Observer API for performance
+
+### Using the Enhanced Theme
+
+All HTML pages have been updated to use the enhanced theme CSS and JS files:
+
+```html
+<link rel="stylesheet" href="css/enhanced-theme.css">
+<script src="js/animation.js" defer></script>
+```
+
+To apply animations to new elements:
+- Use `class="reveal"` for fade-in animations
+- Use `class="stagger-container"` for parent elements with multiple child items
+- Use `class="stagger-item"` for child elements that should animate sequentially
+
+### Applying to New Pages
+
+For new pages, include the enhanced theme files and use the animation classes. Alternatively, you can run the helper script:
+
+```
+node js/apply-enhanced-theme.js
+```
+
+This will automatically add the required files and animation classes to all HTML pages.
+
 ## Development and Maintenance
 
 ### Adding New Pages

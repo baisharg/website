@@ -37,7 +37,8 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/language-toggle.css" />
-	</head>
+	
+		<link rel="stylesheet" href="css/enhanced-theme.css" /></head>
 	<body>
 		<header class="site-header">
 			<div class="container">
@@ -85,7 +86,7 @@
 		</header>
 
 		<section class="page-header">
-			<div class="container">
+			<div class="container reveal">
 				<div class="breadcrumb">
 					<a href="index.html">Home</a> /
 					<span data-i18n="about.pageHeader.breadcrumb">About AI Safety</span>
@@ -196,8 +197,8 @@
 				<h2 data-i18n="about.externalResources.title">
 					Learn More About AI Safety
 				</h2>
-				<div class="resources-grid">
-					<div class="resource-card">
+				<div class="resources-grid stagger-container">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">🔍</div>
 						<h3 data-i18n="about.externalResources.cards.alignmentForum.title">
 							Alignment Forum
@@ -222,7 +223,7 @@
 							>Visit</a
 						>
 					</div>
-					<div class="resource-card">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">💡</div>
 						<h3 data-i18n="about.externalResources.cards.lessWrong.title">
 							LessWrong
@@ -245,7 +246,7 @@
 							>Visit</a
 						>
 					</div>
-					<div class="resource-card">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">🧠</div>
 						<h3
 							data-i18n="about.externalResources.cards.eightyThousandHours.title"
@@ -272,7 +273,7 @@
 							>Visit</a
 						>
 					</div>
-					<div class="resource-card">
+					<div class="resource-card stagger-item">
 						<div class="resource-icon">📚</div>
 						<h3 data-i18n="about.externalResources.cards.stampy.title">
 							Stampy's Wiki
@@ -356,7 +357,7 @@
 		<section class="team-section">
 			<div class="container">
 				<h2 class="section-title">Our Core Team</h2>
-				<div class="team-grid">
+				<div class="team-grid stagger-container">
 					<div class="team-member">
 						<div
 							class="member-photo"
@@ -560,7 +561,7 @@
 
 		<footer class="site-footer">
 			<div class="container">
-				<div class="footer-content">
+				<div class="footer-content reveal">
 					<div class="footer-logo">
 						<img
 							src="img/logo.svg"
@@ -675,5 +676,6 @@
 		<script src="js/translations.js"></script>
 		<script src="js/language-toggle.js"></script>
 		<script src="js/mobile-nav.js"></script>
-	</body>
+	
+		<script src="js/animation.js" defer></script></body>
 </html>

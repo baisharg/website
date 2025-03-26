@@ -34,6 +34,7 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/language-toggle.css" />
+		<link rel="stylesheet" href="css/enhanced-theme.css" />
 	</head>
 	<body>
 		<header class="site-header">
@@ -79,7 +80,7 @@
 
 		<section class="hero">
 			<div class="container">
-				<div class="hero-content">
+				<div class="hero-content reveal">
 					<h1 data-i18n="home.hero.title">Ensuring AI Benefits Humanity</h1>
 					<p class="hero-text">
 						<span data-i18n="home.hero.paragraph1.part1"
@@ -153,7 +154,7 @@
 
 		<section class="upcoming-event">
 			<div class="container">
-				<div class="event-card">
+				<div class="event-card reveal">
 					<div class="event-date">
 						<span class="month">MAR</span>
 						<span class="day">28</span>
@@ -189,9 +190,9 @@
 
 		<section class="activities">
 			<div class="container">
-				<h2 data-i18n="home.activities.title">Our Activities</h2>
-				<div class="activities-grid">
-					<div class="activity-card">
+				<h2 class="reveal" data-i18n="home.activities.title">Our Activities</h2>
+				<div class="activities-grid stagger-container">
+					<div class="activity-card stagger-item">
 						<div class="activity-icon">💬</div>
 						<h3 data-i18n="home.activities.card2.title">
 							Weekly Discussion Group
@@ -210,7 +211,7 @@
 							>Learn More →</a
 						>
 					</div>
-					<div class="activity-card">
+					<div class="activity-card stagger-item">
 						<div class="activity-icon">📝</div>
 						<h3 data-i18n="home.activities.card3.title">Paper Reading Club</h3>
 						<p data-i18n="home.activities.card3.description">
@@ -227,7 +228,7 @@
 							>Learn More →</a
 						>
 					</div>
-					<div class="activity-card">
+					<div class="activity-card stagger-item">
 						<div class="activity-icon">🧠</div>
 						<h3 data-i18n="home.activities.card4.title">Mech Interp Course</h3>
 						<p data-i18n="home.activities.card4.description">
@@ -245,7 +246,7 @@
 							>Learn More →</a
 						>
 					</div>
-					<div class="activity-card">
+					<div class="activity-card stagger-item">
 						<div class="activity-icon">📚</div>
 						<h3 data-i18n="home.activities.card1.title">
 							AGI Safety Fundamentals Cohort
@@ -270,9 +271,9 @@
 			</div>
 		</section>
 
-		<section id="get-involved" class="get-involved">
+		<section class="mission" id="get-involved">
 			<div class="container">
-				<h2 data-i18n="home.getInvolved.title">Get Involved</h2>
+				<h2 class="reveal" data-i18n="home.getInvolved.title">Get Involved</h2>
 				<div class="involvement-options">
 					<div class="involvement-option">
 						<h3 data-i18n="home.getInvolved.mailingList.title">
@@ -348,7 +349,7 @@
 
 		<footer class="site-footer">
 			<div class="container">
-				<div class="footer-content">
+				<div class="footer-content reveal">
 					<div class="footer-logo">
 						<img
 							src="img/logo.svg"
@@ -464,5 +465,6 @@
 		<script src="js/translations.js"></script>
 		<script src="js/language-toggle.js"></script>
 		<script src="js/mobile-nav.js"></script>
+		<script src="js/animation.js" defer></script>
 	</body>
 </html>

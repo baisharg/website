@@ -34,7 +34,8 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/language-toggle.css" />
-	</head>
+	
+		<link rel="stylesheet" href="css/enhanced-theme.css" /></head>
 	<body>
 		<header class="site-header">
 			<div class="container">
@@ -80,7 +81,7 @@
 		</header>
 
 		<section class="page-header">
-			<div class="container">
+			<div class="container reveal">
 				<div class="breadcrumb">
 					<a href="index.html">Home</a> /
 					<span data-i18n="research.pageHeader.breadcrumb">Research</span>
@@ -179,8 +180,8 @@
 						Value Learning
 					</button>
 				</div>
-				<div class="projects-grid">
-					<div class="project-card" data-category="interpretability">
+				<div class="projects-grid stagger-container">
+					<div class="project-card stagger-item" data-category="interpretability">
 						<div class="project-header">
 							<h3>Exploring Adversarial Examples in Large Language Models</h3>
 							<span class="project-year">2025</span>
@@ -199,7 +200,7 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="alignment">
+					<div class="project-card stagger-item" data-category="alignment">
 						<div class="project-header">
 							<h3>Preference Learning from Sparse Human Feedback</h3>
 							<span class="project-year">2025</span>
@@ -217,7 +218,7 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="robustness">
+					<div class="project-card stagger-item" data-category="robustness">
 						<div class="project-header">
 							<h3>Evaluating Robustness of Safety Guardrails in LLMs</h3>
 							<span class="project-year">2023</span>
@@ -236,7 +237,7 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="interpretability">
+					<div class="project-card stagger-item" data-category="interpretability">
 						<div class="project-header">
 							<h3>Circuit Analysis of Attention Heads in Transformer Models</h3>
 							<span class="project-year">2023</span>
@@ -255,7 +256,7 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="value-learning">
+					<div class="project-card stagger-item" data-category="value-learning">
 						<div class="project-header">
 							<h3>
 								Value Pluralism in AI Systems: A Framework for Handling
@@ -276,7 +277,7 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="alignment">
+					<div class="project-card stagger-item" data-category="alignment">
 						<div class="project-header">
 							<h3>
 								Improving Factuality in Language Models through Guided
@@ -476,7 +477,7 @@
 
 		<footer class="site-footer">
 			<div class="container">
-				<div class="footer-content">
+				<div class="footer-content reveal">
 					<div class="footer-logo">
 						<img
 							src="img/logo.svg"
@@ -624,5 +625,6 @@
 				});
 			});
 		</script>
-	</body>
+	
+		<script src="js/animation.js" defer></script></body>
 </html>

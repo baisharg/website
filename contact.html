@@ -34,7 +34,8 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/language-toggle.css" />
-	</head>
+	
+		<link rel="stylesheet" href="css/enhanced-theme.css" /></head>
 	<body>
 		<header class="site-header">
 			<div class="container">
@@ -82,7 +83,7 @@
 		</header>
 
 		<section class="page-header">
-			<div class="container">
+			<div class="container reveal">
 				<div class="breadcrumb">
 					<a href="index.html">Home</a> /
 					<span data-i18n="contact.pageHeader.breadcrumb">Contact</span>
@@ -96,8 +97,8 @@
 
 		<section class="contact-info">
 			<div class="container">
-				<div class="contact-grid">
-					<div class="contact-card">
+				<div class="contact-grid stagger-container">
+					<div class="contact-card stagger-item">
 						<div class="contact-icon">✉️</div>
 						<h3 data-i18n="contact.contactInfo.email.title">Email</h3>
 						<p data-i18n="contact.contactInfo.email.description">
@@ -108,7 +109,7 @@
 						>
 					</div>
 
-					<div class="contact-card">
+					<div class="contact-card stagger-item">
 						<div class="contact-icon">✈️</div>
 						<h3 data-i18n="contact.contactInfo.telegram.title">Telegram</h3>
 						<p data-i18n="contact.contactInfo.telegram.description">
@@ -127,7 +128,7 @@
 						</div>
 					</div>
 
-					<div class="contact-card">
+					<div class="contact-card stagger-item">
 						<div class="contact-icon">📍</div>
 						<h3 data-i18n="contact.contactInfo.location.title">Location</h3>
 						<p data-i18n="contact.contactInfo.location.description">
@@ -140,7 +141,7 @@
 						</address>
 					</div>
 
-					<div class="contact-card">
+					<div class="contact-card stagger-item">
 						<div class="contact-icon">📱</div>
 						<h3 data-i18n="contact.contactInfo.socialMedia.title">
 							Social Media
@@ -495,7 +496,7 @@
 
 		<footer class="site-footer">
 			<div class="container">
-				<div class="footer-content">
+				<div class="footer-content reveal">
 					<div class="footer-logo">
 						<img
 							src="img/logo.svg"
@@ -671,5 +672,6 @@
 				}
 			});
 		</script>
-	</body>
+	
+		<script src="js/animation.js" defer></script></body>
 </html>
