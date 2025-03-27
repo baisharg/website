@@ -11,7 +11,7 @@
 	--bg-surface: rgba(30, 30, 48, 0.8);
 	--bg-surface-solid: #1e1e30;
 	--primary: #9275e5;
-	--primary-dark: #6050aa;
+	--primary-dark: #7c63c7;
 	--primary-light: #a68eee;
 	--secondary: #4a93fb;
 	--secondary-dark: #3e7dd3;
@@ -37,7 +37,7 @@
 	--active: #312d56;
 
 	/* Gradients */
-	--primary-gradient: linear-gradient(135deg, #9275e5 0%, #6050aa 100%);
+	--primary-gradient: linear-gradient(135deg, #9275e5 0%, #7c63c7 100%);
 	--alternate-gradient: linear-gradient(135deg, #9275e5 0%, #4a93fb 100%);
 
 	/* Shadows */
