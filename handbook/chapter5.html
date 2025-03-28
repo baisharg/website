@@ -17,7 +17,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Playfair+Display:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
 		<!-- Custom CSS -->
@@ -50,9 +50,13 @@
 							<a href="../research.html" data-i18n="nav.research">Research</a>
 						</li>
 						<li>
-							<a href="../resources.html" data-i18n="nav.resources">Resources</a>
+							<a href="../resources.html" data-i18n="nav.resources"
+								>Resources</a
+							>
 						</li>
-						<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+						<li>
+							<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="language-toggle">
@@ -68,12 +72,19 @@
 
 		<section class="page-header">
 			<div class="container">
-				<div class="breadcrumb" style="margin-bottom: 1rem;">
-					<a href="../mech-interp-course.html" class="btn btn-secondary" style="margin-right: 1rem;" data-i18n="mechInterpCourse.backToHome">← Back to Course</a>
+				<div class="breadcrumb" style="margin-bottom: 1rem">
+					<a
+						href="../mech-interp-course.html"
+						class="btn btn-secondary"
+						style="margin-right: 1rem"
+						data-i18n="mechInterpCourse.backToHome"
+						>← Back to Course</a
+					>
 				</div>
 				<h1 data-i18n="handbook.chapter5.title">Chapter 5: Superposition</h1>
 				<p class="subtitle" data-i18n="handbook.chapter5.subtitle">
-					Understanding how neural networks represent more features than they have dimensions
+					Understanding how neural networks represent more features than they
+					have dimensions
 				</p>
 			</div>
 		</section>
@@ -84,107 +95,266 @@
 					<div class="handbook-toc">
 						<h3 data-i18n="handbook.tableOfContents">Table of Contents</h3>
 						<ul>
-							<li><a href="#introduction" data-i18n="handbook.chapter5.sections.intro">Introduction to Superposition</a></li>
-							<li><a href="#feature-competition" data-i18n="handbook.chapter5.sections.competition">Feature Competition</a></li>
-							<li><a href="#polysemanticity" data-i18n="handbook.chapter5.sections.polysemanticity">Polysemanticity</a></li>
-							<li><a href="#toy-models" data-i18n="handbook.chapter5.sections.toyModels">Toy Models of Superposition</a></li>
-							<li><a href="#implications" data-i18n="handbook.chapter5.sections.implications">Implications for Interpretability</a></li>
-							<li><a href="#conclusion" data-i18n="handbook.chapter5.sections.conclusion">Conclusion</a></li>
+							<li>
+								<a
+									href="#introduction"
+									data-i18n="handbook.chapter5.sections.intro"
+									>Introduction to Superposition</a
+								>
+							</li>
+							<li>
+								<a
+									href="#feature-competition"
+									data-i18n="handbook.chapter5.sections.competition"
+									>Feature Competition</a
+								>
+							</li>
+							<li>
+								<a
+									href="#polysemanticity"
+									data-i18n="handbook.chapter5.sections.polysemanticity"
+									>Polysemanticity</a
+								>
+							</li>
+							<li>
+								<a
+									href="#toy-models"
+									data-i18n="handbook.chapter5.sections.toyModels"
+									>Toy Models of Superposition</a
+								>
+							</li>
+							<li>
+								<a
+									href="#implications"
+									data-i18n="handbook.chapter5.sections.implications"
+									>Implications for Interpretability</a
+								>
+							</li>
+							<li>
+								<a
+									href="#conclusion"
+									data-i18n="handbook.chapter5.sections.conclusion"
+									>Conclusion</a
+								>
+							</li>
 						</ul>
 					</div>
 					<div class="chapter-navigation">
-						<a href="chapter4.html" class="prev-chapter" data-i18n="handbook.prevChapter">← Previous Chapter: Circuits</a>
-						<a href="chapter6.html" class="next-chapter" data-i18n="handbook.nextChapter">Next Chapter: Sparse Autoencoders →</a>
+						<a
+							href="chapter4.html"
+							class="prev-chapter"
+							data-i18n="handbook.prevChapter"
+							>← Previous Chapter: Circuits</a
+						>
+						<a
+							href="chapter6.html"
+							class="next-chapter"
+							data-i18n="handbook.nextChapter"
+							>Next Chapter: Sparse Autoencoders →</a
+						>
 					</div>
 				</div>
-				
+
 				<div class="handbook-main">
-					<h2 id="introduction" data-i18n="handbook.chapter5.sections.intro">Introduction to Superposition</h2>
+					<h2 id="introduction" data-i18n="handbook.chapter5.sections.intro">
+						Introduction to Superposition
+					</h2>
 					<p data-i18n="handbook.chapter5.intro.p1">
-						Superposition refers to the phenomenon where neural networks represent more features than they have neurons or dimensions. This occurs because networks often need to track many more features than they have parameters available to represent them individually.
+						Superposition refers to the phenomenon where neural networks
+						represent more features than they have neurons or dimensions. This
+						occurs because networks often need to track many more features than
+						they have parameters available to represent them individually.
 					</p>
 					<p data-i18n="handbook.chapter5.intro.p2">
-						The concept was formalized in the paper "Toy Models of Superposition" by Anthropic, which demonstrated how networks can encode multiple features in a lower-dimensional space by exploiting the geometry of feature co-occurrence patterns.
+						The concept was formalized in the paper "Toy Models of
+						Superposition" by Anthropic, which demonstrated how networks can
+						encode multiple features in a lower-dimensional space by exploiting
+						the geometry of feature co-occurrence patterns.
 					</p>
-					
-					<h2 id="feature-competition" data-i18n="handbook.chapter5.sections.competition">Feature Competition</h2>
+
+					<h2
+						id="feature-competition"
+						data-i18n="handbook.chapter5.sections.competition"
+					>
+						Feature Competition
+					</h2>
 					<p data-i18n="handbook.chapter5.competition.p1">
-						When a neural network has fewer dimensions than the features it needs to represent, these features must "compete" for representation space. The network learns to allocate its limited representational capacity efficiently.
+						When a neural network has fewer dimensions than the features it
+						needs to represent, these features must "compete" for representation
+						space. The network learns to allocate its limited representational
+						capacity efficiently.
 					</p>
 					<p data-i18n="handbook.chapter5.competition.p2">
 						Key factors that influence which features get represented include:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter5.competition.list1">Frequency: More common features are more likely to be represented</li>
-						<li data-i18n="handbook.chapter5.competition.list2">Importance: Features that strongly affect the loss function are prioritized</li>
-						<li data-i18n="handbook.chapter5.competition.list3">Correlation: Features that often co-occur can share representation space</li>
-						<li data-i18n="handbook.chapter5.competition.list4">Orthogonality: Features that can be represented in orthogonal directions are easier to separate</li>
+						<li data-i18n="handbook.chapter5.competition.list1">
+							Frequency: More common features are more likely to be represented
+						</li>
+						<li data-i18n="handbook.chapter5.competition.list2">
+							Importance: Features that strongly affect the loss function are
+							prioritized
+						</li>
+						<li data-i18n="handbook.chapter5.competition.list3">
+							Correlation: Features that often co-occur can share representation
+							space
+						</li>
+						<li data-i18n="handbook.chapter5.competition.list4">
+							Orthogonality: Features that can be represented in orthogonal
+							directions are easier to separate
+						</li>
 					</ul>
-					
-					<h2 id="polysemanticity" data-i18n="handbook.chapter5.sections.polysemanticity">Polysemanticity</h2>
+
+					<h2
+						id="polysemanticity"
+						data-i18n="handbook.chapter5.sections.polysemanticity"
+					>
+						Polysemanticity
+					</h2>
 					<p data-i18n="handbook.chapter5.polysemanticity.p1">
-						Polysemanticity is a direct consequence of superposition. It refers to the phenomenon where individual neurons or network directions respond to multiple unrelated features.
+						Polysemanticity is a direct consequence of superposition. It refers
+						to the phenomenon where individual neurons or network directions
+						respond to multiple unrelated features.
 					</p>
 					<p data-i18n="handbook.chapter5.polysemanticity.p2">
 						In a polysemantic network:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter5.polysemanticity.list1">Single neurons may respond to multiple semantically distinct concepts</li>
-						<li data-i18n="handbook.chapter5.polysemanticity.list2">Feature representations are distributed across many neurons</li>
-						<li data-i18n="handbook.chapter5.polysemanticity.list3">There may not be a clear one-to-one mapping between network components and human-interpretable concepts</li>
+						<li data-i18n="handbook.chapter5.polysemanticity.list1">
+							Single neurons may respond to multiple semantically distinct
+							concepts
+						</li>
+						<li data-i18n="handbook.chapter5.polysemanticity.list2">
+							Feature representations are distributed across many neurons
+						</li>
+						<li data-i18n="handbook.chapter5.polysemanticity.list3">
+							There may not be a clear one-to-one mapping between network
+							components and human-interpretable concepts
+						</li>
 					</ul>
 					<p data-i18n="handbook.chapter5.polysemanticity.p3">
-						This makes interpretation challenging, as we cannot simply analyze individual neurons to understand what the network is representing.
+						This makes interpretation challenging, as we cannot simply analyze
+						individual neurons to understand what the network is representing.
 					</p>
-					
-					<h2 id="toy-models" data-i18n="handbook.chapter5.sections.toyModels">Toy Models of Superposition</h2>
+
+					<h2 id="toy-models" data-i18n="handbook.chapter5.sections.toyModels">
+						Toy Models of Superposition
+					</h2>
 					<p data-i18n="handbook.chapter5.toyModels.p1">
-						Researchers have developed simplified models to study superposition. These toy models help illustrate how networks can embed many features in lower-dimensional spaces.
+						Researchers have developed simplified models to study superposition.
+						These toy models help illustrate how networks can embed many
+						features in lower-dimensional spaces.
 					</p>
 					<p data-i18n="handbook.chapter5.toyModels.p2">
 						A typical toy model might involve:
 					</p>
 					<ol>
-						<li data-i18n="handbook.chapter5.toyModels.step1">Generating synthetic data with a known number of sparse features</li>
-						<li data-i18n="handbook.chapter5.toyModels.step2">Training a model with fewer dimensions than features</li>
-						<li data-i18n="handbook.chapter5.toyModels.step3">Analyzing how the model represents these features in its limited space</li>
+						<li data-i18n="handbook.chapter5.toyModels.step1">
+							Generating synthetic data with a known number of sparse features
+						</li>
+						<li data-i18n="handbook.chapter5.toyModels.step2">
+							Training a model with fewer dimensions than features
+						</li>
+						<li data-i18n="handbook.chapter5.toyModels.step3">
+							Analyzing how the model represents these features in its limited
+							space
+						</li>
 					</ol>
 					<p data-i18n="handbook.chapter5.toyModels.p3">
-						These experiments have revealed that networks can use clever geometric arrangements to encode features efficiently, often exploiting properties like sparsity (features rarely appearing simultaneously).
+						These experiments have revealed that networks can use clever
+						geometric arrangements to encode features efficiently, often
+						exploiting properties like sparsity (features rarely appearing
+						simultaneously).
 					</p>
-					
-					<h2 id="implications" data-i18n="handbook.chapter5.sections.implications">Implications for Interpretability</h2>
+
+					<h2
+						id="implications"
+						data-i18n="handbook.chapter5.sections.implications"
+					>
+						Implications for Interpretability
+					</h2>
 					<p data-i18n="handbook.chapter5.implications.p1">
-						Superposition poses several challenges for interpretability research:
+						Superposition poses several challenges for interpretability
+						research:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter5.implications.list1">Direct neuron analysis may reveal misleading or incomplete information</li>
-						<li data-i18n="handbook.chapter5.implications.list2">Features may be encoded in complex, distributed patterns across many neurons</li>
-						<li data-i18n="handbook.chapter5.implications.list3">Simple linear probing techniques may fail to detect important features</li>
+						<li data-i18n="handbook.chapter5.implications.list1">
+							Direct neuron analysis may reveal misleading or incomplete
+							information
+						</li>
+						<li data-i18n="handbook.chapter5.implications.list2">
+							Features may be encoded in complex, distributed patterns across
+							many neurons
+						</li>
+						<li data-i18n="handbook.chapter5.implications.list3">
+							Simple linear probing techniques may fail to detect important
+							features
+						</li>
 					</ul>
 					<p data-i18n="handbook.chapter5.implications.p2">
 						However, understanding superposition also provides opportunities:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter5.implications.list4">It suggests focusing on finding the right basis for analysis, rather than examining individual neurons</li>
-						<li data-i18n="handbook.chapter5.implications.list5">Techniques like Sparse Autoencoders (covered in the next chapter) can help extract features from superposed representations</li>
-						<li data-i18n="handbook.chapter5.implications.list6">Knowledge of superposition patterns can inform better training and architecture design</li>
+						<li data-i18n="handbook.chapter5.implications.list4">
+							It suggests focusing on finding the right basis for analysis,
+							rather than examining individual neurons
+						</li>
+						<li data-i18n="handbook.chapter5.implications.list5">
+							Techniques like Sparse Autoencoders (covered in the next chapter)
+							can help extract features from superposed representations
+						</li>
+						<li data-i18n="handbook.chapter5.implications.list6">
+							Knowledge of superposition patterns can inform better training and
+							architecture design
+						</li>
 					</ul>
-					
-					<h2 id="conclusion" data-i18n="handbook.chapter5.sections.conclusion">Conclusion</h2>
+
+					<h2 id="conclusion" data-i18n="handbook.chapter5.sections.conclusion">
+						Conclusion
+					</h2>
 					<p data-i18n="handbook.chapter5.conclusion.p1">
-						Superposition is a fundamental property of neural networks that arises when they need to represent more features than they have dimensions. This leads to polysemantic neurons and distributed representations that complicate interpretability efforts.
+						Superposition is a fundamental property of neural networks that
+						arises when they need to represent more features than they have
+						dimensions. This leads to polysemantic neurons and distributed
+						representations that complicate interpretability efforts.
 					</p>
 					<p data-i18n="handbook.chapter5.conclusion.p2">
-						Understanding superposition is essential for developing effective methods to interpret neural networks, especially large language models with billions of parameters tracking potentially trillions of features. The next chapter will explore how Sparse Autoencoders can help address this challenge by disentangling these superposed representations.
+						Understanding superposition is essential for developing effective
+						methods to interpret neural networks, especially large language
+						models with billions of parameters tracking potentially trillions of
+						features. The next chapter will explore how Sparse Autoencoders can
+						help address this challenge by disentangling these superposed
+						representations.
 					</p>
-					
+
 					<div class="further-reading">
 						<h3 data-i18n="handbook.furtherReading">Further Reading</h3>
 						<ul>
-							<li><a href="https://transformer-circuits.pub/2022/toy_model/index.html" target="_blank" data-i18n="handbook.chapter5.reading1">Toy Models of Superposition (Anthropic)</a></li>
-							<li><a href="https://arxiv.org/abs/2211.11754" target="_blank" data-i18n="handbook.chapter5.reading2">Progress Measures for Grokking via Mechanistic Interpretability</a></li>
-							<li><a href="https://www.youtube.com/watch?v=mSn7Rr2X8G8" target="_blank" data-i18n="handbook.chapter5.reading3">3Blue1Brown: How LLMs might store facts?</a></li>
+							<li>
+								<a
+									href="https://transformer-circuits.pub/2022/toy_model/index.html"
+									target="_blank"
+									data-i18n="handbook.chapter5.reading1"
+									>Toy Models of Superposition (Anthropic)</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://arxiv.org/abs/2211.11754"
+									target="_blank"
+									data-i18n="handbook.chapter5.reading2"
+									>Progress Measures for Grokking via Mechanistic
+									Interpretability</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.youtube.com/watch?v=mSn7Rr2X8G8"
+									target="_blank"
+									data-i18n="handbook.chapter5.reading3"
+									>3Blue1Brown: How LLMs might store facts?</a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -195,7 +365,11 @@
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-logo">
-						<img src="../img/logo.svg" alt="BAISH Logo" class="footer-logo-img" />
+						<img
+							src="../img/logo.svg"
+							alt="BAISH Logo"
+							class="footer-logo-img"
+						/>
 						<p class="tagline" data-i18n="footer.tagline">
 							Ensuring AI benefits humanity through research, education, and
 							community
@@ -217,7 +391,9 @@
 									>Resources</a
 								>
 							</li>
-							<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+							<li>
+								<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -309,13 +485,13 @@
 		<script src="../js/mobile-nav.js"></script>
 		<script>
 			// Force language application on page load
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener("DOMContentLoaded", function () {
 				// Apply translations based on stored language
-				const storedLang = localStorage.getItem('language') || 'es';
+				const storedLang = localStorage.getItem("language") || "es";
 				currentLanguage = storedLang;
 				updateLanguageToggleUI();
 				applyTranslations();
 			});
 		</script>
 	</body>
-</html> 
+</html>

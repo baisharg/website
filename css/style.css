@@ -1097,8 +1097,8 @@ body.menu-open {
 	--shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
 
 	/* Typography */
-	--font-primary: "Rubik", sans-serif;
-	--font-secondary: "Source Serif Pro", serif;
+	--font-primary: "Space Grotesk", sans-serif;
+	--font-secondary: "Playfair Display", serif;
 	--font-size-base: 16px;
 	--line-height-base: 1.5;
 
@@ -2249,4 +2249,40 @@ a[data-i18n="home.hero.cta"]:hover {
 /* Utility Classes */
 .text-center {
 	text-align: center;
+}
+
+/* Rubik Font Classes */
+.space-grotesk-light {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.space-grotesk-regular {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.space-grotesk-medium {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.space-grotesk-semibold {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.space-grotesk-bold {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
 }

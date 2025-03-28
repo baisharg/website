@@ -17,7 +17,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Playfair+Display:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
 		<!-- Custom CSS -->
@@ -50,9 +50,13 @@
 							<a href="../research.html" data-i18n="nav.research">Research</a>
 						</li>
 						<li>
-							<a href="../resources.html" data-i18n="nav.resources">Resources</a>
+							<a href="../resources.html" data-i18n="nav.resources"
+								>Resources</a
+							>
 						</li>
-						<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+						<li>
+							<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="language-toggle">
@@ -68,12 +72,21 @@
 
 		<section class="page-header">
 			<div class="container">
-				<div class="breadcrumb" style="margin-bottom: 1rem;">
-					<a href="../mech-interp-course.html" class="btn btn-secondary" style="margin-right: 1rem;" data-i18n="mechInterpCourse.backToHome">← Back to Course</a>
+				<div class="breadcrumb" style="margin-bottom: 1rem">
+					<a
+						href="../mech-interp-course.html"
+						class="btn btn-secondary"
+						style="margin-right: 1rem"
+						data-i18n="mechInterpCourse.backToHome"
+						>← Back to Course</a
+					>
 				</div>
-				<h1 data-i18n="handbook.chapter6.title">Chapter 6: Sparse Autoencoders</h1>
+				<h1 data-i18n="handbook.chapter6.title">
+					Chapter 6: Sparse Autoencoders
+				</h1>
 				<p class="subtitle" data-i18n="handbook.chapter6.subtitle">
-					Using Sparse Autoencoders to disentangle superposition in neural networks
+					Using Sparse Autoencoders to disentangle superposition in neural
+					networks
 				</p>
 			</div>
 		</section>
@@ -84,108 +97,266 @@
 					<div class="handbook-toc">
 						<h3 data-i18n="handbook.tableOfContents">Table of Contents</h3>
 						<ul>
-							<li><a href="#introduction" data-i18n="handbook.chapter6.sections.intro">Introduction to Sparse Autoencoders</a></li>
-							<li><a href="#architecture" data-i18n="handbook.chapter6.sections.architecture">Architecture and Training</a></li>
-							<li><a href="#features" data-i18n="handbook.chapter6.sections.features">Feature Extraction</a></li>
-							<li><a href="#applications" data-i18n="handbook.chapter6.sections.applications">Applications in Interpretability</a></li>
-							<li><a href="#recent-research" data-i18n="handbook.chapter6.sections.research">Recent Research</a></li>
-							<li><a href="#conclusion" data-i18n="handbook.chapter6.sections.conclusion">Conclusion</a></li>
+							<li>
+								<a
+									href="#introduction"
+									data-i18n="handbook.chapter6.sections.intro"
+									>Introduction to Sparse Autoencoders</a
+								>
+							</li>
+							<li>
+								<a
+									href="#architecture"
+									data-i18n="handbook.chapter6.sections.architecture"
+									>Architecture and Training</a
+								>
+							</li>
+							<li>
+								<a
+									href="#features"
+									data-i18n="handbook.chapter6.sections.features"
+									>Feature Extraction</a
+								>
+							</li>
+							<li>
+								<a
+									href="#applications"
+									data-i18n="handbook.chapter6.sections.applications"
+									>Applications in Interpretability</a
+								>
+							</li>
+							<li>
+								<a
+									href="#recent-research"
+									data-i18n="handbook.chapter6.sections.research"
+									>Recent Research</a
+								>
+							</li>
+							<li>
+								<a
+									href="#conclusion"
+									data-i18n="handbook.chapter6.sections.conclusion"
+									>Conclusion</a
+								>
+							</li>
 						</ul>
 					</div>
 					<div class="chapter-navigation">
-						<a href="chapter5.html" class="prev-chapter" data-i18n="handbook.prevChapter">← Previous Chapter: Superposition</a>
-						<span class="next-chapter disabled" data-i18n="handbook.noNextChapter">End of Handbook</span>
+						<a
+							href="chapter5.html"
+							class="prev-chapter"
+							data-i18n="handbook.prevChapter"
+							>← Previous Chapter: Superposition</a
+						>
+						<span
+							class="next-chapter disabled"
+							data-i18n="handbook.noNextChapter"
+							>End of Handbook</span
+						>
 					</div>
 				</div>
-				
+
 				<div class="handbook-main">
-					<h2 id="introduction" data-i18n="handbook.chapter6.sections.intro">Introduction to Sparse Autoencoders</h2>
+					<h2 id="introduction" data-i18n="handbook.chapter6.sections.intro">
+						Introduction to Sparse Autoencoders
+					</h2>
 					<p data-i18n="handbook.chapter6.intro.p1">
-						As we saw in the previous chapter, neural networks often represent information in a superposed manner, with many features sharing the same neurons or dimensions. This polysemanticity makes interpretation challenging. Sparse Autoencoders (SAEs) are a powerful tool designed to address this challenge by disentangling these superposed representations.
+						As we saw in the previous chapter, neural networks often represent
+						information in a superposed manner, with many features sharing the
+						same neurons or dimensions. This polysemanticity makes
+						interpretation challenging. Sparse Autoencoders (SAEs) are a
+						powerful tool designed to address this challenge by disentangling
+						these superposed representations.
 					</p>
 					<p data-i18n="handbook.chapter6.intro.p2">
-						The goal of an SAE is to transform the polysemantic, distributed representations in a neural network into a monosemantic, sparse representation, where each feature corresponds to a specific, interpretable concept.
+						The goal of an SAE is to transform the polysemantic, distributed
+						representations in a neural network into a monosemantic, sparse
+						representation, where each feature corresponds to a specific,
+						interpretable concept.
 					</p>
-					
-					<h2 id="architecture" data-i18n="handbook.chapter6.sections.architecture">Architecture and Training</h2>
+
+					<h2
+						id="architecture"
+						data-i18n="handbook.chapter6.sections.architecture"
+					>
+						Architecture and Training
+					</h2>
 					<p data-i18n="handbook.chapter6.architecture.p1">
 						A Sparse Autoencoder consists of:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter6.architecture.list1">An encoder network that maps the original neural network's activations to a higher-dimensional, sparse space</li>
-						<li data-i18n="handbook.chapter6.architecture.list2">A decoder network that reconstructs the original activations from this sparse representation</li>
+						<li data-i18n="handbook.chapter6.architecture.list1">
+							An encoder network that maps the original neural network's
+							activations to a higher-dimensional, sparse space
+						</li>
+						<li data-i18n="handbook.chapter6.architecture.list2">
+							A decoder network that reconstructs the original activations from
+							this sparse representation
+						</li>
 					</ul>
 					<p data-i18n="handbook.chapter6.architecture.p2">
 						The key constraints in training an SAE are:
 					</p>
 					<ol>
-						<li data-i18n="handbook.chapter6.architecture.constraint1">Reconstruction loss: The decoder should accurately reconstruct the original activations</li>
-						<li data-i18n="handbook.chapter6.architecture.constraint2">Sparsity constraint: Each input should activate only a small number of features in the encoded representation</li>
+						<li data-i18n="handbook.chapter6.architecture.constraint1">
+							Reconstruction loss: The decoder should accurately reconstruct the
+							original activations
+						</li>
+						<li data-i18n="handbook.chapter6.architecture.constraint2">
+							Sparsity constraint: Each input should activate only a small
+							number of features in the encoded representation
+						</li>
 					</ol>
 					<p data-i18n="handbook.chapter6.architecture.p3">
-						These constraints ensure that the SAE learns a dictionary of interpretable features that can be activated individually or in small groups to represent the network's internal states.
+						These constraints ensure that the SAE learns a dictionary of
+						interpretable features that can be activated individually or in
+						small groups to represent the network's internal states.
 					</p>
-					
-					<h2 id="features" data-i18n="handbook.chapter6.sections.features">Feature Extraction</h2>
+
+					<h2 id="features" data-i18n="handbook.chapter6.sections.features">
+						Feature Extraction
+					</h2>
 					<p data-i18n="handbook.chapter6.features.p1">
-						After training an SAE on a large dataset of activations from a neural network, we can analyze the features it has learned:
+						After training an SAE on a large dataset of activations from a
+						neural network, we can analyze the features it has learned:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter6.features.list1">Each feature can be visualized by examining what types of inputs most strongly activate it</li>
-						<li data-i18n="handbook.chapter6.features.list2">Features can be named based on the patterns they recognize (e.g., "quotes detector" or "multiplication operator")</li>
-						<li data-i18n="handbook.chapter6.features.list3">The dictionary of features provides a new basis for understanding the network's internal representations</li>
+						<li data-i18n="handbook.chapter6.features.list1">
+							Each feature can be visualized by examining what types of inputs
+							most strongly activate it
+						</li>
+						<li data-i18n="handbook.chapter6.features.list2">
+							Features can be named based on the patterns they recognize (e.g.,
+							"quotes detector" or "multiplication operator")
+						</li>
+						<li data-i18n="handbook.chapter6.features.list3">
+							The dictionary of features provides a new basis for understanding
+							the network's internal representations
+						</li>
 					</ul>
 					<p data-i18n="handbook.chapter6.features.p2">
-						Unlike analyzing individual neurons, SAE features often correspond to meaningful, human-interpretable concepts because they're designed to disentangle the superposed representations.
+						Unlike analyzing individual neurons, SAE features often correspond
+						to meaningful, human-interpretable concepts because they're designed
+						to disentangle the superposed representations.
 					</p>
-					
-					<h2 id="applications" data-i18n="handbook.chapter6.sections.applications">Applications in Interpretability</h2>
+
+					<h2
+						id="applications"
+						data-i18n="handbook.chapter6.sections.applications"
+					>
+						Applications in Interpretability
+					</h2>
 					<p data-i18n="handbook.chapter6.applications.p1">
 						Sparse Autoencoders can be used for various interpretability tasks:
 					</p>
-					<h3 data-i18n="handbook.chapter6.applications.task1title">Circuit Discovery</h3>
+					<h3 data-i18n="handbook.chapter6.applications.task1title">
+						Circuit Discovery
+					</h3>
 					<p data-i18n="handbook.chapter6.applications.task1">
-						By tracking which SAE features activate in response to specific inputs, researchers can identify the computational circuits within the network.
+						By tracking which SAE features activate in response to specific
+						inputs, researchers can identify the computational circuits within
+						the network.
 					</p>
-					
-					<h3 data-i18n="handbook.chapter6.applications.task2title">Feature Attribution</h3>
+
+					<h3 data-i18n="handbook.chapter6.applications.task2title">
+						Feature Attribution
+					</h3>
 					<p data-i18n="handbook.chapter6.applications.task2">
-						SAEs can help determine which features contribute to specific predictions, providing insight into how the model makes decisions.
+						SAEs can help determine which features contribute to specific
+						predictions, providing insight into how the model makes decisions.
 					</p>
-					
-					<h3 data-i18n="handbook.chapter6.applications.task3title">Editing Model Behavior</h3>
+
+					<h3 data-i18n="handbook.chapter6.applications.task3title">
+						Editing Model Behavior
+					</h3>
 					<p data-i18n="handbook.chapter6.applications.task3">
-						Once interpretable features are identified, it's possible to modify the model's behavior by intervening on specific features, potentially enabling safer AI systems.
+						Once interpretable features are identified, it's possible to modify
+						the model's behavior by intervening on specific features,
+						potentially enabling safer AI systems.
 					</p>
-					
-					<h2 id="recent-research" data-i18n="handbook.chapter6.sections.research">Recent Research</h2>
+
+					<h2
+						id="recent-research"
+						data-i18n="handbook.chapter6.sections.research"
+					>
+						Recent Research
+					</h2>
 					<p data-i18n="handbook.chapter6.research.p1">
 						Recent advances in SAE research include:
 					</p>
 					<ul>
-						<li data-i18n="handbook.chapter6.research.advance1">Scaling SAEs to larger models, such as Claude 3 Sonnet by Anthropic</li>
-						<li data-i18n="handbook.chapter6.research.advance2">Improving training techniques to identify more interpretable features</li>
-						<li data-i18n="handbook.chapter6.research.advance3">Developing automatic methods to name and categorize the discovered features</li>
-						<li data-i18n="handbook.chapter6.research.advance4">Using SAEs to understand higher-level abstractions in language models</li>
+						<li data-i18n="handbook.chapter6.research.advance1">
+							Scaling SAEs to larger models, such as Claude 3 Sonnet by
+							Anthropic
+						</li>
+						<li data-i18n="handbook.chapter6.research.advance2">
+							Improving training techniques to identify more interpretable
+							features
+						</li>
+						<li data-i18n="handbook.chapter6.research.advance3">
+							Developing automatic methods to name and categorize the discovered
+							features
+						</li>
+						<li data-i18n="handbook.chapter6.research.advance4">
+							Using SAEs to understand higher-level abstractions in language
+							models
+						</li>
 					</ul>
 					<p data-i18n="handbook.chapter6.research.p2">
-						Papers like "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning" and "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet" demonstrate the potential of SAEs for understanding increasingly complex models.
+						Papers like "Towards Monosemanticity: Decomposing Language Models
+						With Dictionary Learning" and "Scaling Monosemanticity: Extracting
+						Interpretable Features from Claude 3 Sonnet" demonstrate the
+						potential of SAEs for understanding increasingly complex models.
 					</p>
-					
-					<h2 id="conclusion" data-i18n="handbook.chapter6.sections.conclusion">Conclusion</h2>
+
+					<h2 id="conclusion" data-i18n="handbook.chapter6.sections.conclusion">
+						Conclusion
+					</h2>
 					<p data-i18n="handbook.chapter6.conclusion.p1">
-						Sparse Autoencoders represent one of the most promising approaches for addressing the superposition problem in neural networks. By transforming polysemantic representations into monosemantic features, SAEs provide a powerful tool for mechanistic interpretability.
+						Sparse Autoencoders represent one of the most promising approaches
+						for addressing the superposition problem in neural networks. By
+						transforming polysemantic representations into monosemantic
+						features, SAEs provide a powerful tool for mechanistic
+						interpretability.
 					</p>
 					<p data-i18n="handbook.chapter6.conclusion.p2">
-						As research in this area continues to advance, SAEs may play a crucial role in building more transparent, trustworthy, and alignable AI systems. Understanding the internal workings of neural networks is not just an academic pursuit but a practical necessity as these systems become increasingly powerful and integrated into our society.
+						As research in this area continues to advance, SAEs may play a
+						crucial role in building more transparent, trustworthy, and
+						alignable AI systems. Understanding the internal workings of neural
+						networks is not just an academic pursuit but a practical necessity
+						as these systems become increasingly powerful and integrated into
+						our society.
 					</p>
-					
+
 					<div class="further-reading">
 						<h3 data-i18n="handbook.furtherReading">Further Reading</h3>
 						<ul>
-							<li><a href="https://transformer-circuits.pub/2023/monosemantic-features/index.html" target="_blank" data-i18n="handbook.chapter6.reading1">Towards Monosemanticity: Decomposing Language Models With Dictionary Learning</a></li>
-							<li><a href="https://www.alignmentforum.org/posts/bJsCDXPJLewtuYYfG/scaling-monosemanticity-extracting-interpretable-features" target="_blank" data-i18n="handbook.chapter6.reading2">Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet</a></li>
-							<li><a href="https://openreview.net/forum?id=4bSQ5-jXMz" target="_blank" data-i18n="handbook.chapter6.reading3">SolidGoldMagikarp & Indirect Object Identification</a></li>
+							<li>
+								<a
+									href="https://transformer-circuits.pub/2023/monosemantic-features/index.html"
+									target="_blank"
+									data-i18n="handbook.chapter6.reading1"
+									>Towards Monosemanticity: Decomposing Language Models With
+									Dictionary Learning</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.alignmentforum.org/posts/bJsCDXPJLewtuYYfG/scaling-monosemanticity-extracting-interpretable-features"
+									target="_blank"
+									data-i18n="handbook.chapter6.reading2"
+									>Scaling Monosemanticity: Extracting Interpretable Features
+									from Claude 3 Sonnet</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://openreview.net/forum?id=4bSQ5-jXMz"
+									target="_blank"
+									data-i18n="handbook.chapter6.reading3"
+									>SolidGoldMagikarp & Indirect Object Identification</a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -196,7 +367,11 @@
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-logo">
-						<img src="../img/logo.svg" alt="BAISH Logo" class="footer-logo-img" />
+						<img
+							src="../img/logo.svg"
+							alt="BAISH Logo"
+							class="footer-logo-img"
+						/>
 						<p class="tagline" data-i18n="footer.tagline">
 							Ensuring AI benefits humanity through research, education, and
 							community
@@ -218,7 +393,9 @@
 									>Resources</a
 								>
 							</li>
-							<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+							<li>
+								<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -310,13 +487,13 @@
 		<script src="../js/mobile-nav.js"></script>
 		<script>
 			// Force language application on page load
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener("DOMContentLoaded", function () {
 				// Apply translations based on stored language
-				const storedLang = localStorage.getItem('language') || 'es';
+				const storedLang = localStorage.getItem("language") || "es";
 				currentLanguage = storedLang;
 				updateLanguageToggleUI();
 				applyTranslations();
 			});
 		</script>
 	</body>
-</html> 
+</html>

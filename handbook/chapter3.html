@@ -17,7 +17,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Playfair+Display:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
 		<!-- Custom CSS -->
@@ -50,9 +50,13 @@
 							<a href="../research.html" data-i18n="nav.research">Research</a>
 						</li>
 						<li>
-							<a href="../resources.html" data-i18n="nav.resources">Resources</a>
+							<a href="../resources.html" data-i18n="nav.resources"
+								>Resources</a
+							>
 						</li>
-						<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+						<li>
+							<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="language-toggle">
@@ -68,8 +72,13 @@
 
 		<section class="page-header">
 			<div class="container">
-				<div class="breadcrumb" style="margin-bottom: 1rem;">
-					<a href="../mech-interp-course.html" class="btn btn-secondary" style="margin-right: 1rem;">← Back to Course</a>
+				<div class="breadcrumb" style="margin-bottom: 1rem">
+					<a
+						href="../mech-interp-course.html"
+						class="btn btn-secondary"
+						style="margin-right: 1rem"
+						>← Back to Course</a
+					>
 				</div>
 				<h1>Chapter 3: Interpretability</h1>
 				<p class="subtitle">
@@ -84,7 +93,9 @@
 					<div class="handbook-toc">
 						<h3>Table of Contents</h3>
 						<ul>
-							<li><a href="#introduction">Introduction to Interpretability</a></li>
+							<li>
+								<a href="#introduction">Introduction to Interpretability</a>
+							</li>
 							<li><a href="#motivation">Motivation and Importance</a></li>
 							<li><a href="#approaches">Approaches to Interpretability</a></li>
 							<li><a href="#tools">Tools and Techniques</a></li>
@@ -93,39 +104,68 @@
 						</ul>
 					</div>
 					<div class="chapter-navigation">
-						<a href="chapter2.html" class="prev-chapter">← Previous Chapter: Transformers</a>
-						<a href="chapter4.html" class="next-chapter">Next Chapter: Circuits →</a>
+						<a href="chapter2.html" class="prev-chapter"
+							>← Previous Chapter: Transformers</a
+						>
+						<a href="chapter4.html" class="next-chapter"
+							>Next Chapter: Circuits →</a
+						>
 					</div>
 				</div>
-				
+
 				<div class="handbook-main">
 					<h2 id="introduction">Introduction to Interpretability</h2>
 					<p>
-						Neural networks, particularly large language models, have demonstrated impressive capabilities but often function as "black boxes." Interpretability research aims to understand how these models work internally and why they make specific predictions or decisions.
+						Neural networks, particularly large language models, have
+						demonstrated impressive capabilities but often function as "black
+						boxes." Interpretability research aims to understand how these
+						models work internally and why they make specific predictions or
+						decisions.
 					</p>
 					<p>
-						This chapter introduces the field of neural network interpretability, with a focus on mechanistic interpretability—the approach that seeks to understand the internal mechanisms and computations within these models.
+						This chapter introduces the field of neural network
+						interpretability, with a focus on mechanistic interpretability—the
+						approach that seeks to understand the internal mechanisms and
+						computations within these models.
 					</p>
-					
+
 					<h2 id="motivation">Motivation and Importance</h2>
 					<p>
-						Understanding how neural networks function is important for several reasons:
+						Understanding how neural networks function is important for several
+						reasons:
 					</p>
 					<ul>
-						<li><strong>Safety and Alignment:</strong> To ensure AI systems behave as intended, especially as they become more capable</li>
-						<li><strong>Debugging:</strong> To identify and fix issues in model behavior</li>
-						<li><strong>Trust:</strong> To build justified confidence in model outputs and capabilities</li>
-						<li><strong>Scientific Understanding:</strong> To advance our knowledge of how artificial intelligence works</li>
-						<li><strong>Capability Improvement:</strong> To enable targeted improvements based on mechanistic insights</li>
+						<li>
+							<strong>Safety and Alignment:</strong> To ensure AI systems behave
+							as intended, especially as they become more capable
+						</li>
+						<li>
+							<strong>Debugging:</strong> To identify and fix issues in model
+							behavior
+						</li>
+						<li>
+							<strong>Trust:</strong> To build justified confidence in model
+							outputs and capabilities
+						</li>
+						<li>
+							<strong>Scientific Understanding:</strong> To advance our
+							knowledge of how artificial intelligence works
+						</li>
+						<li>
+							<strong>Capability Improvement:</strong> To enable targeted
+							improvements based on mechanistic insights
+						</li>
 					</ul>
-					
+
 					<h2 id="approaches">Approaches to Interpretability</h2>
 					<p>
-						The field of interpretability can be roughly divided into two approaches:
+						The field of interpretability can be roughly divided into two
+						approaches:
 					</p>
 					<h3>Post-hoc Interpretability</h3>
 					<p>
-						Post-hoc interpretability attempts to explain already-trained models by analyzing their behavior, often through methods like:
+						Post-hoc interpretability attempts to explain already-trained models
+						by analyzing their behavior, often through methods like:
 					</p>
 					<ul>
 						<li>Feature visualization</li>
@@ -133,64 +173,108 @@
 						<li>Concept-based explanations</li>
 						<li>Surrogate models</li>
 					</ul>
-					
+
 					<h3>Mechanistic Interpretability</h3>
 					<p>
-						Mechanistic interpretability attempts to reverse-engineer the inner workings of neural networks by:
+						Mechanistic interpretability attempts to reverse-engineer the inner
+						workings of neural networks by:
 					</p>
 					<ul>
-						<li>Identifying specific computational circuits within the network</li>
-						<li>Understanding how these circuits implement particular functions</li>
+						<li>
+							Identifying specific computational circuits within the network
+						</li>
+						<li>
+							Understanding how these circuits implement particular functions
+						</li>
 						<li>Mapping information flow through the network</li>
 						<li>Relating network components to human-interpretable concepts</li>
 					</ul>
-					
+
 					<h2 id="tools">Tools and Techniques</h2>
 					<p>
-						Several tools and techniques are commonly used in mechanistic interpretability research:
+						Several tools and techniques are commonly used in mechanistic
+						interpretability research:
 					</p>
 					<h3>Activation Analysis</h3>
 					<p>
-						Studying the activation patterns of neurons in response to different inputs to understand what information they encode.
+						Studying the activation patterns of neurons in response to different
+						inputs to understand what information they encode.
 					</p>
-					
+
 					<h3>Causal Intervention</h3>
 					<p>
-						Modifying activations or weights to observe the effect on model behavior, helping to establish causal relationships.
+						Modifying activations or weights to observe the effect on model
+						behavior, helping to establish causal relationships.
 					</p>
-					
+
 					<h3>Weight Analysis</h3>
 					<p>
-						Examining learned weights to understand the connections between components of the network.
+						Examining learned weights to understand the connections between
+						components of the network.
 					</p>
-					
+
 					<h3>Library Tools</h3>
 					<p>
-						Libraries like TransformerLens provide specialized tools for interpretability research on transformer models.
+						Libraries like TransformerLens provide specialized tools for
+						interpretability research on transformer models.
 					</p>
-					
+
 					<h2 id="challenges">Challenges and Limitations</h2>
-					<p>
-						Interpretability research faces several challenges:
-					</p>
+					<p>Interpretability research faces several challenges:</p>
 					<ul>
-						<li><strong>Scale:</strong> Modern models contain billions of parameters, making comprehensive analysis difficult</li>
-						<li><strong>Complexity:</strong> Neural networks implement distributed representations that don't always align with human concepts</li>
-						<li><strong>Verification:</strong> It's often difficult to verify that an interpretation is correct</li>
-						<li><strong>Generalizability:</strong> Insights from one model or task may not generalize to others</li>
+						<li>
+							<strong>Scale:</strong> Modern models contain billions of
+							parameters, making comprehensive analysis difficult
+						</li>
+						<li>
+							<strong>Complexity:</strong> Neural networks implement distributed
+							representations that don't always align with human concepts
+						</li>
+						<li>
+							<strong>Verification:</strong> It's often difficult to verify that
+							an interpretation is correct
+						</li>
+						<li>
+							<strong>Generalizability:</strong> Insights from one model or task
+							may not generalize to others
+						</li>
 					</ul>
-					
+
 					<h2 id="conclusion">Conclusion</h2>
 					<p>
-						Interpretability, particularly mechanistic interpretability, is a growing field that aims to demystify neural networks. While challenging, this work is essential for building safe, trustworthy, and well-understood AI systems. The subsequent chapters will explore specific techniques and case studies in mechanistic interpretability.
+						Interpretability, particularly mechanistic interpretability, is a
+						growing field that aims to demystify neural networks. While
+						challenging, this work is essential for building safe, trustworthy,
+						and well-understood AI systems. The subsequent chapters will explore
+						specific techniques and case studies in mechanistic
+						interpretability.
 					</p>
-					
+
 					<div class="further-reading">
 						<h3>Further Reading</h3>
 						<ul>
-							<li><a href="https://transformer-circuits.pub/2021/framework/index.html" target="_blank">A Mathematical Framework for Transformer Circuits</a></li>
-							<li><a href="https://distill.pub/2020/circuits/zoom-in/" target="_blank">Zoom In: An Introduction to Circuits</a></li>
-							<li><a href="https://www.alignmentforum.org/posts/NfFST5Mio7BCAQHPA/an-extremely-opinionated-annotated-list-of-my-favourite-1" target="_blank">An Extremely Opinionated Annotated List of My Favourite Mechanistic Interpretability Papers</a></li>
+							<li>
+								<a
+									href="https://transformer-circuits.pub/2021/framework/index.html"
+									target="_blank"
+									>A Mathematical Framework for Transformer Circuits</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://distill.pub/2020/circuits/zoom-in/"
+									target="_blank"
+									>Zoom In: An Introduction to Circuits</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.alignmentforum.org/posts/NfFST5Mio7BCAQHPA/an-extremely-opinionated-annotated-list-of-my-favourite-1"
+									target="_blank"
+									>An Extremely Opinionated Annotated List of My Favourite
+									Mechanistic Interpretability Papers</a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -201,7 +285,11 @@
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-logo">
-						<img src="../img/logo.svg" alt="BAISH Logo" class="footer-logo-img" />
+						<img
+							src="../img/logo.svg"
+							alt="BAISH Logo"
+							class="footer-logo-img"
+						/>
 						<p class="tagline" data-i18n="footer.tagline">
 							Ensuring AI benefits humanity through research, education, and
 							community
@@ -223,7 +311,9 @@
 									>Resources</a
 								>
 							</li>
-							<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+							<li>
+								<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -315,13 +405,13 @@
 		<script src="../js/mobile-nav.js"></script>
 		<script>
 			// Force language application on page load
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener("DOMContentLoaded", function () {
 				// Apply translations based on stored language
-				const storedLang = localStorage.getItem('language') || 'es';
+				const storedLang = localStorage.getItem("language") || "es";
 				currentLanguage = storedLang;
 				updateLanguageToggleUI();
 				applyTranslations();
 			});
 		</script>
 	</body>
-</html> 
+</html>

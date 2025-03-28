@@ -17,7 +17,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Playfair+Display:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
 		<!-- Custom CSS -->
@@ -50,9 +50,13 @@
 							<a href="../research.html" data-i18n="nav.research">Research</a>
 						</li>
 						<li>
-							<a href="../resources.html" data-i18n="nav.resources">Resources</a>
+							<a href="../resources.html" data-i18n="nav.resources"
+								>Resources</a
+							>
 						</li>
-						<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+						<li>
+							<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="language-toggle">
@@ -68,8 +72,13 @@
 
 		<section class="page-header">
 			<div class="container">
-				<div class="breadcrumb" style="margin-bottom: 1rem;">
-					<a href="../mech-interp-course.html" class="btn btn-secondary" style="margin-right: 1rem;">← Back to Course</a>
+				<div class="breadcrumb" style="margin-bottom: 1rem">
+					<a
+						href="../mech-interp-course.html"
+						class="btn btn-secondary"
+						style="margin-right: 1rem"
+						>← Back to Course</a
+					>
 				</div>
 				<h1>Chapter 2: Transformers</h1>
 				<p class="subtitle">
@@ -87,32 +96,46 @@
 							<li><a href="#introduction">Introduction to Transformers</a></li>
 							<li><a href="#architecture">Transformer Architecture</a></li>
 							<li><a href="#attention">Attention Mechanisms</a></li>
-							<li><a href="#language-models">Transformer-based Language Models</a></li>
+							<li>
+								<a href="#language-models">Transformer-based Language Models</a>
+							</li>
 							<li><a href="#conclusion">Conclusion</a></li>
 						</ul>
 					</div>
 					<div class="chapter-navigation">
 						<span class="prev-chapter disabled">Previous Chapter</span>
-						<a href="chapter3.html" class="next-chapter">Next Chapter: Interpretability →</a>
+						<a href="chapter3.html" class="next-chapter"
+							>Next Chapter: Interpretability →</a
+						>
 					</div>
 				</div>
-				
+
 				<div class="handbook-main">
 					<h2 id="introduction">Introduction to Transformers</h2>
 					<p>
-						Transformers have revolutionized machine learning, particularly in natural language processing. This chapter provides a thorough introduction to the transformer architecture, including its key components and operating principles.
+						Transformers have revolutionized machine learning, particularly in
+						natural language processing. This chapter provides a thorough
+						introduction to the transformer architecture, including its key
+						components and operating principles.
 					</p>
 					<p>
-						The transformer model was introduced in the 2017 paper "Attention Is All You Need" by Vaswani et al. Unlike previous sequence-to-sequence models that relied on recurrence or convolution, transformers are based entirely on attention mechanisms, making them more parallelizable and efficient for training.
+						The transformer model was introduced in the 2017 paper "Attention Is
+						All You Need" by Vaswani et al. Unlike previous sequence-to-sequence
+						models that relied on recurrence or convolution, transformers are
+						based entirely on attention mechanisms, making them more
+						parallelizable and efficient for training.
 					</p>
-					
+
 					<h2 id="architecture">Transformer Architecture</h2>
 					<p>
-						The transformer architecture consists of an encoder and a decoder, each containing stacked layers of self-attention and feed-forward neural networks.
+						The transformer architecture consists of an encoder and a decoder,
+						each containing stacked layers of self-attention and feed-forward
+						neural networks.
 					</p>
 					<h3>Encoder</h3>
 					<p>
-						The encoder processes the input sequence in parallel. Each encoder layer has two sub-layers:
+						The encoder processes the input sequence in parallel. Each encoder
+						layer has two sub-layers:
 					</p>
 					<ul>
 						<li>Multi-head self-attention mechanism</li>
@@ -123,52 +146,93 @@
 					</p>
 					<h3>Decoder</h3>
 					<p>
-						The decoder generates the output sequence, with each step predicting the next token. It contains three sub-layers:
+						The decoder generates the output sequence, with each step predicting
+						the next token. It contains three sub-layers:
 					</p>
 					<ul>
-						<li>Masked multi-head self-attention mechanism (to prevent looking at future tokens)</li>
+						<li>
+							Masked multi-head self-attention mechanism (to prevent looking at
+							future tokens)
+						</li>
 						<li>Multi-head attention over the encoder's output</li>
 						<li>Position-wise fully connected feed-forward network</li>
 					</ul>
-					
+
 					<h2 id="attention">Attention Mechanisms</h2>
 					<p>
-						Attention mechanisms allow the model to focus on different parts of the input when generating each part of the output. The self-attention mechanism in transformers, specifically the "Scaled Dot-Product Attention," computes attention weights as follows:
+						Attention mechanisms allow the model to focus on different parts of
+						the input when generating each part of the output. The
+						self-attention mechanism in transformers, specifically the "Scaled
+						Dot-Product Attention," computes attention weights as follows:
 					</p>
 					<pre>
 Attention(Q, K, V) = softmax(QK^T/√d_k)V
-					</pre>
+					</pre
+					>
 					<p>
-						Where Q (query), K (key), and V (value) are matrices, and d_k is the dimension of the keys.
+						Where Q (query), K (key), and V (value) are matrices, and d_k is the
+						dimension of the keys.
 					</p>
 					<p>
-						Multi-head attention allows the model to jointly attend to information from different representation subspaces, enabling it to capture different aspects of the input.
+						Multi-head attention allows the model to jointly attend to
+						information from different representation subspaces, enabling it to
+						capture different aspects of the input.
 					</p>
-					
+
 					<h2 id="language-models">Transformer-based Language Models</h2>
 					<p>
-						Large language models like GPT (Generative Pre-trained Transformer) use transformer architectures with modifications. These models are trained on vast amounts of text data to predict the next token in a sequence.
+						Large language models like GPT (Generative Pre-trained Transformer)
+						use transformer architectures with modifications. These models are
+						trained on vast amounts of text data to predict the next token in a
+						sequence.
 					</p>
-					<p>
-						Key transformer-based language models include:
-					</p>
+					<p>Key transformer-based language models include:</p>
 					<ul>
-						<li>BERT: Uses a bidirectional transformer for masked language modeling</li>
-						<li>GPT series: Uses a decoder-only transformer for autoregressive language modeling</li>
-						<li>T5: Uses the full encoder-decoder architecture for various text-to-text tasks</li>
+						<li>
+							BERT: Uses a bidirectional transformer for masked language
+							modeling
+						</li>
+						<li>
+							GPT series: Uses a decoder-only transformer for autoregressive
+							language modeling
+						</li>
+						<li>
+							T5: Uses the full encoder-decoder architecture for various
+							text-to-text tasks
+						</li>
 					</ul>
-					
+
 					<h2 id="conclusion">Conclusion</h2>
 					<p>
-						Transformers have become the foundation of modern NLP and are expanding into other domains like computer vision and reinforcement learning. Understanding their architecture is essential for work in mechanistic interpretability, as it provides the necessary context for analyzing how these models process and represent information.
+						Transformers have become the foundation of modern NLP and are
+						expanding into other domains like computer vision and reinforcement
+						learning. Understanding their architecture is essential for work in
+						mechanistic interpretability, as it provides the necessary context
+						for analyzing how these models process and represent information.
 					</p>
-					
+
 					<div class="further-reading">
 						<h3>Further Reading</h3>
 						<ul>
-							<li><a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need (Vaswani et al., 2017)</a></li>
-							<li><a href="https://transformer-circuits.pub/2021/framework/index.html" target="_blank">A Mathematical Framework for Transformer Circuits</a></li>
-							<li><a href="https://www.youtube.com/watch?v=wjZofJX0v4M" target="_blank">3Blue1Brown - But what is a GPT?</a></li>
+							<li>
+								<a href="https://arxiv.org/abs/1706.03762" target="_blank"
+									>Attention Is All You Need (Vaswani et al., 2017)</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://transformer-circuits.pub/2021/framework/index.html"
+									target="_blank"
+									>A Mathematical Framework for Transformer Circuits</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.youtube.com/watch?v=wjZofJX0v4M"
+									target="_blank"
+									>3Blue1Brown - But what is a GPT?</a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -179,7 +243,11 @@ Attention(Q, K, V) = softmax(QK^T/√d_k)V
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-logo">
-						<img src="../img/logo.svg" alt="BAISH Logo" class="footer-logo-img" />
+						<img
+							src="../img/logo.svg"
+							alt="BAISH Logo"
+							class="footer-logo-img"
+						/>
 						<p class="tagline" data-i18n="footer.tagline">
 							Ensuring AI benefits humanity through research, education, and
 							community
@@ -201,7 +269,9 @@ Attention(Q, K, V) = softmax(QK^T/√d_k)V
 									>Resources</a
 								>
 							</li>
-							<li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+							<li>
+								<a href="../contact.html" data-i18n="nav.contact">Contact</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -293,13 +363,13 @@ Attention(Q, K, V) = softmax(QK^T/√d_k)V
 		<script src="../js/mobile-nav.js"></script>
 		<script>
 			// Force language application on page load
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener("DOMContentLoaded", function () {
 				// Apply translations based on stored language
-				const storedLang = localStorage.getItem('language') || 'es';
+				const storedLang = localStorage.getItem("language") || "es";
 				currentLanguage = storedLang;
 				updateLanguageToggleUI();
 				applyTranslations();
 			});
 		</script>
 	</body>
-</html> 
+</html>

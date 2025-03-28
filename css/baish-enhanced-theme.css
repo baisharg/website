@@ -2,7 +2,7 @@
 /* Comprehensive styling enhancement implementation */
 
 /* ======= Font Imports ======= */
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;700&family=Manrope:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;700&display=swap");
 
 /* ======= Enhanced CSS Variables ======= */
 :root {
@@ -52,7 +52,7 @@
 
 	/* Typography - Updated for new fonts */
 	--font-heading: "Oxanium", sans-serif;
-	--font-body: "Manrope", sans-serif;
+	--font-body: "Space Grotesk", sans-serif;
 	--font-size-base: 16px;
 	--line-height-base: 1.6;
 
@@ -61,6 +61,7 @@
 	--transition-medium: 0.3s ease;
 	--transition-slow: 0.5s ease;
 	--easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	--button-active-color: #cc5500;
 }
 
 /* ======= Typography Implementation ======= */
@@ -939,4 +940,59 @@ iframe.luma-embed {
 		height: 60%;
 		filter: blur(40px);
 	}
+}
+
+/* ======= Space Grotesk Font Variants ======= */
+.space-grotesk-light {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.space-grotesk-regular {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.space-grotesk-medium {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.space-grotesk-semibold {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.space-grotesk-bold {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.space-grotesk-italic {
+	font-family: "Space Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-style: italic;
+}
+
+/* ======= Reveal Animation ======= */
+.reveal {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity var(--transition-medium),
+		transform var(--transition-medium);
+}
+
+.reveal.active {
+	opacity: 1;
+	transform: translateY(0);
 }
