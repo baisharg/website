@@ -4,6 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize animations
   initRevealAnimations()
   initStaggeredAnimations()
+
+  // Initialize header scroll effects
+  initHeaderScrollEffects()
+
+  // Ensure footer is always visible regardless of animation state
+  const footer = document.querySelector('.site-footer')
+  if (footer) {
+    const footerContent = footer.querySelector('.footer-content')
+    if (footerContent && footerContent.classList.contains('reveal')) {
+      footerContent.classList.add('active')
+    }
+    footer.style.display = 'block'
+    footer.style.visibility = 'visible'
+  }
 })
 
 /**
@@ -121,4 +135,46 @@ function setupStaggeredContainer (containerSelector, itemSelector) {
 
   // Reinitialize animations
   initStaggeredAnimations()
+}
+
+/**
+ * Initialize header scroll effects
+ */
+function initHeaderScrollEffects() {
+  const header = document.querySelector('.site-header')
+  if (!header) return
+
+  // Set initial transparency based on scroll position
+  updateHeaderTransparency()
+
+  // Update on scroll
+  window.addEventListener('scroll', () => {
+    updateHeaderTransparency()
+  })
+
+  function updateHeaderTransparency() {
+    const scrollPosition = window.scrollY
+    const maxScroll = 200
+
+    // Calculate opacity - starts at 0.85 and increases to 0.98
+    let opacity = 0.85 + (Math.min(scrollPosition, maxScroll) / maxScroll) * 0.13
+
+    // Apply background color with calculated opacity
+    header.style.backgroundColor = `rgba(30, 30, 48, ${opacity})`
+
+    // Add a class to indicate scrolling state for additional styling
+    if (scrollPosition > 50) {
+      header.classList.add('scrolled')
+    } else {
+      header.classList.remove('scrolled')
+    }
+
+    // Adjust the border opacity based on scroll position
+    const borderOpacity = 0.15 + (Math.min(scrollPosition, maxScroll) / maxScroll) * 0.15
+    header.style.borderBottomColor = `rgba(255, 255, 255, ${borderOpacity})`
+
+    // Adjust the shadow intensity based on scroll position
+    const shadowIntensity = 0.2 + (Math.min(scrollPosition, maxScroll) / maxScroll) * 0.1
+    header.style.boxShadow = `0 2px 15px rgba(0, 0, 0, ${shadowIntensity})`
+  }
 }

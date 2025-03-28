@@ -1097,7 +1097,7 @@ body.menu-open {
 	--shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
 
 	/* Typography */
-	--font-primary: "Inter", sans-serif;
+	--font-primary: "Rubik", sans-serif;
 	--font-secondary: "Source Serif Pro", serif;
 	--font-size-base: 16px;
 	--line-height-base: 1.5;
@@ -1652,6 +1652,10 @@ section {
 	color: var(--text-secondary);
 	padding: var(--spacing-xl) 0;
 	border-top: 1px solid var(--border);
+	display: block;
+	visibility: visible;
+	position: relative;
+	z-index: 10;
 }
 
 .footer-content {

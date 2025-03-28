@@ -156,6 +156,12 @@ const translations = {
           description: 'Connect with fellow students interested in AI safety.',
           button: 'Join Telegram Group'
         }
+      },
+      events: {
+        // Added new events section
+        title: 'Upcoming Events',
+        description:
+          'Join our upcoming events, discussions, and workshops on AI safety. All events are open to the community.'
       }
     },
 
@@ -1227,6 +1233,12 @@ const translations = {
             'Conectate con otros estudiantes interesados en la seguridad de la IA.',
           button: 'Sumate al grupo de Telegram'
         }
+      },
+      events: {
+        // Added new events section
+        title: 'Próximos Eventos',
+        description:
+          'Sumate a nuestros próximos eventos, discusiones y talleres sobre seguridad de la IA. Todos los eventos están abiertos a la comunidad.'
       }
     },
 

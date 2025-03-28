@@ -95,8 +95,8 @@ function applyTranslations () {
         // For label elements, update the text content
         element.textContent = text
       } else {
-        // For other elements, update the inner text
-        element.textContent = text
+        // For other elements, update the inner HTML to render HTML tags
+        element.innerHTML = text
       }
     }
   })
