@@ -684,6 +684,24 @@ select:focus {
 	max-width: var(--container-max-width);
 	margin: 2rem auto;
 	padding: 0 var(--spacing-lg);
+	position: relative;
+}
+
+.event-card-container h2 {
+	margin-bottom: 0.5rem;
+	position: relative;
+	z-index: 1;
+	text-shadow: 0 0 15px rgba(146, 117, 229, 0.5);
+}
+
+.event-card-container .events-intro {
+	margin-bottom: 1.5rem;
+	color: var(--text-secondary);
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 1;
 }
 
 .event-card {
@@ -795,5 +813,73 @@ select:focus {
 
 	.event-date .day {
 		font-size: 1.8rem;
+	}
+}
+
+/* Lu.ma Embed Styling */
+.luma-embed {
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.luma-embed:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-lg), 0 0 30px rgba(146, 117, 229, 0.6);
+}
+
+.event-card-container::before {
+	content: "";
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 80%;
+	background: linear-gradient(
+		135deg,
+		rgba(146, 117, 229, 0.4) 0%,
+		rgba(74, 147, 251, 0.4) 100%
+	);
+	filter: blur(60px);
+	z-index: 0;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+iframe.luma-embed {
+	box-shadow: var(--shadow-md), 0 0 20px rgba(146, 117, 229, 0.4);
+	transition: transform var(--transition-medium),
+		box-shadow var(--transition-medium);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	display: block;
+	margin: 20px auto;
+	background: var(--bg-surface);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+	.luma-embed {
+		height: 500px;
+	}
+
+	.event-card-container::before {
+		width: 90%;
+		height: 70%;
+	}
+}
+
+@media (max-width: 480px) {
+	.luma-embed {
+		height: 550px;
+	}
+
+	.event-card-container::before {
+		width: 95%;
+		height: 60%;
+		filter: blur(40px);
 	}
 }
