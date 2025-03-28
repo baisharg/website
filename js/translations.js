@@ -103,7 +103,7 @@ const translations = {
         title: 'Weekly Discussion Group: Interpretability Methods',
         eventType: 'Upcoming Event',
         time: '18:00 - 19:30',
-        location: 'Pabellon 0+inf, Room 1603, Ciudad Universitaria',
+        location: 'Pabellon 0+inf, Room 1604, Ciudad Universitaria',
         description:
           'Join us for an interactive discussion on recent advances in neural network interpretability methods and their implications for AI alignment.',
         rsvp: 'RSVP Now'
@@ -114,21 +114,20 @@ const translations = {
           title: 'AGI Safety Fundamentals Cohort',
           description:
             'An 8-week guided course covering the essential concepts in AI alignment and safety.',
-          status: 'Currently Active',
+          status: 'Starting in the second semester',
           link: 'Learn More →'
         },
         card2: {
           title: 'Weekly Discussion Group',
           description:
             'Weekly meetings to discuss recent papers, concepts, and developments in AI safety.',
-          status: 'Every Tuesday @ 18:00',
+          status: 'Every Friday @ 3pm',
           link: 'Learn More →'
         },
         card3: {
           title: 'Paper Reading Club',
-          description:
-            'Deep dives into foundational and recent papers in AI safety research.',
-          status: 'Every Friday @ 17:00',
+          description: 'Student led presentations of AI Safety papers.',
+          status: 'Every Thursday @ 2pm',
           link: 'Learn More →'
         },
         card4: {
@@ -301,7 +300,7 @@ const translations = {
       },
       agiFundamentals: {
         title: 'AGI Safety Fundamentals Cohort',
-        status: 'Currently Active',
+        status: 'Starting in the second semester',
         description:
           'The AGI Safety Fundamentals cohort is an 8-week guided course covering the essential concepts in AI alignment and safety. Participants read curated materials and meet weekly to discuss the readings with a facilitator.',
         description2:
@@ -326,7 +325,7 @@ const translations = {
       },
       weeklyDiscussion: {
         title: 'Weekly Discussion Group',
-        status: 'Every Tuesday @ 18:00',
+        status: 'Every Tuesday @ 3pm',
         description:
           'Our Weekly Discussion Group provides a casual forum to discuss recent papers, concepts, and developments in AI safety. These sessions are open to anyone interested in the field, regardless of prior knowledge.',
         description2:
@@ -352,7 +351,7 @@ const translations = {
           time: 'Time:',
           timeValue: '18:00 - 19:30',
           location: 'Location:',
-          locationValue: 'Pabellón 0+inf, Room 1603, Ciudad Universitaria',
+          locationValue: 'Pabellón 0+inf, Room 1604, Ciudad Universitaria',
           topic: 'Topic:',
           topicValue: 'Interpretability Methods',
           facilitator: 'Facilitator:',
@@ -362,7 +361,7 @@ const translations = {
       },
       paperReading: {
         title: 'Paper Reading Club',
-        status: 'Every Friday @ 17:00',
+        status: 'Every Thursday @ 2pm',
         description:
           'The Paper Reading Club conducts deep dives into foundational and recent papers in AI safety research. Unlike the more casual discussion group, this activity involves a close examination of specific research papers.',
         description2:
@@ -393,7 +392,7 @@ const translations = {
           time: 'Time:',
           timeValue: '17:00 - 18:30',
           location: 'Location:',
-          locationValue: 'Pabellón 0+inf, Room 1603, Ciudad Universitaria',
+          locationValue: 'Pabellón 0+inf, Room 1604, Ciudad Universitaria',
           paper: 'Paper:',
           paperValue: '"Mechanistic Interpretability for Language Models"',
           lead: 'Discussion Lead:',
@@ -1184,21 +1183,21 @@ const translations = {
           title: 'Cohorte de Fundamentos de Seguridad en AGI',
           description:
             'Un curso guiado de 8 semanas cubriendo los conceptos esenciales en alineamiento y seguridad de IA.',
-          status: 'Actualmente Activo',
+          status: 'Comienza en el segundo semestre',
           link: 'Ver Más →'
         },
         card2: {
           title: 'Grupo de Discusión Semanal',
           description:
             'Reuniones semanales para discutir papers recientes, conceptos y avances en seguridad de IA.',
-          status: 'Todos los Martes @ 18:00',
+          status: 'Todos los Viernes @ 3pm',
           link: 'Saber Más →'
         },
         card3: {
           title: 'Club de Lectura de Papers',
           description:
-            'Análisis profundos de papers fundamentales y recientes en investigación de seguridad de IA.',
-          status: 'Cada Viernes @ 17:00',
+            'Presentaciones de estudiantes sobre papers de Seguridad en IA.',
+          status: 'Cada Jueves @ 2pm',
           link: 'Saber Más →'
         },
         card4: {
@@ -1372,7 +1371,7 @@ const translations = {
       },
       agiFundamentals: {
         title: 'Cohorte de Fundamentos de Seguridad en AGI',
-        status: 'Actualmente Activo',
+        status: 'Starting in the second semester',
         description:
           'La cohorte de Fundamentos de Seguridad en AGI es un curso guiado de 8 semanas que cubre los conceptos esenciales en alineamiento y seguridad de IA. Los participantes leen materiales seleccionados y se reúnen semanalmente para discutir las lecturas con un facilitador.',
         description2:
@@ -1397,7 +1396,7 @@ const translations = {
       },
       weeklyDiscussion: {
         title: 'Grupo de Discusión Semanal',
-        status: 'Todos los Martes @ 18:00',
+        status: 'Every Friday @ 3pm',
         description:
           'Nuestro Grupo de Discusión Semanal proporciona un foro casual para discutir papers recientes, conceptos y avances en seguridad de IA. Estas sesiones están abiertas a cualquier persona interesada en el campo, independientemente de conocimientos previos.',
         description2:
@@ -1433,9 +1432,9 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Cada Viernes @ 17:00',
+        status: 'Every Thursday @ 2pm',
         description:
-          'El Club de Lectura de Papers realiza análisis profundos de papers fundamentales y recientes en investigación de seguridad en IA. A diferencia del grupo de discusión más casual, esta actividad implica un examen minucioso de papers de investigación específicos.',
+          'El Club de Lectura de Papers presenta presentaciones de estudiantes sobre papers de Seguridad en IA. A diferencia del grupo de discusión más casual, esta actividad implica un examen minucioso de papers de investigación específicos.',
         description2:
           'Se espera que los participantes lean el paper seleccionado con anticipación y vengan preparados para discutir sus métodos, resultados e implicaciones.',
         selectionCriteria: {
