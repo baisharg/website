@@ -1709,7 +1709,7 @@ const translations = {
         },
         socialMedia: {
           title: 'Redes Sociales',
-          description: 'Síguenos para actualizaciones y anuncios:'
+          description: 'Seguinos para actualizaciones y anuncios:'
         }
       },
       getInvolved: {
