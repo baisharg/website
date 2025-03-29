@@ -2286,3 +2286,8 @@ a[data-i18n="home.hero.cta"]:hover {
 	font-weight: 700;
 	font-style: normal;
 }
+
+/* Add this rule at the end of the file */
+[data-i18n="nav.research"] {
+	display: none !important;
+}
