@@ -43,6 +43,42 @@
 		<link rel="stylesheet" href="css/language-toggle.css" />
 
 		<link rel="stylesheet" href="css/baish-enhanced-theme.css" />
+		<style>
+			.site-footer {
+				display: block !important;
+				visibility: visible !important;
+				position: relative !important;
+				z-index: 10 !important;
+			}
+
+			/* Make footer social links display horizontally */
+			.site-footer .social-links {
+				display: flex;
+				flex-direction: row;
+				gap: 20px;
+			}
+
+			/* Contact cards styling */
+			.contact-grid {
+				display: flex;
+				justify-content: center;
+				gap: 2rem;
+				flex-wrap: wrap;
+				margin: 0 auto;
+			}
+
+			.contact-card {
+				flex: 0 0 300px;
+				max-width: 300px;
+			}
+
+			/* Keep contact card social links vertical */
+			.contact-card .social-links {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<header class="site-header">
@@ -107,18 +143,23 @@
 			<div class="container">
 				<div class="contact-grid stagger-container">
 					<div class="contact-card stagger-item">
-						<div class="contact-icon">✉️</div>
-						<h3 data-i18n="contact.contactInfo.email.title">Email</h3>
-						<p data-i18n="contact.contactInfo.email.description">
-							For general inquiries, suggestions, or questions:
-						</p>
-						<a href="mailto:aisafetyarg@gmail.com" class="contact-detail"
-							>aisafetyarg@gmail.com</a
-						>
-					</div>
-
-					<div class="contact-card stagger-item">
-						<div class="contact-icon">✈️</div>
+						<div class="contact-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather"
+							>
+								<line x1="22" y1="2" x2="11" y2="13"></line>
+								<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+							</svg>
+						</div>
 						<h3 data-i18n="contact.contactInfo.telegram.title">Telegram</h3>
 						<p data-i18n="contact.contactInfo.telegram.description">
 							Join our community channel for discussions and updates:
@@ -130,10 +171,6 @@
 							rel="noopener noreferrer"
 							>t.me/+zfvMHU8TaAhjNjVh</a
 						>
-						<div class="qr-code">
-							<!-- Placeholder for QR code image -->
-							<div class="qr-placeholder"></div>
-						</div>
 					</div>
 
 					<div class="contact-card stagger-item">
@@ -161,6 +198,7 @@
 							<a
 								href="https://www.instagram.com/aisafetyarg"
 								aria-label="Instagram"
+								class="social-link"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -180,62 +218,55 @@
 									></path>
 									<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
 								</svg>
+								Instagram
 							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="apply" class="get-involved-options">
-			<div class="container">
-				<h2 data-i18n="contact.getInvolved.title">Get Involved</h2>
-				<p class="section-intro" data-i18n="contact.getInvolved.intro">
-					There are multiple ways to participate in our community and
-					activities.
-				</p>
-
-				<div class="involvement-accordion">
-					<div class="accordion-item">
-						<div class="accordion-header">
-							<h3 data-i18n="contact.getInvolved.mailingList.title">
-								Join our Mailing List
-							</h3>
-							<span class="accordion-toggle">+</span>
-						</div>
-						<div class="accordion-content">
-							<p data-i18n="contact.getInvolved.mailingList.description">
-								Stay updated with our events, activities, and opportunities by
-								subscribing to our mailing list. We send monthly newsletters and
-								important announcements.
-							</p>
-							<div id="custom-substack-embed"></div>
-
-							<script>
-								window.CustomSubstackWidget = {
-									substackUrl: "baish.substack.com",
-									placeholder: "example@gmail.com",
-									buttonText: "Subscribe",
-									theme: "custom",
-									colors: {
-										primary: "#5A9FFF",
-										input: "#121620",
-										email: "#606878",
-										text: "#000000",
-									},
-
-									// Go to substackapi.com to unlock custom redirect
-								};
-							</script>
-							<script src="https://substackapi.com/widget.js" async></script>
-
-							<style>
-								/* Additional styling for the Substack widget */
-								.substack-widget input::placeholder {
-									color: #606878 !important;
-									opacity: 0.6 !important;
-								}
-							</style>
+							<a
+								href="https://www.linkedin.com/company/aisafetyarg"
+								aria-label="LinkedIn"
+								class="social-link"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather"
+								>
+									<path
+										d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+									></path>
+									<rect x="2" y="9" width="4" height="12"></rect>
+									<circle cx="4" cy="4" r="2"></circle>
+								</svg>
+								LinkedIn
+							</a>
+							<a
+								href="https://t.me/+zhSGhXrn56g1YjVh"
+								aria-label="Telegram"
+								class="social-link"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather"
+								>
+									<line x1="22" y1="2" x2="11" y2="13"></line>
+									<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+								</svg>
+								Telegram
+							</a>
 						</div>
 					</div>
 				</div>
@@ -401,7 +432,82 @@
 					.form-group textarea::placeholder {
 						color: #8792a8;
 					}
+
+					/* Social links styling */
+					.social-links {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+					}
+
+					.social-link {
+						display: flex;
+						align-items: center;
+						gap: 8px;
+						color: inherit;
+						text-decoration: none;
+						transition: color 0.3s;
+					}
+
+					.social-link:hover {
+						color: #9275e5;
+					}
 				</style>
+			</div>
+		</section>
+
+		<section id="apply" class="get-involved-options">
+			<div class="container">
+				<h2 data-i18n="contact.getInvolved.title">Get Involved</h2>
+				<p class="section-intro" data-i18n="contact.getInvolved.intro">
+					There are multiple ways to participate in our community and
+					activities.
+				</p>
+
+				<div class="involvement-accordion">
+					<div class="accordion-item">
+						<div class="accordion-header">
+							<h3 data-i18n="contact.getInvolved.mailingList.title">
+								Join our Mailing List
+							</h3>
+							<span class="accordion-toggle">+</span>
+						</div>
+						<div class="accordion-content">
+							<p data-i18n="contact.getInvolved.mailingList.description">
+								Stay updated with our events, activities, and opportunities by
+								subscribing to our mailing list. We send monthly newsletters and
+								important announcements.
+							</p>
+							<div id="custom-substack-embed"></div>
+
+							<script>
+								window.CustomSubstackWidget = {
+									substackUrl: "baish.substack.com",
+									placeholder: "example@gmail.com",
+									buttonText: "Subscribe",
+									theme: "custom",
+									colors: {
+										primary: "#5A9FFF",
+										input: "#121620",
+										email: "#606878",
+										text: "#000000",
+									},
+
+									// Go to substackapi.com to unlock custom redirect
+								};
+							</script>
+							<script src="https://substackapi.com/widget.js" async></script>
+
+							<style>
+								/* Additional styling for the Substack widget */
+								.substack-widget input::placeholder {
+									color: #606878 !important;
+									opacity: 0.6 !important;
+								}
+							</style>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

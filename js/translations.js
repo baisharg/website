@@ -813,7 +813,7 @@ const translations = {
           date: 'September 13, Friday, starting at 3:00 PM',
           location: 'Auditorium 418',
           scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
+          preparationTitle: 'Preparación:',
           preparation: 'Handbook Chapter 6',
           part1: '30 min: Sparse Autoencoders (SAE) and practical exploration',
           part2:
@@ -1228,7 +1228,7 @@ const translations = {
             'Mantenete al día con nuestras actividades, eventos y oportunidades.'
         },
         telegram: {
-          title: 'Unite a Nuestra Comunidad de Telegram',
+          title: 'Sumate a Nuestra Comunidad de Telegram',
           description:
             'Conectate con otros estudiantes interesados en la seguridad de la IA.',
           button: 'Sumate al grupo de Telegram'
@@ -1439,7 +1439,7 @@ const translations = {
           topicValue: 'Métodos de Interpretabilidad',
           facilitator: 'Facilitador:',
           facilitatorValue: 'Eitan Sprejer',
-          button: 'Unite al Telegram para Actualizaciones'
+          button: 'Sumate al Telegram para Actualizaciones'
         }
       },
       paperReading: {
@@ -1699,7 +1699,8 @@ const translations = {
         },
         telegram: {
           title: 'Telegram',
-          description: 'Join our community channel for discussions and updates:'
+          description:
+            'Sumate a nuestro canal comunitario para discusiones y actualizaciones:'
         },
         location: {
           title: 'Ubicación',
@@ -1707,7 +1708,7 @@ const translations = {
             'Estamos ubicados en el Departamento de Ciencias de la Computación:'
         },
         socialMedia: {
-          title: 'Medios Sociales',
+          title: 'Redes Sociales',
           description: 'Síguenos para actualizaciones y anuncios:'
         }
       },
