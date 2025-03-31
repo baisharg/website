@@ -279,72 +279,196 @@
 
 		<section class="feedback-form alt-bg">
 			<div class="container">
-				<div class="contact-form-container">
-					<h2 data-i18n="contact.pageHeader.title">Contact Us</h2>
-					<p data-i18n="contact.pageHeader.subtitle">
-						Get in touch with our team and join our community
-					</p>
+				<!-- Add a grid container -->
+				<div class="contact-subscribe-grid">
+					<div class="contact-form-container">
+						<h2 data-i18n="contact.pageHeader.title">Contact Us</h2>
+						<p data-i18n="contact.pageHeader.subtitle">
+							Get in touch with our team and join our community
+						</p>
 
-					<hr />
+						<hr />
 
-					<form action="https://formspree.io/f/xjkyoknb" method="POST">
-						<div class="form-group">
-							<label for="name" data-i18n="contact.form.name"
-								>What is your name?</label
-							>
-							<input type="text" name="name" id="name" required />
+						<form action="https://formspree.io/f/xjkyoknb" method="POST">
+							<div class="form-group">
+								<label for="name" data-i18n="contact.form.name"
+									>What is your name?</label
+								>
+								<input type="text" name="name" id="name" required />
+							</div>
+
+							<div class="form-group">
+								<label for="email" data-i18n="contact.form.email"
+									>What is your email?</label
+								>
+								<input type="email" name="email" id="email" required />
+							</div>
+
+							<div class="form-group">
+								<label for="message" data-i18n="contact.form.message"
+									>Message</label
+								>
+								<textarea
+									name="message"
+									id="message"
+									rows="5"
+									required
+								></textarea>
+							</div>
+
+							<div class="form-actions">
+								<button type="reset" class="clear-form">
+									<span class="icon">↺</span>
+									<span data-i18n="contact.form.clear">Clear form</span>
+								</button>
+								<button type="submit" class="submit-btn">
+									<span data-i18n="contact.form.submit">Submit</span>
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<!-- Add container for the subscribe section -->
+					<div class="subscribe-container">
+						<h2 data-i18n="contact.getInvolved.title">Get Involved</h2>
+						<p class="section-intro" data-i18n="contact.getInvolved.intro">
+							There are multiple ways to participate in our community and
+							activities.
+						</p>
+						<div class="involvement-accordion">
+							<div class="accordion-item">
+								<div class="accordion-header">
+									<h3 data-i18n="contact.getInvolved.mailingList.title">
+										Join our Mailing List
+									</h3>
+								</div>
+								<div class="accordion-content">
+									<p data-i18n="contact.getInvolved.mailingList.description">
+										Stay updated with our events, activities, and opportunities
+										by subscribing to our mailing list. We send monthly
+										newsletters and important announcements.
+									</p>
+									<div id="custom-substack-embed"></div>
+
+									<script>
+										window.CustomSubstackWidget = {
+											substackUrl: "baish.substack.com",
+											placeholder: "example@gmail.com",
+											buttonText: "Subscribe",
+											theme: "custom",
+											colors: {
+												primary: "#5A9FFF",
+												input: "#121620",
+												email: "#606878",
+												text: "#000000",
+											},
+											// Go to substackapi.com to unlock custom redirect
+										};
+									</script>
+									<script
+										src="https://substackapi.com/widget.js"
+										async
+									></script>
+
+									<style>
+										/* Additional styling for the Substack widget */
+										.substack-widget input::placeholder {
+											color: #606878 !important;
+											opacity: 0.6 !important;
+										}
+									</style>
+								</div>
+							</div>
 						</div>
-
-						<div class="form-group">
-							<label for="email" data-i18n="contact.form.email"
-								>What is your email?</label
-							>
-							<input type="email" name="email" id="email" required />
-						</div>
-
-						<div class="form-group">
-							<label for="message" data-i18n="contact.form.message"
-								>Message</label
-							>
-							<textarea
-								name="message"
-								id="message"
-								rows="5"
-								required
-							></textarea>
-						</div>
-
-						<div class="form-actions">
-							<button type="reset" class="clear-form">
-								<span class="icon">↺</span>
-								<span data-i18n="contact.form.clear">Clear form</span>
-							</button>
-							<button type="submit" class="submit-btn">
-								<span data-i18n="contact.form.submit">Submit</span>
-							</button>
-						</div>
-					</form>
+					</div>
 				</div>
+				<!-- End contact-subscribe-grid -->
 
 				<style>
-					.contact-form-container {
-						max-width: 800px;
-						margin: 0 auto;
+					/* Grid layout for contact form and subscribe section */
+					.contact-subscribe-grid {
+						display: grid;
+						grid-template-columns: 1fr; /* Default: stack vertically */
+						gap: 2rem;
+						margin-top: 2rem; /* Add some space above */
+					}
+
+					@media (min-width: 992px) {
+						/* Apply side-by-side layout on larger screens */
+						.contact-subscribe-grid {
+							grid-template-columns: 1.5fr 1fr; /* Adjust ratio as needed */
+						}
+					}
+
+					/* Styling for the new subscribe container */
+					.subscribe-container {
 						padding: 20px;
 						color: #f0f2f5;
 						background-color: #1e1e30;
 						border-radius: 8px;
+						/* Match styling of contact form container */
 					}
 
-					.contact-form-container h2 {
+					.subscribe-container h2 {
 						font-size: 2rem;
 						margin-bottom: 10px;
 						color: #f0f2f5;
 					}
 
-					.contact-form-container p {
+					.subscribe-container p.section-intro {
 						margin-bottom: 20px;
 						color: #c0c5d0;
+					}
+
+					/* Adjust accordion styles if needed within this context */
+					.subscribe-container .accordion-item {
+						background-color: #232336; /* Match background */
+						border: 1px solid #2a2a40; /* Match border */
+						border-radius: 4px;
+						margin-bottom: 0; /* Remove bottom margin if only one item */
+					}
+
+					.subscribe-container .accordion-header {
+						padding: 15px;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+					}
+
+					.subscribe-container .accordion-header h3 {
+						margin: 0;
+						font-size: 1.1rem;
+						color: #f0f2f5;
+					}
+
+					.subscribe-container .accordion-content {
+						padding: 15px;
+						border-top: none;
+						display: block;
+					}
+
+					.subscribe-container .accordion-content p {
+						color: #c0c5d0;
+						margin-bottom: 15px;
+					}
+
+					/* Style for the Substack widget inside accordion */
+					.subscribe-container #custom-substack-embed {
+						margin-top: 15px;
+					}
+
+					/* Existing Contact Form styles */
+					.contact-form-container {
+						/* max-width: 800px;  -- Remove or adjust max-width for grid */
+						width: 100%; /* Ensure it takes full width of its grid column */
+						/* margin: 0 auto; -- Remove auto margin for grid layout */
+						padding: 20px;
+						color: #f0f2f5;
+						background-color: #1e1e30;
+					}
+					.contact-form-container h2 {
+						font-size: 2rem;
+						margin-bottom: 10px;
 					}
 
 					.contact-form-container hr {
@@ -457,61 +581,6 @@
 						color: #9275e5;
 					}
 				</style>
-			</div>
-		</section>
-
-		<section id="apply" class="get-involved-options">
-			<div class="container">
-				<h2 data-i18n="contact.getInvolved.title">Get Involved</h2>
-				<p class="section-intro" data-i18n="contact.getInvolved.intro">
-					There are multiple ways to participate in our community and
-					activities.
-				</p>
-
-				<div class="involvement-accordion">
-					<div class="accordion-item">
-						<div class="accordion-header">
-							<h3 data-i18n="contact.getInvolved.mailingList.title">
-								Join our Mailing List
-							</h3>
-							<span class="accordion-toggle">+</span>
-						</div>
-						<div class="accordion-content">
-							<p data-i18n="contact.getInvolved.mailingList.description">
-								Stay updated with our events, activities, and opportunities by
-								subscribing to our mailing list. We send monthly newsletters and
-								important announcements.
-							</p>
-							<div id="custom-substack-embed"></div>
-
-							<script>
-								window.CustomSubstackWidget = {
-									substackUrl: "baish.substack.com",
-									placeholder: "example@gmail.com",
-									buttonText: "Subscribe",
-									theme: "custom",
-									colors: {
-										primary: "#5A9FFF",
-										input: "#121620",
-										email: "#606878",
-										text: "#000000",
-									},
-
-									// Go to substackapi.com to unlock custom redirect
-								};
-							</script>
-							<script src="https://substackapi.com/widget.js" async></script>
-
-							<style>
-								/* Additional styling for the Substack widget */
-								.substack-widget input::placeholder {
-									color: #606878 !important;
-									opacity: 0.6 !important;
-								}
-							</style>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 

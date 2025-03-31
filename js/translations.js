@@ -327,7 +327,8 @@ const translations = {
           durationValue: '10-12 weeks',
           period: 'Fellowship Period:',
           periodValue: 'August - December 2025'
-        }
+        },
+        viewCurriculumButton: 'View Curriculum'
       },
       weeklyDiscussion: {
         title: 'Weekly Discussion Group',
@@ -462,7 +463,8 @@ const translations = {
       },
       calendar: {
         title: 'Upcoming Events Calendar',
-        subscribe: 'Subscribe to Google Calendar for All Events'
+        subscribe: 'Subscribe to Google Calendar for All Events',
+        subscribeLuma: 'Subscribe to Events Calendar' // Added Luma button text
       }
     },
 
@@ -698,7 +700,7 @@ const translations = {
         focusAreas: {
           title: 'Focus Areas',
           interpretability:
-            '<strong>Interpretability and Transparency</strong> - Understanding how neural networks represent and process information',
+            '<strong>Interpretabilidad y Transparencia</strong> - Understanding how neural networks represent and process information',
           alignment:
             '<strong>Alignment Techniques</strong> - Developing methods to align AI systems with human values and intentions',
           robustness:
@@ -712,10 +714,10 @@ const translations = {
         filterBy: 'Filter by:',
         filters: {
           all: 'All',
-          interpretability: 'Interpretability',
-          alignment: 'Alignment',
-          robustness: 'Robustness',
-          valueLearning: 'Value Learning'
+          interpretability: 'Interpretabilidad',
+          alignment: 'Alineación',
+          robustness: 'Robustez',
+          valueLearning: 'Aprendizaje de Valores'
         }
       },
       publications: {
@@ -1196,14 +1198,14 @@ const translations = {
           title: 'Grupo de Discusión Semanal',
           description:
             'Reuniones semanales para discutir papers recientes, conceptos y avances en seguridad de IA.',
-          status: 'Cada Viernes @ 3pm',
+          status: 'Todos los martes a las 18:00',
           link: 'Saber Más →'
         },
         card3: {
           title: 'Club de Lectura de Papers',
           description:
             'Presentaciones de estudiantes sobre papers de Seguridad en IA.',
-          status: 'Cada Jueves @ 2pm',
+          status: 'Todos los viernes a las 17:00',
           link: 'Saber Más →'
         },
         card4: {
@@ -1383,7 +1385,7 @@ const translations = {
       },
       agiFundamentals: {
         title: 'Cohorte de Fundamentos de Seguridad en AGI',
-        status: 'Starting in the second semester',
+        status: 'Comienza en el segundo semestre',
         description:
           'La cohorte de Fundamentos de Seguridad en AGI es un curso guiado de 8 semanas que cubre los conceptos esenciales en alineamiento y seguridad de IA. Los participantes leen materiales seleccionados y se reúnen semanalmente para discutir las lecturas con un facilitador.',
         description2:
@@ -1404,11 +1406,12 @@ const translations = {
           durationValue: '10-12 semanas',
           period: 'Período de Fellowship:',
           periodValue: 'Agosto - Diciembre 2025'
-        }
+        },
+        viewCurriculumButton: 'Ver Plan de Estudios'
       },
       weeklyDiscussion: {
         title: 'Grupo de Discusión Semanal',
-        status: 'Every Friday @ 3pm',
+        status: 'Todos los martes a las 18:00',
         description:
           'Nuestro Grupo de Discusión Semanal proporciona un foro casual para discutir papers recientes, conceptos y avances en seguridad de IA. Estas sesiones están abiertas a cualquier persona interesada en el campo, independientemente de conocimientos previos.',
         description2:
@@ -1444,11 +1447,11 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Every Thursday @ 2pm',
+        status: 'Todos los viernes a las 17:00',
         description:
-          'El Club de Lectura de Papers presenta presentaciones de estudiantes sobre papers de Seguridad en IA. A diferencia del grupo de discusión más casual, esta actividad implica un examen minucioso de papers de investigación específicos.',
+          'Profundizamos en papers fundacionales y recientes sobre investigación en seguridad de IA. Se espera que los participantes lean el paper seleccionado con antelación y vengan preparados para discutir.',
         description2:
-          'Se espera que los participantes lean el paper seleccionado con anticipación y vengan preparados para discutir sus métodos, resultados e implicaciones.',
+          'Se espera que los participantes lean el paper seleccionado con antelación y vengan preparados para discutir sus métodos, resultados e implicaciones.',
         selectionCriteria: {
           title: 'Criterios de Selección de Papers',
           items: [
@@ -1540,7 +1543,8 @@ const translations = {
       },
       calendar: {
         title: 'Calendario de Próximos Eventos',
-        subscribe: 'Suscribirse al Calendario de Google de Todos los Eventos'
+        subscribe: 'Suscribirse al Calendario de Google de Todos los Eventos',
+        subscribeLuma: 'Suscribirse al Calendario de Eventos' // Added Luma button text
       }
     },
 
@@ -1699,17 +1703,15 @@ const translations = {
         },
         telegram: {
           title: 'Telegram',
-          description:
-            'Sumate a nuestro canal comunitario para discusiones y actualizaciones:'
+          description: 'Join our community channel for discussions and updates:'
         },
         location: {
-          title: 'Ubicación',
-          description:
-            'Estamos ubicados en el Departamento de Ciencias de la Computación:'
+          title: 'Location',
+          description: "We're based at the Department of Computer Science:"
         },
         socialMedia: {
-          title: 'Redes Sociales',
-          description: 'Seguinos para actualizaciones y anuncios:'
+          title: 'Social Media',
+          description: 'Follow us for updates and announcements:'
         }
       },
       getInvolved: {
