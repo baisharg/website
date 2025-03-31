@@ -1198,14 +1198,14 @@ const translations = {
           title: 'Grupo de Discusión Semanal',
           description:
             'Reuniones semanales para discutir papers recientes, conceptos y avances en seguridad de IA.',
-          status: 'Todos los martes a las 18:00',
+          status: 'Todos los martes a las 14:30',
           link: 'Saber Más →'
         },
         card3: {
           title: 'Club de Lectura de Papers',
           description:
             'Presentaciones de estudiantes sobre papers de Seguridad en IA.',
-          status: 'Todos los viernes a las 17:00',
+          status: 'Todos los martes a las 14:00',
           link: 'Saber Más →'
         },
         card4: {
@@ -1411,7 +1411,7 @@ const translations = {
       },
       weeklyDiscussion: {
         title: 'Grupo de Discusión Semanal',
-        status: 'Todos los martes a las 18:00',
+        status: 'Todos los martes a las 14:30',
         description:
           'Nuestro Grupo de Discusión Semanal proporciona un foro casual para discutir papers recientes, conceptos y avances en seguridad de IA. Estas sesiones están abiertas a cualquier persona interesada en el campo, independientemente de conocimientos previos.',
         description2:
@@ -1447,7 +1447,7 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Todos los viernes a las 17:00',
+        status: 'Todos los martes a las 14:00',
         description:
           'Profundizamos en papers fundacionales y recientes sobre investigación en seguridad de IA. Se espera que los participantes lean el paper seleccionado con antelación y vengan preparados para discutir.',
         description2:
