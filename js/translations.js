@@ -1196,7 +1196,7 @@ const translations = {
           title: 'Grupo de Discusión Semanal',
           description:
             'Reuniones semanales para discutir papers recientes, conceptos y avances en seguridad de IA.',
-          status: 'Todos los Viernes @ 3pm',
+          status: 'Cada Viernes @ 3pm',
           link: 'Saber Más →'
         },
         card3: {
