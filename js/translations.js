@@ -1190,7 +1190,7 @@ const translations = {
         card1: {
           title: 'Cohorte de Fundamentos de Seguridad en AGI',
           description:
-            'Un curso guiado de 8 semanas cubriendo los conceptos esenciales en alineamiento y seguridad de IA.',
+            'Un curso guiado de 8 semanas cubriendo los conceptos esenciales en alineamiento y seguridad de IA. Los participantes leen materiales seleccionados y se reúnen semanalmente para discutir las lecturas con un facilitador.',
           status: 'Comienza en el segundo semestre',
           link: 'Ver Más →'
         },
@@ -1447,9 +1447,9 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Todos los martes a las 14:00',
+        status: 'Cada dos semanas los viernes a las 15:00',
         description:
-          'Profundizamos en papers fundacionales y recientes sobre investigación en seguridad de IA. Se espera que los participantes lean el paper seleccionado con antelación y vengan preparados para discutir.',
+          'Nuestro Club de Lectura de Papers se enfoca en leer y discutir papers de investigación recientes en seguridad de IA. Los participantes se turnan para presentar papers y liderar discusiones sobre las implicaciones de la investigación.',
         description2:
           'Se espera que los participantes lean el paper seleccionado con antelación y vengan preparados para discutir sus métodos, resultados e implicaciones.',
         selectionCriteria: {
@@ -1489,7 +1489,7 @@ const translations = {
       },
       mechInterp: {
         title: 'Curso de Interpretabilidad Mecanística',
-        status: 'Comienza en fines de Abril 2025',
+        status: 'Starts end of April 2025',
         description:
           'El Curso de Interpretabilidad Mecanística es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
         description2:
@@ -1542,9 +1542,10 @@ const translations = {
         viewCourseButton: 'Ver Información Detallada del Curso'
       },
       calendar: {
-        title: 'Calendario de Próximos Eventos',
-        subscribe: 'Suscribirse al Calendario de Google de Todos los Eventos',
-        subscribeLuma: 'Suscribirse al Calendario de Eventos' // Added Luma button text
+        title: 'Próximos Eventos',
+        description:
+          'Sumate a nuestros próximos eventos de seguridad en IA, discusiones y talleres. Todos los eventos están abiertos a la comunidad.',
+        subscribeLuma: 'Suscribirse al Calendario de Eventos'
       }
     },
 
@@ -1916,7 +1917,7 @@ const translations = {
         arenaTitle: 'ARENA',
         arenaDescription:
           'Opportunity to spend 4 weeks in London studying practical content relevant to AI Safety research',
-        arenaButton: 'Más Información',
+        arenaButton: 'Learn More',
         matsTitle: 'MATS',
         matsDescription:
           'Programa para iniciar investigación en Seguridad de IA con la orientación de mentores con amplia experiencia en el campo. Varios autores de artículos utilizados en este curso son mentores de MATS.',
