@@ -121,7 +121,7 @@ const translations = {
           title: 'Weekly Discussion Group',
           description:
             'Weekly meetings to discuss recent papers, concepts, and developments in AI safety.',
-          status: 'Every Friday @ 3pm',
+          status: 'Every Tuesday @ 3pm',
           link: 'Learn More →'
         },
         card3: {
@@ -306,7 +306,7 @@ const translations = {
       },
       agiFundamentals: {
         title: 'AGI Safety Fundamentals Cohort',
-        status: 'Starting in the second semester',
+        status: 'Comienza en el segundo semestre',
         description:
           'The AGI Safety Fundamentals cohort is an 8-week guided course covering the essential concepts in AI alignment and safety. Participants read curated materials and meet weekly to discuss the readings with a facilitator.',
         description2:
@@ -332,7 +332,7 @@ const translations = {
       },
       weeklyDiscussion: {
         title: 'Weekly Discussion Group',
-        status: 'Every Tuesday @ 3pm',
+        status: 'Todos los martes a las 14:30',
         description:
           'Our Weekly Discussion Group provides a casual forum to discuss recent papers, concepts, and developments in AI safety. These sessions are open to anyone interested in the field, regardless of prior knowledge.',
         description2:
@@ -368,7 +368,7 @@ const translations = {
       },
       paperReading: {
         title: 'Paper Reading Club',
-        status: 'Every Thursday @ 2pm',
+        status: 'Todos los martes a las 14:00',
         description:
           'The Paper Reading Club conducts deep dives into foundational and recent papers in AI safety research. Unlike the more casual discussion group, this activity involves a close examination of specific research papers.',
         description2:
@@ -621,15 +621,17 @@ const translations = {
         },
         telegram: {
           title: 'Telegram',
-          description: 'Join our community channel for discussions and updates:'
+          description:
+            'Sumate a nuestro canal comunitario para discusiones y actualizaciones:'
         },
         location: {
-          title: 'Location',
-          description: "We're based at the Department of Computer Science:"
+          title: 'Ubicación',
+          description:
+            'Estamos ubicados en el Departamento de Ciencias de la Computación:'
         },
         socialMedia: {
-          title: 'Social Media',
-          description: 'Follow us for updates and announcements:'
+          title: 'Redes Sociales',
+          description: 'Seguinos para actualizaciones y anuncios:'
         }
       },
       getInvolved: {
@@ -704,9 +706,9 @@ const translations = {
           alignment:
             '<strong>Alignment Techniques</strong> - Developing methods to align AI systems with human values and intentions',
           robustness:
-            '<strong>Robustness</strong> - Creating AI systems that maintain safe behavior in new environments',
+            '<strong>Robustez</strong> - Creating AI systems that maintain safe behavior in new environments',
           valueLearning:
-            '<strong>Value Learning</strong> - Inferring human preferences from feedback and demonstration'
+            '<strong>Aprendizaje de Valores</strong> - Inferir human preferences from feedback and demonstration'
         }
       },
       projects: {
@@ -759,7 +761,7 @@ const translations = {
       backToHome: '← Back to Home',
       intro: {
         paragraph1:
-          'This is a quick 4-session course designed to introduce the field of Mechanistic Interpretability for Large Language Models (LLMs). The course includes theoretical materials, introduces Python libraries for interpretability, discusses recent papers in the field (published by organizations such as Anthropic and Google DeepMind), and provides practical exercises.',
+          'Este es un curso rápido de 4 sesiones diseñado para introducir el campo de la Interpretabilidad Mecanística para Modelos de Lenguaje Grandes (LLMs). El curso incluye materiales teóricos, introduce librerías de Python para interpretabilidad, discute artículos recientes en el campo (publicados por organizaciones como Anthropic y Google DeepMind), y proporciona ejercicios prácticos.',
         paragraph2:
           'The field of Mechanistic Interpretability has rapidly gained popularity in recent years, with more than 90 papers accepted at ICML 2024. Its main goal is to understand the logic behind the decisions of machine learning models. This knowledge can be applied to improve transparency and trust in existing models, as well as to better understand how these models learn.',
         paragraph3:
@@ -812,9 +814,9 @@ const translations = {
         },
         session4: {
           title: 'Session 4 - Sparse Autoencoders (SAE)',
-          date: 'September 13, Friday, starting at 3:00 PM',
-          location: 'Auditorium 418',
-          scheduleTitle: 'Schedule:',
+          date: '13 de septiembre, viernes, a partir de las 15:00',
+          location: 'Auditorio 418',
+          scheduleTitle: 'Programa:',
           preparationTitle: 'Preparación:',
           preparation: 'Handbook Chapter 6',
           part1: '30 min: Sparse Autoencoders (SAE) and practical exploration',
@@ -1389,7 +1391,7 @@ const translations = {
         description:
           'La cohorte de Fundamentos de Seguridad en AGI es un curso guiado de 8 semanas que cubre los conceptos esenciales en alineamiento y seguridad de IA. Los participantes leen materiales seleccionados y se reúnen semanalmente para discutir las lecturas con un facilitador.',
         description2:
-          'Este programa está basado en el plan de estudios de Fundamentos de Seguridad en AGI de BlueDot y proporciona una introducción estructurada al campo de la seguridad en IA.',
+          'Este programa se basa en el currículo de Fundamentos de Seguridad en AGI de BlueDot y proporciona una introducción estructurada al campo de la seguridad en IA.',
         whatToExpect: {
           title: 'Qué Esperar',
           items: [
@@ -1447,7 +1449,7 @@ const translations = {
       },
       paperReading: {
         title: 'Club de Lectura de Papers',
-        status: 'Cada dos semanas los viernes a las 15:00',
+        status: 'Todos los martes a las 14:00',
         description:
           'Nuestro Club de Lectura de Papers se enfoca en leer y discutir papers de investigación recientes en seguridad de IA. Los participantes se turnan para presentar papers y liderar discusiones sobre las implicaciones de la investigación.',
         description2:
@@ -1478,7 +1480,7 @@ const translations = {
           time: 'Hora:',
           timeValue: '17:00 - 18:30',
           location: 'Ubicación:',
-          locationValue: 'Pabellón 0+inf, Aula 1603, Ciudad Universitaria',
+          locationValue: 'Pabellón 0+inf, Aula 1604, Ciudad Universitaria',
           paper: 'Paper:',
           paperValue:
             '"Interpretabilidad Mecanística para Modelos de Lenguaje"',
@@ -1489,7 +1491,7 @@ const translations = {
       },
       mechInterp: {
         title: 'Curso de Interpretabilidad Mecanística',
-        status: 'Starts end of April 2025',
+        status: 'Comienza en fines de Abril 2025',
         description:
           'El Curso de Interpretabilidad Mecanística es un programa intensivo de 1 mes enfocado en técnicas para entender los mecanismos internos de las redes neuronales. Este curso combina aprendizaje teórico con proyectos prácticos.',
         description2:
@@ -1704,15 +1706,17 @@ const translations = {
         },
         telegram: {
           title: 'Telegram',
-          description: 'Join our community channel for discussions and updates:'
+          description:
+            'Sumate a nuestro canal de comunidad para discusiones y actualizaciones:'
         },
         location: {
-          title: 'Location',
-          description: "We're based at the Department of Computer Science:"
+          title: 'Ubicación',
+          description:
+            'Estamos ubicados en el Departamento de Ciencias de la Computación:'
         },
         socialMedia: {
-          title: 'Social Media',
-          description: 'Follow us for updates and announcements:'
+          title: 'Redes Sociales',
+          description: 'Seguinos para actualizaciones y anuncios:'
         }
       },
       getInvolved: {
@@ -1845,37 +1849,37 @@ const translations = {
       backToHome: '← Volver al Inicio',
       intro: {
         paragraph1:
-          'Este es un curso rápido de 4 sesiones diseñado para introducir el campo de la Interpretabilidad Mecanística para Modelos de Lenguaje Grandes (LLMs). El curso incluye materiales teóricos, introduces Python libraries for interpretability, discusses recent papers in the field (published by organizations such as Anthropic and Google DeepMind), and provides practical exercises.',
+          'Este es un curso rápido de 4 sesiones diseñado para introducir el campo de la Interpretabilidad Mecanística para Modelos de Lenguaje Grandes (LLMs). El curso incluye materiales teóricos, introduce librerías de Python para interpretabilidad, discute artículos recientes en el campo (publicados por organizaciones como Anthropic y Google DeepMind), y proporciona ejercicios prácticos.',
         paragraph2:
-          'El campo de la Interpretabilidad Mecanística ha ganado popularidad rápidamente en los últimos años, con más de 90 artículos aceptados en ICML 2024. Su objetivo principal es entender la lógica detrás de las decisiones de los modelos de aprendizaje automático. Este conocimiento puede aplicarse para mejorar la transparencia y la confianza en los modelos existentes, así como para entender mejor cómo estos modelos aprenden.',
+          'The field of Mechanistic Interpretability has rapidly gained popularity in recent years, with more than 90 papers accepted at ICML 2024. Its main goal is to understand the logic behind the decisions of machine learning models. This knowledge can be applied to improve transparency and trust in existing models, as well as to better understand how these models learn.',
         paragraph3:
-          'Poco después de la finalización de este curso, BAISH organizará un Hackathon de Interpretabilidad Mecanística en la FGV — ¡detalles por anunciar! Recomendamos encarecidamente que cualquier persona interesada en participar en el Hackathon complete este curso como introducción al tema, lo que también aumentará sus posibilidades de recibir un premio en la competición.'
+          'Shortly after the completion of this course, BAISH will organize a Mechanistic Interpretability Hackathon at FGV — details to be announced! We strongly recommend that anyone interested in participating in the Hackathon complete this course as an introduction to the topic, which will also increase their chances of receiving an award in the competition.'
       },
       schedule: {
-        title: 'Programa del Curso',
+        title: 'Course Schedule',
         session1: {
-          title: 'Sesión 1 - Transformers e Interpretabilidad',
-          date: '23 de agosto, viernes, a partir de las 14:30',
-          location: 'Auditorio 537',
-          scheduleTitle: 'Programa:',
-          preparationTitle: 'Preparación:',
+          title: 'Session 1 - Transformers and Interpretability',
+          date: 'August 23, Friday, starting at 2:30 PM',
+          location: 'Auditorium 537',
+          scheduleTitle: 'Schedule:',
+          preparationTitle: 'Preparation:',
           preparation: 'Handbook Chapters 2 and 3',
-          part1: '45 min: Introducción a transformers y atención',
+          part1: '45 min: Introduction to transformers and attention',
           part2: '20 min: Coffee break',
-          part3: '45 min: Introducción a la Interpretabilidad Mecanística',
+          part3: '45 min: Introduction to Mechanistic Interpretability',
           part4: '30 min: Coding: PyTorch and TransformerLens',
-          materialsTitle: 'Materiales:',
+          materialsTitle: 'Materials:',
           handbookTitle: 'Handbook:',
-          papersTitle: 'Artículos:',
-          codingTitle: 'Codificación:',
+          papersTitle: 'Papers:',
+          codingTitle: 'Coding:',
           videosTitle: 'Videos:'
         },
         session2: {
-          title: 'Sesión 2 - Circuits',
-          date: '30 de agosto, viernes, a partir de las 14:30',
-          location: 'Auditorio 418',
-          scheduleTitle: 'Programa:',
-          preparationTitle: 'Preparación:',
+          title: 'Session 2 - Circuits',
+          date: 'August 30, Friday, starting at 2:30 PM',
+          location: 'Auditorium 418',
+          scheduleTitle: 'Schedule:',
+          preparationTitle: 'Preparation:',
           preparation: 'Handbook Chapters 3 and 4',
           part1: '40 min: Circuits and the induction circuit',
           part2:
@@ -1884,11 +1888,11 @@ const translations = {
           part4: '60 min: Coding: circuit discovery'
         },
         session3: {
-          title: 'Sesión 3 - Superposición',
-          date: '6 de septiembre, viernes, a partir de las 14:30',
-          location: 'Auditorio 537',
-          scheduleTitle: 'Programa:',
-          preparationTitle: 'Preparación:',
+          title: 'Session 3 - Superposition',
+          date: 'September 6, Friday, starting at 2:30 PM',
+          location: 'Auditorium 537',
+          scheduleTitle: 'Schedule:',
+          preparationTitle: 'Preparation:',
           preparation: 'Handbook Chapter 5',
           part1: '30 min: Superposition',
           part2:
@@ -1897,7 +1901,7 @@ const translations = {
           part4: '60 min: Coding: superposition in toy models'
         },
         session4: {
-          title: 'Sesión 4 - Sparse Autoencoders (SAE)',
+          title: 'Session 4 - Sparse Autoencoders (SAE)',
           date: '13 de septiembre, viernes, a partir de las 15:00',
           location: 'Auditorio 418',
           scheduleTitle: 'Programa:',
