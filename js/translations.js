@@ -583,7 +583,7 @@ const translations = {
             title: 'Human Compatible',
             author: 'Stuart Russell (2019)',
             description:
-              'A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity.'
+              "A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity."
           },
           book3: {
             title: 'Superintelligence',
@@ -689,8 +689,7 @@ const translations = {
       pageHeader: {
         breadcrumb: 'Research',
         title: 'Our Research',
-        subtitle:
-          'Student-led projects exploring critical AI safety challenges'
+        subtitle: 'Student-led projects exploring critical AI safety challenges'
       },
       overview: {
         approach: {
@@ -1670,25 +1669,25 @@ const translations = {
             title: 'Human Compatible',
             author: 'Stuart Russell (2019)',
             description:
-              'Un caso convincente de un investigador líder en IA sobre cómo asegurar que la inteligencia artificial siga siendo beneficiosa para la humanidad.'
+              "A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity."
           },
           book3: {
             title: 'Superintelligence',
             author: 'Nick Bostrom (2014)',
             description:
-              'Explora los riesgos potenciales y caminos hacia la IA superinteligente, abordando preguntas clave sobre el futuro de la inteligencia.'
+              'Explores the potential risks and paths to superintelligent AI, addressing key questions about the future of intelligence.'
           },
           book4: {
             title: 'The Alignment Problem',
             author: 'Brian Christian (2020)',
             description:
-              'Una exploración del creciente campo del alineamiento de IA, explicando conceptos técnicos de manera accesible.'
+              'An exploration of the growing field of AI alignment, explaining technical concepts in an accessible way.'
           },
           book5: {
             title: 'Life 3.0',
             author: 'Max Tegmark (2017)',
             description:
-              'Examina cómo la inteligencia artificial podría afectar la vida en el futuro y qué elecciones enfrentamos al dar forma a ese futuro.'
+              'Examines how artificial intelligence might affect life in the future and what choices we face in shaping that future.'
           }
         }
       }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Language Toggle Debug</title>
+		<link rel="stylesheet" href="css/language-toggle.css" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+				background: #161624;
+				color: #f0f2f5;
+			}
+
+			:root {
+				--primary: #9275e5;
+				--text-secondary: #c0c5d0;
+				--text-muted: #8792a8;
+				--border: rgba(192, 197, 208, 0.2);
+			}
+
+			.test-element {
+				margin: 20px 0;
+				padding: 10px;
+				background: rgba(30, 30, 48, 0.8);
+				border-radius: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Language Toggle Debug</h1>
+
+		<div class="language-toggle">
+			<button id="lang-es" class="language-toggle-btn active">ES</button>
+			<span class="language-toggle-separator">|</span>
+			<button id="lang-en" class="language-toggle-btn">EN</button>
+		</div>
+
+		<div class="test-element">
+			<h2 data-i18n="test.title">Test Title</h2>
+			<p data-i18n="test.description">Test Description</p>
+		</div>
+
+		<div id="debug-info">
+			<h3>Debug Information:</h3>
+			<ul id="debug-list"></ul>
+		</div>
+
+		<script src="js/translations.js"></script>
+		<script>
+			// Debug script
+			const debugList = document.getElementById("debug-list");
+
+			function addDebugInfo(message) {
+				const li = document.createElement("li");
+				li.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+				debugList.appendChild(li);
+			}
+
+			addDebugInfo("Script loaded");
+
+			// Check if translations object exists
+			if (typeof translations !== "undefined") {
+				addDebugInfo("Translations object found");
+				addDebugInfo(
+					`Available languages: ${Object.keys(translations).join(", ")}`
+				);
+			} else {
+				addDebugInfo("ERROR: Translations object not found");
+			}
+
+			// Check if buttons exist
+			const enButton = document.getElementById("lang-en");
+			const esButton = document.getElementById("lang-es");
+
+			if (enButton && esButton) {
+				addDebugInfo("Language toggle buttons found");
+			} else {
+				addDebugInfo("ERROR: Language toggle buttons not found");
+			}
+
+			// Add test translations
+			if (typeof translations === "undefined") {
+				window.translations = {
+					en: {
+						test: {
+							title: "Test Title (English)",
+							description: "Test Description (English)",
+						},
+					},
+					es: {
+						test: {
+							title: "Título de Prueba (Español)",
+							description: "Descripción de Prueba (Español)",
+						},
+					},
+				};
+				addDebugInfo("Created test translations");
+			}
+		</script>
+		<script src="js/language-toggle.js"></script>
+		<script>
+			// Additional debug after language-toggle.js loads
+			setTimeout(() => {
+				addDebugInfo("Language toggle script should be loaded now");
+				addDebugInfo(
+					`Current language: ${
+						typeof getCurrentLanguage === "function"
+							? getCurrentLanguage()
+							: "function not available"
+					}`
+				);
+			}, 100);
+		</script>
+	</body>
+</html>
