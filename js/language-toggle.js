@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Force the default language if none is stored
   if (!localStorage.getItem('language')) {
     localStorage.setItem('language', 'es')
+    currentLanguage = 'es'
+  }
+
+  // Ensure translations object is available
+  if (typeof translations === 'undefined') {
+    console.error('Translations object not found. Make sure translations.js is loaded before language-toggle.js')
+    return
   }
 
   // Set language toggle button states
@@ -17,13 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTranslations()
 
   // Add event listeners to language toggle buttons
-  document.getElementById('lang-en').addEventListener('click', () => {
-    setLanguage('en')
-  })
+  const enButton = document.getElementById('lang-en')
+  const esButton = document.getElementById('lang-es')
+  
+  if (enButton && esButton) {
+    enButton.addEventListener('click', () => {
+      setLanguage('en')
+    })
 
-  document.getElementById('lang-es').addEventListener('click', () => {
-    setLanguage('es')
-  })
+    esButton.addEventListener('click', () => {
+      setLanguage('es')
+    })
+  } else {
+    console.warn('Language toggle buttons not found')
+  }
 })
 
 /**
@@ -32,6 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateLanguageToggleUI () {
   const enButton = document.getElementById('lang-en')
   const esButton = document.getElementById('lang-es')
+
+  if (!enButton || !esButton) {
+    console.warn('Language toggle buttons not found')
+    return
+  }
 
   if (currentLanguage === 'en') {
     enButton.classList.add('active')
@@ -47,6 +66,12 @@ function updateLanguageToggleUI () {
  * @param {string} lang - The language code ('en' or 'es')
  */
 function setLanguage (lang) {
+  // Validate language parameter
+  if (lang !== 'en' && lang !== 'es') {
+    console.error('Invalid language code:', lang)
+    return
+  }
+
   // Don't do anything if the language is already set
   if (currentLanguage === lang) return
 
@@ -67,6 +92,18 @@ function setLanguage (lang) {
  * Applies translations to all elements with data-i18n attributes
  */
 function applyTranslations () {
+  // Check if translations object exists
+  if (typeof translations === 'undefined') {
+    console.error('Translations object not found')
+    return
+  }
+
+  // Check if current language exists in translations
+  if (!translations[currentLanguage]) {
+    console.error('Language not found in translations:', currentLanguage)
+    return
+  }
+
   // Get all elements with data-i18n attribute
   const elements = document.querySelectorAll('[data-i18n]')
 
@@ -115,6 +152,11 @@ function applyTranslations () {
       element.setAttribute(attr, text)
     }
   })
+
+  // Trigger a custom event to notify other scripts that translations have been applied
+  document.dispatchEvent(new CustomEvent('translationsApplied', {
+    detail: { language: currentLanguage }
+  }))
 }
 
 /**
@@ -123,6 +165,18 @@ function applyTranslations () {
  * @returns {string|null} - The translated text or null if not found
  */
 function getTranslationByKey (key) {
+  // Check if translations object exists
+  if (typeof translations === 'undefined') {
+    console.error('Translations object not found')
+    return null
+  }
+
+  // Check if current language exists in translations
+  if (!translations[currentLanguage]) {
+    console.error('Language not found in translations:', currentLanguage)
+    return null
+  }
+
   // Split the key by dots
   const keys = key.split('.')
 
@@ -135,10 +189,17 @@ function getTranslationByKey (key) {
       translation = translation[k]
     } else {
       // Key not found
-      console.warn(`Translation key not found: ${key}`)
+      console.warn(`Translation key not found: ${key} for language: ${currentLanguage}`)
       return null
     }
   }
 
   return translation
+}
+
+// Export functions for potential use by other scripts
+if (typeof window !== 'undefined') {
+  window.setLanguage = setLanguage
+  window.applyTranslations = applyTranslations
+  window.getCurrentLanguage = () => currentLanguage
 }
