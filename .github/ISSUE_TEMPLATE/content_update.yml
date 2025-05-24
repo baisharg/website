@@ -1,0 +1,64 @@
+name: Content Update
+description: Request an update to website content, events, or information
+title: "[Content]: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request updates to website content, events, team information, or translations.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Type
+      options:
+        - Event Information
+        - Team Member Updates
+        - Course/Activity Information
+        - Translation Updates
+        - Resource Links
+        - About Page Content
+        - Contact Information
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What is the current content that needs to be updated?
+      placeholder: Copy the current text or describe the current state
+
+  - type: textarea
+    id: new-content
+    attributes:
+      label: Requested Changes
+      description: What should the new content be? Or describe the changes needed.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Both Spanish and English
+        - Spanish only
+        - English only
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      options:
+        - Low (when convenient)
+        - Medium (within a week)
+        - High (ASAP)
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Any additional context about the content update.

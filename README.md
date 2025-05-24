@@ -9,7 +9,7 @@ The website is built using HTML, CSS, and JavaScript, with a responsive design t
 ## Site Structure
 
 ```
-aisafetysite/
+website/
 ├── css/
 │   ├── baish-enhanced-theme.css    # Enhanced theming and components
 │   ├── style.css                   # Core styling
@@ -22,10 +22,10 @@ aisafetysite/
 │   ├── apply-enhanced-theme.js     # Theme application
 │   ├── mobile-nav.js               # Mobile navigation menu
 │   └── update-all-pages.js         # Utility for site-wide updates
-├── img/                            # Image assets
+├── img/                            # Image assets (logos, icons, team photos)
 ├── images/                         # Additional image assets
 ├── mech-interp/                    # Mechanistic Interpretability course materials
-├── handbook/                       # Handbook resources
+├── handbook/                       # Handbook resources (chapter2-6.html)
 ├── index.html                      # Homepage
 ├── about.html                      # About page
 ├── activities.html                 # Activities page
@@ -34,7 +34,9 @@ aisafetysite/
 ├── contact.html                    # Contact page
 ├── mech-interp-course.html         # Mechanistic Interpretability course page
 ├── privacy-policy.html             # Privacy policy
-└── CNAME                           # Custom domain configuration
+├── .gitignore                      # Git ignore file
+├── .DS_Store                       # macOS metadata file
+└── CNAME                           # Custom domain configuration (baish.com.ar)
 ```
 
 ## Key Features
