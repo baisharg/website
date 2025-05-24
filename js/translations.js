@@ -583,7 +583,7 @@ const translations = {
             title: 'Human Compatible',
             author: 'Stuart Russell (2019)',
             description:
-              "A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity."
+              'A leading AI researcher's compelling case for how to ensure that artificial intelligence remains beneficial to humanity.'
           },
           book3: {
             title: 'Superintelligence',
@@ -689,7 +689,8 @@ const translations = {
       pageHeader: {
         breadcrumb: 'Research',
         title: 'Our Research',
-        subtitle: 'Student-led projects exploring critical AI safety challenges'
+        subtitle:
+          'Student-led projects exploring critical AI safety challenges'
       },
       overview: {
         approach: {
@@ -763,81 +764,82 @@ const translations = {
         paragraph1:
           'Este es un curso rápido de 4 sesiones diseñado para introducir el campo de la Interpretabilidad Mecanística para Modelos de Lenguaje Grandes (LLMs). El curso incluye materiales teóricos, introduce librerías de Python para interpretabilidad, discute artículos recientes en el campo (publicados por organizaciones como Anthropic y Google DeepMind), y proporciona ejercicios prácticos.',
         paragraph2:
-          'The field of Mechanistic Interpretability has rapidly gained popularity in recent years, with more than 90 papers accepted at ICML 2024. Its main goal is to understand the logic behind the decisions of machine learning models. This knowledge can be applied to improve transparency and trust in existing models, as well as to better understand how these models learn.',
+          'El campo de la Interpretabilidad Mecanística ha ganado rápidamente popularidad en los últimos años, con más de 90 papers aceptados en ICML 2024. Su objetivo principal es entender la lógica detrás de las decisiones de los modelos de aprendizaje automático. Este conocimiento puede aplicarse para mejorar la transparencia y confianza en modelos existentes, así como para entender mejor cómo estos modelos aprenden.',
         paragraph3:
-          'Shortly after the completion of this course, BAISH will organize a Mechanistic Interpretability Hackathon at FGV — details to be announced! We strongly recommend that anyone interested in participating in the Hackathon complete this course as an introduction to the topic, which will also increase their chances of receiving an award in the competition.'
+          'Poco después de la finalización de este curso, BAISH organizará un Hackathón de Interpretabilidad Mecanística en FGV — ¡detalles por anunciar! Recomendamos encarecidamente que cualquier persona interesada en participar en el Hackathón complete este curso como introducción al tema, lo que también aumentará sus posibilidades de recibir un premio en la competencia.'
       },
       schedule: {
-        title: 'Course Schedule',
+        title: 'Cronograma del Curso',
         session1: {
-          title: 'Session 1 - Transformers and Interpretability',
-          date: 'August 23, Friday, starting at 2:30 PM',
-          location: 'Auditorium 537',
-          scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
-          preparation: 'Handbook Chapters 2 and 3',
-          part1: '45 min: Introduction to transformers and attention',
-          part2: '20 min: Coffee break',
-          part3: '45 min: Introduction to Mechanistic Interpretability',
-          part4: '30 min: Coding: PyTorch and TransformerLens',
-          materialsTitle: 'Materials:',
-          handbookTitle: 'Handbook:',
+          title: 'Sesión 1 - Transformers e Interpretabilidad',
+          date: '23 de agosto, viernes, a partir de las 14:30',
+          location: 'Auditorio 537',
+          scheduleTitle: 'Programa:',
+          preparationTitle: 'Preparación:',
+          preparation: 'Capítulos 2 y 3 del Manual',
+          part1: '45 min: Introducción a transformers y atención',
+          part2: '20 min: Pausa para café',
+          part3: '45 min: Introducción a Interpretabilidad Mecanística',
+          part4: '30 min: Programación: PyTorch y TransformerLens',
+          materialsTitle: 'Materiales:',
+          handbookTitle: 'Manual:',
           papersTitle: 'Papers:',
-          codingTitle: 'Coding:',
+          codingTitle: 'Programación:',
           videosTitle: 'Videos:'
         },
         session2: {
-          title: 'Session 2 - Circuits',
-          date: 'August 30, Friday, starting at 2:30 PM',
-          location: 'Auditorium 418',
-          scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
-          preparation: 'Handbook Chapters 3 and 4',
-          part1: '40 min: Circuits and the induction circuit',
+          title: 'Sesión 2 - Circuitos',
+          date: '30 de agosto, viernes, a partir de las 14:30',
+          location: 'Auditorio 418',
+          scheduleTitle: 'Programa:',
+          preparationTitle: 'Preparación:',
+          preparation: 'Capítulos 3 y 4 del Manual',
+          part1: '40 min: Circuitos y el circuito de inducción',
           part2:
-            '20 min: Exploration of the paper "A Mathematical Framework for Transformer Circuits"',
-          part3: '20 min: Coffee break',
-          part4: '60 min: Coding: circuit discovery'
+            '20 min: Exploración del paper "Un Marco Matemático para Circuitos Transformer"',
+          part3: '20 min: Pausa para café',
+          part4: '60 min: Programación: descubrimiento de circuitos'
         },
         session3: {
-          title: 'Session 3 - Superposition',
-          date: 'September 6, Friday, starting at 2:30 PM',
-          location: 'Auditorium 537',
-          scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
-          preparation: 'Handbook Chapter 5',
-          part1: '30 min: Superposition',
+          title: 'Sesión 3 - Superposición',
+          date: '6 de septiembre, viernes, a partir de las 14:30',
+          location: 'Auditorio 537',
+          scheduleTitle: 'Programa:',
+          preparationTitle: 'Preparación:',
+          preparation: 'Capítulo 5 del Manual',
+          part1: '30 min: Superposición',
           part2:
-            '30 min: 3Blue1Brown video "How might LLMs store facts" and discussion',
-          part3: '20 min: Coffee break',
-          part4: '60 min: Coding: superposition in toy models'
+            '30 min: Video de 3Blue1Brown "Cómo podrían almacenar hechos los LLMs" y discusión',
+          part3: '20 min: Pausa para café',
+          part4: '60 min: Programación: superposición en modelos simplificados'
         },
         session4: {
-          title: 'Session 4 - Sparse Autoencoders (SAE)',
+          title: 'Sesión 4 - Autoencoders Dispersos (SAE)',
           date: '13 de septiembre, viernes, a partir de las 15:00',
           location: 'Auditorio 418',
           scheduleTitle: 'Programa:',
           preparationTitle: 'Preparación:',
-          preparation: 'Handbook Chapter 6',
-          part1: '30 min: Sparse Autoencoders (SAE) and practical exploration',
+          preparation: 'Capítulo 6 del Manual',
+          part1: '30 min: Autoencoders Dispersos (SAE) y exploración práctica',
           part2:
-            '30 min: Exploration of the papers "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning" and "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet"',
-          part3: '20 min: Coffee break',
-          part4: '40 min: Coding: Using SAEs',
-          part5: '30 min: New areas of exploration and tips for the Hackathon!'
+            '30 min: Exploración de los papers "Hacia la Monosemántica: Descomponiendo Modelos de Lenguaje con Aprendizaje de Diccionario" y "Escalando Monosemántica: Extrayendo Características Interpretables de Claude 3 Sonnet"',
+          part3: '20 min: Pausa para café',
+          part4: '40 min: Programación: Usando SAEs',
+          part5:
+            '30 min: ¡Nuevas áreas de exploración y consejos para el Hackathón!'
         }
       },
       resources: {
-        title: 'Additional Resources',
-        opportunitiesTitle: 'Opportunities',
+        title: 'Recursos Adicionales',
+        opportunitiesTitle: 'Oportunidades',
         arenaTitle: 'ARENA',
         arenaDescription:
-          'Opportunity to spend 4 weeks in London studying practical content relevant to AI Safety research',
-        arenaButton: 'Learn More',
+          'Oportunidad de pasar 4 semanas en Londres estudiando contenido práctico relevante para la investigación en Seguridad de IA',
+        arenaButton: 'Saber Más',
         matsTitle: 'MATS',
         matsDescription:
-          'Program to start research in AI Safety with guidance from mentors with extensive experience in the field. Several authors of papers used in this course are MATS mentors.',
-        matsButton: 'View Mentors'
+          'Programa para iniciar investigación en Seguridad de IA con la orientación de mentores con amplia experiencia en el campo. Varios autores de artículos utilizados en este curso son mentores de MATS.',
+        matsButton: 'Ver Mentores'
       }
     },
 
@@ -1851,68 +1853,69 @@ const translations = {
         paragraph1:
           'Este es un curso rápido de 4 sesiones diseñado para introducir el campo de la Interpretabilidad Mecanística para Modelos de Lenguaje Grandes (LLMs). El curso incluye materiales teóricos, introduce librerías de Python para interpretabilidad, discute artículos recientes en el campo (publicados por organizaciones como Anthropic y Google DeepMind), y proporciona ejercicios prácticos.',
         paragraph2:
-          'The field of Mechanistic Interpretability has rapidly gained popularity in recent years, with more than 90 papers accepted at ICML 2024. Its main goal is to understand the logic behind the decisions of machine learning models. This knowledge can be applied to improve transparency and trust in existing models, as well as to better understand how these models learn.',
+          'El campo de la Interpretabilidad Mecanística ha ganado rápidamente popularidad en los últimos años, con más de 90 papers aceptados en ICML 2024. Su objetivo principal es entender la lógica detrás de las decisiones de los modelos de aprendizaje automático. Este conocimiento puede aplicarse para mejorar la transparencia y confianza en modelos existentes, así como para entender mejor cómo estos modelos aprenden.',
         paragraph3:
-          'Shortly after the completion of this course, BAISH will organize a Mechanistic Interpretability Hackathon at FGV — details to be announced! We strongly recommend that anyone interested in participating in the Hackathon complete this course as an introduction to the topic, which will also increase their chances of receiving an award in the competition.'
+          'Poco después de la finalización de este curso, BAISH organizará un Hackathón de Interpretabilidad Mecanística en FGV — ¡detalles por anunciar! Recomendamos encarecidamente que cualquier persona interesada en participar en el Hackathón complete este curso como introducción al tema, lo que también aumentará sus posibilidades de recibir un premio en la competencia.'
       },
       schedule: {
-        title: 'Course Schedule',
+        title: 'Cronograma del Curso',
         session1: {
-          title: 'Session 1 - Transformers and Interpretability',
-          date: 'August 23, Friday, starting at 2:30 PM',
-          location: 'Auditorium 537',
-          scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
-          preparation: 'Handbook Chapters 2 and 3',
-          part1: '45 min: Introduction to transformers and attention',
-          part2: '20 min: Coffee break',
-          part3: '45 min: Introduction to Mechanistic Interpretability',
-          part4: '30 min: Coding: PyTorch and TransformerLens',
-          materialsTitle: 'Materials:',
-          handbookTitle: 'Handbook:',
+          title: 'Sesión 1 - Transformers e Interpretabilidad',
+          date: '23 de agosto, viernes, a partir de las 14:30',
+          location: 'Auditorio 537',
+          scheduleTitle: 'Programa:',
+          preparationTitle: 'Preparación:',
+          preparation: 'Capítulos 2 y 3 del Manual',
+          part1: '45 min: Introducción a transformers y atención',
+          part2: '20 min: Pausa para café',
+          part3: '45 min: Introducción a Interpretabilidad Mecanística',
+          part4: '30 min: Programación: PyTorch y TransformerLens',
+          materialsTitle: 'Materiales:',
+          handbookTitle: 'Manual:',
           papersTitle: 'Papers:',
-          codingTitle: 'Coding:',
+          codingTitle: 'Programación:',
           videosTitle: 'Videos:'
         },
         session2: {
-          title: 'Session 2 - Circuits',
-          date: 'August 30, Friday, starting at 2:30 PM',
-          location: 'Auditorium 418',
-          scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
-          preparation: 'Handbook Chapters 3 and 4',
-          part1: '40 min: Circuits and the induction circuit',
+          title: 'Sesión 2 - Circuitos',
+          date: '30 de agosto, viernes, a partir de las 14:30',
+          location: 'Auditorio 418',
+          scheduleTitle: 'Programa:',
+          preparationTitle: 'Preparación:',
+          preparation: 'Capítulos 3 y 4 del Manual',
+          part1: '40 min: Circuitos y el circuito de inducción',
           part2:
-            '20 min: Exploration of the paper "A Mathematical Framework for Transformer Circuits"',
-          part3: '20 min: Coffee break',
-          part4: '60 min: Coding: circuit discovery'
+            '20 min: Exploración del paper "Un Marco Matemático para Circuitos Transformer"',
+          part3: '20 min: Pausa para café',
+          part4: '60 min: Programación: descubrimiento de circuitos'
         },
         session3: {
-          title: 'Session 3 - Superposition',
-          date: 'September 6, Friday, starting at 2:30 PM',
-          location: 'Auditorium 537',
-          scheduleTitle: 'Schedule:',
-          preparationTitle: 'Preparation:',
-          preparation: 'Handbook Chapter 5',
-          part1: '30 min: Superposition',
+          title: 'Sesión 3 - Superposición',
+          date: '6 de septiembre, viernes, a partir de las 14:30',
+          location: 'Auditorio 537',
+          scheduleTitle: 'Programa:',
+          preparationTitle: 'Preparación:',
+          preparation: 'Capítulo 5 del Manual',
+          part1: '30 min: Superposición',
           part2:
-            '30 min: 3Blue1Brown video "How might LLMs store facts" and discussion',
-          part3: '20 min: Coffee break',
-          part4: '60 min: Coding: superposition in toy models'
+            '30 min: Video de 3Blue1Brown "Cómo podrían almacenar hechos los LLMs" y discusión',
+          part3: '20 min: Pausa para café',
+          part4: '60 min: Programación: superposición en modelos simplificados'
         },
         session4: {
-          title: 'Session 4 - Sparse Autoencoders (SAE)',
+          title: 'Sesión 4 - Autoencoders Dispersos (SAE)',
           date: '13 de septiembre, viernes, a partir de las 15:00',
           location: 'Auditorio 418',
           scheduleTitle: 'Programa:',
           preparationTitle: 'Preparación:',
-          preparation: 'Handbook Chapter 6',
-          part1: '30 min: Sparse Autoencoders (SAE) and practical exploration',
+          preparation: 'Capítulo 6 del Manual',
+          part1: '30 min: Autoencoders Dispersos (SAE) y exploración práctica',
           part2:
-            '30 min: Exploration of the papers "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning" and "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet"',
-          part3: '20 min: Coffee break',
-          part4: '40 min: Coding: Using SAEs',
-          part5: '30 min: New areas of exploration and tips for the Hackathon!'
+            '30 min: Exploración de los papers "Hacia la Monosemántica: Descomponiendo Modelos de Lenguaje con Aprendizaje de Diccionario" y "Escalando Monosemántica: Extrayendo Características Interpretables de Claude 3 Sonnet"',
+          part3: '20 min: Pausa para café',
+          part4: '40 min: Programación: Usando SAEs',
+          part5:
+            '30 min: ¡Nuevas áreas de exploración y consejos para el Hackathón!'
         }
       },
       resources: {
@@ -1920,8 +1923,8 @@ const translations = {
         opportunitiesTitle: 'Oportunidades',
         arenaTitle: 'ARENA',
         arenaDescription:
-          'Opportunity to spend 4 weeks in London studying practical content relevant to AI Safety research',
-        arenaButton: 'Learn More',
+          'Oportunidad de pasar 4 semanas en Londres estudiando contenido práctico relevante para la investigación en Seguridad de IA',
+        arenaButton: 'Saber Más',
         matsTitle: 'MATS',
         matsDescription:
           'Programa para iniciar investigación en Seguridad de IA con la orientación de mentores con amplia experiencia en el campo. Varios autores de artículos utilizados en este curso son mentores de MATS.',
