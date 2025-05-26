@@ -165,6 +165,62 @@ const translations = {
       }
     },
 
+    // Hackathon translations
+    hackathon: {
+      title: 'AI Safety Hackathon: Model Routing',
+      subtitle: 'Beyond Single Models - Revolución del Model Routing',
+      prize: '$2,000 USD en Premios',
+      days: 'Días',
+      hours: 'Horas',
+      minutes: 'Min',
+      seconds: 'Seg',
+      register: '¡Inscribite ahora!',
+      urgency: '¡Cupos limitados - No te quedas afuera!',
+      eventTitle: 'AI Safety Hackathon - Model Routing',
+      eventDate: '30 de Mayo - 1 de Junio, 2025',
+      venue: '@ Aleph Hub',
+      foodIncluded: '🥗 Comida vegana incluida',
+      eventDescription:
+        "Join Argentina's first AI Safety hackathon. We'll explore revolutionary Model Routing techniques that go beyond single models to create safer and more efficient AI systems. Compete for $2,000 USD in prizes!",
+      registerEvent: '¡Regístrate ahora!',
+      moreInfo: 'Más Información & Registro →',
+      tracks: {
+        title: 'Tracks de Desafío',
+        track1: {
+          title: 'Desarrollo de Modelo de Evaluación',
+          description:
+            'Construye modelos de evaluación especializados que evalúan capacidades de IA en dimensiones relevantes para la seguridad.'
+        },
+        track2: {
+          title: 'Sistemas de Enrutamiento Inteligente',
+          description:
+            'Desarrolla sistemas que dirigen consultas de manera inteligente a modelos especializados apropiados.'
+        },
+        track3: {
+          title: 'Descomposición de Tareas',
+          description:
+            'Crea marcos de trabajo que descomponen solicitudes complejas en pasos manejables para diferentes modelos.'
+        },
+        track4: {
+          title: 'Integración de Modelos',
+          description:
+            'Construye marcos de trabajo para una integración fácil de modelos especializados en la arquitectura de enrutamiento.'
+        }
+      },
+      feature1: {
+        title: 'Premios Atractivos',
+        description: '$2,000 USD distribuidos entre los mejores proyectos'
+      },
+      feature2: {
+        title: 'Model Routing',
+        description: 'Técnicas innovadoras para sistemas multi-modelo'
+      },
+      feature3: {
+        title: 'Support',
+        description: 'Weekend support and mentoring'
+      }
+    },
+
     // About page
     about: {
       pageHeader: {
@@ -1244,6 +1300,62 @@ const translations = {
         title: 'Próximos Eventos',
         description:
           'Sumate a nuestros próximos eventos, discusiones y talleres sobre seguridad de la IA. Todos los eventos están abiertos a la comunidad.'
+      }
+    },
+
+    // Hackathon translations
+    hackathon: {
+      title: 'AI Safety Hackathon: Model Routing',
+      subtitle: 'Beyond Single Models - Revolución del Model Routing',
+      prize: '$2,000 USD en Premios',
+      days: 'Días',
+      hours: 'Horas',
+      minutes: 'Min',
+      seconds: 'Seg',
+      register: '¡Inscribite ahora!',
+      urgency: '¡Cupos limitados - No te quedas afuera!',
+      eventTitle: 'AI Safety Hackathon - Model Routing',
+      eventDate: '30 de Mayo - 1 de Junio, 2025',
+      venue: '@ Aleph Hub',
+      foodIncluded: '🥗 Comida vegana incluida',
+      eventDescription:
+        'Sumate al primer hackathon de AI Safety de Argentina. Exploraremos técnicas revolucionarias de Model Routing que van más allá de modelos únicos para crear sistemas de IA más seguros y eficientes. ¡Competí por $2,000 USD en premios!',
+      registerEvent: '¡Regístrate ahora!',
+      moreInfo: 'Más Información & Registro →',
+      tracks: {
+        title: 'Tracks de Desafío',
+        track1: {
+          title: 'Desarrollo de Modelo de Evaluación',
+          description:
+            'Construye modelos de evaluación especializados que evalúan capacidades de IA en dimensiones relevantes para la seguridad.'
+        },
+        track2: {
+          title: 'Sistemas de Enrutamiento Inteligente',
+          description:
+            'Desarrolla sistemas que dirigen consultas de manera inteligente a modelos especializados apropiados.'
+        },
+        track3: {
+          title: 'Descomposición de Tareas',
+          description:
+            'Crea marcos de trabajo que descomponen solicitudes complejas en pasos manejables para diferentes modelos.'
+        },
+        track4: {
+          title: 'Integración de Modelos',
+          description:
+            'Construye marcos de trabajo para una integración fácil de modelos especializados en la arquitectura de enrutamiento.'
+        }
+      },
+      feature1: {
+        title: 'Premios Atractivos',
+        description: '$2,000 USD distribuidos entre los mejores proyectos'
+      },
+      feature2: {
+        title: 'Model Routing',
+        description: 'Técnicas innovadoras para sistemas multi-modelo'
+      },
+      feature3: {
+        title: 'Apoyo',
+        description: 'Apoyo durante el fin de semana'
       }
     },
 
