@@ -1,0 +1,26 @@
+# BAISH Frontend Architecture Document
+
+## Table of Contents
+
+- [BAISH Frontend Architecture Document](#table-of-contents)
+  - [Change Log](./change-log.md)
+  - [Template and Framework Selection](./template-and-framework-selection.md)
+  - [Frontend Tech Stack](./frontend-tech-stack.md)
+  - [Project Structure](./project-structure.md)
+  - [Component Standards](./component-standards.md)
+    - [Component Template](./component-standards.md#component-template)
+    - [Naming Conventions](./component-standards.md#naming-conventions)
+  - [State Management](./state-management.md)
+  - [API Integration](./api-integration.md)
+  - [Routing](./routing.md)
+  - [Styling Guidelines](./styling-guidelines.md)
+    - [CSS Architecture](./styling-guidelines.md#css-architecture)
+    - [Global Theme Variables](./styling-guidelines.md#global-theme-variables)
+  - [Testing Requirements](./testing-requirements.md)
+    - [Browser-based Testing with Mocha/Chai](./testing-requirements.md#browser-based-testing-with-mochachai)
+    - [Testing Best Practices](./testing-requirements.md#testing-best-practices)
+  - [Environment Configuration](./environment-configuration.md)
+  - [Frontend Developer Standards](./frontend-developer-standards.md)
+    - [Critical Coding Rules](./frontend-developer-standards.md#critical-coding-rules)
+    - [Quick Reference](./frontend-developer-standards.md#quick-reference)
+  - [Summary](./summary.md)
