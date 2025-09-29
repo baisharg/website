@@ -64,6 +64,34 @@
 	--button-active-color: #cc5500;
 }
 
+/* ======= Accessibility - Skip to Content Link ======= */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: var(--primary);
+	color: #ffffff;
+	padding: 8px 16px;
+	text-decoration: none;
+	font-weight: 600;
+	font-family: var(--font-heading);
+	z-index: 1000;
+	border-radius: 0 0 4px 0;
+	box-shadow: var(--shadow-lg);
+	transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 2px solid var(--secondary);
+	outline-offset: 2px;
+}
+
+.skip-link:hover {
+	background: var(--primary-light);
+	text-decoration: none;
+}
+
 /* ======= Typography Implementation ======= */
 h1,
 h2,

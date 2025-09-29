@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     esButton.addEventListener('click', () => {
       setLanguage('es')
     })
-  } else {
-    console.warn('Language toggle buttons not found')
   }
 })
 
@@ -50,7 +48,6 @@ function updateLanguageToggleUI () {
   const esButton = document.getElementById('lang-es')
 
   if (!enButton || !esButton) {
-    console.warn('Language toggle buttons not found')
     return
   }
 
@@ -193,9 +190,6 @@ function getTranslationByKey (key) {
       translation = translation[k]
     } else {
       // Key not found
-      console.warn(
-        `Translation key not found: ${key} for language: ${currentLanguage}`
-      )
       return null
     }
   }
