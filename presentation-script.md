@@ -1,5 +1,5 @@
 # Script de Presentación: Taller de LLM Assisted Coding
-## BAISH x Y-hat | Duración: 30 minutos
+## BAISH x Y-hat | Duración: 30 minutos | Total de slides: 22
 
 ---
 
@@ -15,7 +15,7 @@ Perfecto. Y ahora, ¿cuántos se frustraron cuando el modelo les dio código que
 
 [PAUSA - probablemente más manos]
 
-Bueno, ahí está el problema que vamos a resolver hoy. Les voy a mostrar exactamente por qué pasa eso, y cómo usar un método que convierte a los LLMs de "asistentes que a veces ayudan" a "un equipo completo de desarrollo que trabaja en serio".
+Bueno, ahí está el problema que vamos a resolver hoy. Les voy a mostrar exactamente por qué pasa eso, y cómo usar un método que convierte a los LLMs de "asistentes que a veces ayudan" a "un equipo completo de desarrollo que trabaja con documentación estructurada y contexto inteligente".
 
 [CLICK - mostrar Slide 1]
 
@@ -31,55 +31,59 @@ El título dice "Armá proyectos con AI como si tuvieras todo un equipo" - y es 
 
 ---
 
-## SLIDE 2: ¿QUÉ ES BAISH? [3:00 - 4:30]
+## SLIDE 2: ¿QUÉ ES BAISH? [3:00 - 3:45]
 
-BAISH es el Buenos Aires AI Safety Hub. Somos una comunidad que investiga y enseña sobre seguridad en inteligencia artificial.
+BAISH es el Buenos Aires AI Safety Hub - investigamos y enseñamos sobre seguridad en inteligencia artificial.
 
-Creemos que garantizar la seguridad de los modelos avanzados de IA es uno de los desafíos más importantes que tenemos por delante. No se trata de tenerle miedo a la IA - se trata de construirla bien desde el principio.
+Tenemos tres actividades que pueden interesarles:
 
-Tenemos tres actividades principales que pueden interesarles:
+**AI Safety Fundamentals** - Viernes 14:30-17:00, Sala 1604.
 
-**AI Safety Fundamentals** - Un curso introductorio que se da los viernes de 14:30 a 17:00 en la sala 1604. Si les interesa entender los fundamentos técnicos y filosóficos de la seguridad en IA, pasen por ahí.
+**Workshop de AI Safety** - Martes 15:00-17:00, Sala 1604. Replicaciones de papers guiadas. **Importante: abierto a todos sin necesidad de inscripción previa.**
 
-**Workshop de AI Safety** - Los martes de 15 a 17, también en 1604, hacemos replicaciones guiadas de papers. Agarramos un paper importante y lo implementamos juntos.
+**Club del Paper** - Cada dos semanas los jueves, 15:00-17:00, Sala 1604.
 
-**Club del Paper** - Cada dos semanas los jueves, presentaciones de estudiantes sobre papers de IA y seguridad. Es un espacio más académico para discutir research de punta.
-
-Toda la info está en nuestros canales. Ahora sí, vamos al taller.
+Ahora sí, vamos al taller.
 
 [CLICK - Slide 3]
 
 ---
 
-## SLIDE 3: DISCLAIMER [4:30 - 5:30]
+## SLIDE 3: CÓMO APROVECHAR ESTA HERRAMIENTA [3:45 - 5:00]
 
-Antes de seguir, un disclaimer súper importante que tienen que entender bien.
+Antes de seguir, hablemos de cómo usar BMad de forma inteligente.
 
-[Leer con énfasis]
+**BMad acelera la construcción de proyectos y mejora la calidad del código.**
 
-**Esta herramienta es excelente para armar apps completas desde cero en poco tiempo.** Eso es verdad y se los vamos a demostrar.
+La estrategia inteligente: usala para **construir más proyectos y aprender más rápido**. Cada proyecto te expone a nuevos patterns, arquitecturas, decisiones de diseño.
 
-**PERO - y es un PERO enorme - NO la usen para los trabajos prácticos de la facultad.**
+**Casos de uso ideales:** Proyectos personales, MVPs, prototipos, tu startup, hackathons, aprender nuevos tech stacks.
 
-¿Por qué? Porque si dejan que el LLM haga todo el trabajo de aprender, ustedes no van a aprender. Y cuando llegue el parcial y tengan que codear a mano, se van a dar cuenta de que no saben.
+Ahora, sobre los TPs de la facultad - acá viene lo interesante. **SÍ podés usar BMad para TPs**, pero de forma pedagógica:
 
-La analogía es usar una calculadora: está perfecto usarla para trabajar, pero si la usan para hacer toda la tarea de matemática, nunca van a aprender a hacer las cuentas ustedes.
+[Señalar la caja con el workflow]
 
-**¿Para qué SÍ usarla?** Proyectos propios. Tu portfolio. Un MVP para una idea que tenés. Tu startup. Hackathons. Cosas donde el objetivo es construir algo que funcione, no demostrar que aprendiste un concepto específico.
+**Workflow para aprender:**
+1. Usá PM + Architect para **entender** el problema y la arquitectura profesional
+2. Usá SM para dividir el trabajo en stories claras
+3. **Acá está la clave: Salteá el Developer - CODEA VOS**
+4. Usá QA para revisar TU código y aprender de feedback experto
 
-¿Quedó claro? Perfecto.
+El resultado: aprendés planificación profesional, codeás vos mismo, y recibís code review automático de calidad. Es como tener un senior developer revisando tu trabajo.
+
+Esto es lo que hace BMad diferente - no es solo generación de código, es un sistema completo para aprender y trabajar profesionalmente.
 
 [CLICK - Slide 4]
 
 ---
 
-## SLIDE 4: LOCODIFF BENCHMARK [5:30 - 7:00]
+## SLIDE 4: LOCODIFF BENCHMARK [5:00 - 6:15]
 
 Ahora les voy a mostrar por qué los LLMs tradicionales tienen problemas con el código.
 
 [Señalar el gráfico]
 
-Este es el benchmark LoCoDiff, que mide qué tan bien los modelos manejan contextos largos en tareas de código.
+Este es el benchmark LoCoDiff - un estudio publicado en enero 2025 que mide qué tan bien los modelos manejan contextos largos en tareas de código reales.
 
 Miren la línea azul - ese es Sonnet 4.5, el mejor modelo disponible ahora. Fíjense qué pasa cuando aumenta la cantidad de tokens en el contexto:
 
@@ -88,9 +92,13 @@ Miren la línea azul - ese es Sonnet 4.5, el mejor modelo disponible ahora. Fíj
 - Con 36 a 60 mil tokens → 72%. Está claramente degradándose.
 - Con más de 60 mil tokens → 64%. Es como pasar de un 10 a un 6.
 
-**Y ese es el MEJOR modelo.** Miren los demás - GPT, Gemini, Grok. Todos se caen mucho más rápido.
+**Y ese es el MEJOR modelo.** Miren los demás - GPT-5, Gemini, Grok. Todos se caen mucho más rápido.
 
 ¿Qué significa esto? Que cuando pegan todo su código en ChatGPT, el modelo está ahogándose en información. No puede encontrar lo que importa entre tanto ruido.
+
+[Señalar link abajo a la derecha si alguien pregunta]
+
+El estudio completo está linkeado abajo - pueden profundizar después del taller.
 
 Pero hay algo aún peor que el problema de contexto largo...
 
@@ -98,7 +106,7 @@ Pero hay algo aún peor que el problema de contexto largo...
 
 ---
 
-## SLIDE 5: ESTUDIO METR - AI HACE MÁS LENTOS A EXPERTOS [7:00 - 8:30]
+## SLIDE 5: ESTUDIO METR - AI Y DEVELOPERS EXPERTOS [6:15 - 7:45]
 
 Los modelos no tienen memoria a largo plazo.
 
@@ -108,12 +116,12 @@ El LLM, cada vez que lo usás, arranca de cero. No importa cuántas veces trabaj
 
 [Señalar gráfico izquierdo - Predicciones vs Realidad]
 
-Este estudio de METR de 2025 lo demuestra dramáticamente. Tomaron developers con más de 2 años de experiencia en sus propios proyectos open-source y midieron su velocidad con y sin AI.
+Este estudio de METR de julio 2025 lo demuestra dramáticamente. Tomaron developers con más de 2 años de experiencia en sus propios proyectos open-source y midieron su velocidad con y sin AI.
 
 Miren las predicciones:
-- **Expertos predijeron**: 40% más rápido con AI
+- **Expertos predijeron**: 39% más rápido con AI
 - **Expertos en ML predijeron**: 38% más rápido
-- **Los mismos developers esperaban**: 20-25% más rápido
+- **Los mismos developers esperaban**: 20-24% más rápido
 
 [Señalar la barra roja del final]
 
@@ -127,19 +135,25 @@ Acá ven los tiempos concretos. Con AI permitido, tardaron 2.26 horas en promedi
 
 ¿Por qué? Porque estos developers ya tienen todo el contexto en su cabeza. El AI no. Pierden tiempo explicándole al modelo cosas que ellos ya saben.
 
-[PAUSA]
+[Señalar la caja verde abajo]
 
-Ahora, acá está el plot twist: **BMad no está diseñado para trabajar en codebases que ya conocés hace años.**
+**Ahora, la solución BMad:** Documentación estructurada + Contexto inteligente.
 
-Está diseñado para **construir proyectos nuevos desde cero**, donde nadie tiene ventaja de conocimiento previo. Donde el contexto inteligente y los agentes especializados te dan un superpoder real.
+BMad funciona para DOS casos:
 
-Ese es el sweet spot de AI para código: greenfield projects, no mantenimiento de legacy.
+**Greenfield projects** - Construir proyectos nuevos desde cero. Acá nadie tiene ventaja de contexto, y BMad brilla.
+
+**Brownfield projects** - Y acá está lo interesante: también sirve para codebases existentes. ¿Cómo? **Documentándolos primero.** Usás los agentes para crear documentación estructurada del proyecto existente - arquitectura, componentes, decisiones de diseño. Ahora los agentes tienen contexto profesional, no tienen que adivinarlo.
+
+Entonces BMad no es solo para proyectos nuevos - es para cualquier proyecto que quieras desarrollar de forma estructurada y profesional.
+
+[El link al estudio está abajo a la derecha para quien quiera profundizar]
 
 [CLICK - Slide 6]
 
 ---
 
-## SLIDE 6: ¿CÓMO USÁS AI HOY? [8:30 - 10:30]
+## SLIDE 6: ¿CÓMO USÁS AI HOY? [7:45 - 9:30]
 
 Seamos honestos sobre cómo todos usamos los LLMs para programar actualmente.
 
@@ -176,46 +190,43 @@ Eso es BMad.
 
 ---
 
-## SLIDE 7: CICLO DE DESARROLLO CON BMAD [10:30 - 12:30]
+## SLIDE 7: CICLO DE DESARROLLO CON BMAD [9:30 - 11:00]
 
-BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software.
+BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo simplificamos para que sea práctico.
 
 [Primera sección - Planning]
 
-**Planning riguroso**: Antes de escribir una línea de código, planificamos todo.
+**Planning riguroso**: Antes de escribir una línea de código, planificamos. El workflow core es:
 
-- El **Analyst** (opcional) puede armar un project brief si arrancás de cero
-- El **PM** crea el PRD - Product Requirements Document - con todas las features y requisitos
-- El **UX Expert** (opcional) diseña la experiencia de usuario
-- El **Architect** define la arquitectura técnica, el tech stack, cómo se conecta todo
-- **QA** puede dar input temprano sobre áreas de alto riesgo
-- El **Product Owner** "shardea" todo - lo parte en epics y stories manejables
+- **PM** crea el PRD - Product Requirements Document completo
+- **Architect** define la arquitectura técnica y tech stack
+- **PO** "shardea" todo - lo parte en epics y stories manejables
+
+Y después tenés agentes adicionales que usás cuando los necesitás: Analyst para proyectos nuevos, UX Expert para apps con UI, QA para input en áreas de alto riesgo.
 
 [Medio - PO shard documents]
 
-El PO es clave acá. Toma documentos enormes (el PRD de 20 páginas, la arquitectura compleja) y los parte en pedacitos digeribles. Cada "shard" es un documento focalizado que un agente puede procesar sin ahogarse.
+El PO es clave acá. Toma documentos enormes y los parte en pedacitos digeribles. Cada "shard" es un documento focalizado que un agente puede procesar sin ahogarse. Acá es donde resolvemos el problema del contexto largo.
 
 [Segunda sección - Development Loop]
 
-**Development Loop iterativo**: Ahora sí, a programar. Pero story por story, con validación en cada paso.
+**Development Loop iterativo**: El workflow core es simple:
 
-- **SM** (Scrum Master) hace el draft de la siguiente story
-- **PO** valida contra los requirements (opcional pero recomendado)
-- **QA** hace análisis de riesgo y diseño de tests (opcional)
-- **Dev** implementa la story con código y tests
-- **QA** revisa y da el gate de calidad (opcional)
-- Hacemos el **commit** y marcamos la story como Done
-- Repetimos el ciclo para la siguiente story
+- **SM** hace el draft de la siguiente story con tareas secuenciales
+- **Dev** implementa con código, tests, documentación
+- **Commit** y siguiente story
+
+Y de nuevo, validación adicional cuando la necesitás: PO para validar contra PRD, QA para review de áreas críticas.
 
 [Abajo - HITL]
 
-Acá está la clave del éxito: **Human in the Loop**. Hay puntos donde tenés que aprobar antes de seguir. No es todo automático. Vos sos el tech lead que guía al equipo.
+Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que aprueba transiciones clave. No es todo automático - vos guiás el equipo.
 
 [CLICK - Slide 8]
 
 ---
 
-## SLIDE 8: BUSINESS ANALYST [12:30 - 13:30]
+## SLIDE 8: BUSINESS ANALYST [11:00 - 11:45]
 
 El **Business Analyst** se llama Mary en los prompts.
 
@@ -223,35 +234,42 @@ El **Business Analyst** se llama Mary en los prompts.
 
 Imaginate que tenés una idea medio vaga: "Quiero hacer una app para que la gente comparta recetas". Pero no sabés exactamente qué features necesitás, quién es tu competencia, cómo monetizar.
 
-Mary te ayuda:
-- **Arma los briefs del proyecto** - Te hace las preguntas correctas y documenta todo
-- **Investiga el mercado** - Analiza la competencia, busca nichos
-- **Organiza lluvias de ideas** - Te ayuda a generar y estructurar ideas
-- **Te da clarity cuando estás perdido**
+Mary te ayuda con:
+- Armar briefs del proyecto
+- Investigar mercado y competencia
+- Organizar lluvias de ideas
+- Dar clarity cuando estás perdido
+
+[Señalar la sección de artifacts]
+
+**Los artifacts que crea:** Project Brief, Market Research, Competitor Analysis, Brainstorming Output. Documentos estructurados que después usa el PM.
 
 El comando es `/analyst *create-project-brief`
 
-Mary es opcional - si ya tenés tu idea clara, podés skipearla y arrancar directo con el PM. Pero si estás en modo "tengo una idea pero no sé bien qué hacer con ella", Mary es tu mejor amiga.
+Mary es para proyectos greenfield donde arrancás de cero. Si ya tenés tu idea clara, podés skipearla.
 
 [CLICK - Slide 9]
 
 ---
 
-## SLIDE 9: PRODUCT MANAGER [13:30 - 14:30]
+## SLIDE 9: PRODUCT MANAGER [11:45 - 12:30]
 
-El **Product Manager** se llama John. Y John es **el que planifica TODO.**
+El **Product Manager** se llama John. John es **el que planifica TODO.**
 
-El PM toma tu idea (refinada por Mary o directa de vos) y la convierte en un PRD - Product Requirements Document. Este es el documento más importante del proyecto.
+El PM toma tu idea y la convierte en un PRD - Product Requirements Document. Este es el documento más importante del proyecto.
 
 ¿Qué hace John?
-- **Arma PRDs completos** con features, user stories, requirements funcionales y no funcionales
-- **Define prioridades** - Qué se hace en el MVP, qué viene después
-- **Crea el roadmap** - Planifica las fases del proyecto
-- **Documenta todo** para que todos entiendan qué hay que hacer
+- Arma PRDs completos con features, user stories, requirements
+- Define prioridades - MVP vs roadmap
+- Documenta todo
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** PRD (Product Requirements Document), Epics, User Stories, y también Brownfield PRD para proyectos existentes.
 
 El comando principal es `/pm *create-prd`
 
-El PRD es tu contrato. Es lo que guía a todos los demás agentes. Si el PRD está bien hecho, el resto fluye. Si está mal, todo el proyecto se tuerce.
+El PRD es tu contrato. Es lo que guía a todos los demás agentes. Si el PRD está bien hecho, el resto fluye.
 
 John es obligatorio - no podés skipear el PM. Necesitás esos requirements.
 
@@ -259,145 +277,161 @@ John es obligatorio - no podés skipear el PM. Necesitás esos requirements.
 
 ---
 
-## SLIDE 10: ARCHITECT [14:30 - 15:30]
+## SLIDE 10: ARCHITECT [12:30 - 13:15]
 
-El **Architect** se llama Winston. Y Winston **diseña toda la arquitectura del sistema.**
+El **Architect** se llama Winston. Winston **diseña toda la arquitectura del sistema.**
 
 Una vez que John terminó el PRD, Winston lo lee y diseña cómo se va a construir técnicamente.
 
 ¿Qué hace Winston?
-- **Diseña la arquitectura** completa - frontend, backend, base de datos, APIs
-- **Elige el tech stack** - ¿React o Vue? ¿Node o Python? ¿SQL o NoSQL?
-- **Define las APIs** y contratos entre componentes
-- **Estructura el código** - Carpetas, módulos, separación de concerns
-- **Considera escalabilidad, seguridad, performance**
+- Diseña arquitectura completa - frontend, backend, base de datos, APIs
+- Elige el tech stack - React o Vue, Node o Python, SQL o NoSQL
+- Define APIs y contratos entre componentes
+- Estructura el código
+- Considera escalabilidad, seguridad, performance
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** Full-Stack Architecture, Backend Architecture, Frontend Architecture, y Brownfield Architecture para proyectos existentes que necesitás documentar.
 
 El comando es `/architect *create-full-stack-architecture`
 
-Winston toma decisiones técnicas fundamentales. Y las documenta, así el Developer sabe exactamente cómo construir cada pieza y cómo encajan todas juntas.
-
-También es obligatorio - sin arquitectura, el Developer va a inventar cosas sobre la marcha y va a ser un desastre.
+También es obligatorio - sin arquitectura, el Developer va a inventar cosas sobre la marcha.
 
 [CLICK - Slide 11]
 
 ---
 
-## SLIDE 11: UX EXPERT [15:30 - 16:30]
+## SLIDE 11: UX EXPERT [13:15 - 13:50]
 
 La **UX Expert** se llama Sally. Sally es **la diseñadora de experiencia.**
 
-Sally es opcional, pero si tu app tiene interfaz de usuario (casi todas), vale mucho la pena usarla.
+Sally es para apps con UI - si tu app tiene interfaz de usuario, vale la pena usarla.
 
 ¿Qué hace Sally?
-- **Diseño de UX e UI** - Cómo va a sentirse y verse la app
-- **Wireframes y prototipos** - Mockups de las pantallas
-- **User research** e **interaction design** - Cómo el usuario interactúa con cada feature
-- **Accesibilidad** - Asegura que sea usable por todos
-- **Prompts para V0/Lovable** - Genera prompts optimizados para herramientas de generación de UI
+- Diseño de UX e UI
+- Wireframes y prototipos
+- User research e interaction design
+- Accesibilidad
+- Prompts optimizados para V0/Lovable
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** Front-End Spec, UI Design Prompts para v0 y Lovable, Wireframes & Prototypes.
 
 El comando es `/ux-expert *create-front-end-spec`
 
-Sally genera un spec de front-end que el Developer puede seguir. No es código - es una descripción detallada de cómo debe verse y comportarse cada componente.
-
-Si querés que tu app no parezca de los 90, usá a Sally.
+Sally genera un spec que el Developer sigue, o que vos podés usar para generar UI con herramientas como v0 o Lovable.
 
 [CLICK - Slide 12]
 
 ---
 
-## SLIDE 12: SCRUM MASTER [16:30 - 17:30]
+## SLIDE 12: SCRUM MASTER [13:50 - 14:30]
 
 El **Scrum Master** se llama Bob. Bob es **especialista en preparación de stories.**
 
 Acá es donde el proyecto pasa de documentos a trabajo ejecutable.
 
 ¿Qué hace Bob?
-- **Crea stories detalladas y accionables** - Toma un epic y lo parte en stories que el Developer puede implementar
-- **Define criterios de aceptación claros** - ¿Cómo sabemos que está hecho?
-- **Secuencia las tareas** - Primera esto, después esto, al final esto
-- **Gestión de epics** y procesos ágiles
-- **Retrospectivas y mejora continua**
+- Crea stories detalladas y accionables
+- Define criterios de aceptación claros
+- Secuencia las tareas - primero esto, después esto
+- Gestión de epics y procesos ágiles
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** User Story Drafts, Tareas Secuenciales, Criterios de Aceptación. Todo lo que el Developer necesita para implementar sin adivinar.
 
 El comando principal es `/sm *draft`
 
-Bob agarra los shards que generó el PO y dice: "Ok Developer, hacé exactamente esto, en este orden, con estos criterios de éxito."
+Bob agarra los shards del PO y dice: "Ok Developer, hacé exactamente esto, en este orden, con estos criterios de éxito."
 
-Sin Bob, el Developer mira el PRD gigante y se paraliza. Con Bob, tiene una tarjeta clara de "hacé esto ahora".
+Sin Bob, el Developer se paraliza. Con Bob, tiene una tarjeta clara.
 
 [CLICK - Slide 13]
 
 ---
 
-## SLIDE 13: PRODUCT OWNER [17:30 - 18:30]
+## SLIDE 13: PRODUCT OWNER [14:30 - 15:10]
 
 La **Product Owner** se llama Sarah. Sarah **gestiona el backlog y shardea documentos.**
 
-Ya mencioné el sharding antes - ahora veamos por qué es crítico.
+El sharding es crítico - es cómo resolvemos el problema del contexto largo.
 
 ¿Qué hace Sarah?
-- **Shardea PRD y arquitectura** en epics y stories - Parte documentos gigantes en pedacitos focalizados
-- **Valida cada story draft** contra requirements - Se asegura que lo que Bob propone cumple con lo que John pidió
-- **Gestión de backlog** y priorización - Qué story va primero
-- **Refina historias durante desarrollo** - Ajusta el backlog según lo que aprendemos
-- **Asegura coherencia story por story** - Que todo encaje al final
+- Shardea PRD y arquitectura en epics y stories
+- Valida story drafts contra requirements
+- Gestión de backlog y priorización
+- Asegura coherencia story por story
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** Sharded Documents, Epic Files, Story Validations, Backlog Structure. Documentos focalizados en vez de monolitos gigantes.
 
 El comando principal es `/po *shard-doc`
 
-Sarah es la que evita que el contexto explote. En vez de darle al Developer un documento de 10,000 tokens, le da un shard de 500 tokens con exactamente lo que necesita para esta story.
+Sarah evita que el contexto explote. En vez de 10,000 tokens de PRD gigante, le da al Developer 500 tokens con exactamente lo que necesita para esta story.
 
 [CLICK - Slide 14]
 
 ---
 
-## SLIDE 14: DEVELOPER [18:30 - 19:30]
+## SLIDE 14: DEVELOPER [15:10 - 15:50]
 
 El **Developer** se llama James. James es **el que codea posta.**
 
 Todo lo anterior era preparación. James es donde la magia sucede.
 
 ¿Qué hace James?
-- **Programa cada feature con todos los tests** - Código de producción, no prototipos
-- **Tests unitarios, de integración y E2E** - Cobertura completa
-- **Debuggea y refactorea** - No solo escribe código nuevo, arregla y mejora
-- **Sigue best practices** - Code style, SOLID principles, DRY
-- **Documenta el código** - Comments, docstrings, README
+- Programa cada feature con todos los tests
+- Tests unitarios, de integración y E2E
+- Debuggea y refactorea
+- Sigue best practices
+- Documenta el código
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** Production Code, Unit Tests, Integration Tests, E2E Tests, Code Documentation. Todo lo que necesitás para una feature completa de producción.
 
 El comando principal es `/dev *develop-story`
 
 James recibe la story de Bob, lee la arquitectura de Winston, el spec de Sally si existe, y programa. Genera código que funciona, con tests que pasan.
 
-James es el más usado. Vas a estar todo el tiempo en el loop de draft → validate → develop → review → commit.
+James es el más usado - vas a estar en el loop: draft → develop → commit.
 
 [CLICK - Slide 15]
 
 ---
 
-## SLIDE 15: QA/TEST ARCHITECT [19:30 - 20:30]
+## SLIDE 15: QA/TEST ARCHITECT [15:50 - 16:35]
 
 El **Test Architect** se llama Quinn. Quinn es **tu asesor de calidad.**
 
-Acá hay algo importante: Quinn NO bloquea. Quinn **asesora**. Ustedes deciden la barra de calidad que quieren.
+Importante: Quinn NO bloquea. Quinn **asesora**. Ustedes deciden la barra de calidad.
 
 ¿Qué hace Quinn?
-- **Risk profiling** - Matriz de evaluación de riesgos por feature
-- **Test design** - Estrategia comprehensiva de testing
-- **Requirements traceability** - Mapea cada test a un requirement (formato Given-When-Then)
-- **NFR assessment** - Non-Functional Requirements: seguridad, performance, confiabilidad
-- **Quality gates** - Emite uno de cuatro estados: PASS / CONCERNS / FAIL / WAIVED
+- Risk profiling - matriz de riesgos
+- Test design - estrategia de testing
+- Requirements traceability - Given-When-Then
+- NFR assessment - seguridad, performance, confiabilidad
+- Quality gates - PASS / CONCERNS / FAIL / WAIVED
+
+[Señalar artifacts]
+
+**Los artifacts que crea:** QA Reports, Quality Gate Files, Risk Profiles, Test Designs, Requirements Trace Maps. Documentación profesional de calidad.
 
 El comando es `/qa *review {story}`
 
-Quinn puede entrar en dos momentos:
-1. **Antes de desarrollar** - "Esta story tiene alto riesgo de seguridad, considerá estos test cases"
-2. **Después de desarrollar** - "Revisé el código, los tests están bien pero falta validación de input - CONCERNS"
+Quinn puede entrar antes de desarrollar (análisis de riesgo) o después (code review). Ustedes deciden si seguir con CONCERNS o arreglar primero.
 
-Ustedes deciden si seguir adelante con CONCERNS o arreglarlo primero. Quinn informa, no manda.
+**Y acá está el workflow pedagógico:** Si estás haciendo un TP, usá QA para revisar TU código y aprender de feedback experto.
 
 [CLICK - Slide 16]
 
 ---
 
-## SLIDE 16: FASE 1 - PLANNING [20:30 - 21:30]
+## SLIDE 16: FASE 1 - PLANNING [16:35 - 17:20]
 
 Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Planning y Development.
 
@@ -405,63 +439,58 @@ Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Plannin
 
 Esta fase genera todos los documentos que el equipo necesita. Se hace UNA VEZ al principio del proyecto.
 
-Los pasos:
+**El workflow core tiene 3 pasos:**
 
-**1. Analyst: Project Brief (opcional)** - Define la visión. Si ya tenés esto claro, skip.
+**1. PM: PRD Creation** - Genera requirements completos, epics, stories preliminares.
 
-**2. PM: PRD Creation** - OBLIGATORIO. Genera requirements, epics, stories preliminares.
+**2. Architect: System Design** - Diseña arquitectura completa y tech stack.
 
-**3. UX Expert: Front-End Spec (opcional)** - Si tenés UI, recomendado. Diseño de interfaces y prompts para herramientas.
+**3. PO: Sharding** - Shardea PRD y arquitectura en epics/stories con contexto enfocado.
 
-**4. Architect: System Design** - OBLIGATORIO. Arquitectura y tech stack.
+[Señalar la nota abajo]
 
-**5. QA: Early Test Input (opcional)** - Quinn puede dar input temprano en áreas de alto riesgo.
+**Agentes adicionales según necesidad:** Analyst para proyectos nuevos, UX Expert para apps con UI, QA para áreas de alto riesgo.
 
-**6. PO: Sharding** - OBLIGATORIO. Sarah parte PRD y arquitectura en shards manejables.
-
-Al final de esta fase, tenés:
+Al final de esta fase tenés:
 - PRD completo
 - Arquitectura definida
-- Specs de diseño (si aplica)
-- Backlog de stories shardeadas
+- Backlog de stories shardeadas y listas para desarrollo
 
-Listo. No tocaste una línea de código todavía. Y eso está bien - el planning correcto te ahorra semanas de refactoring después.
+No tocaste una línea de código todavía. Y eso está bien - el planning correcto te ahorra semanas de refactoring después.
 
 [CLICK - Slide 17]
 
 ---
 
-## SLIDE 17: FASE 2 - DEVELOPMENT [21:30 - 22:30]
+## SLIDE 17: FASE 2 - DEVELOPMENT [17:20 - 18:00]
 
 **Fase 2: Development - Implementación iterativa story por story**
 
 Esta fase es un loop. Lo repetís para cada story hasta terminar el proyecto.
 
-Los pasos del loop:
+**El workflow core tiene 3 pasos:**
 
-**1. SM: Draft Story** - Bob toma la siguiente story del backlog y la prepara: tasks secuenciales, criterios de aceptación, contexto.
+**1. SM: Draft Story** - Bob prepara la siguiente story: tareas secuenciales detalladas, criterios de aceptación.
 
-**2. PO: Validate Draft (opcional)** - Sarah valida que la story cumple con PRD y arquitectura. Recomendado.
+**2. Dev: Implementation** - James programa: código de producción + tests (unitarios, integración, E2E) + documentación.
 
-**3. QA: Risk & Test Design (opcional)** - Quinn identifica riesgos y define estrategia de testing. Útil para stories complejas.
+**3. Commit & Loop** - Commit changes, marcar story como Done, siguiente story.
 
-**4. Dev: Implementation** - James programa la story: código + tests + documentación.
+[Señalar la nota abajo]
 
-**5. QA: Review & Gate (opcional)** - Quinn hace análisis comprehensivo y emite quality gate. Recomendado antes de commit.
-
-**6. Commit & Loop** - Commitean los cambios, marcan la story como Done en el backlog, y vuelven al paso 1 con la siguiente story.
+**Validación adicional según necesidad:** PO Validate para coherencia con PRD, QA Risk/Review para áreas críticas.
 
 [Abajo - nota iterativa]
 
-Es **iterativo**. No hacen todo de una. Story por story, commit por commit, hasta completar el proyecto.
+Es **iterativo**. Story por story, commit por commit, hasta completar el proyecto.
 
-La ventaja de este approach es que siempre tenés una versión funcional. Si después de 5 stories te das cuenta que querés cambiar el rumbo, podés. No estás comprometido a un plan gigante que generaste al principio.
+La ventaja: siempre tenés una versión funcional. Si después de 5 stories querés cambiar el rumbo, podés. No estás comprometido a un plan gigante.
 
 [CLICK - Slide 18]
 
 ---
 
-## SLIDE 18: QUALITY GATES [22:30 - 23:00]
+## SLIDE 18: QUALITY GATES [18:00 - 18:30]
 
 Hablemos rápido de los quality gates porque son importantes.
 
@@ -494,37 +523,41 @@ Quinn te da la información. Vos decidís.
 
 ---
 
-## SLIDE 19: HERRAMIENTAS [23:00 - 24:00]
+## SLIDE 19: HERRAMIENTAS [18:30 - 19:45]
 
 Bueno, ya entendieron la metodología. ¿Cómo lo usamos en la práctica?
 
-[Grid de herramientas]
+[Grid de herramientas - señalando cada una]
 
 **Entorno**: VS Code en GitHub Codespaces. Nada para instalar localmente, todo en la nube. En 2 minutos tenés todo listo.
 
-**Modelos**: Vamos a usar principalmente code-supernova y Grok Code Fast 1. Son modelos optimizados para código con buen balance costo-performance.
+**Modelos Gratuitos**: Vamos a usar principalmente code-supernova y Grok Code Fast 1. ¿Por qué? Porque somos 80 estudiantes y este workflow usa muchos tokens. Necesitamos opciones gratuitas para que todos puedan probar sin gastar.
+
+**GitHub Student (Recomendado)**: Si tienen GitHub Student Pack, tienen Copilot Pro gratis, que les da acceso a Sonnet 4.5 - el mejor modelo del benchmark que vimos. Pueden hacer login con GitHub en OpenCode y usar Sonnet directamente.
 
 **Framework**: BMad Method ya viene pre-instalado en el repo. Los prompts de los 8 agentes, toda la estructura, listo para usar.
 
-**MCP Tools**: Playwright y Sequential Thinking. Ya vamos a ver qué son.
+**MCP Tools**: Playwright y Sequential Thinking - ya vamos a ver qué son.
+
+**Compatibilidad**: BMad son prompts, no software propietario. Funciona en Cursor, Copilot, Claude Code, lo que usen.
 
 [Abajo - setup en 5 pasos]
 
 El setup es simple:
 
-1. **Fork del repo** - Copian el repo del workshop a su cuenta
-2. **Abrir en Codespaces** - Un botón en GitHub
-3. **Correr script de setup** - Un comando que instala todo
-4. **Ingresar API key** - Su key de Anthropic u OpenRouter
-5. **Seleccionar modelo** - Eligen el modelo que quieren usar
+1. Fork del repo
+2. Abrir en Codespaces
+3. Correr script de setup
+4. Ingresar API key
+5. Seleccionar modelo
 
-5 pasos, 5 minutos máximo. Después de eso están listos para armar apps.
+5 pasos, 5 minutos máximo. Después están listos.
 
 [CLICK - Slide 20]
 
 ---
 
-## SLIDE 20: MCP TOOLS [24:00 - 25:30]
+## SLIDE 20: MCP TOOLS [19:45 - 20:45]
 
 MCP Tools son "superpoderes" para los agentes. Son herramientas especializadas que los LLMs pueden usar para hacer cosas que normalmente no pueden.
 
@@ -577,97 +610,41 @@ Ambos vienen pre-configurados en el repo. Se activan automáticamente cuando los
 
 ---
 
-## SLIDE 21: DEMO - LA IDEA [25:30 - 26:00]
+## SLIDE 21: EJEMPLO REAL - BAISH WEBSITE [20:45 - 22:00]
 
-Bueno, suficiente teoría. Veamos esto en acción.
+Ahora que vieron toda la metodología, les voy a contar algo interesante.
 
-Vamos a construir un **Pomodoro Timer** en tiempo real.
+[Señalar el centro - el ejemplo de baish.com.ar]
 
-¿Qué es un Pomodoro Timer? Es una técnica de estudio donde laburás 25 minutos concentrado, 5 minutos de break, y repetís. Después de 4 "pomodoros", tomás un break más largo.
+**Estamos reconstruyendo nuestra propia web con BMad.** Esto es dogfooding real - usamos la herramienta que les estamos enseñando para mejorar nuestro propio sitio.
 
-Es perfecto para estudiar sin agotarte. Y es un proyecto ideal para demo porque:
-- Es simple de entender
-- Tiene UI (timer visual, botones)
-- Tiene lógica (countdown, state management)
-- Tiene features opcionales (notificaciones, historial)
+Documentación estructurada del proyecto existente, workflow completo, agentes coordinados trabajando en brownfield.
 
-Entonces vamos a ver cómo BMad construye esto desde cero.
+¿Qué pueden construir con BMad?
+
+[Señalar lado izquierdo]
+
+**Greenfield Projects:**
+- Hackathon projects - empezás de cero, armás algo funcional en 24-48 horas
+- MVP para tu startup - validá tu idea rápido
+- Prototipos rápidos - probá conceptos sin commitment
+- Aprender nuevo stack - querés aprender React Native? Construí un proyecto real
+
+[Señalar lado derecho]
+
+**Brownfield Projects:**
+- Refactors mayores - ese código legacy que nadie quiere tocar
+- Nueva feature en app existente - documentás primero, después desarrollás
+- Migración de tecnología - de Vue a React, de REST a GraphQL
+- Documentar codebase legacy - creá la documentación que nunca existió
+
+El punto clave: BMad no es solo para proyectos nuevos. Es para cualquier proyecto donde quieras trabajar de forma profesional y estructurada.
 
 [CLICK - Slide 22]
 
 ---
 
-## SLIDE 22: DEMO FLOW [26:00 - 27:30]
-
-[Acá está el plan para la demo. Hay dos opciones dependiendo del tiempo:]
-
-**OPCIÓN A: Demo rápida narrada (si estamos cortos de tiempo)**
-
-Voy a narrar cada paso mostrando screenshots o navegando rápido:
-
-**1. Planning (3 min total en slides)**
-- Mostrar comando `/pm *create-prd` y explicar: "Le decimos al PM: quiero un pomodoro timer con estas features básicas"
-- Mostrar el PRD generado (scroll rápido): "Miren, armó user stories, requirements funcionales, hasta pensó en notificaciones"
-- Mostrar comando `/architect *create-full-stack-architecture`
-- Mostrar arquitectura generada: "Winston eligió React + TypeScript en el front, lógica de timer con hooks, componentes separados"
-
-**2. Sharding (1 min)**
-- `/po *shard-doc` - "Sarah parte esto en 4 stories manejables"
-- Mostrar el backlog generado
-
-**3. Story Draft (2 min)**
-- `/sm *draft` para la primera story
-- "Bob toma 'Story 1: Timer Básico' y la expande en tasks: 1) Crear componente Timer, 2) Implementar countdown logic, 3) Agregar controles start/pause, 4) Escribir tests"
-
-**4. Development (5 min)**
-- `/dev *develop-story`
-- Mostrar a James trabajando (ver los archivos siendo creados en tiempo real)
-- Mostrar el código generado (scroll por un componente)
-- **IMPORTANTE**: Mostrar la app funcionando en el browser
-
-**5. QA Review (1 min - opcional)**
-- `/qa *review story-1`
-- Mostrar el reporte: "PASS - tests comprehensivos, código limpio"
-
-[Transición]
-
-Y eso es todo. En 12 minutos pasamos de "quiero un pomodoro timer" a una app funcional con código limpio y tests.
-
-**OPCIÓN B: Si tienen tiempo para live demo**
-
-[Hacer un live demo rápido ejecutando estos comandos. Requiere que todo esté preparado antes.]
-
----
-
-[CLICK - Slide 23]
-
----
-
-## SLIDE 23: ¿QUÉ PODÉS CONSTRUIR? [27:30 - 28:30]
-
-Ahora que vieron cómo funciona, ¿qué pueden construir con esto?
-
-[Leer la grilla rápido, con energía, como lista de posibilidades]
-
-Tu portfolio personal. Un dashboard de finanzas. Una app de recetas. Tu app de notas perfecta. La API para tu startup. Un e-commerce MVP. Tu blog. Un task manager.
-
-[Pausa]
-
-¿Vieron la última celda? "¡Lo que se te ocurra!"
-
-Eso es literal. Si podés describirlo en palabras, BMad puede ayudarte a construirlo.
-
-Algunos de ustedes tal vez estén pensando: "Suena demasiado bueno para ser verdad." Y los entiendo. Pero la realidad es que las herramientas están acá. Los modelos están cada vez mejor. El contexto inteligente resuelve el problema principal.
-
-La única limitación real es tu creatividad y tu tiempo.
-
-El límite lo ponés vos.
-
-[CLICK - Slide 24]
-
----
-
-## SLIDE 24: ¡COMENCEMOS! [28:30 - 30:00]
+## SLIDE 22: ¡COMENCEMOS! [22:00 - 24:00]
 
 Bueno, ya hablamos suficiente. Ahora viene la parte divertida: ustedes van a hacerlo.
 
@@ -678,8 +655,8 @@ El setup es simple, 5 pasos:
 1. **Fork del repo** - Van al repo del workshop y le dan fork
 2. **Abrirlo en GitHub Codespaces** - Un botón verde que dice "Code" → "Codespaces"
 3. **Correr el script de setup** - Un comando en la terminal
-4. **Ingresar tu API key** - Si no tenés, les vamos a dar instrucciones para conseguir trial credits
-5. **Seleccionar el modelo** - Eligen entre code-supernova o Grok Code Fast 1
+4. **Ingresar tu API key** - Si no tenés, les vamos a dar instrucciones para conseguir trial credits. Si tenés GitHub Student, podés usar Copilot Pro con Sonnet.
+5. **Seleccionar el modelo** - Eligen entre code-supernova, Grok Code Fast 1, o Sonnet si tienen GitHub Student
 
 Eso es todo. En 5 minutos están listos.
 
@@ -697,6 +674,8 @@ Gracias BAISH y Y-hat por organizar esto. Y gracias a ustedes por venir.
 
 [Pausa, contacto visual con la audiencia]
 
+**Recordatorio final:** Si están haciendo un TP, usen el workflow pedagógico - PM + Architect + SM para entender y planear, CODEAN USTEDES, y QA para revisar su código. Aprendés más y recibís feedback profesional.
+
 Ahora sí - ¿tienen alguna pregunta rápida antes de arrancar con el hands-on?
 
 [Tomar 1-2 preguntas MUY breves si hay, máximo 1 minuto]
@@ -705,25 +684,27 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 
 ---
 
-## TIMING TOTAL: ~30 minutos
+## TIMING TOTAL: ~24 minutos de presentación + ~6 min de Q&A/transición = ~30 min total
 
 **Breakdown por sección:**
-- Apertura + Slides 1-2: 4:30 min
-- Slide 3 (Disclaimer): 1:00 min
-- Slide 4 (LoCoDiff): 1:30 min
+- Apertura + Slides 1-2: 3:45 min
+- Slide 3 (Aprovechar herramienta): 1:15 min
+- Slide 4 (LoCoDiff): 1:15 min
 - Slide 5 (METR Study): 1:30 min
-- Slide 6 (Problema actual): 2:00 min
-- Slide 7 (Ciclo desarrollo): 2:00 min
-- Slides 8-15 (8 agentes individuales): 7:30 min
-- Slides 16-18 (Workflow + QA): 2:30 min
-- Slides 19-20 (Tools + MCP): 2:30 min
-- Slides 21-22 (Demo): 2:00 min
-- Slides 23-24 (Cierre): 1:30 min
+- Slide 6 (Problema actual): 1:45 min
+- Slide 7 (Ciclo desarrollo): 1:30 min
+- Slides 8-15 (8 agentes individuales): 5:50 min
+- Slides 16-18 (Workflow + QA): 2:10 min
+- Slides 19-20 (Tools + MCP): 2:15 min
+- Slide 21 (BAISH website ejemplo): 1:15 min
+- Slide 22 (Cierre): 2:00 min
 
-**Total: 29:30 min** (buffer de 30 seg para transiciones)
+**Total: 24:30 min** de presentación + 5:30 min de buffer/Q&A = **30:00 min total**
 
 **Nota sobre timing crítico:**
-Los agentes individuales (slides 8-15) son ~1 minuto cada uno. Si te atrasás, cortá la descripción del Analyst y UX Expert que son opcionales, y pasá más rápido por SM y PO.
+- Si te atrasás, los agentes opcionales (Analyst, UX Expert) se pueden mencionar más rápido (30 seg cada uno en vez de 45 seg)
+- El ejemplo de BAISH website (slide 21) se puede acortar a 45 segundos si es necesario
+- Mantené el timing ajustado en la sección de agentes para llegar al hands-on a tiempo
 
 ---
 
@@ -736,31 +717,36 @@ Los agentes individuales (slides 8-15) son ~1 minuto cada uno. Si te atrasás, c
 
 ### Puntos de énfasis
 - El benchmark (Slide 4) - Hacer que entiendan el problema de contexto largo
-- **El estudio METR (Slide 5)** - Este es el momento "wow" negativo - AI hace MÁS LENTOS a expertos. Dejar que caiga. Luego el pivot: BMad es para greenfield projects.
-- El disclaimer (Slide 3) - Ser firme pero no sermoneador
+- **El estudio METR (Slide 5)** - Este es el momento "wow" negativo - AI hace MÁS LENTOS a expertos. Dejar que caiga. Luego el pivot: BMad funciona para greenfield Y brownfield con documentación estructurada.
+- **El workflow pedagógico (Slide 3)** - Este es el game changer para estudiantes: PUEDEN usar BMad para TPs saltando el Developer y codeando ellos mismos, con QA review
+- Los artifacts (Slides 8-15) - Señalar qué documentos crea cada agente para que entiendan el flujo de información
 - Human in the Loop (Slide 7) - Esto no es mágico, vos seguís a cargo
-- Quality gates (Slide 19) - No bloquea, asesora
+- Quality gates (Slide 18) - No bloquea, asesora
+- **Modelos gratuitos (Slide 19)** - Explicar por qué usamos free models (80 estudiantes) pero que GitHub Student da acceso a Sonnet
 
 ### Si te quedás sin tiempo
 **Cortar en este orden:**
-1. Analyst (Slide 8) - Es opcional, skipear completamente
-2. UX Expert (Slide 11) - Es opcional, mencionar brevemente
-3. QA (Slide 15) - Mencionar que existe y es asesor, no detalle
-4. MCP Tools (Slide 20) - Solo mencionar que existen
-5. Hacer agentes restantes más rápidos - 30-45 seg cada uno
+1. Analyst (Slide 8) - Mencionar en 30 seg o skipear
+2. UX Expert (Slide 11) - Mencionar en 30 seg
+3. MCP Tools (Slide 20) - Solo mencionar que existen y están pre-configurados
+4. BAISH website ejemplo (Slide 21) - Acortar a 45 segundos
+5. Hacer agentes restantes más rápidos - 30-40 seg cada uno
 
 **Nunca cortar:**
-- **El estudio METR (Slide 5)** - Es la justificación clave de por qué BMad
+- **El workflow pedagógico para TPs (Slide 3)** - Es clave para estudiantes, les da permiso para usar BMad correctamente
+- **El estudio METR (Slide 5)** - Es la justificación de por qué BMad funciona
 - El problema y contexto (Slide 6)
 - El flujo general (Slide 7)
-- PM (Slide 9), Architect (Slide 10), Developer (Slide 14) - Los agentes core
+- PM (Slide 9), Architect (Slide 10), Developer (Slide 14), PO (Slide 13) - Los agentes core
 - Workflow phases (Slides 16-17)
+- **Los artifacts en cada agente** - Señalar brevemente qué crea cada uno, es clave para entender el flujo
 
 ### Si te sobra tiempo
-- Expander más en el demo
+- Expander más en el ejemplo de BAISH website - mostrar artifacts reales si están disponibles
 - Tomar más preguntas en el medio
-- Mostrar ejemplos de PRDs o arquitecturas reales
-- Contar anécdotas de proyectos exitosos con BMad
+- Mostrar ejemplos de PRDs o arquitecturas generadas por los agentes
+- Profundizar en el workflow brownfield - cómo documentar un proyecto existente
+- Contar más casos de uso específicos (hackathons ganados, MVPs lanzados)
 
 ### Manejo de preguntas
 - Si hacen una pregunta durante la presentación que vas a cubrir después: "Excelente pregunta, llego a eso en 2 slides"
@@ -768,12 +754,13 @@ Los agentes individuales (slides 8-15) son ~1 minuto cada uno. Si te atrasás, c
 - Si alguien es escéptico: "Entiendo el escepticismo, por eso vamos a hacer el demo - seeing is believing"
 
 ### Backup por problemas técnicos
-Si la demo falla:
-- Tener screenshots pre-tomados de cada paso
-- Tener un video backup grabado de antemano
-- En último caso: narrar el proceso con los slides del flujo (22)
+Si hay problemas durante el hands-on setup:
+- Tener un ambiente de Codespaces pre-configurado como backup
+- Tener API keys de prueba listas para distribuir
+- Tener screenshots del proceso de setup
+- En último caso: hacer demo en vivo mostrando el proceso completo
 
-No entrar en pánico. La metodología es sólida incluso si la demo no sale perfecta.
+No entrar en pánico. La metodología es sólida y el setup es simple - la mayoría podrá hacerlo.
 
 ---
 
@@ -788,23 +775,29 @@ No entrar en pánico. La metodología es sólida incluso si la demo no sale perf
 
 ### Respuestas a preguntas frecuentes
 
-**"¿Cuánto cuesta?"**
-Los modelos tienen costo por token. Para proyectos chicos (como el pomodoro) es < $1. Para proyectos más grandes, depende del tamaño. OpenRouter tiene precios transparentes.
+**"¿Puedo realmente usar esto para los TPs de la facultad?"**
+Sí, pero con el workflow pedagógico: usá PM + Architect + SM para entender y planear, saltá el Developer y CODEA VOS, usá QA para revisar tu código. Así aprendés planificación profesional, implementás vos, y recibís feedback experto.
 
-**"¿Funciona con código existente?"**
-Sí, BMad puede trabajar con codebases existentes. Los agentes pueden leer tu código, entenderlo, y hacer modificaciones siguiendo tu arquitectura.
+**"¿Cuánto cuesta?"**
+Los modelos gratuitos (code-supernova, Grok Code Fast 1) no cuestan nada. Si tenés GitHub Student Pack, tenés Copilot Pro gratis con acceso a Sonnet 4.5. Si querés usar modelos pagos, proyectos chicos son < $1.
+
+**"¿Funciona con código existente o solo greenfield?"**
+Funciona para ambos. Greenfield: construís desde cero. Brownfield: primero documentás el proyecto existente con los agentes (arquitectura, componentes), después los agentes tienen contexto para trabajar.
 
 **"¿Qué lenguajes soporta?"**
 Todos los lenguajes mainstream: Python, JavaScript/TypeScript, Go, Rust, Java, etc. Los modelos son polyglot.
 
 **"¿Puedo usar otros modelos además de los que mencionaste?"**
-Sí, BMad es agnóstico al modelo. Podés usar Claude Sonnet, GPT-4, Gemini, lo que quieras. Solo ajustás la configuración.
+Sí, BMad es agnóstico al modelo. Son prompts, no software propietario. Funciona con Claude, GPT, Gemini, en Cursor, Copilot, Claude Code, etc.
 
 **"¿El código generado es bueno?"**
-Con las instrucciones correctas y el contexto adecuado, sí. No es perfecto - siempre vas a revisar y ajustar. Pero es production-quality en la mayoría de casos.
+Con el contexto estructurado de BMad (PRD, arquitectura, stories claras), sí. No es perfecto - siempre vas a revisar. Pero es production-quality en la mayoría de casos.
+
+**"¿Qué es el 'sharding' exactamente?"**
+Sharding es partir documentos gigantes en pedacitos enfocados. En vez de darle al Developer un PRD de 10,000 tokens, le das un shard de 500 tokens con exactamente lo que necesita para esta story. Así evitás el problema del contexto largo.
 
 **"¿Esto me va a sacar el trabajo?"**
-No. Te va a hacer 10x más productivo. En vez de ser un developer que hace 1 proyecto a la vez, vas a ser un tech lead que orquesta múltiples proyectos simultáneos.
+No. Te va a hacer más productivo. En vez de ser un developer, vas a ser un tech lead que orquesta múltiples proyectos simultáneos y entiende todo el ciclo de desarrollo.
 
 ---
 
