@@ -192,7 +192,7 @@ Eso es BMad.
 
 ## SLIDE 7: CICLO DE DESARROLLO CON BMAD [9:30 - 11:00]
 
-BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo simplificamos para que sea práctico.
+BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
 
 [Primera sección - Planning]
 
@@ -200,21 +200,25 @@ BMad sigue un proceso profesional que probablemente reconozcan si hicieron mater
 
 - **PM** crea el PRD - Product Requirements Document completo
 - **Architect** define la arquitectura técnica y tech stack
+- **PO** corre el Master Checklist - valida que PRD y Arquitectura estén alineados
 - **PO** "shardea" todo - lo parte en epics y stories manejables
 
 Y después tenés agentes adicionales que usás cuando los necesitás: Analyst para proyectos nuevos, UX Expert para apps con UI, QA para input en áreas de alto riesgo.
 
-[Medio - PO shard documents]
+[Medio - Documents Shardeados]
 
-El PO es clave acá. Toma documentos enormes y los parte en pedacitos digeribles. Cada "shard" es un documento focalizado que un agente puede procesar sin ahogarse. Acá es donde resolvemos el problema del contexto largo.
+El PO es clave acá. Primero valida que los documentos estén alineados - si no, se refinan hasta que todo tenga sentido. Después toma documentos enormes y los parte en pedacitos digeribles. Cada "shard" es un documento focalizado que un agente puede procesar sin ahogarse. Acá es donde resolvemos el problema del contexto largo.
 
 [Segunda sección - Development Loop]
 
-**Development Loop iterativo**: El workflow core es simple:
+**Development Loop iterativo**: El workflow core tiene pasos críticos:
 
-- **SM** hace el draft de la siguiente story con tareas secuenciales
-- **Dev** implementa con código, tests, documentación
-- **Commit** y siguiente story
+- **SM Review** - revisa notas de la story anterior para aprender
+- **SM Draft** - hace el draft de la siguiente story con tareas secuenciales
+- **Dev** implementa con código, tests, validaciones
+- **Ready + Notes** - Dev marca listo para review y documenta notas
+- **Tests✓ Commit** - Verificar tests de regresión y linting, después COMMIT
+- Loop a siguiente story
 
 Y de nuevo, validación adicional cuando la necesitás: PO para validar contra PRD, QA para review de áreas críticas.
 
@@ -439,13 +443,15 @@ Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Plannin
 
 Esta fase genera todos los documentos que el equipo necesita. Se hace UNA VEZ al principio del proyecto.
 
-**El workflow core tiene 3 pasos:**
+**El workflow core tiene 4 pasos:**
 
 **1. PM: PRD Creation** - Genera requirements completos, epics, stories preliminares.
 
 **2. Architect: System Design** - Diseña arquitectura completa y tech stack.
 
-**3. PO: Sharding** - Shardea PRD y arquitectura en epics/stories con contexto enfocado.
+**3. PO: Master Checklist** - Valida alineación entre PRD y Arquitectura. Si no alinea, se refinan documentos hasta que todo tenga sentido.
+
+**4. PO: Sharding** - Shardea PRD y arquitectura en epics/stories con contexto enfocado.
 
 [Señalar la nota abajo]
 
@@ -453,7 +459,7 @@ Esta fase genera todos los documentos que el equipo necesita. Se hace UNA VEZ al
 
 Al final de esta fase tenés:
 - PRD completo
-- Arquitectura definida
+- Arquitectura definida y **validada contra el PRD**
 - Backlog de stories shardeadas y listas para desarrollo
 
 No tocaste una línea de código todavía. Y eso está bien - el planning correcto te ahorra semanas de refactoring después.
@@ -468,13 +474,19 @@ No tocaste una línea de código todavía. Y eso está bien - el planning correc
 
 Esta fase es un loop. Lo repetís para cada story hasta terminar el proyecto.
 
-**El workflow core tiene 3 pasos:**
+**El workflow core tiene 6 pasos:**
 
-**1. SM: Draft Story** - Bob prepara la siguiente story: tareas secuenciales detalladas, criterios de aceptación.
+**1. SM: Review Previous Notes** - Bob revisa notas de dev/QA de la story anterior para aprender de lo que pasó.
 
-**2. Dev: Implementation** - James programa: código de producción + tests (unitarios, integración, E2E) + documentación.
+**2. SM: Draft Next Story** - Prepara la siguiente story desde el epic shardeado con tareas secuenciales.
 
-**3. Commit & Loop** - Commit changes, marcar story como Done, siguiente story.
+**3. Dev: Implementation** - James programa: código de producción + tests (unit, integration, E2E) + validaciones.
+
+**4. Dev: Ready for Review + Notes** - James marca el trabajo listo para review y documenta notas para la próxima story.
+
+**5. Verify Tests/Linting → COMMIT** - IMPORTANTE: Verificar que todos los tests de regresión y el linting pasen, después hacer COMMIT.
+
+**6. Mark Done & Next Story** - Marcar story como completa y volver al paso 1 para la siguiente.
 
 [Señalar la nota abajo]
 
@@ -485,6 +497,8 @@ Esta fase es un loop. Lo repetís para cada story hasta terminar el proyecto.
 Es **iterativo**. Story por story, commit por commit, hasta completar el proyecto.
 
 La ventaja: siempre tenés una versión funcional. Si después de 5 stories querés cambiar el rumbo, podés. No estás comprometido a un plan gigante.
+
+**Y acá está el loop de aprendizaje:** las notas que James deja hoy son las que Bob usa mañana para mejorar el siguiente draft.
 
 [CLICK - Slide 18]
 
@@ -692,14 +706,14 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 - Slide 4 (LoCoDiff): 1:15 min
 - Slide 5 (METR Study): 1:30 min
 - Slide 6 (Problema actual): 1:45 min
-- Slide 7 (Ciclo desarrollo): 1:30 min
+- Slide 7 (Ciclo desarrollo): 1:45 min (+15 seg por PO Checklist + pasos dev detallados)
 - Slides 8-15 (8 agentes individuales): 5:50 min
-- Slides 16-18 (Workflow + QA): 2:10 min
+- Slides 16-18 (Workflow + QA): 2:25 min (+15 seg por paso adicional en planning y dev)
 - Slides 19-20 (Tools + MCP): 2:15 min
 - Slide 21 (BAISH website ejemplo): 1:15 min
 - Slide 22 (Cierre): 2:00 min
 
-**Total: 24:30 min** de presentación + 5:30 min de buffer/Q&A = **30:00 min total**
+**Total: 25:00 min** de presentación + 5:00 min de buffer/Q&A = **30:00 min total**
 
 **Nota sobre timing crítico:**
 - Si te atrasás, los agentes opcionales (Analyst, UX Expert) se pueden mencionar más rápido (30 seg cada uno en vez de 45 seg)
@@ -736,9 +750,9 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 - **El workflow pedagógico para TPs (Slide 3)** - Es clave para estudiantes, les da permiso para usar BMad correctamente
 - **El estudio METR (Slide 5)** - Es la justificación de por qué BMad funciona
 - El problema y contexto (Slide 6)
-- El flujo general (Slide 7)
+- El flujo general (Slide 7) - **Especialmente el PO Checklist y el loop de aprendizaje (SM Review Notes)**
 - PM (Slide 9), Architect (Slide 10), Developer (Slide 14), PO (Slide 13) - Los agentes core
-- Workflow phases (Slides 16-17)
+- Workflow phases (Slides 16-17) - **Especialmente PO Master Checklist y el paso Verify Tests/Linting → COMMIT**
 - **Los artifacts en cada agente** - Señalar brevemente qué crea cada uno, es clave para entender el flujo
 
 ### Si te sobra tiempo
