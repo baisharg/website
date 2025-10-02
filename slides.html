@@ -755,7 +755,31 @@
             </div>
         </div>
 
-        <!-- Slide 5: ¿Cómo usas AI hoy? (renumbered from 4) -->
+        <!-- Slide 5: METR Study - AI Slows Down Experienced Developers -->
+        <div class="slide dark-slide">
+            <h2>🔬 <span class="gradient-text">METR Study: AI y Desarrolladores Expertos (2025)</span></h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 95%; max-width: 1200px; margin: 20px auto;">
+                <!-- Left chart -->
+                <div style="position: relative;">
+                    <canvas id="metrForecastChart"
+                        style="background: rgba(255, 255, 255, 0.02); border-radius: 10px; padding: 15px;"></canvas>
+                </div>
+                <!-- Right chart -->
+                <div style="position: relative;">
+                    <canvas id="metrTimeChart"
+                        style="background: rgba(255, 255, 255, 0.02); border-radius: 10px; padding: 15px;"></canvas>
+                </div>
+            </div>
+            <div
+                style="text-align: center; margin-top: 20px; padding: 20px; background: rgba(239, 68, 68, 0.1); border: 2px solid #EF4444; border-radius: 10px; max-width: 1000px; margin: 20px auto;">
+                <p style="color: #FCA5A5; font-size: 1.1rem; margin: 0; line-height: 1.6;">
+                    <strong>Developers con 2+ años en su propio codebase fueron 20% MÁS LENTOS con AI</strong><br>
+                    <span style="font-size: 0.9rem; opacity: 0.9;">Los modelos no tienen memoria a largo plazo - cada sesión arranca de cero</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 6: ¿Cómo usas AI hoy? (renumbered from 5) -->
         <div class="slide dark-slide">
             <h2>🤔 <span class="gradient-text">¿Cómo usás AI para codear hoy?</span></h2>
             <div
@@ -1451,7 +1475,7 @@
     </div>
 
     <div class="slide-number">
-        <span id="currentSlide">1</span> / <span id="totalSlides">24</span>
+        <span id="currentSlide">1</span> / <span id="totalSlides">25</span>
     </div>
 
     <script>
@@ -1511,12 +1535,14 @@
             }
         }
 
-        // Initialize LoCoDiff chart when on that slide
-        let chartInstance = null;
+        // Initialize charts when on those slides
+        let locodiffChartInstance = null;
+        let metrForecastChartInstance = null;
+        let metrTimeChartInstance = null;
 
-        function initializeChart() {
+        function initializeLocodiffChart() {
             const chartCanvas = document.getElementById('locodiffChart');
-            if (!chartCanvas || chartInstance) return;
+            if (!chartCanvas || locodiffChartInstance) return;
 
             // Configure Chart.js defaults for dark theme
             Chart.defaults.color = '#E5E7EB';
@@ -1662,16 +1688,198 @@
                 }
             };
 
-            chartInstance = new Chart(ctx, config);
+            locodiffChartInstance = new Chart(ctx, config);
         }
 
-        // Check if we need to initialize chart when changing slides
+        function initializeMetrCharts() {
+            // Initialize forecast chart (left)
+            const forecastCanvas = document.getElementById('metrForecastChart');
+            if (forecastCanvas && !metrForecastChartInstance) {
+                Chart.defaults.color = '#E5E7EB';
+                Chart.defaults.borderColor = 'rgba(139, 92, 246, 0.2)';
+
+                const ctx = forecastCanvas.getContext('2d');
+
+                // Data from the METR study - forecast vs actual
+                const forecastData = {
+                    labels: ['Expert\nForecasts', 'ML Expert\nForecasts', 'Developer\nForecasts\n(during)', 'Developer\nEstimates\n(after)', 'Observed\nResult'],
+                    datasets: [{
+                        label: 'Change in time',
+                        data: [-39, -38, -24, -20, +20],
+                        backgroundColor: function(context) {
+                            const value = context.parsed.y;
+                            return value < 0 ? 'rgba(34, 197, 94, 0.7)' : 'rgba(239, 68, 68, 0.7)';
+                        },
+                        borderColor: function(context) {
+                            const value = context.parsed.y;
+                            return value < 0 ? '#22C55E' : '#EF4444';
+                        },
+                        borderWidth: 2
+                    }]
+                };
+
+                const forecastConfig = {
+                    type: 'bar',
+                    data: forecastData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        aspectRatio: 1.2,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(30, 27, 75, 0.95)',
+                                titleColor: '#A78BFA',
+                                borderColor: 'rgba(139, 92, 246, 0.3)',
+                                borderWidth: 1,
+                                padding: 12,
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.parsed.y;
+                                        return value > 0 ? '+' + value + '% (más lento)' : value + '% (más rápido)';
+                                    }
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Predicciones vs. Realidad',
+                                font: { size: 14 },
+                                color: '#A78BFA'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                min: -50,
+                                max: 40,
+                                title: {
+                                    display: true,
+                                    text: 'Cambio en tiempo (%)',
+                                    font: { size: 12 },
+                                    color: '#E5E7EB'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value > 0 ? '+' + value + '%' : value + '%';
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(139, 92, 246, 0.1)',
+                                    borderDash: [5, 5]
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: { size: 10 },
+                                    color: '#E5E7EB'
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                };
+
+                metrForecastChartInstance = new Chart(ctx, forecastConfig);
+            }
+
+            // Initialize time comparison chart (right)
+            const timeCanvas = document.getElementById('metrTimeChart');
+            if (timeCanvas && !metrTimeChartInstance) {
+                const ctx2 = timeCanvas.getContext('2d');
+
+                const timeData = {
+                    labels: ['Forecast\nAI-disallowed', 'Forecast\nAI-allowed', 'Observed\nAI-disallowed', 'Observed\nAI-allowed'],
+                    datasets: [{
+                        label: 'Time (hours)',
+                        data: [1.85, 1.42, 1.67, 2.26],
+                        backgroundColor: ['#9333EA', '#22C55E', '#9333EA', '#EF4444'],
+                        borderColor: ['#7C3AED', '#16A34A', '#7C3AED', '#DC2626'],
+                        borderWidth: 2
+                    }]
+                };
+
+                const timeConfig = {
+                    type: 'bar',
+                    data: timeData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        aspectRatio: 1.2,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(30, 27, 75, 0.95)',
+                                titleColor: '#A78BFA',
+                                borderColor: 'rgba(139, 92, 246, 0.3)',
+                                borderWidth: 1,
+                                padding: 12,
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.parsed.y.toFixed(2) + ' horas';
+                                    }
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Tiempo de Implementación',
+                                font: { size: 14 },
+                                color: '#A78BFA'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 3,
+                                title: {
+                                    display: true,
+                                    text: 'Tiempo (horas)',
+                                    font: { size: 12 },
+                                    color: '#E5E7EB'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + 'h';
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(139, 92, 246, 0.1)',
+                                    borderDash: [5, 5]
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: { size: 10 },
+                                    color: '#E5E7EB'
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                };
+
+                metrTimeChartInstance = new Chart(ctx2, timeConfig);
+            }
+        }
+
+        // Check if we need to initialize charts when changing slides
         const originalShowSlide = showSlide;
         showSlide = function (n) {
             originalShowSlide(n);
-            // Initialize chart when we reach slide 4 (index 3)
+            // Initialize locodiff chart when we reach slide 4 (index 3)
             if (currentSlide === 3) {
-                setTimeout(initializeChart, 100);
+                setTimeout(initializeLocodiffChart, 100);
+            }
+            // Initialize METR charts when we reach slide 5 (index 4)
+            if (currentSlide === 4) {
+                setTimeout(initializeMetrCharts, 100);
             }
         }
     </script>
