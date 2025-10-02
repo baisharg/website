@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de LLM Assisted Coding - BAISH x Y-hat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            background: #1a1625;
+        }
+
+        .presentation {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            padding: 60px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #3B82F6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .title-slide .subtitle {
+            font-size: 1.8rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+
+        .title-slide .meta {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .title-slide .meta p {
+            margin: 8px 0;
+        }
+
+        .title-slide .meta a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .logo-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .logo {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #6B46C1;
+        }
+
+        /* Dark Content Slides */
+        .dark-slide {
+            background: #1a1625;
+            color: white;
+        }
+
+        .dark-slide h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Gradient text separate from emojis */
+        .gradient-text {
+            background: linear-gradient(90deg, #A78BFA 0%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .dark-slide h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: #C4B5FD;
+        }
+
+        /* BAISH Slide */
+        .baish-intro {
+            background: linear-gradient(135deg, #2D1B69 0%, #1a1625 100%);
+        }
+
+        .baish-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .baish-tagline {
+            font-size: 1.5rem;
+            color: #C4B5FD;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .baish-activities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .activity-card {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .activity-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .activity-title {
+            color: #A78BFA;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .activity-desc {
+            color: #E5E7EB;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Disclaimer */
+        .disclaimer-box {
+            background: rgba(251, 191, 36, 0.1);
+            border: 2px solid #FBBF24;
+            padding: 35px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .disclaimer-box p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #FCD34D;
+            text-align: center;
+        }
+
+        .disclaimer-box strong {
+            color: #FBBF24;
+        }
+
+        /* Problem Slides */
+        .typical-use {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .typical-use-item {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #EF4444;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: #FCA5A5;
+        }
+
+        /* Development Flow */
+        .flow-section {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .flow-title {
+            font-weight: 600;
+            color: #A78BFA;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .flow-items {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flow-item {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #E9D5FF;
+        }
+
+        .flow-arrow {
+            color: #8B5CF6;
+            font-size: 1.5rem;
+        }
+
+        /* Gap Analysis */
+        .gap-analysis {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .gap-box {
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .gap-box.current {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid #EF4444;
+        }
+
+        .gap-box.potential {
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid #22C55E;
+        }
+
+        .percentage {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .current .percentage { color: #EF4444; }
+        .potential .percentage { color: #22C55E; }
+
+        /* Agent Card */
+        .agent-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 40px;
+            border-radius: 16px;
+            width: 80%;
+            max-width: 700px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .agent-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .agent-name {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #A78BFA 0%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .agent-role {
+            font-size: 1.2rem;
+            color: #C4B5FD;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .agent-tasks {
+            text-align: left;
+            background: rgba(30, 27, 75, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .agent-tasks li {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #E5E7EB;
+            list-style: none;
+        }
+
+        /* Team Grid */
+        .team-overview {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .team-member-small {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member-small:hover {
+            transform: translateY(-5px);
+            background: rgba(139, 92, 246, 0.15);
+        }
+
+        .team-avatar-small {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .team-role-small {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #A78BFA;
+            line-height: 1.2;
+        }
+
+        /* Workflow Phases */
+        .phase-detail {
+            background: rgba(139, 92, 246, 0.05);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 35px;
+            border-radius: 16px;
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .phase-header {
+            background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .phase-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .phase-step {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #8B5CF6;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #A78BFA;
+            margin-bottom: 5px;
+        }
+
+        .step-desc {
+            color: #C4B5FD;
+            font-size: 0.95rem;
+        }
+
+        /* Commands */
+        .command-box {
+            background: #0F0E1A;
+            color: #22D3EE;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        /* Tools */
+        .tools-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .tool-item {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .tool-category {
+            font-weight: 600;
+            color: #A78BFA;
+            margin-bottom: 10px;
+        }
+
+        .tool-names {
+            color: #C4B5FD;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        /* Human in the Loop */
+        .hitl-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            border: 2px solid #22C55E;
+            color: #86EFAC;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.2rem;
+            width: 80%;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        /* Quality Gates */
+        .quality-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .quality-item {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            color: #E5E7EB;
+        }
+
+        .quality-item strong {
+            color: #A78BFA;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+            color: white;
+            padding: 25px 50px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            margin: 40px auto;
+            display: block;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .cta:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(139, 92, 246, 0.9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #8B5CF6;
+            transform: scale(1.05);
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(139, 92, 246, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide { padding: 30px; }
+            .title-slide h1 { font-size: 2.5rem; }
+            .dark-slide h2 { font-size: 2rem; }
+            .team-overview { grid-template-columns: repeat(2, 1fr); }
+            .quality-features, .project-grid { grid-template-columns: 1fr; }
+            .baish-activities { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Title -->
+        <div class="slide active title-slide">
+            <h1>Taller de <span style="text-decoration: line-through;">Vibe Coding</span><br>LLM Assisted Coding</h1>
+            <div class="subtitle">Construye con AI como un equipo completo</div>
+            <div class="meta">
+                <p>📅 Viernes 3 de octubre, 16:00hs</p>
+                <p>📍 Salas 1109 y 1110</p>
+            </div>
+            <div class="logo-container">
+                <div class="logo">BAISH</div>
+                <div class="logo">Y-hat</div>
+            </div>
+        </div>
+
+        <!-- Slide 2: About BAISH -->
+        <div class="slide dark-slide baish-intro">
+            <div class="baish-content">
+                <h2>🛡️ <span class="gradient-text">¿Qué es BAISH?</span></h2>
+                <div class="baish-tagline">
+                    Buenos Aires AI Safety Hub - Asegurando que la IA Beneficie a la Humanidad
+                </div>
+                <p style="color: #E5E7EB; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+                    Somos una comunidad dedicada a la investigación y educación en seguridad de IA.
+                    Creemos que reducir los riesgos asociados a modelos avanzados de IA es uno de los
+                    desafíos más importantes de nuestro tiempo.
+                </p>
+                <div class="baish-activities">
+                    <div class="activity-card">
+                        <div class="activity-icon">📚</div>
+                        <div class="activity-title">AI Safety Fundamentals</div>
+                        <div class="activity-desc">Curso introductorio - Viernes 14:30 - 17:00 - Sala 1604</div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">💬</div>
+                        <div class="activity-title">Workshop de AI Safety</div>
+                        <div class="activity-desc"> Replicaciones de papers guiadas - Martes 15:00 - 17:00 - Sala 1604</div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">📖</div>
+                        <div class="activity-title">Club del Paper</div>
+                        <div class="activity-desc">Presentaciones de estudiantes sobre papers de IA / Seguridad en IA - cada dos semanas los Jueves - 15:00 - 17:00 - Sala 1604</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Disclaimer -->
+        <div class="slide dark-slide">
+            <h2>⚠️ <span class="gradient-text">Disclaimer Importante</span></h2>
+            <div class="disclaimer-box">
+                <p><strong>Esta herramienta está enfocada en hacer más eficientes procesos extensos de levantar una aplicación desde cero.</strong></p>
+                <p style="margin-top: 20px;">❌ <strong>NO recomendamos usar esto para tareas de la carrera</strong>, ya que utilizar estas herramientas en contextos educativos interrumpe el proceso de aprendizaje.</p>
+                <p style="margin-top: 20px;">✅ <strong>Ideal para:</strong> Proyectos personales, MVPs, prototipos, startups, hackathons</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: ¿Cómo usas AI hoy? -->
+        <div class="slide dark-slide">
+            <h2>🤔 <span class="gradient-text">¿Cómo usas AI para programar hoy?</span></h2>
+            <div class="typical-use">
+                <div class="typical-use-item">
+                    🐛 "Ayúdame a arreglar este bug"
+                </div>
+                <div class="typical-use-item">
+                    🔘 "Genera un componente de botón"
+                </div>
+                <div class="typical-use-item">
+                    📝 "Explícame este código"
+                </div>
+            </div>
+            <h3 style="text-align: center; margin-top: 40px; color: #EF4444;">
+                Resultado: Snippets aislados, proyectos pequeños 😕
+            </h3>
+        </div>
+
+        <!-- Slide 5: El ciclo de desarrollo REAL con BMad -->
+        <div class="slide dark-slide">
+            <h2>⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
+
+            <div class="flow-section">
+                <div class="flow-title">📋 Planning Riguroso (Web UI)</div>
+                <div class="flow-items">
+                    <div class="flow-item">Analyst<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">PM</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">UX Expert<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">Architect</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">QA Input<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">PO Validation</div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 15px; border-radius: 10px; margin: 20px auto; text-align: center; max-width: 600px; font-weight: 600; font-size: 1.1rem;">
+                📁 Switch to IDE → PO: Shard Documents
+            </div>
+
+            <div class="flow-section">
+                <div class="flow-title">🚀 Development Iterativo (IDE)</div>
+                <div class="flow-items">
+                    <div class="flow-item">SM Draft</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">QA Risk/Design<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">Dev</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">QA Mid-Dev<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">QA Review<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">Commit</div>
+                    <div class="flow-arrow" style="font-size: 1.8rem;">🔄</div>
+                </div>
+            </div>
+
+            <div class="hitl-box">
+                👤 Human in the Loop: Aprobación requerida en puntos clave de transición
+            </div>
+        </div>
+
+        <!-- Slide 6: El Gap -->
+        <div class="slide dark-slide">
+            <h2>📊 <span class="gradient-text">El Gap</span></h2>
+            <div class="gap-analysis">
+                <div class="gap-box current">
+                    <h3 style="color: #FCA5A5;">Uso Actual</h3>
+                    <div class="percentage">10%</div>
+                    <p style="color: #FCA5A5;">Solo generación de código</p>
+                </div>
+                <div class="gap-box potential">
+                    <h3 style="color: #86EFAC;">Potencial Real</h3>
+                    <div class="percentage">100%</div>
+                    <p style="color: #86EFAC;">¡TODO el ciclo de desarrollo!</p>
+                </div>
+            </div>
+            <h3 style="text-align: center; margin-top: 40px; color: #A78BFA;">
+                🎯 ¿Por qué limitarse a un asistente cuando puedes tener un equipo completo?
+            </h3>
+        </div>
+
+        <!-- Slide 7: El Equipo BMad - Overview -->
+        <div class="slide dark-slide">
+            <h2>✨ <span class="gradient-text">BMad: Tu Equipo Completo de Desarrollo</span></h2>
+            <div class="team-overview">
+                <div class="team-member-small">
+                    <div class="team-avatar-small">🎯</div>
+                    <div class="team-role-small">Business<br>Analyst</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">👔</div>
+                    <div class="team-role-small">Product<br>Manager</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">🏗️</div>
+                    <div class="team-role-small">Architect</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">🎨</div>
+                    <div class="team-role-small">UX Expert</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">🎭</div>
+                    <div class="team-role-small">Scrum<br>Master</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">📊</div>
+                    <div class="team-role-small">Product<br>Owner</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">💻</div>
+                    <div class="team-role-small">Developer</div>
+                </div>
+                <div class="team-member-small">
+                    <div class="team-avatar-small">✅</div>
+                    <div class="team-role-small">QA/Test<br>Architect</div>
+                </div>
+            </div>
+            <h3 style="text-align: center; margin-top: 30px; color: #A78BFA;">
+                8 agentes especializados trabajando en sincronía
+            </h3>
+        </div>
+
+        <!-- Slide 8: Business Analyst -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">🎯</div>
+                <div class="agent-name">Business Analyst</div>
+                <div class="agent-role">"Blake" - Estratega de Negocios</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>📝 Crea el Project Brief inicial</li>
+                        <li>🔍 Realiza análisis de mercado y competencia</li>
+                        <li>💡 Brainstorming y validación de ideas</li>
+                        <li>📊 Define el valor del negocio</li>
+                    </ul>
+                </div>
+                <div class="command-box">@analyst Create project brief for [tu idea]</div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Product Manager -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">👔</div>
+                <div class="agent-name">Product Manager</div>
+                <div class="agent-role">"Parker" - Dueño del Producto</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>📄 Crea el PRD (Product Requirements Document)</li>
+                        <li>🎯 Define Functional Requirements (FRs)</li>
+                        <li>⚙️ Especifica Non-Functional Requirements (NFRs)</li>
+                        <li>📚 Organiza Epics y Stories</li>
+                    </ul>
+                </div>
+                <div class="command-box">@pm Create PRD from brief</div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Architect -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">🏗️</div>
+                <div class="agent-name">Architect</div>
+                <div class="agent-role">"Avery" - Diseñador de Sistemas</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>🏛️ Diseña la arquitectura del sistema</li>
+                        <li>🔧 Selecciona el tech stack</li>
+                        <li>📁 Define estructura del proyecto</li>
+                        <li>📐 Crea diagramas de arquitectura</li>
+                        <li>🔄 Establece patrones de diseño</li>
+                    </ul>
+                </div>
+                <div class="command-box">@architect Design architecture from PRD</div>
+            </div>
+        </div>
+
+        <!-- Slide 11: UX Expert -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">🎨</div>
+                <div class="agent-name">UX Expert</div>
+                <div class="agent-role">"Uma" - Diseñadora de Experiencia</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>🖼️ Crea especificaciones de UI/UX</li>
+                        <li>📱 Define wireframes y mockups</li>
+                        <li>🎯 Diseña user journeys</li>
+                        <li>♿ Asegura accesibilidad</li>
+                        <li>🎨 Genera prompts para V0/Lovable</li>
+                    </ul>
+                </div>
+                <div class="command-box">@ux Create front-end spec</div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Scrum Master -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">🎭</div>
+                <div class="agent-name">Scrum Master</div>
+                <div class="agent-role">"Sam" - Facilitador Ágil</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>📋 Draftea stories detalladas</li>
+                        <li>✔️ Define criterios de aceptación</li>
+                        <li>🔀 Secuencia las tareas de desarrollo</li>
+                        <li>📝 Mantiene notas de progreso</li>
+                        <li>🔄 Facilita la iteración</li>
+                    </ul>
+                </div>
+                <div class="command-box">@sm Draft next story</div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Product Owner -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">📊</div>
+                <div class="agent-name">Product Owner</div>
+                <div class="agent-role">"Pat" - Guardián del Producto</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>✅ Valida alineación de documentos</li>
+                        <li>📂 Shardea PRD y arquitectura</li>
+                        <li>🎯 Verifica que stories cumplan requirements</li>
+                        <li>📈 Mantiene el backlog priorizado</li>
+                    </ul>
+                </div>
+                <div class="command-box">@po Shard documents</div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Developer -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">💻</div>
+                <div class="agent-name">Developer</div>
+                <div class="agent-role">"Dylan" - Ingeniero Full-Stack</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>⚡ Implementa stories secuencialmente</li>
+                        <li>🧪 Escribe tests unitarios e integración</li>
+                        <li>🔧 Sigue coding standards</li>
+                        <li>📚 Documenta el código</li>
+                        <li>🚀 Ejecuta validaciones</li>
+                    </ul>
+                </div>
+                <div class="command-box">@dev Implement story</div>
+            </div>
+        </div>
+
+        <!-- Slide 15: QA/Test Architect -->
+        <div class="slide dark-slide">
+            <div class="agent-card">
+                <div class="agent-avatar">✅</div>
+                <div class="agent-name">Test Architect (QA)</div>
+                <div class="agent-role">"Quinn" - Guardián de la Calidad</div>
+                <div class="agent-tasks">
+                    <ul>
+                        <li>⚠️ Risk profiling antes del desarrollo</li>
+                        <li>🎯 Test design y estrategia</li>
+                        <li>📊 Requirements tracing</li>
+                        <li>🔍 NFR assessment (seguridad, performance)</li>
+                        <li>🚦 Quality gates (PASS/CONCERNS/FAIL)</li>
+                    </ul>
+                </div>
+                <div class="command-box">@qa *review story</div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Fase 1 - Planning -->
+        <div class="slide dark-slide">
+            <h2>📋 <span class="gradient-text">Fase 1: Planning (Web UI)</span></h2>
+            <div class="phase-detail">
+                <div class="phase-header">Diseño completo antes de codear</div>
+                <div class="phase-steps">
+                    <div class="phase-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Analyst: Project Brief</div>
+                            <div class="step-desc">Define la visión y objetivos del proyecto</div>
+                        </div>
+                    </div>
+                    <div class="phase-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">PM: PRD Creation</div>
+                            <div class="step-desc">Genera requirements, epics y stories</div>
+                        </div>
+                    </div>
+                    <div class="phase-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Architect: System Design</div>
+                            <div class="step-desc">Diseña arquitectura y tech stack</div>
+                        </div>
+                    </div>
+                    <div class="phase-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">PO: Document Alignment</div>
+                            <div class="step-desc">Valida coherencia y shardea documentos</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(59, 130, 246, 0.2); padding: 15px; border-radius: 10px; margin-top: 20px; text-align: center; border: 1px solid rgba(59, 130, 246, 0.4);">
+                    <span style="color: #60A5FA;">💰 <strong>Cost-effective:</strong> Usa modelos potentes en web para planning profundo</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 17: Fase 2 - Development -->
+        <div class="slide dark-slide">
+            <h2>🚀 <span class="gradient-text">Fase 2: Development (IDE)</span></h2>
+            <div class="phase-detail">
+                <div class="phase-header">Implementación iterativa story por story</div>
+                <div class="phase-steps">
+                    <div class="phase-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">SM: Draft Story</div>
+                            <div class="step-desc">Prepara la siguiente story con tareas secuenciales</div>
+                        </div>
+                    </div>
+                    <div class="phase-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">QA: Risk Assessment (opcional)</div>
+                            <div class="step-desc">Identifica riesgos y define estrategia de testing</div>
+                        </div>
+                    </div>
+                    <div class="phase-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Dev: Implementation</div>
+                            <div class="step-desc">Código + tests + documentación</div>
+                        </div>
+                    </div>
+                    <div class="phase-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">QA: Review & Gate</div>
+                            <div class="step-desc">Validación completa + quality gate decision</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(34, 197, 94, 0.2); padding: 15px; border-radius: 10px; margin-top: 20px; text-align: center; border: 1px solid rgba(34, 197, 94, 0.4);">
+                    <span style="color: #86EFAC;">🔄 <strong>Iterativo:</strong> Repite el ciclo para cada story</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 18: Quality Gates -->
+        <div class="slide dark-slide">
+            <h2>🚦 <span class="gradient-text">Quality Gates Formales</span></h2>
+            <div class="quality-features">
+                <div class="quality-item">
+                    <strong>⚠️ Risk Profiling</strong>
+                    <p>Análisis de riesgos antes de desarrollar</p>
+                </div>
+                <div class="quality-item">
+                    <strong>🎯 Test Design</strong>
+                    <p>Estrategia de testing comprehensiva</p>
+                </div>
+                <div class="quality-item">
+                    <strong>📊 Requirements Tracing</strong>
+                    <p>Mapeo de tests a requirements</p>
+                </div>
+                <div class="quality-item">
+                    <strong>🔍 NFR Assessment</strong>
+                    <p>Validación de seguridad y performance</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <h3 style="color: #A78BFA;">Gate Status:</h3>
+                <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px;">
+                    <div style="background: rgba(34, 197, 94, 0.2); color: #86EFAC; padding: 15px 30px; border-radius: 10px; border: 1px solid #22C55E;">✅ PASS</div>
+                    <div style="background: rgba(251, 191, 36, 0.2); color: #FCD34D; padding: 15px 30px; border-radius: 10px; border: 1px solid #FBBF24;">⚠️ CONCERNS</div>
+                    <div style="background: rgba(239, 68, 68, 0.2); color: #FCA5A5; padding: 15px 30px; border-radius: 10px; border: 1px solid #EF4444;">❌ FAIL</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 19: Herramientas -->
+        <div class="slide dark-slide">
+            <h2>🛠️ <span class="gradient-text">Herramientas que usaremos</span></h2>
+            <div class="tools-list">
+                <div class="tool-item">
+                    <div class="tool-category">💻 IDEs</div>
+                    <div class="tool-names">VS Code / Cursor / Windsurf</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-category">🤖 Terminal Agents</div>
+                    <div class="tool-names">Claude Code / Codex CLI / Gemini CLI</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-category">📚 BMad Method</div>
+                    <div class="tool-names">Framework open source</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-category">⏱️ Setup Time</div>
+                    <div class="tool-names">~10 minutos</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <div class="command-box" style="display: inline-block;">npx bmad-method install</div>
+            </div>
+        </div>
+
+        <!-- Slide 20: Demo - La Idea -->
+        <div class="slide dark-slide">
+            <h2>🎬 <span class="gradient-text">Demo: De idea a código en 15 minutos</span></h2>
+            <h3 style="text-align: center; color: #A78BFA; margin: 40px 0;">
+                "Vamos a construir un Study Timer con técnica Pomodoro"
+            </h3>
+            <div style="text-align: center;">
+                <div style="display: inline-block; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 30px; border-radius: 15px;">
+                    <p style="font-size: 5rem; margin: 0;">⏰</p>
+                    <p style="font-size: 1.3rem; margin-top: 20px; color: #C4B5FD;">
+                        Timer para estudiar con descansos programados
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 21: Demo Flow -->
+        <div class="slide dark-slide">
+            <h2>📍 <span class="gradient-text">Demo: Flujo Completo</span></h2>
+            <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto;">
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #A78BFA;">1. Planning (2 min)</strong>
+                    <div class="command-box">@pm Create a PRD for a study timer with pomodoro</div>
+                </div>
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #A78BFA;">2. Architecture (3 min)</strong>
+                    <div class="command-box">@architect Design architecture for this timer</div>
+                </div>
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #A78BFA;">3. Story Draft (2 min)</strong>
+                    <div class="command-box">@sm Draft first story: basic timer UI</div>
+                </div>
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #A78BFA;">4. Development (5 min)</strong>
+                    <div class="command-box">@dev Implement the story</div>
+                </div>
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #A78BFA;">5. Quality Review (3 min)</strong>
+                    <div class="command-box">@qa *review story</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 22: ¿Qué puedes construir? -->
+        <div class="slide dark-slide">
+            <h2>🎯 <span class="gradient-text">¿Qué puedes construir con esto?</span></h2>
+            <div class="project-grid">
+                <div class="project-card">Portfolio personal</div>
+                <div class="project-card">Dashboard de finanzas</div>
+                <div class="project-card">App de recetas</div>
+                <div class="project-card">Sistema de notas</div>
+                <div class="project-card">API para tu startup</div>
+                <div class="project-card">E-commerce MVP</div>
+                <div class="project-card">Blog platform</div>
+                <div class="project-card">Task manager</div>
+                <div class="project-card">¡Tu idea!</div>
+            </div>
+            <h3 style="text-align: center; margin-top: 40px; color: #A78BFA;">
+                El límite es tu imaginación 🚀
+            </h3>
+        </div>
+
+        <!-- Slide 23: Let's Build! -->
+        <div class="slide dark-slide">
+            <h2>🚀 <span class="gradient-text" style="font-size: 3.5rem;">¡Manos a la obra!</span></h2>
+            <div style="text-align: center; margin-top: 50px;">
+                <h3 style="color: #C4B5FD;">📝 Setup rápido:</h3>
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 30px; border-radius: 15px; margin: 30px auto; width: 80%; max-width: 600px;">
+                    <p style="font-size: 1.3rem; margin: 15px 0; color: #E5E7EB;">1️⃣ Clona el repo del workshop</p>
+                    <p style="font-size: 1.3rem; margin: 15px 0; color: #E5E7EB;">2️⃣ Instala BMad Method</p>
+                    <p style="font-size: 1.3rem; margin: 15px 0; color: #E5E7EB;">3️⃣ Elige tu proyecto</p>
+                    <p style="font-size: 1.3rem; margin: 15px 0; color: #E5E7EB;">4️⃣ ¡Empieza a construir!</p>
+                </div>
+                <button class="cta">¡Vamos a construir algo increíble!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <button class="nav-btn" onclick="previousSlide()">← Anterior</button>
+        <button class="nav-btn" onclick="nextSlide()">Siguiente →</button>
+    </div>
+
+    <div class="slide-number">
+        <span id="currentSlide">1</span> / <span id="totalSlides">23</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'Home') {
+                showSlide(0);
+            } else if (e.key === 'End') {
+                showSlide(totalSlides - 1);
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                previousSlide();
+            }
+        }
+    </script>
+</body>
+</html>
