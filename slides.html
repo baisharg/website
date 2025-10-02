@@ -488,9 +488,9 @@
         .tools-list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            width: 80%;
-            max-width: 800px;
+            gap: 15px;
+            width: 90%;
+            max-width: 900px;
             margin: 40px auto;
         }
 
@@ -697,30 +697,23 @@
                         style="height: 1.5em; vertical-align: middle; margin-right: 10px;"><span
                         class="gradient-text">¿Qué es BAISH?</span></h2>
                 <div class="baish-tagline">
-                    Buenos Aires AI Safety Hub - Trabajando para que la IA sea segura y beneficiosa para todos
+                    Buenos Aires AI Safety Hub - Investigación y educación en seguridad de IA
                 </div>
-                <p style="color: #E5E7EB; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
-                    Somos una comunidad que se dedica a investigar y enseñar sobre seguridad en IA.
-                    Creemos que garantizar la seguridad de los modelos avanzados de IA
-                    es uno de los desafíos más importantes que tenemos por delante.
-                </p>
                 <div class="baish-activities">
                     <div class="activity-card">
                         <div class="activity-icon">📚</div>
                         <div class="activity-title">AI Safety Fundamentals</div>
-                        <div class="activity-desc">Curso introductorio - Viernes 14:30 - 17:00 - Sala 1604</div>
+                        <div class="activity-desc">Viernes 14:30-17:00 - Sala 1604</div>
                     </div>
                     <div class="activity-card">
                         <div class="activity-icon">💬</div>
                         <div class="activity-title">Workshop de AI Safety</div>
-                        <div class="activity-desc"> Replicaciones de papers guiadas - Martes 15:00 - 17:00 - Sala 1604
-                        </div>
+                        <div class="activity-desc">Martes 15:00-17:00 - Sala 1604 • <strong>Abierto a todos sin inscripción</strong></div>
                     </div>
                     <div class="activity-card">
                         <div class="activity-icon">📖</div>
                         <div class="activity-title">Club del Paper</div>
-                        <div class="activity-desc">Presentaciones de estudiantes sobre papers de IA / Seguridad en IA -
-                            cada dos semanas los Jueves - 15:00 - 17:00 - Sala 1604</div>
+                        <div class="activity-desc">Jueves cada 2 semanas, 15:00-17:00 - Sala 1604</div>
                     </div>
                 </div>
             </div>
@@ -728,19 +721,17 @@
 
         <!-- Slide 3: Disclaimer -->
         <div class="slide dark-slide">
-            <h2>⚠️ <span class="gradient-text">Disclaimer Importante</span></h2>
+            <h2>💡 <span class="gradient-text">Cómo Aprovechar Esta Herramienta</span></h2>
             <div class="disclaimer-box">
-                <p><strong>Esta herramienta es excelente para armar apps completas desde cero en poco tiempo.</strong>
-                </p>
-                <p style="margin-top: 20px;">❌ <strong>NO la uses para los trabajos prácticos de la facultad</strong>,
-                    porque si no, no vas a aprender nada y después te va a costar en los parciales.</p>
-                <p style="margin-top: 20px;">✅ <strong>Usala para:</strong> Proyectos propios, MVPs, prototipos, tu
-                    startup, hackathons</p>
+                <p><strong>BMad acelera la construcción de proyectos completos desde cero.</strong></p>
+                <p style="margin-top: 20px;">🎯 <strong>La estrategia inteligente:</strong> Usala para <em>construir más proyectos y aprender más rápido</em>. Cada proyecto te expone a nuevos patterns, arquitecturas y decisiones de diseño.</p>
+                <p style="margin-top: 20px;">⚡ <strong>Casos de uso ideales:</strong> Proyectos personales • MVPs • Prototipos • Tu startup • Hackathons • Aprender nuevos tech stacks</p>
+                <p style="margin-top: 20px; font-size: 0.95rem; opacity: 0.9;">📚 <strong>Sobre los TPs:</strong> Para trabajos de la facultad, considerá primero qué se está evaluando. Si es aprender un concepto específico, implementalo vos. Si es construir algo funcional, BMad puede ayudarte.</p>
             </div>
         </div>
 
         <!-- Slide 4: LoCoDiff Benchmark Graph -->
-        <div class="slide dark-slide">
+        <div class="slide dark-slide" style="position: relative;">
             <h2>📊 <span class="gradient-text">LoCoDiff: Natural Long Context Code Bench</span></h2>
             <div style="position: relative; width: 90%; max-width: 1000px; margin: 20px auto;">
                 <canvas id="locodiffChart"
@@ -753,10 +744,15 @@
                     contextos largos
                 </p>
             </div>
+            <a href="https://arxiv.org/abs/2501.01469" target="_blank"
+               style="position: absolute; bottom: 20px; right: 30px; color: #8B5CF6; text-decoration: none; font-size: 0.85rem; opacity: 0.7; transition: opacity 0.3s;"
+               onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+                📄 Source: LoCoDiff arXiv:2501.01469
+            </a>
         </div>
 
         <!-- Slide 5: METR Study - AI Slows Down Experienced Developers -->
-        <div class="slide dark-slide">
+        <div class="slide dark-slide" style="position: relative;">
             <h2>🔬 <span class="gradient-text">METR Study: AI y Desarrolladores Expertos (Julio 2025)</span></h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 95%; max-width: 1200px; margin: 20px auto;">
                 <!-- Left chart -->
@@ -777,6 +773,18 @@
                     <span style="font-size: 0.9rem; opacity: 0.9;">Los modelos no tienen memoria a largo plazo - cada sesión arranca de cero</span>
                 </p>
             </div>
+            <div
+                style="text-align: center; margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); border: 2px solid #22C55E; border-radius: 10px; max-width: 1000px; margin: 20px auto;">
+                <p style="color: #86EFAC; font-size: 1.1rem; margin: 0; line-height: 1.6;">
+                    <strong>✅ La Solución BMad:</strong> Documentación estructurada + Contexto inteligente<br>
+                    <span style="font-size: 0.95rem; opacity: 0.95;">Greenfield: Construye proyectos nuevos desde cero • Brownfield: Documenta proyectos existentes para que los agentes entiendan el contexto</span>
+                </p>
+            </div>
+            <a href="https://metr.github.io/ai-rd-tasks/" target="_blank"
+               style="position: absolute; bottom: 20px; right: 30px; color: #8B5CF6; text-decoration: none; font-size: 0.85rem; opacity: 0.7; transition: opacity 0.3s;"
+               onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+                📄 Source: METR AI R&D Study (July 2025)
+            </a>
         </div>
 
         <!-- Slide 6: ¿Cómo usas AI hoy? (renumbered from 5) -->
@@ -850,18 +858,14 @@
             <div class="flow-section">
                 <div class="flow-title">📋 Planning Riguroso</div>
                 <div class="flow-items">
-                    <div class="flow-item">Analyst<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span>
-                    </div>
-                    <div class="flow-arrow">→</div>
                     <div class="flow-item">PM</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">UX Expert<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span>
-                    </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-item">Architect</div>
                     <div class="flow-arrow">→</div>
-                    <div class="flow-item">QA Input<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span>
-                    </div>
+                    <div class="flow-item">PO Shard</div>
+                </div>
+                <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
+                    + Analyst, UX Expert, QA cuando sea necesario
                 </div>
             </div>
 
@@ -875,19 +879,13 @@
                 <div class="flow-items">
                     <div class="flow-item">SM Draft</div>
                     <div class="flow-arrow">→</div>
-                    <div class="flow-item">PO Validate<br><span
-                            style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">QA Risk/Design<br><span
-                            style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
-                    <div class="flow-arrow">→</div>
                     <div class="flow-item">Dev</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">QA Review<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span>
-                    </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-item">Commit</div>
                     <div class="flow-arrow" style="font-size: 1.8rem;">🔄</div>
+                </div>
+                <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
+                    + PO Validate, QA Risk/Review cuando sea necesario
                 </div>
                 <p style="text-align: center; color: #A78BFA; margin-top: 15px; font-size: 0.95rem;">
                     ↻ Repite para cada story hasta completar el proyecto
@@ -912,6 +910,12 @@
                         <li>💡 Organiza las lluvias de ideas para generar ideas innovadoras</li>
                         <li>📊 Te ayuda a arrancar cuando no sabés por dónde empezar</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            Project Brief • Market Research • Competitor Analysis • Brainstorming Output
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/analyst *create-project-brief</div>
             </div>
@@ -930,6 +934,12 @@
                         <li>📊 Te arma el roadmap para que sepas qué viene</li>
                         <li>📚 Se encarga de que todos entiendan qué hay que hacer</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            PRD (Product Requirements Document) • Epics • User Stories • Brownfield PRD
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/pm *create-prd</div>
             </div>
@@ -949,6 +959,12 @@
                         <li>📐 Define cómo se estructura el back y el front</li>
                         <li>🔄 Se asegura que todo funcione bien junto</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            Full-Stack Architecture • Backend Architecture • Frontend Architecture • Brownfield Architecture
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/architect *create-full-stack-architecture</div>
             </div>
@@ -968,6 +984,12 @@
                         <li>♿ Accesibilidad y detalles micro-interactivos</li>
                         <li>🤖 Prompts para V0/Lovable y otras herramientas AI</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            Front-End Spec • UI Design Prompts (v0, Lovable) • Wireframes & Prototypes
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/ux-expert *create-front-end-spec</div>
             </div>
@@ -987,6 +1009,12 @@
                         <li>📝 Gestión de epics y procesos ágiles</li>
                         <li>🔄 Facilita retrospectivas y mejora continua</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            User Story Drafts • Tareas Secuenciales • Criterios de Aceptación
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/sm *draft</div>
             </div>
@@ -1006,6 +1034,12 @@
                         <li>📊 Refinamiento de historias durante desarrollo</li>
                         <li>🔄 Asegura coherencia story por story</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            Sharded Documents • Epic Files • Story Validations • Backlog Structure
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/po *shard-doc</div>
             </div>
@@ -1025,6 +1059,12 @@
                         <li>📚 Documenta el código para que se entienda</li>
                         <li>🚀 Corre validaciones y se asegura que esté todo prolijo</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            Production Code • Unit Tests • Integration Tests • E2E Tests • Code Documentation
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/dev *develop-story</div>
             </div>
@@ -1044,6 +1084,12 @@
                         <li>🔍 NFR assessment (seguridad, performance, confiabilidad)</li>
                         <li>🚦 Quality gates (PASS/CONCERNS/FAIL/WAIVED) - Asesoría, no bloqueo</li>
                     </ul>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.3);">
+                        <strong style="color: #A78BFA;">📄 Artifacts que crea:</strong>
+                        <div style="font-size: 0.9rem; margin-top: 8px; color: #C4B5FD;">
+                            QA Reports • Quality Gate Files • Risk Profiles • Test Designs • Requirements Trace Maps
+                        </div>
+                    </div>
                 </div>
                 <div class="command-box">/qa *review {story}</div>
             </div>
@@ -1058,44 +1104,29 @@
                     <div class="phase-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <div class="step-title">Analyst: Project Brief (opcional)</div>
-                            <div class="step-desc">Define la visión y objetivos del proyecto</div>
+                            <div class="step-title">PM: PRD Creation</div>
+                            <div class="step-desc">Genera requirements completos, epics y stories preliminares</div>
                         </div>
                     </div>
                     <div class="phase-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <div class="step-title">PM: PRD Creation</div>
-                            <div class="step-desc">Genera requirements, epics y stories</div>
+                            <div class="step-title">Architect: System Design</div>
+                            <div class="step-desc">Diseña arquitectura completa y tech stack</div>
                         </div>
                     </div>
                     <div class="phase-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <div class="step-title">UX Expert: Front-End Spec (opcional)</div>
-                            <div class="step-desc">Diseño de UI/UX y prompts para herramientas AI</div>
-                        </div>
-                    </div>
-                    <div class="phase-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <div class="step-title">Architect: System Design</div>
-                            <div class="step-desc">Diseña arquitectura y tech stack</div>
-                        </div>
-                    </div>
-                    <div class="phase-step">
-                        <div class="step-number">5</div>
-                        <div class="step-content">
-                            <div class="step-title">QA: Early Test Input (opcional)</div>
-                            <div class="step-desc">Aportes tempranos en áreas de alto riesgo</div>
-                        </div>
-                    </div>
-                    <div class="phase-step">
-                        <div class="step-number">6</div>
-                        <div class="step-content">
                             <div class="step-title">PO: Sharding</div>
-                            <div class="step-desc">Shardea PRD y arquitectura en epics/stories</div>
+                            <div class="step-desc">Shardea PRD y arquitectura en epics/stories con contexto enfocado</div>
                         </div>
+                    </div>
+                </div>
+                <div style="margin-top: 25px; padding: 15px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; text-align: center;">
+                    <strong style="color: #A78BFA;">Agentes adicionales según necesidad:</strong>
+                    <div style="font-size: 0.9rem; color: #C4B5FD; margin-top: 8px;">
+                        Analyst (proyectos nuevos) • UX Expert (apps con UI) • QA (áreas de alto riesgo)
                     </div>
                 </div>
             </div>
@@ -1111,48 +1142,33 @@
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <div class="step-title">SM: Draft Story</div>
-                            <div class="step-desc">Prepara la siguiente story con tareas secuenciales</div>
+                            <div class="step-desc">Prepara la siguiente story con tareas secuenciales detalladas</div>
                         </div>
                     </div>
                     <div class="phase-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <div class="step-title">PO: Validate Draft (opcional)</div>
-                            <div class="step-desc">Valida story contra artifacts</div>
+                            <div class="step-title">Dev: Implementation</div>
+                            <div class="step-desc">Código de producción + tests (unitarios, integración, E2E) + documentación</div>
                         </div>
                     </div>
                     <div class="phase-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <div class="step-title">QA: Risk & Test Design (opcional)</div>
-                            <div class="step-desc">Identifica riesgos y define estrategia de testing</div>
-                        </div>
-                    </div>
-                    <div class="phase-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <div class="step-title">Dev: Implementation</div>
-                            <div class="step-desc">Código + tests + documentación</div>
-                        </div>
-                    </div>
-                    <div class="phase-step">
-                        <div class="step-number">5</div>
-                        <div class="step-content">
-                            <div class="step-title">QA: Review & Gate (opcional)</div>
-                            <div class="step-desc">Análisis comprehensivo + quality gate decision</div>
-                        </div>
-                    </div>
-                    <div class="phase-step">
-                        <div class="step-number">6</div>
-                        <div class="step-content">
                             <div class="step-title">Commit & Loop</div>
-                            <div class="step-desc">Commit changes y marcar story como Done</div>
+                            <div class="step-desc">Commit changes, marcar story como Done, siguiente story</div>
                         </div>
+                    </div>
+                </div>
+                <div style="margin-top: 25px; padding: 15px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; text-align: center;">
+                    <strong style="color: #A78BFA;">Validación adicional según necesidad:</strong>
+                    <div style="font-size: 0.9rem; color: #C4B5FD; margin-top: 8px;">
+                        PO Validate (coherencia con PRD) • QA Risk/Review (áreas críticas)
                     </div>
                 </div>
                 <div
                     style="background: rgba(34, 197, 94, 0.2); padding: 15px; border-radius: 10px; margin-top: 20px; text-align: center; border: 1px solid rgba(34, 197, 94, 0.4);">
-                    <span style="color: #86EFAC;">🔄 <strong>Iterativo:</strong> Repite el ciclo para cada story</span>
+                    <span style="color: #86EFAC;">🔄 <strong>Iterativo:</strong> Repite el ciclo para cada story hasta completar el proyecto</span>
                 </div>
             </div>
         </div>
@@ -1209,8 +1225,14 @@
                         <div class="tool-names">VS Code en GitHub Codespaces</div>
                     </div>
                     <div class="tool-item">
-                        <div class="tool-category">🤖 Modelos</div>
+                        <div class="tool-category">🤖 Modelos Gratuitos</div>
                         <div class="tool-names">code-supernova, Grok Code Fast 1</div>
+                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">80 estudiantes × alto uso de tokens = necesitamos opciones gratuitas</div>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-category">🎓 GitHub Student (Recomendado)</div>
+                        <div class="tool-names">Copilot Pro gratis → Acceso a Sonnet 4.5</div>
+                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">Login con GitHub en OpenCode para usar Sonnet</div>
                     </div>
                     <div class="tool-item">
                         <div class="tool-category">📚 Framework</div>
@@ -1219,6 +1241,11 @@
                     <div class="tool-item">
                         <div class="tool-category">🔧 MCP Tools</div>
                         <div class="tool-names">Playwright, Sequential Thinking</div>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-category">🔌 Compatibilidad</div>
+                        <div class="tool-names">Funciona en Cursor, Copilot, Claude Code</div>
+                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">BMad son prompts, no software propietario</div>
                     </div>
                 </div>
 
@@ -1320,84 +1347,41 @@
             </div>
         </div>
 
-        <!-- Slide 21: Demo - La Idea -->
+        <!-- Slide 21: Ejemplo Real - BAISH Website -->
         <div class="slide dark-slide">
-            <h2>🎬 <span class="gradient-text">Demo: De idea a app en 15 minutos</span></h2>
-            <h3 style="text-align: center; color: #A78BFA; margin: 40px 0;">
-                "Vamos a armar un Pomodoro Timer para estudiar"
-            </h3>
-            <div style="text-align: center;">
-                <div
-                    style="display: inline-block; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 30px; border-radius: 15px;">
-                    <p style="font-size: 5rem; margin: 0;">⏰</p>
-                    <p style="font-size: 1.3rem; margin-top: 20px; color: #C4B5FD;">
-                        Un temporizador efectivo para estudiar sin agotarte
+            <h2>🎯 <span class="gradient-text">Ejemplo Real: baish.com.ar con BMad</span></h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); border: 2px solid #8B5CF6; padding: 30px; border-radius: 16px; text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🌐</div>
+                    <h3 style="color: #A78BFA; margin-bottom: 15px; font-size: 1.8rem;">Estamos reconstruyendo nuestra propia web con BMad</h3>
+                    <p style="color: #C4B5FD; font-size: 1.1rem; line-height: 1.6;">
+                        Dogfooding real: usamos BMad para mejorar el sitio de BAISH. Documentación estructurada, workflow completo, agentes coordinados.
                     </p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Slide 22: Demo Flow -->
-        <div class="slide dark-slide">
-            <h2>📍 <span class="gradient-text">Demo: Flujo Completo en OpenCode</span></h2>
-            <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto;">
-                <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
-                    <strong style="color: #A78BFA;">1. Planning (3 min)</strong>
-                    <div class="command-box">/pm *create-prd</div>
-                    <div style="font-size: 0.9rem; color: #C4B5FD; margin-top: 10px;">Crear PRD para un pomodoro timer
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                        <strong style="color: #A78BFA; font-size: 1.1rem;">🚀 Greenfield Projects</strong>
+                        <div style="color: #C4B5FD; margin-top: 10px; font-size: 0.95rem; line-height: 1.5;">
+                            • Hackathon projects<br>
+                            • MVP para tu startup<br>
+                            • Prototipos rápidos<br>
+                            • Aprender nuevo stack
+                        </div>
+                    </div>
+                    <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                        <strong style="color: #A78BFA; font-size: 1.1rem;">🏗️ Brownfield Projects</strong>
+                        <div style="color: #C4B5FD; margin-top: 10px; font-size: 0.95rem; line-height: 1.5;">
+                            • Refactors mayores<br>
+                            • Nueva feature en app existente<br>
+                            • Migración de tecnología<br>
+                            • Documentar codebase legacy
+                        </div>
                     </div>
                 </div>
-                <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
-                    <strong style="color: #A78BFA;">2. Architecture (3 min)</strong>
-                    <div class="command-box">/architect *create-full-stack-architecture</div>
-                </div>
-                <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
-                    <strong style="color: #A78BFA;">3. Sharding (1 min)</strong>
-                    <div class="command-box">/po *shard-doc</div>
-                    <div style="font-size: 0.9rem; color: #C4B5FD; margin-top: 10px;">Shardear PRD y arquitectura</div>
-                </div>
-                <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
-                    <strong style="color: #A78BFA;">4. Story Draft (2 min)</strong>
-                    <div class="command-box">/sm *draft</div>
-                    <div style="font-size: 0.9rem; color: #C4B5FD; margin-top: 10px;">Primera story: timer básico</div>
-                </div>
-                <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
-                    <strong style="color: #A78BFA;">5. Development (5 min)</strong>
-                    <div class="command-box">/dev *develop-story</div>
-                </div>
-                <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
-                    <strong style="color: #A78BFA;">6. Quality Review (1 min - opcional)</strong>
-                    <div class="command-box">/qa *review {story}</div>
-                </div>
             </div>
         </div>
 
-        <!-- Slide 23: ¿Qué puedes construir? -->
-        <div class="slide dark-slide">
-            <h2>🎯 <span class="gradient-text">¿Qué podés desarrollar con esto?</span></h2>
-            <div class="project-grid">
-                <div class="project-card">Tu portfolio</div>
-                <div class="project-card">Dashboard de finanzas</div>
-                <div class="project-card">App de recetas</div>
-                <div class="project-card">App de notas</div>
-                <div class="project-card">API para tu startup</div>
-                <div class="project-card">E-commerce MVP</div>
-                <div class="project-card">Tu blog</div>
-                <div class="project-card">Task manager</div>
-                <div class="project-card">¡Lo que se te ocurra!</div>
-            </div>
-            <h3 style="text-align: center; margin-top: 40px; color: #A78BFA;">
-                El límite lo ponés vos 🚀
-            </h3>
-        </div>
-
-        <!-- Slide 24: Let's Build! -->
+        <!-- Slide 22: Let's Build! -->
         <div class="slide dark-slide">
             <h2>🚀 <span class="gradient-text" style="font-size: 3.5rem;">¡Comencemos!</span></h2>
             <div style="text-align: center; margin-top: 50px;">
@@ -1433,7 +1417,7 @@
     </div>
 
     <div class="slide-number">
-        <span id="currentSlide">1</span> / <span id="totalSlides">24</span>
+        <span id="currentSlide">1</span> / <span id="totalSlides">22</span>
     </div>
 
     <script>
