@@ -152,23 +152,28 @@
             padding: 25px;
             border-radius: 12px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .activity-icon {
             font-size: 2rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .activity-title {
             color: #A78BFA;
             font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 1.1rem;
+            line-height: 1.3;
         }
 
         .activity-desc {
             color: #E5E7EB;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.9;
         }
 
         /* Disclaimer */
@@ -622,6 +627,11 @@
             .team-overview { grid-template-columns: repeat(2, 1fr); }
             .quality-features, .project-grid { grid-template-columns: 1fr; }
             .baish-activities { grid-template-columns: 1fr; }
+
+            /* Slide 4 responsive */
+            .slide:nth-child(4) > div:first-of-type {
+                grid-template-columns: 1fr !important;
+            }
         }
     </style>
 </head>
@@ -636,15 +646,21 @@
                 <p>📍 Salas 1109 y 1110</p>
             </div>
             <div class="logo-container">
-                <div class="logo">BAISH</div>
-                <div class="logo">Y-hat</div>
+                <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="img/logo.svg" style="height: 30px;">
+                    <span>BAISH</span>
+                </div>
+                <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="img/yhatlogo.jpg" style="height: 30px;">
+                    <span>Y-hat</span>
+                </div>
             </div>
         </div>
 
         <!-- Slide 2: About BAISH -->
         <div class="slide dark-slide baish-intro">
             <div class="baish-content">
-                <h2>🛡️ <span class="gradient-text">¿Qué es BAISH?</span></h2>
+                <h2><img src="img/logo.svg" style="height: 1.5em; vertical-align: middle; margin-right: 10px;"><span class="gradient-text">¿Qué es BAISH?</span></h2>
                 <div class="baish-tagline">
                     Buenos Aires AI Safety Hub - Asegurando que la IA Beneficie a la Humanidad
                 </div>
@@ -686,20 +702,58 @@
         <!-- Slide 4: ¿Cómo usas AI hoy? -->
         <div class="slide dark-slide">
             <h2>🤔 <span class="gradient-text">¿Cómo usas AI para programar hoy?</span></h2>
-            <div class="typical-use">
-                <div class="typical-use-item">
-                    🐛 "Ayúdame a arreglar este bug"
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1100px; margin: 40px auto;">
+                <div>
+                    <h3 style="color: #FCA5A5; margin-bottom: 20px;">❌ Problemas Típicos</h3>
+                    <div class="typical-use-item" style="margin: 15px 0;">
+                        🐛 "Ayúdame a arreglar este bug"
+                    </div>
+                    <div class="typical-use-item" style="margin: 15px 0;">
+                        🔘 "Genera un componente de botón"
+                    </div>
+                    <div class="typical-use-item" style="margin: 15px 0;">
+                        📝 "Explícame este código"
+                    </div>
+                    <div style="background: rgba(239, 68, 68, 0.1); padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <p style="color: #FCA5A5; font-size: 1rem;">
+                            <strong>Resultado:</strong> Snippets aislados, contexto perdido, proyectos pequeños
+                        </p>
+                    </div>
                 </div>
-                <div class="typical-use-item">
-                    🔘 "Genera un componente de botón"
-                </div>
-                <div class="typical-use-item">
-                    📝 "Explícame este código"
+                <div>
+                    <h3 style="color: #A78BFA; margin-bottom: 20px;">🧠 El Problema Real: Context Window</h3>
+                    <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px;">
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #A78BFA;">📉 Performance Degrada con Contexto</strong>
+                            <p style="color: #C4B5FD; font-size: 0.95rem; margin-top: 5px;">
+                                <span style="font-size: 0.85rem; opacity: 0.8;">(LoCoDiff Benchmark - Claude Opus 4.1)</span><br>
+                                • 2-21K tokens → ~95% success<br>
+                                • 21-35K tokens → ~80% success<br>
+                                • 36-60K tokens → ~50% success<br>
+                                • 60-98K tokens → ~20% success
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #A78BFA;">🎯 Needle in Haystack Problem</strong>
+                            <p style="color: #C4B5FD; font-size: 0.95rem; margin-top: 5px;">
+                                El modelo pierde detalles críticos en contextos largos
+                            </p>
+                        </div>
+                        <div>
+                            <strong style="color: #A78BFA;">♻️ Chat Único = Acumulación Tóxica</strong>
+                            <p style="color: #C4B5FD; font-size: 0.95rem; margin-top: 5px;">
+                                Cada edit suma contexto irrelevante hasta colapsar
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h3 style="text-align: center; margin-top: 40px; color: #EF4444;">
-                Resultado: Snippets aislados, proyectos pequeños 😕
-            </h3>
+            <div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); border: 2px solid #22C55E; padding: 20px; border-radius: 12px; max-width: 900px; margin: 30px auto;">
+                <h3 style="color: #86EFAC; text-align: center;">✅ La Solución: Context Management Inteligente</h3>
+                <p style="color: #86EFAC; text-align: center; margin-top: 10px; font-size: 1.1rem;">
+                    Agentes especializados que recopilan SOLO el contexto relevante para cada tarea
+                </p>
+            </div>
         </div>
 
         <!-- Slide 5: El ciclo de desarrollo REAL con BMad -->
@@ -1216,6 +1270,17 @@
                     <p style="font-size: 1.3rem; margin: 15px 0; color: #E5E7EB;">4️⃣ ¡Empieza a construir con /pm!</p>
                 </div>
                 <button class="cta">¡Vamos a construir algo increíble!</button>
+                <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="img/logo.svg" style="height: 40px; opacity: 0.8;">
+                        <span style="color: #A78BFA; font-size: 1.2rem; font-weight: 600;">BAISH</span>
+                    </div>
+                    <span style="color: #8B5CF6; font-size: 1.5rem;">×</span>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="img/yhatlogo.jpg" style="height: 40px; opacity: 0.8; border-radius: 4px;">
+                        <span style="color: #A78BFA; font-size: 1.2rem; font-weight: 600;">Y-hat</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
