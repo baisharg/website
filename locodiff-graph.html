@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoCoDiff Benchmark Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1625 0%, #2D1B69 100%);
+            color: white;
+            padding: 40px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .graph-container {
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #A78BFA 0%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #C4B5FD;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        #locodiffChart {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .legend-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 10px;
+            color: #FCD34D;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="graph-container">
+        <h1>LoCoDiff: Natural Long Context Code Bench</h1>
+        <div class="subtitle">200 casos, divididos en 4 buckets (todos los lenguajes)</div>
+        <canvas id="locodiffChart"></canvas>
+        <div class="note">
+            📊 <strong>Nota:</strong> Claude Opus 4.1 mantiene ~20% de éxito incluso en contextos largos (60-98K tokens),
+            mientras que otros modelos caen a menos del 5%
+        </div>
+    </div>
+
+    <script>
+        // Configure Chart.js defaults for dark theme
+        Chart.defaults.color = '#E5E7EB';
+        Chart.defaults.borderColor = 'rgba(139, 92, 246, 0.2)';
+
+        const ctx = document.getElementById('locodiffChart').getContext('2d');
+
+        const data = {
+            labels: ['2-21K', '21-35K', '36-60K', '60-98K'],
+            datasets: [
+                {
+                    label: 'Claude Opus 4.1',
+                    data: [95, 80, 50, 20],
+                    borderColor: '#3B82F6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointBackgroundColor: '#3B82F6',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2
+                },
+                {
+                    label: 'Sonnet-4',
+                    data: [73, 42, 30, 22],
+                    borderColor: '#F97316',
+                    backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'Gemini 2.5 Pro 06-05',
+                    data: [73, 37, 31, 24],
+                    borderColor: '#EF4444',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'GPT-5 (medium)',
+                    data: [66, 28, 22, 5],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'GPT-5 (minimal)',
+                    data: [66, 41, 20, 5],
+                    borderColor: '#22C55E',
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'Grok 4',
+                    data: [55, 17, 7, 3],
+                    borderColor: '#FCD34D',
+                    backgroundColor: 'rgba(252, 211, 77, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }
+            ]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 2,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            },
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    title: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(30, 27, 75, 0.95)',
+                        titleColor: '#A78BFA',
+                        borderColor: 'rgba(139, 92, 246, 0.3)',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: true,
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y + '% success';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Success Rate (%)',
+                            font: {
+                                size: 14
+                            }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            },
+                            stepSize: 10
+                        },
+                        grid: {
+                            color: 'rgba(139, 92, 246, 0.1)',
+                            borderDash: [5, 5]
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Prompt Token Length',
+                            font: {
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(139, 92, 246, 0.1)',
+                            borderDash: [5, 5]
+                        }
+                    }
+                }
+            }
+        };
+
+        const myChart = new Chart(ctx, config);
+
+        // Add animation on load
+        window.addEventListener('load', () => {
+            myChart.update('active');
+        });
+    </script>
+</body>
+</html>
