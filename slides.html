@@ -848,44 +848,53 @@
                 📁 PO: Shard Documents → Listos para Dev
             </div>
 
-            <div class="flow-section" style="position: relative;">
+            <div class="flow-section">
                 <div class="flow-title">🚀 Development Loop Iterativo</div>
-                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; position: relative; padding: 20px;">
-                    <!-- Create circular layout -->
-                    <div style="position: relative; width: 500px; height: 300px; margin: 0 auto;">
-                        <!-- Top row -->
-                        <div class="flow-item" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">SM Draft</div>
+                <div style="display: flex; flex-direction: column; gap: 15px; align-items: center; padding: 20px;">
+                    <!-- Top flow -->
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="flow-item">SM Draft</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">PO Validate<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">QA Risk/Design<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                        <div class="flow-arrow">→</div>
+                    </div>
 
-                        <!-- Top right -->
-                        <div class="flow-item" style="position: absolute; top: 20px; right: 50px;">PO Validate<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <!-- Right side -->
+                    <div style="align-self: flex-end; margin-right: 60px;">
+                        <div class="flow-arrow" style="transform: rotate(90deg);">→</div>
+                    </div>
 
-                        <!-- Right -->
-                        <div class="flow-item" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);">QA Risk/Design<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <!-- Middle -->
+                    <div style="align-self: flex-end; margin-right: 30px;">
+                        <div class="flow-item">Dev</div>
+                    </div>
 
-                        <!-- Bottom -->
-                        <div class="flow-item" style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">Dev</div>
+                    <!-- Down arrow -->
+                    <div style="align-self: flex-end; margin-right: 60px;">
+                        <div class="flow-arrow" style="transform: rotate(90deg);">→</div>
+                    </div>
 
-                        <!-- Left -->
-                        <div class="flow-item" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%);">QA Review<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                    <!-- Bottom flow (reversed) -->
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="flow-arrow" style="transform: rotate(180deg);">→</div>
+                        <div class="flow-item">Commit</div>
+                        <div class="flow-arrow" style="transform: rotate(180deg);">→</div>
+                        <div class="flow-item">QA Review<br><span style="font-size: 0.8em; opacity: 0.7;">(opcional)</span></div>
+                        <div class="flow-arrow" style="transform: rotate(180deg);">→</div>
+                    </div>
 
-                        <!-- Bottom left -->
-                        <div class="flow-item" style="position: absolute; bottom: 20px; left: 50px;">Commit</div>
+                    <!-- Left side up arrow -->
+                    <div style="align-self: flex-start; margin-left: 60px;">
+                        <div class="flow-arrow" style="transform: rotate(270deg);">→</div>
+                    </div>
 
-                        <!-- Arrows forming the loop -->
-                        <div style="position: absolute; top: 35px; left: 52%; font-size: 1.5rem; color: #8B5CF6; transform: rotate(45deg);">→</div>
-                        <div style="position: absolute; top: 50%; right: 35px; font-size: 1.5rem; color: #8B5CF6; transform: rotate(135deg);">→</div>
-                        <div style="position: absolute; bottom: 35px; right: 52%; font-size: 1.5rem; color: #8B5CF6; transform: rotate(225deg);">→</div>
-                        <div style="position: absolute; bottom: 35px; left: 35%; font-size: 1.5rem; color: #8B5CF6; transform: rotate(270deg);">→</div>
-                        <div style="position: absolute; top: 50%; left: 35px; font-size: 1.5rem; color: #8B5CF6; transform: rotate(315deg);">→</div>
-                        <div style="position: absolute; top: 35px; left: 35%; font-size: 1.5rem; color: #8B5CF6; transform: rotate(0deg);">→</div>
-
-                        <!-- Center loop indicator -->
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: #8B5CF6; opacity: 0.3;">🔄</div>
+                    <!-- Loop indicator -->
+                    <div style="text-align: center; color: #A78BFA; font-size: 0.95rem; margin-top: 10px;">
+                        🔄 <strong>Loop:</strong> Repite para cada story hasta completar el proyecto
                     </div>
                 </div>
-                <p style="text-align: center; color: #A78BFA; margin-top: 10px; font-size: 0.95rem;">
-                    ↻ Repite para cada story hasta completar el proyecto
-                </p>
             </div>
 
             <div class="hitl-box">
