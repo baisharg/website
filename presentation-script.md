@@ -215,31 +215,7 @@ Acá está la clave del éxito: **Human in the Loop**. Hay puntos donde tenés q
 
 ---
 
-## SLIDE 8: EL EQUIPO BMAD [12:30 - 14:00]
-
-Estos son los 8 agentes especializados que tenés disponibles. No es un solo modelo tratando de hacer todo - son 8 agentes distintos, cada uno experto en su área.
-
-[Hacer un paneo visual por la grilla]
-
-Tenemos:
-- **Business Analyst** - Para cuando no sabés ni por dónde empezar
-- **Product Manager** - El que planifica todo y crea los requirements
-- **Architect** - Diseña la arquitectura y elige el tech stack
-- **UX Expert** - Diseño de experiencia e interfaces
-- **Scrum Master** - Prepara las stories para desarrollo
-- **Product Owner** - Gestiona el backlog y shardea documentos
-- **Developer** - El que programa de verdad con tests
-- **QA/Test Architect** - Asegura la calidad y detecta riesgos
-
-8 agentes especializados laburando juntos para vos. Como tener un equipo senior de desarrollo, pero en tu laptop.
-
-Ahora veamos cada uno en detalle.
-
-[CLICK - Slide 8]
-
----
-
-## SLIDE 9: BUSINESS ANALYST [14:00 - 15:00]
+## SLIDE 8: BUSINESS ANALYST [12:30 - 13:30]
 
 El **Business Analyst** se llama Mary en los prompts.
 
@@ -261,7 +237,7 @@ Mary es opcional - si ya tenés tu idea clara, podés skipearla y arrancar direc
 
 ---
 
-## SLIDE 10: PRODUCT MANAGER [15:00 - 16:00]
+## SLIDE 9: PRODUCT MANAGER [13:30 - 14:30]
 
 El **Product Manager** se llama John. Y John es **el que planifica TODO.**
 
@@ -283,7 +259,7 @@ John es obligatorio - no podés skipear el PM. Necesitás esos requirements.
 
 ---
 
-## SLIDE 11: ARCHITECT [16:00 - 17:00]
+## SLIDE 10: ARCHITECT [14:30 - 15:30]
 
 El **Architect** se llama Winston. Y Winston **diseña toda la arquitectura del sistema.**
 
@@ -306,7 +282,7 @@ También es obligatorio - sin arquitectura, el Developer va a inventar cosas sob
 
 ---
 
-## SLIDE 12: UX EXPERT [17:00 - 18:00]
+## SLIDE 11: UX EXPERT [15:30 - 16:30]
 
 La **UX Expert** se llama Sally. Sally es **la diseñadora de experiencia.**
 
@@ -329,7 +305,7 @@ Si querés que tu app no parezca de los 90, usá a Sally.
 
 ---
 
-## SLIDE 13: SCRUM MASTER [18:00 - 19:00]
+## SLIDE 12: SCRUM MASTER [16:30 - 17:30]
 
 El **Scrum Master** se llama Bob. Bob es **especialista en preparación de stories.**
 
@@ -352,7 +328,7 @@ Sin Bob, el Developer mira el PRD gigante y se paraliza. Con Bob, tiene una tarj
 
 ---
 
-## SLIDE 14: PRODUCT OWNER [19:00 - 20:00]
+## SLIDE 13: PRODUCT OWNER [17:30 - 18:30]
 
 La **Product Owner** se llama Sarah. Sarah **gestiona el backlog y shardea documentos.**
 
@@ -373,7 +349,7 @@ Sarah es la que evita que el contexto explote. En vez de darle al Developer un d
 
 ---
 
-## SLIDE 15: DEVELOPER [20:00 - 21:00]
+## SLIDE 14: DEVELOPER [18:30 - 19:30]
 
 El **Developer** se llama James. James es **el que codea posta.**
 
@@ -396,7 +372,7 @@ James es el más usado. Vas a estar todo el tiempo en el loop de draft → valid
 
 ---
 
-## SLIDE 16: QA/TEST ARCHITECT [21:00 - 22:00]
+## SLIDE 15: QA/TEST ARCHITECT [19:30 - 20:30]
 
 El **Test Architect** se llama Quinn. Quinn es **tu asesor de calidad.**
 
@@ -421,7 +397,7 @@ Ustedes deciden si seguir adelante con CONCERNS o arreglarlo primero. Quinn info
 
 ---
 
-## SLIDE 17: FASE 1 - PLANNING [22:00 - 23:00]
+## SLIDE 16: FASE 1 - PLANNING [20:30 - 21:30]
 
 Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Planning y Development.
 
@@ -455,7 +431,7 @@ Listo. No tocaste una línea de código todavía. Y eso está bien - el planning
 
 ---
 
-## SLIDE 18: FASE 2 - DEVELOPMENT [23:00 - 24:00]
+## SLIDE 17: FASE 2 - DEVELOPMENT [21:30 - 22:30]
 
 **Fase 2: Development - Implementación iterativa story por story**
 
@@ -485,7 +461,7 @@ La ventaja de este approach es que siempre tenés una versión funcional. Si des
 
 ---
 
-## SLIDE 19: QUALITY GATES [24:00 - 24:30]
+## SLIDE 18: QUALITY GATES [22:30 - 23:00]
 
 Hablemos rápido de los quality gates porque son importantes.
 
@@ -518,7 +494,7 @@ Quinn te da la información. Vos decidís.
 
 ---
 
-## SLIDE 20: HERRAMIENTAS [24:30 - 25:30]
+## SLIDE 19: HERRAMIENTAS [23:00 - 24:00]
 
 Bueno, ya entendieron la metodología. ¿Cómo lo usamos en la práctica?
 
@@ -548,7 +524,7 @@ El setup es simple:
 
 ---
 
-## SLIDE 21: MCP TOOLS [25:30 - 27:00]
+## SLIDE 20: MCP TOOLS [24:00 - 25:30]
 
 MCP Tools son "superpoderes" para los agentes. Son herramientas especializadas que los LLMs pueden usar para hacer cosas que normalmente no pueden.
 
@@ -601,7 +577,7 @@ Ambos vienen pre-configurados en el repo. Se activan automáticamente cuando los
 
 ---
 
-## SLIDE 22: DEMO - LA IDEA [27:00 - 27:30]
+## SLIDE 21: DEMO - LA IDEA [25:30 - 26:00]
 
 Bueno, suficiente teoría. Veamos esto en acción.
 
@@ -621,7 +597,7 @@ Entonces vamos a ver cómo BMad construye esto desde cero.
 
 ---
 
-## SLIDE 23: DEMO FLOW [27:30 - 29:00]
+## SLIDE 22: DEMO FLOW [26:00 - 27:30]
 
 [Acá está el plan para la demo. Hay dos opciones dependiendo del tiempo:]
 
@@ -667,7 +643,7 @@ Y eso es todo. En 12 minutos pasamos de "quiero un pomodoro timer" a una app fun
 
 ---
 
-## SLIDE 24: ¿QUÉ PODÉS CONSTRUIR? [29:00 - 29:45]
+## SLIDE 23: ¿QUÉ PODÉS CONSTRUIR? [27:30 - 28:30]
 
 Ahora que vieron cómo funciona, ¿qué pueden construir con esto?
 
@@ -691,7 +667,7 @@ El límite lo ponés vos.
 
 ---
 
-## SLIDE 25: ¡COMENCEMOS! [29:45 - 30:00]
+## SLIDE 24: ¡COMENCEMOS! [28:30 - 30:00]
 
 Bueno, ya hablamos suficiente. Ahora viene la parte divertida: ustedes van a hacerlo.
 
@@ -738,16 +714,16 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 - Slide 5 (METR Study): 1:30 min
 - Slide 6 (Problema actual): 2:00 min
 - Slide 7 (Ciclo desarrollo): 2:00 min
-- Slides 8-16 (Team overview + 8 agentes): 9:00 min
-- Slides 17-19 (Workflow + QA): 2:30 min
-- Slides 20-21 (Tools + MCP): 2:30 min
-- Slides 22-23 (Demo): 2:00 min
-- Slides 24-25 (Cierre): 1:00 min
+- Slides 8-15 (8 agentes individuales): 7:30 min
+- Slides 16-18 (Workflow + QA): 2:30 min
+- Slides 19-20 (Tools + MCP): 2:30 min
+- Slides 21-22 (Demo): 2:00 min
+- Slides 23-24 (Cierre): 1:30 min
 
 **Total: 29:30 min** (buffer de 30 seg para transiciones)
 
 **Nota sobre timing crítico:**
-Los agentes individuales (slides 9-16) tienen que ser ágiles - 1 minuto cada uno. Si te atrasás, cortá la descripción del Analyst y UX Expert que son opcionales.
+Los agentes individuales (slides 8-15) son ~1 minuto cada uno. Si te atrasás, cortá la descripción del Analyst y UX Expert que son opcionales, y pasá más rápido por SM y PO.
 
 ---
 
@@ -767,16 +743,18 @@ Los agentes individuales (slides 9-16) tienen que ser ágiles - 1 minuto cada un
 
 ### Si te quedás sin tiempo
 **Cortar en este orden:**
-1. Slides individuales de agentes (9-16) - Hacer overview más rápido, 30 seg cada uno
-2. QA como agente opcional - Mencionarlo brevemente en otros slides
-3. Analyst y UX Expert - Enfocarte en PM, Architect, SM, PO, Dev
-4. MCP Tools (Slide 21) - Solo mencionar que existen
+1. Analyst (Slide 8) - Es opcional, skipear completamente
+2. UX Expert (Slide 11) - Es opcional, mencionar brevemente
+3. QA (Slide 15) - Mencionar que existe y es asesor, no detalle
+4. MCP Tools (Slide 20) - Solo mencionar que existen
+5. Hacer agentes restantes más rápidos - 30-45 seg cada uno
 
 **Nunca cortar:**
 - **El estudio METR (Slide 5)** - Es la justificación clave de por qué BMad
 - El problema y contexto (Slide 6)
-- El flujo general (Slides 7, 17, 18)
-- PM, Architect, Developer (los agentes core)
+- El flujo general (Slide 7)
+- PM (Slide 9), Architect (Slide 10), Developer (Slide 14) - Los agentes core
+- Workflow phases (Slides 16-17)
 
 ### Si te sobra tiempo
 - Expander más en el demo
