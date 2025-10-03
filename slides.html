@@ -1930,7 +1930,7 @@ export async function createTask(req: Request, res: Response) {
     </div>
 
     <script>
-        let currentSlide = 0;
+        let slideIndex = 0;
         let slides;
         let totalSlides;
 
@@ -1943,18 +1943,18 @@ export async function createTask(req: Request, res: Response) {
 
         function showSlide(n) {
             if (!slides || slides.length === 0) return;
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (n + totalSlides) % totalSlides;
-            slides[currentSlide].classList.add('active');
-            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (n + totalSlides) % totalSlides;
+            slides[slideIndex].classList.add('active');
+            document.getElementById('currentSlide').textContent = slideIndex + 1;
         }
 
         function nextSlide() {
-            showSlide(currentSlide + 1);
+            showSlide(slideIndex + 1);
         }
 
         function previousSlide() {
-            showSlide(currentSlide - 1);
+            showSlide(slideIndex - 1);
         }
 
         // Keyboard navigation
@@ -2342,12 +2342,12 @@ export async function createTask(req: Request, res: Response) {
         const originalShowSlide = showSlide;
         showSlide = function (n) {
             originalShowSlide(n);
-            // Initialize locodiff chart when we reach slide 4 (index 3)
-            if (currentSlide === 3) {
+            // Initialize locodiff chart when we reach slide 3 (index 2)
+            if (slideIndex === 2) {
                 setTimeout(initializeLocodiffChart, 300);
             }
-            // Initialize METR charts when we reach slide 5 (index 4)
-            if (currentSlide === 4) {
+            // Initialize METR charts when we reach slide 4 (index 3)
+            if (slideIndex === 3) {
                 setTimeout(initializeMetrCharts, 300);
             }
         }
@@ -2376,8 +2376,8 @@ export async function createTask(req: Request, res: Response) {
             } else {
                 console.log('Chart.js loaded successfully');
                 setTimeout(function () {
-                    if (currentSlide === 3) initializeLocodiffChart();
-                    if (currentSlide === 4) initializeMetrCharts();
+                    if (slideIndex === 2) initializeLocodiffChart();
+                    if (slideIndex === 3) initializeMetrCharts();
                 }, 500);
             }
         });
