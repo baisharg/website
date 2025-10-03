@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller de Agentic Coding - BAISH x Y-hat</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -1912,12 +1912,18 @@ export async function createTask(req: Request, res: Response) {
 
     <script>
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
+        let slides;
+        let totalSlides;
 
-        document.getElementById('totalSlides').textContent = totalSlides;
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function () {
+            slides = document.querySelectorAll('.slide');
+            totalSlides = slides.length;
+            document.getElementById('totalSlides').textContent = totalSlides;
+        });
 
         function showSlide(n) {
+            if (!slides || slides.length === 0) return;
             slides[currentSlide].classList.remove('active');
             currentSlide = (n + totalSlides) % totalSlides;
             slides[currentSlide].classList.add('active');
@@ -1973,6 +1979,12 @@ export async function createTask(req: Request, res: Response) {
         let metrTimeChartInstance = null;
 
         function initializeLocodiffChart() {
+            // Check if Chart.js is loaded
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js is not loaded yet');
+                return;
+            }
+
             const chartCanvas = document.getElementById('locodiffChart');
             if (!chartCanvas || locodiffChartInstance) return;
 
@@ -2124,6 +2136,12 @@ export async function createTask(req: Request, res: Response) {
         }
 
         function initializeMetrCharts() {
+            // Check if Chart.js is loaded
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js is not loaded yet');
+                return;
+            }
+
             // Initialize forecast chart (left)
             const forecastCanvas = document.getElementById('metrForecastChart');
             if (forecastCanvas && !metrForecastChartInstance) {
@@ -2307,13 +2325,43 @@ export async function createTask(req: Request, res: Response) {
             originalShowSlide(n);
             // Initialize locodiff chart when we reach slide 4 (index 3)
             if (currentSlide === 3) {
-                setTimeout(initializeLocodiffChart, 100);
+                setTimeout(initializeLocodiffChart, 300);
             }
             // Initialize METR charts when we reach slide 5 (index 4)
             if (currentSlide === 4) {
-                setTimeout(initializeMetrCharts, 100);
+                setTimeout(initializeMetrCharts, 300);
             }
         }
+
+        // Ensure charts are initialized if we start on those slides
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if Chart.js loaded successfully
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js failed to load from CDN. Charts will not be displayed.');
+                // Try to display an error message on the chart canvases
+                setTimeout(function () {
+                    const locodiffCanvas = document.getElementById('locodiffChart');
+                    const metrForecastCanvas = document.getElementById('metrForecastChart');
+                    const metrTimeCanvas = document.getElementById('metrTimeChart');
+
+                    [locodiffCanvas, metrForecastCanvas, metrTimeCanvas].forEach(canvas => {
+                        if (canvas) {
+                            const ctx = canvas.getContext('2d');
+                            ctx.fillStyle = '#FCD34D';
+                            ctx.font = '16px sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('Chart.js failed to load. Check your internet connection.', canvas.width / 2, canvas.height / 2);
+                        }
+                    });
+                }, 100);
+            } else {
+                console.log('Chart.js loaded successfully');
+                setTimeout(function () {
+                    if (currentSlide === 3) initializeLocodiffChart();
+                    if (currentSlide === 4) initializeMetrCharts();
+                }, 500);
+            }
+        });
     </script>
 </body>
 
