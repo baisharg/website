@@ -1,11 +1,13 @@
 # Script de Presentación: Taller de LLM Assisted Coding
-## BAISH x Y-hat | Duración: 40 minutos | Total de slides: 25
+## BAISH x Y-hat | Duración: 65-70 minutos total | Presentación: 24 min | Total de slides: 29
 
 **CAMBIOS IMPORTANTES:**
-- **3 nuevos slides:** Qué es un agente (7), Cómo resuelve contexto (8), DEMO (9)
+- **3 nuevos slides conceptuales:** Qué es un agente (7), Cómo resuelve contexto (8), DEMO (9)
+- **4 nuevos slides de cierre:** Feedback (26), Recursos (27), AIS Workshop (28), Gracias (29)
 - **Disclaimer movido:** De slide 3 a slide 11 (después del workflow)
 - **Ejemplos agregados:** PM, Architect, SM, Dev tienen ejemplos de código
 - **Mejoras:** Glossarios, diagramas de ecosistema, definición MCP, costos detallados
+- **QR codes:** Placeholders para feedback form y AIS workshop signup
 
 ---
 
@@ -849,11 +851,126 @@ Ahora sí - ¿tienen alguna pregunta rápida antes de arrancar con el hands-on?
 
 Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y empecemos a construir.
 
+[CLICK - Slide 26]
+
 ---
 
-## TIMING TOTAL: ~37 minutos de presentación + ~3 min de Q&A/transición = ~40 min total
+## SLIDE 26: FEEDBACK [22:00 - 22:30]
 
-**Breakdown por sección (25 slides total):**
+Antes de que se vayan a trabajar, necesito pedirles un favor.
+
+[Señalar el QR code]
+
+Su feedback es super importante para mejorar este workshop. Queremos saber:
+- ¿Qué funcionó bien?
+- ¿Qué necesita mejorar?
+- ¿Qué proyectos van a construir con esto?
+
+[Señalar el link]
+
+Pueden scanear el QR o ir directamente al link. Son literalmente 2 minutos - 3-4 preguntas cortitas.
+
+Este es el primer workshop que hacemos con BMad, y su feedback nos va a ayudar a hacerlo mejor para la próxima camada.
+
+[CLICK - Slide 27]
+
+---
+
+## SLIDE 27: RECURSOS [22:30 - 23:15]
+
+Para que sigan trabajando después del workshop, acá tienen todos los recursos.
+
+[Señalar el repo de BMad]
+
+**BMad Repository completo** - github.com/bmad-ai/bmad-method
+- Todo el código que vieron hoy
+- Los 8 prompts de agentes
+- Templates y checklists
+- Documentación completa
+
+[Señalar YouTube]
+
+**Tutorial completo en YouTube** - youtube.com/@bmad-method
+- Video paso a paso de todo el método
+- Ejemplos reales de proyectos
+- Tips y best practices
+
+[Señalar la grid de recursos adicionales]
+
+Y tienen más recursos:
+- **Docs** para referencia técnica
+- **Discord** para hacer preguntas y compartir proyectos
+- **Twitter** para updates
+- **Email** si necesitan ayuda directa
+
+[Señalar el CTA verde abajo]
+
+El mejor momento para empezar tu primer proyecto es HOY. No esperes - agarrá una idea que tengas, corré `/pm *create-prd`, y arrancá.
+
+[CLICK - Slide 28]
+
+---
+
+## SLIDE 28: INVITACIÓN AIS WORKSHOP [23:15 - 24:00]
+
+Y una invitación especial antes de terminar.
+
+[Señalar el header principal]
+
+**Workshop de AI Safety** - todos los martes, 15:00 a 17:00, Sala 1604.
+
+¿Qué hacemos ahí?
+- Discutimos proyectos de AI
+- Trabajamos en replicaciones de papers
+- Compartimos ideas y feedback
+- Y lo más importante: **café y medialunas gratis**
+
+[Señalar el lado derecho - Important info]
+
+Tres cosas importantes:
+1. **Abierto a todos** - no necesitan inscripción previa, pueden venir cuando quieran
+2. **Sin requisitos previos** - todos los niveles son bienvenidos
+3. **Ambiente colaborativo** - vengan a aprender y compartir
+
+[Señalar el QR de signup]
+
+Si quieren registrarse de todas formas para que sepamos cuánta gente viene (y cuántas medialunas comprar), pueden scanear el QR.
+
+Pero en serio - pueden aparecer el martes sin avisar, no hay problema.
+
+[Señalar el CTA final]
+
+Los esperamos el martes con café y buenas ideas.
+
+[CLICK - Slide 29]
+
+---
+
+## SLIDE 29: GRACIAS [24:00 - 24:30]
+
+[Slide final - Thank you]
+
+Bueno, eso es todo por la parte de teoría.
+
+Gracias BAISH y Y-hat por organizar esto.
+
+Y gracias a ustedes por venir y por la atención.
+
+Ahora sí - los siguientes 40-50 minutos son para ustedes. Saquen sus laptops, hagan el setup, y empiecen a construir.
+
+Nosotros vamos a estar dando vueltas para ayudar si tienen problemas con el setup o con sus primeros proyectos.
+
+¿Alguna pregunta de último minuto antes de arrancar?
+
+[Tomar 1-2 preguntas MUY breves, máximo 30 segundos cada una]
+
+Perfecto. ¡A construir!
+
+---
+
+## TIMING TOTAL: ~24 minutos de presentación + ~40 min hands-on = ~64 min total workshop
+
+**Breakdown por sección (29 slides total):**
 - Apertura + Slides 1-2 (Title, BAISH): 3:45 min
 - Slide 3 (LoCoDiff): 1:15 min
 - Slide 4 (METR Study): 1:45 min (+15 seg por BMad difference callout)
@@ -869,9 +986,13 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 - Slide 22 (Tools con ecosistema): 2:30 min (+1:15 min por diagramas/costos)
 - Slide 23 (MCP con definición): 1:00 min
 - Slide 24 (BAISH website ejemplo): 1:00 min
-- Slide 25 (Cierre): 2:00 min
+- Slide 25 (Cierre - Let's Build): 2:00 min
+- Slide 26 (Feedback form): 0:30 min [NUEVO]
+- Slide 27 (Resources): 0:45 min [NUEVO]
+- Slide 28 (AIS Workshop invitation): 0:45 min [NUEVO]
+- Slide 29 (Thank you): 0:30 min [NUEVO]
 
-**Total: ~37:00 min** de presentación + 3:00 min de buffer/Q&A = **~40:00 min total**
+**Total presentation: ~24:30 min** + Q&A/transition + **40 min hands-on** = **~65-70 min total workshop**
 
 **Nota sobre timing crítico:**
 - Si te atrasás, los agentes opcionales (Analyst, UX Expert) se pueden mencionar más rápido (30 seg cada uno en vez de 45 seg)

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cierre - Taller de LLM Assisted Coding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            background: #1a1625;
+        }
+
+        .presentation {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            padding: 60px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #3B82F6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .title-slide .subtitle {
+            font-size: 1.8rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .logo {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #6B46C1;
+        }
+
+        /* Dark Content Slides */
+        .dark-slide {
+            background: #1a1625;
+            color: white;
+        }
+
+        .dark-slide h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #A78BFA 0%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(139, 92, 246, 0.9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #8B5CF6;
+            transform: scale(1.05);
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(139, 92, 246, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px;
+            }
+
+            .title-slide h1 {
+                font-size: 2.5rem;
+            }
+
+            .dark-slide h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Feedback Form -->
+        <div class="slide active dark-slide">
+            <h2>📝 <span class="gradient-text">Tu Feedback es Importante</span></h2>
+            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <p style="color: #C4B5FD; font-size: 1.3rem; line-height: 1.6; margin-bottom: 40px;">
+                    Ayudanos a mejorar el workshop para futuras ediciones
+                </p>
+
+                <!-- QR Code Placeholder -->
+                <div style="background: white; width: 300px; height: 300px; margin: 0 auto 30px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                    <div style="text-align: center; color: #6B46C1;">
+                        <div style="font-size: 4rem; margin-bottom: 10px;">📱</div>
+                        <div style="font-size: 1.2rem; font-weight: 600;">QR CODE</div>
+                        <div style="font-size: 0.9rem;">Feedback Form</div>
+                    </div>
+                </div>
+
+                <!-- Link -->
+                <div style="background: rgba(139, 92, 246, 0.2); padding: 20px; border-radius: 10px; border: 1px solid rgba(139, 92, 246, 0.4); margin-bottom: 30px;">
+                    <p style="color: #A78BFA; font-size: 1rem; margin-bottom: 10px;">O visitá directamente:</p>
+                    <p style="color: #60A5FA; font-size: 1.2rem; font-family: 'Monaco', monospace; word-break: break-all;">
+                        forms.gle/PLACEHOLDER123
+                    </p>
+                </div>
+
+                <!-- CTA -->
+                <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%); padding: 25px; border-radius: 12px; border: 2px solid #8B5CF6;">
+                    <p style="color: white; font-size: 1.1rem; margin: 0; line-height: 1.6;">
+                        ⏱️ <strong>Solo toma 2 minutos</strong><br>
+                        <span style="font-size: 0.95rem; opacity: 0.9;">¿Qué funcionó? ¿Qué mejorar? ¿Qué proyectos vas a construir?</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Resources -->
+        <div class="slide dark-slide">
+            <h2>📚 <span class="gradient-text">Recursos para Continuar</span></h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+
+                <!-- Main Resources -->
+                <div style="display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 30px;">
+
+                    <!-- BMad Repo -->
+                    <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%); border: 2px solid #8B5CF6; padding: 30px; border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px;">
+                            <div style="font-size: 3rem;">📦</div>
+                            <div>
+                                <h3 style="color: #A78BFA; font-size: 1.5rem; margin: 0;">BMad Repository Completo</h3>
+                                <p style="color: #C4B5FD; margin: 5px 0 0 0; font-size: 0.95rem;">Todo el código, prompts, y documentación</p>
+                            </div>
+                        </div>
+                        <div style="background: #0F0E1A; padding: 15px; border-radius: 8px; font-family: 'Monaco', monospace;">
+                            <span style="color: #22D3EE;">github.com/bmad-ai/bmad-method</span>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Tutorial -->
+                    <div style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(251, 191, 36, 0.15) 100%); border: 2px solid #EF4444; padding: 30px; border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px;">
+                            <div style="font-size: 3rem;">🎥</div>
+                            <div>
+                                <h3 style="color: #FCA5A5; font-size: 1.5rem; margin: 0;">Tutorial Completo en YouTube</h3>
+                                <p style="color: #FCD34D; margin: 5px 0 0 0; font-size: 0.95rem;">Video paso a paso del BMad Method</p>
+                            </div>
+                        </div>
+                        <div style="background: #0F0E1A; padding: 15px; border-radius: 8px; font-family: 'Monaco', monospace;">
+                            <span style="color: #22D3EE;">youtube.com/@bmad-method</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Resources -->
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 25px; border-radius: 12px;">
+                    <h3 style="color: #A78BFA; margin-bottom: 20px; text-align: center;">🔗 Más Recursos</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                        <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                            <strong style="color: #60A5FA;">📖 Docs:</strong>
+                            <span style="color: #C4B5FD; font-size: 0.9rem;"> docs.bmad.ai</span>
+                        </div>
+                        <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                            <strong style="color: #60A5FA;">💬 Discord:</strong>
+                            <span style="color: #C4B5FD; font-size: 0.9rem;"> discord.gg/bmad</span>
+                        </div>
+                        <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                            <strong style="color: #60A5FA;">🐦 Twitter:</strong>
+                            <span style="color: #C4B5FD; font-size: 0.9rem;"> @bmad_ai</span>
+                        </div>
+                        <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                            <strong style="color: #60A5FA;">📧 Email:</strong>
+                            <span style="color: #C4B5FD; font-size: 0.9rem;"> hello@bmad.ai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom CTA -->
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%); border-radius: 10px; border: 2px solid #22C55E;">
+                    <p style="color: #86EFAC; font-size: 1.2rem; margin: 0;">
+                        🚀 <strong>Empezá tu primer proyecto hoy</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: AIS Workshop Invitation -->
+        <div class="slide dark-slide">
+            <h2>☕ <span class="gradient-text">¡Seguí Aprendiendo con Nosotros!</span></h2>
+            <div style="text-align: center; max-width: 1000px; margin: 0 auto;">
+
+                <!-- Main Invitation -->
+                <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%); border: 3px solid #8B5CF6; padding: 40px; border-radius: 16px; margin-bottom: 30px;">
+                    <h3 style="color: white; font-size: 2.5rem; margin: 0 0 20px 0;">
+                        <img src="img/jacarandashield.png" style="height: 1.2em; vertical-align: middle; margin-right: 15px;">
+                        Workshop de AI Safety
+                    </h3>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 12px; margin-bottom: 20px;">
+                        <p style="color: #FCD34D; font-size: 1.8rem; font-weight: 700; margin: 0;">
+                            🗓️ Martes 15:00-17:00
+                        </p>
+                        <p style="color: white; font-size: 1.3rem; margin: 10px 0 0 0;">
+                            📍 Sala 1604
+                        </p>
+                    </div>
+                    <p style="color: #C4B5FD; font-size: 1.2rem; line-height: 1.6;">
+                        • Discutí proyectos de AI<br>
+                        • Trabajá en replicaciones de papers<br>
+                        • Compartí ideas y feedback<br>
+                        • <strong style="color: #86EFAC;">☕ Café y medialunas gratis</strong>
+                    </p>
+                </div>
+
+                <!-- QR Codes Section -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+
+                    <!-- QR for Signup -->
+                    <div style="background: rgba(139, 92, 246, 0.1); border: 2px solid #8B5CF6; padding: 25px; border-radius: 12px;">
+                        <h4 style="color: #A78BFA; margin: 0 0 20px 0; font-size: 1.2rem;">📝 Registrate</h4>
+                        <div style="background: white; width: 200px; height: 200px; margin: 0 auto 20px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; color: #6B46C1;">
+                                <div style="font-size: 3rem; margin-bottom: 5px;">📱</div>
+                                <div style="font-size: 1rem; font-weight: 600;">QR CODE</div>
+                                <div style="font-size: 0.8rem;">Signup</div>
+                            </div>
+                        </div>
+                        <p style="color: #60A5FA; font-size: 0.9rem; font-family: 'Monaco', monospace; word-break: break-all; margin: 0;">
+                            forms.gle/AIS-SIGNUP
+                        </p>
+                    </div>
+
+                    <!-- Important Info -->
+                    <div style="background: rgba(34, 197, 94, 0.1); border: 2px solid #22C55E; padding: 25px; border-radius: 12px; display: flex; flex-direction: column; justify-content: center;">
+                        <h4 style="color: #86EFAC; margin: 0 0 20px 0; font-size: 1.3rem;">✨ Importante</h4>
+                        <div style="text-align: left; color: #E5E7EB; line-height: 2;">
+                            <p style="margin: 10px 0;"><strong style="color: #86EFAC;">✅ Abierto a todos</strong><br>
+                            <span style="font-size: 0.9rem; opacity: 0.9;">No necesitas inscripción previa</span></p>
+
+                            <p style="margin: 10px 0;"><strong style="color: #86EFAC;">✅ Sin requisitos previos</strong><br>
+                            <span style="font-size: 0.9rem; opacity: 0.9;">Todos los niveles bienvenidos</span></p>
+
+                            <p style="margin: 10px 0;"><strong style="color: #86EFAC;">✅ Ambiente colaborativo</strong><br>
+                            <span style="font-size: 0.9rem; opacity: 0.9;">Aprende y comparte con otros</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final CTA -->
+                <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%); border-radius: 12px;">
+                    <p style="color: white; font-size: 1.3rem; margin: 0; font-weight: 600;">
+                        ☕ Te esperamos el martes con café y buenas ideas
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Thank You -->
+        <div class="slide title-slide">
+            <h1 style="font-size: 3.5rem; margin-bottom: 30px;">¡Gracias!</h1>
+            <div class="subtitle" style="font-size: 1.5rem; margin-bottom: 40px;">
+                Ahora... ¡a construir proyectos increíbles! 🚀
+            </div>
+            <div class="logo-container">
+                <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="img/jacarandashield.png" style="height: 30px;">
+                    <span>BAISH</span>
+                </div>
+                <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="img/yhatlogo.jpg" style="height: 30px;">
+                    <span>Y-hat</span>
+                </div>
+            </div>
+            <div style="margin-top: 50px; color: rgba(255, 255, 255, 0.8); font-size: 1.1rem;">
+                <p>📧 Contacto: <span style="border-bottom: 1px solid rgba(255, 255, 255, 0.5);">baish@dc.uba.ar</span></p>
+                <p>🌐 Web: <span style="border-bottom: 1px solid rgba(255, 255, 255, 0.5);">baish.com.ar</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <button class="nav-btn" onclick="previousSlide()">← Anterior</button>
+        <button class="nav-btn" onclick="nextSlide()">Siguiente →</button>
+    </div>
+
+    <div class="slide-number">
+        <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'Home') {
+                showSlide(0);
+            } else if (e.key === 'End') {
+                showSlide(totalSlides - 1);
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                previousSlide();
+            }
+        }
+    </script>
+</body>
+
+</html>
