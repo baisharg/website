@@ -232,13 +232,11 @@ Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que 
 
 ## SLIDE 8: BUSINESS ANALYST [11:00 - 11:45]
 
-El **Business Analyst** se llama Mary en los prompts.
-
-¿Para qué sirve? Es **la que entiende el negocio y te ayuda a arrancar.**
+El **Business Analyst** es **el agente que entiende el negocio y te ayuda a arrancar.**
 
 Imaginate que tenés una idea medio vaga: "Quiero hacer una app para que la gente comparta recetas". Pero no sabés exactamente qué features necesitás, quién es tu competencia, cómo monetizar.
 
-Mary te ayuda con:
+El Analyst te ayuda con:
 - Armar briefs del proyecto
 - Investigar mercado y competencia
 - Organizar lluvias de ideas
@@ -250,7 +248,7 @@ Mary te ayuda con:
 
 El comando es `/analyst *create-project-brief`
 
-Mary es para proyectos greenfield donde arrancás de cero. Si ya tenés tu idea clara, podés skipearla.
+El Analyst es para proyectos greenfield donde arrancás de cero. Si ya tenés tu idea clara, podés skipear este agente.
 
 [CLICK - Slide 9]
 
@@ -258,11 +256,11 @@ Mary es para proyectos greenfield donde arrancás de cero. Si ya tenés tu idea 
 
 ## SLIDE 9: PRODUCT MANAGER [11:45 - 12:30]
 
-El **Product Manager** se llama John. John es **el que planifica TODO.**
+El **Product Manager** es **el agente que planifica TODO.**
 
 El PM toma tu idea y la convierte en un PRD - Product Requirements Document. Este es el documento más importante del proyecto.
 
-¿Qué hace John?
+¿Qué hace el PM?
 - Arma PRDs completos con features, user stories, requirements
 - Define prioridades - MVP vs roadmap
 - Documenta todo
@@ -275,7 +273,7 @@ El comando principal es `/pm *create-prd`
 
 El PRD es tu contrato. Es lo que guía a todos los demás agentes. Si el PRD está bien hecho, el resto fluye.
 
-John es obligatorio - no podés skipear el PM. Necesitás esos requirements.
+El PM es obligatorio - no podés skipear este agente. Necesitás esos requirements.
 
 [CLICK - Slide 10]
 
@@ -283,11 +281,11 @@ John es obligatorio - no podés skipear el PM. Necesitás esos requirements.
 
 ## SLIDE 10: ARCHITECT [12:30 - 13:15]
 
-El **Architect** se llama Winston. Winston **diseña toda la arquitectura del sistema.**
+El **Architect** es el agente que **diseña toda la arquitectura del sistema.**
 
-Una vez que John terminó el PRD, Winston lo lee y diseña cómo se va a construir técnicamente.
+Una vez que el PM terminó el PRD, el Architect lo lee y diseña cómo se va a construir técnicamente.
 
-¿Qué hace Winston?
+¿Qué hace el Architect?
 - Diseña arquitectura completa - frontend, backend, base de datos, APIs
 - Elige el tech stack - React o Vue, Node o Python, SQL o NoSQL
 - Define APIs y contratos entre componentes
@@ -308,11 +306,11 @@ También es obligatorio - sin arquitectura, el Developer va a inventar cosas sob
 
 ## SLIDE 11: UX EXPERT [13:15 - 13:50]
 
-La **UX Expert** se llama Sally. Sally es **la diseñadora de experiencia.**
+El **UX Expert** es el agente **diseñador de experiencia.**
 
-Sally es para apps con UI - si tu app tiene interfaz de usuario, vale la pena usarla.
+El UX Expert es para apps con UI - si tu app tiene interfaz de usuario, vale la pena usar este agente.
 
-¿Qué hace Sally?
+¿Qué hace el UX Expert?
 - Diseño de UX e UI
 - Wireframes y prototipos
 - User research e interaction design
@@ -325,7 +323,7 @@ Sally es para apps con UI - si tu app tiene interfaz de usuario, vale la pena us
 
 El comando es `/ux-expert *create-front-end-spec`
 
-Sally genera un spec que el Developer sigue, o que vos podés usar para generar UI con herramientas como v0 o Lovable.
+El UX Expert genera un spec que el Developer sigue, o que vos podés usar para generar UI con herramientas como v0 o Lovable.
 
 [CLICK - Slide 12]
 
@@ -333,11 +331,11 @@ Sally genera un spec que el Developer sigue, o que vos podés usar para generar 
 
 ## SLIDE 12: SCRUM MASTER [13:50 - 14:30]
 
-El **Scrum Master** se llama Bob. Bob es **especialista en preparación de stories.**
+El **Scrum Master** es el agente **especialista en preparación de stories.**
 
 Acá es donde el proyecto pasa de documentos a trabajo ejecutable.
 
-¿Qué hace Bob?
+¿Qué hace el SM?
 - Crea stories detalladas y accionables
 - Define criterios de aceptación claros
 - Secuencia las tareas - primero esto, después esto
@@ -349,9 +347,9 @@ Acá es donde el proyecto pasa de documentos a trabajo ejecutable.
 
 El comando principal es `/sm *draft`
 
-Bob agarra los shards del PO y dice: "Ok Developer, hacé exactamente esto, en este orden, con estos criterios de éxito."
+El SM agarra los shards del PO y dice: "Ok Developer, hacé exactamente esto, en este orden, con estos criterios de éxito."
 
-Sin Bob, el Developer se paraliza. Con Bob, tiene una tarjeta clara.
+Sin el SM, el Developer se paraliza. Con el SM, tiene una tarjeta clara.
 
 [CLICK - Slide 13]
 
@@ -359,11 +357,11 @@ Sin Bob, el Developer se paraliza. Con Bob, tiene una tarjeta clara.
 
 ## SLIDE 13: PRODUCT OWNER [14:30 - 15:10]
 
-La **Product Owner** se llama Sarah. Sarah **gestiona el backlog y shardea documentos.**
+El **Product Owner** es el agente que **gestiona el backlog y shardea documentos.**
 
 El sharding es crítico - es cómo resolvemos el problema del contexto largo.
 
-¿Qué hace Sarah?
+¿Qué hace el PO?
 - Shardea PRD y arquitectura en epics y stories
 - Valida story drafts contra requirements
 - Gestión de backlog y priorización
@@ -375,7 +373,7 @@ El sharding es crítico - es cómo resolvemos el problema del contexto largo.
 
 El comando principal es `/po *shard-doc`
 
-Sarah evita que el contexto explote. En vez de 10,000 tokens de PRD gigante, le da al Developer 500 tokens con exactamente lo que necesita para esta story.
+El PO evita que el contexto explote. En vez de 10,000 tokens de PRD gigante, le da al Developer 500 tokens con exactamente lo que necesita para esta story.
 
 [CLICK - Slide 14]
 
@@ -383,11 +381,11 @@ Sarah evita que el contexto explote. En vez de 10,000 tokens de PRD gigante, le 
 
 ## SLIDE 14: DEVELOPER [15:10 - 15:50]
 
-El **Developer** se llama James. James es **el que codea posta.**
+El **Developer** es el agente que **codea posta.**
 
-Todo lo anterior era preparación. James es donde la magia sucede.
+Todo lo anterior era preparación. El Developer es donde la magia sucede.
 
-¿Qué hace James?
+¿Qué hace el Dev?
 - Programa cada feature con todos los tests
 - Tests unitarios, de integración y E2E
 - Debuggea y refactorea
@@ -400,9 +398,9 @@ Todo lo anterior era preparación. James es donde la magia sucede.
 
 El comando principal es `/dev *develop-story`
 
-James recibe la story de Bob, lee la arquitectura de Winston, el spec de Sally si existe, y programa. Genera código que funciona, con tests que pasan.
+El Developer recibe la story del SM, lee la arquitectura del Architect, el spec del UX Expert si existe, y programa. Genera código que funciona, con tests que pasan.
 
-James es el más usado - vas a estar en el loop: draft → develop → commit.
+El Dev es el más usado - vas a estar en el loop: draft → develop → commit.
 
 [CLICK - Slide 15]
 
@@ -410,11 +408,11 @@ James es el más usado - vas a estar en el loop: draft → develop → commit.
 
 ## SLIDE 15: QA/TEST ARCHITECT [15:50 - 16:35]
 
-El **Test Architect** se llama Quinn. Quinn es **tu asesor de calidad.**
+El **Test Architect** es el agente **asesor de calidad.**
 
-Importante: Quinn NO bloquea. Quinn **asesora**. Ustedes deciden la barra de calidad.
+Importante: El QA NO bloquea. El QA **asesora**. Ustedes deciden la barra de calidad.
 
-¿Qué hace Quinn?
+¿Qué hace el QA?
 - Risk profiling - matriz de riesgos
 - Test design - estrategia de testing
 - Requirements traceability - Given-When-Then
@@ -427,9 +425,9 @@ Importante: Quinn NO bloquea. Quinn **asesora**. Ustedes deciden la barra de cal
 
 El comando es `/qa *review {story}`
 
-Quinn puede entrar antes de desarrollar (análisis de riesgo) o después (code review). Ustedes deciden si seguir con CONCERNS o arreglar primero.
+El QA puede entrar antes de desarrollar (análisis de riesgo) o después (code review). Ustedes deciden si seguir con CONCERNS o arreglar primero.
 
-**Y acá está el workflow pedagógico:** Si estás haciendo un TP, usá QA para revisar TU código y aprender de feedback experto.
+**Y acá está el workflow pedagógico:** Si estás haciendo un TP, usá el QA para revisar TU código y aprender de feedback experto.
 
 [CLICK - Slide 16]
 
@@ -476,13 +474,13 @@ Esta fase es un loop. Lo repetís para cada story hasta terminar el proyecto.
 
 **El workflow core tiene 6 pasos:**
 
-**1. SM: Review Previous Notes** - Bob revisa notas de dev/QA de la story anterior para aprender de lo que pasó.
+**1. SM: Review Previous Notes** - El SM revisa notas de dev/QA de la story anterior para aprender de lo que pasó.
 
 **2. SM: Draft Next Story** - Prepara la siguiente story desde el epic shardeado con tareas secuenciales.
 
-**3. Dev: Implementation** - James programa: código de producción + tests (unit, integration, E2E) + validaciones.
+**3. Dev: Implementation** - El Developer programa: código de producción + tests (unit, integration, E2E) + validaciones.
 
-**4. Dev: Ready for Review + Notes** - James marca el trabajo listo para review y documenta notas para la próxima story.
+**4. Dev: Ready for Review + Notes** - El Developer marca el trabajo listo para review y documenta notas para la próxima story.
 
 **5. Verify Tests/Linting → COMMIT** - IMPORTANTE: Verificar que todos los tests de regresión y el linting pasen, después hacer COMMIT.
 
@@ -498,7 +496,7 @@ Es **iterativo**. Story por story, commit por commit, hasta completar el proyect
 
 La ventaja: siempre tenés una versión funcional. Si después de 5 stories querés cambiar el rumbo, podés. No estás comprometido a un plan gigante.
 
-**Y acá está el loop de aprendizaje:** las notas que James deja hoy son las que Bob usa mañana para mejorar el siguiente draft.
+**Y acá está el loop de aprendizaje:** las notas que el Developer deja hoy son las que el SM usa mañana para mejorar el siguiente draft.
 
 [CLICK - Slide 18]
 
@@ -510,7 +508,7 @@ Hablemos rápido de los quality gates porque son importantes.
 
 [Arriba - features]
 
-Quinn ofrece 4 tipos de análisis:
+El QA ofrece 4 tipos de análisis:
 - **Risk Profiling** - ¿Qué puede salir mal?
 - **Test Design** - ¿Cómo testeamos esto bien?
 - **Requirements Tracing** - ¿Estamos cumpliendo con lo que pedimos?
@@ -518,7 +516,7 @@ Quinn ofrece 4 tipos de análisis:
 
 [Medio - gate status]
 
-Quinn emite uno de cuatro estados:
+El QA emite uno de cuatro estados:
 
 - **PASS** ✅ - Todo bien, adelante
 - **CONCERNS** ⚠️ - Hay problemas menores, considérenlos
@@ -531,7 +529,7 @@ Quinn emite uno de cuatro estados:
 
 Esto significa: si estás haciendo un MVP rápido para una hackathon, podés ignorar los CONCERNS. Si estás construyendo software médico, probablemente no.
 
-Quinn te da la información. Vos decidís.
+El QA te da la información. Vos decidís.
 
 [CLICK - Slide 19]
 
@@ -594,7 +592,7 @@ Casos de uso:
 - Testear user flows reales
 - Detectar bugs visuales
 
-Con Playwright, Quinn puede literalmente abrir tu app, usarla como lo haría un usuario, y decirte "el botón de login no funciona en mobile".
+Con Playwright, el QA puede literalmente abrir tu app, usarla como lo haría un usuario, y decirte "el botón de login no funciona en mobile".
 
 [Segunda sección - Sequential Thinking]
 
@@ -614,7 +612,7 @@ Ideal para:
 - Análisis que requiere reconsideración
 - Decisiones arquitectónicas con múltiples tradeoffs
 
-Con Sequential Thinking, Winston puede pensar "Ok, podría usar REST o GraphQL, veamos pros y cons de cada uno para este caso específico" antes de decidir.
+Con Sequential Thinking, el Architect puede pensar "Ok, podría usar REST o GraphQL, veamos pros y cons de cada uno para este caso específico" antes de decidir.
 
 [Banner final]
 
