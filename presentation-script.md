@@ -1,4 +1,4 @@
-# Script de Presentación: Taller de LLM Assisted Coding
+# Script de Presentación: Taller de Agentic Coding
 ## BAISH x Y-hat | Duración: 65-70 minutos total | Presentación: 24 min | Total de slides: 29
 
 **CAMBIOS IMPORTANTES:**
@@ -31,7 +31,7 @@ Bueno, ahí está el problema que vamos a resolver hoy. Les voy a mostrar exacta
 
 ## SLIDE 1: TÍTULO [1:30 - 3:00]
 
-Bienvenidos al Taller de LLM Assisted Coding. Noten que tachamos "Vibe Coding" porque lo que les vamos a mostrar hoy no es tirar prompts al aire a ver qué sale. Es un método profesional, estructurado, que genera apps completas y funcionales.
+Bienvenidos al Taller de Agentic Coding. Noten que tachamos "Vibe Coding" porque lo que les vamos a mostrar hoy no es tirar prompts al aire a ver qué sale. Es un método profesional, estructurado, que genera apps completas y funcionales.
 
 El título dice "Armá proyectos con AI como si tuvieras todo un equipo" - y es literal. Vamos a usar 8 agentes especializados que trabajan juntos: Product Manager, Arquitecto, Desarrollador, QA, y más.
 
