@@ -1322,28 +1322,26 @@ export async function createTask(req: Request, res: Response) {
 
         <!-- Slide 17: El ciclo de desarrollo REAL con BMad -->
         <div class="slide dark-slide">
-            <h2>⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
+            <h2 style="font-size: 2rem; margin-bottom: 15px;">⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
 
             <!-- Two-column layout for horizontal space -->
-            <div style="display: flex; gap: 30px; width: 100%; max-width: 1400px; margin: 20px 0;">
+            <div style="display: flex; gap: 25px; width: 100%; max-width: 1400px; margin: 10px 0; align-items: flex-start;">
                 <!-- Left column: Planning -->
                 <div style="flex: 1;">
-                    <div class="flow-section">
-                        <div class="flow-title">📋 Planning Riguroso</div>
-                        <div class="flow-items" style="flex-direction: column; gap: 8px;">
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div class="flow-item" style="flex-shrink: 0;">PM</div>
-                                <div class="flow-arrow">→</div>
-                                <div class="flow-item" style="flex-shrink: 0;">Architect</div>
-                            </div>
-                            <div class="flow-arrow" style="transform: rotate(90deg); margin: 0;">↓</div>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div class="flow-item" style="flex-shrink: 0;">PO Checklist</div>
-                                <div class="flow-arrow">→</div>
-                                <div class="flow-item" style="flex-shrink: 0;">PO Shard</div>
-                            </div>
+                    <div class="flow-section" style="padding: 15px;">
+                        <div class="flow-title" style="font-size: 1rem; margin-bottom: 10px;">📋 Planning Riguroso</div>
+                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px;">
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">PM</div>
+                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Architect</div>
                         </div>
-                        <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
+                        <div class="flow-arrow" style="font-size: 1.5rem; text-align: center;">↓</div>
+                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">PO Checklist</div>
+                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">PO Shard</div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #A78BFA;">
                             + Analyst, UX Expert, QA cuando sea necesario
                         </div>
                     </div>
@@ -1351,65 +1349,55 @@ export async function createTask(req: Request, res: Response) {
 
                 <!-- Right column: Development Loop -->
                 <div style="flex: 1;">
-                    <div class="flow-section">
-                        <div class="flow-title">🚀 Development Loop Iterativo</div>
-                        <div class="flow-items" style="flex-direction: column; gap: 8px;">
-                            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                                <div class="flow-item" style="flex-shrink: 0;">SM Review</div>
-                                <div class="flow-arrow">→</div>
-                                <div class="flow-item" style="flex-shrink: 0;">SM Draft</div>
-                            </div>
-                            <div class="flow-arrow" style="transform: rotate(90deg); margin: 0;">↓</div>
-                            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                                <div class="flow-item" style="flex-shrink: 0;">Dev</div>
-                                <div class="flow-arrow">→</div>
-                                <div class="flow-item" style="flex-shrink: 0;">Ready+Notes</div>
-                            </div>
-                            <div class="flow-arrow" style="transform: rotate(90deg); margin: 0;">↓</div>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div class="flow-item" style="flex-shrink: 0;">Tests✓Commit</div>
-                                <div class="flow-arrow" style="font-size: 1.8rem;">🔄</div>
-                            </div>
+                    <div class="flow-section" style="padding: 15px;">
+                        <div class="flow-title" style="font-size: 1rem; margin-bottom: 10px;">🚀 Development Loop Iterativo</div>
+                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px;">
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">SM Review</div>
+                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">SM Draft</div>
                         </div>
-                        <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
+                        <div class="flow-arrow" style="font-size: 1.5rem; text-align: center;">↓</div>
+                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px;">
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Dev</div>
+                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Ready+Notes</div>
+                        </div>
+                        <div class="flow-arrow" style="font-size: 1.5rem; text-align: center;">↓</div>
+                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Tests✓Commit</div>
+                            <div class="flow-arrow" style="font-size: 1.5rem;">🔄</div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #A78BFA;">
                             + PO Validate, QA Risk/Review cuando sea necesario
                         </div>
-                        <p style="text-align: center; color: #A78BFA; margin-top: 10px; font-size: 0.9rem;">
-                            ↻ Repite para cada story hasta completar el proyecto
-                        </p>
                     </div>
                 </div>
             </div>
 
             <!-- Center connector -->
-            <div
-                style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 12px; border-radius: 10px; text-align: center; max-width: 600px; margin: 15px auto; font-weight: 600; font-size: 1rem;">
+            <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 10px; border-radius: 8px; text-align: center; max-width: 500px; margin: 12px auto; font-weight: 600; font-size: 0.95rem;">
                 📁 Documents Shardeados → Listos para Dev
             </div>
 
             <!-- HITL Box -->
-            <div class="hitl-box">
+            <div class="hitl-box" style="padding: 10px; font-size: 0.9rem; margin: 10px auto;">
                 👤 Human in the Loop: Aprobación requerida en puntos clave de transición
             </div>
 
             <!-- How HITL works -->
-            <div
-                style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 18px; border-radius: 10px; max-width: 900px; margin: 15px auto;">
-                <strong style="color: #60A5FA; font-size: 1rem;">🤔 ¿Cómo funciona el control humano?</strong>
-                <p style="color: #C4B5FD; margin-top: 8px; line-height: 1.5; font-size: 0.9rem;">
-                    <strong style="color: white;">VOS invocás cada agente manualmente.</strong> El workflow NO procede
-                    automáticamente.
+            <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 12px; border-radius: 8px; max-width: 900px; margin: 10px auto;">
+                <strong style="color: #60A5FA; font-size: 0.95rem;">🤔 ¿Cómo funciona el control humano?</strong>
+                <p style="color: #C4B5FD; margin-top: 6px; line-height: 1.4; font-size: 0.85rem;">
+                    <strong style="color: white;">VOS invocás cada agente manualmente.</strong> El workflow NO procede automáticamente.
                 </p>
-                <div
-                    style="margin-top: 12px; padding: 12px; background: #0F0E1A; border-radius: 8px; font-family: 'Monaco', monospace; color: #22D3EE; font-size: 0.85rem; line-height: 1.6;">
+                <div style="margin-top: 8px; padding: 10px; background: #0F0E1A; border-radius: 6px; font-family: 'Monaco', monospace; color: #22D3EE; font-size: 0.75rem; line-height: 1.5;">
                     1. PM termina → VOS revisás el PRD<br>
-                    2. Si te gusta → VOS tipeas: <span style="color: white;">/architect
-                        *create-full-stack-architecture</span><br>
+                    2. Si te gusta → VOS tipeas: <span style="color: white;">/architect *create-full-stack-architecture</span><br>
                     3. Architect termina → VOS revisás arquitectura<br>
                     4. Si necesita cambios → VOS editás o pedís regenerar<br>
                     5. Si está listo → VOS continuás al siguiente paso
                 </div>
-                <p style="color: #86EFAC; margin-top: 8px; font-size: 0.9rem; text-align: center;">
+                <p style="color: #86EFAC; margin-top: 6px; font-size: 0.85rem; text-align: center;">
                     ✅ Tenés control total en cada transición
                 </p>
             </div>
@@ -1602,9 +1590,10 @@ export async function createTask(req: Request, res: Response) {
 
         <!-- Slide 21: Herramientas -->
         <div class="slide dark-slide">
-            <h2>🛠️ <span class="gradient-text">Herramientas que vamos a usar</span></h2>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="tools-list">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">🛠️ <span class="gradient-text">Herramientas que vamos a usar</span></h2>
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <!-- Two-column layout for tools -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
                     <div class="tool-item">
                         <div class="tool-category">💻 Entorno</div>
                         <div class="tool-names">VS Code en GitHub Codespaces</div>
@@ -1612,14 +1601,12 @@ export async function createTask(req: Request, res: Response) {
                     <div class="tool-item">
                         <div class="tool-category">🤖 Modelos Gratuitos</div>
                         <div class="tool-names">code-supernova, Grok Code Fast 1</div>
-                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">80 estudiantes × alto uso de
-                            tokens = necesitamos opciones gratuitas</div>
+                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">80 estudiantes × alto uso de tokens = necesitamos opciones gratuitas</div>
                     </div>
                     <div class="tool-item">
                         <div class="tool-category">🎓 GitHub Student (Recomendado)</div>
                         <div class="tool-names">Copilot Pro gratis → Acceso a Sonnet 4.5</div>
-                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">Login con GitHub en OpenCode
-                            para usar Sonnet</div>
+                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">Login con GitHub en OpenCode para usar Sonnet</div>
                     </div>
                     <div class="tool-item">
                         <div class="tool-category">📚 Framework</div>
@@ -1632,8 +1619,7 @@ export async function createTask(req: Request, res: Response) {
                     <div class="tool-item">
                         <div class="tool-category">🔌 Compatibilidad</div>
                         <div class="tool-names">Funciona en Cursor, Copilot, Claude Code</div>
-                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">BMad son prompts, no software
-                            propietario</div>
+                        <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">BMad son prompts, no software propietario</div>
                     </div>
                 </div>
 
@@ -1894,16 +1880,25 @@ export async function createTask(req: Request, res: Response) {
         <!-- Slide 25: Let's Build! -->
         <div class="slide dark-slide">
             <h2>🚀 <span class="gradient-text" style="font-size: 3.5rem;">¡Comencemos!</span></h2>
-            <div style="text-align: center; margin-top: 50px;">
+            <div style="text-align: center; margin-top: 40px;">
+                <!-- Repo Link -->
+                <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 15px 30px; border-radius: 12px; margin: 0 auto 30px; max-width: 700px;">
+                    <p style="color: white; font-size: 1rem; margin-bottom: 8px;">📂 Repo del Workshop:</p>
+                    <a href="https://github.com/baisharg/Workshop-Vibe-Coding" target="_blank"
+                       style="color: #FCD34D; font-size: 1.3rem; font-weight: 600; text-decoration: none; font-family: 'Monaco', monospace;">
+                        github.com/baisharg/Workshop-Vibe-Coding
+                    </a>
+                </div>
+
                 <h3 style="color: #C4B5FD;">📝 Setup en 5 pasos:</h3>
                 <div
-                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 30px; border-radius: 15px; margin: 30px auto; width: 80%; max-width: 700px;">
-                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">1️⃣ Fork del repo del workshop</p>
-                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">2️⃣ Abrirlo en GitHub Codespaces</p>
-                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">3️⃣ Correr el script de setup</p>
-                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">4️⃣ Ingresar tu API key <span
+                    style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 25px; border-radius: 15px; margin: 25px auto; width: 80%; max-width: 700px;">
+                    <p style="font-size: 1.15rem; margin: 10px 0; color: #E5E7EB;">1️⃣ Fork del repo del workshop</p>
+                    <p style="font-size: 1.15rem; margin: 10px 0; color: #E5E7EB;">2️⃣ Abrirlo en GitHub Codespaces</p>
+                    <p style="font-size: 1.15rem; margin: 10px 0; color: #E5E7EB;">3️⃣ Correr el script de setup</p>
+                    <p style="font-size: 1.15rem; margin: 10px 0; color: #E5E7EB;">4️⃣ Ingresar tu API key <span
                             style="color: #86EFAC; font-size: 0.9rem;">(provista por instructores)</span></p>
-                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">5️⃣ Seleccionar el modelo</p>
+                    <p style="font-size: 1.15rem; margin: 10px 0; color: #E5E7EB;">5️⃣ Seleccionar el modelo</p>
                 </div>
                 <button class="cta">¡Vamos a armar algo copado!</button>
                 <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; align-items: center;">
