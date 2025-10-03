@@ -1329,59 +1329,46 @@ export async function createTask(req: Request, res: Response) {
         <div class="slide dark-slide">
             <h2 style="font-size: 2rem; margin-bottom: 15px;">⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
 
-            <!-- Two-column layout for horizontal space -->
-            <div style="display: flex; gap: 25px; width: 100%; max-width: 1400px; margin: 10px 0; align-items: flex-start;">
-                <!-- Left column: Planning -->
-                <div style="flex: 1;">
-                    <div class="flow-section" style="padding: 15px;">
-                        <div class="flow-title" style="font-size: 1rem; margin-bottom: 10px;">📋 Planning Riguroso</div>
-                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px;">
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">PM</div>
-                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Architect</div>
-                        </div>
-                        <div class="flow-arrow" style="font-size: 1.5rem; text-align: center;">↓</div>
-                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">PO Checklist</div>
-                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">PO Shard</div>
-                        </div>
-                        <div style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #A78BFA;">
-                            + Analyst, UX Expert, QA cuando sea necesario
-                        </div>
+            <!-- Single horizontal workflow -->
+            <div class="flow-section" style="padding: 20px; max-width: 100%; width: 95%;">
+                <!-- Planning Phase Label -->
+                <div class="flow-title" style="font-size: 1rem; margin-bottom: 15px; text-align: center;">📋 Planning Riguroso</div>
+
+                <!-- Main horizontal flow -->
+                <div style="display: flex; align-items: center; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 15px;">
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">PM</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">Architect</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">PO Checklist</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">PO Shard</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; color: white;">
+                        📁 Documents Shardeados
                     </div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">SM Review</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">SM Draft</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">Dev</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">Ready+Notes</div>
+                    <div class="flow-arrow" style="font-size: 1.3rem;">→</div>
+                    <div class="flow-item" style="padding: 10px 15px; font-size: 0.9rem;">Tests✓Commit</div>
+                    <div class="flow-arrow" style="font-size: 1.5rem;">🔄</div>
                 </div>
 
-                <!-- Right column: Development Loop -->
-                <div style="flex: 1;">
-                    <div class="flow-section" style="padding: 15px;">
-                        <div class="flow-title" style="font-size: 1rem; margin-bottom: 10px;">🚀 Development Loop Iterativo</div>
-                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px;">
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">SM Review</div>
-                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">SM Draft</div>
-                        </div>
-                        <div class="flow-arrow" style="font-size: 1.5rem; text-align: center;">↓</div>
-                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px;">
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Dev</div>
-                            <div class="flow-arrow" style="font-size: 1.2rem;">→</div>
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Ready+Notes</div>
-                        </div>
-                        <div class="flow-arrow" style="font-size: 1.5rem; text-align: center;">↓</div>
-                        <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
-                            <div class="flow-item" style="padding: 8px 12px; font-size: 0.9rem;">Tests✓Commit</div>
-                            <div class="flow-arrow" style="font-size: 1.5rem;">🔄</div>
-                        </div>
-                        <div style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #A78BFA;">
-                            + PO Validate, QA Risk/Review cuando sea necesario
-                        </div>
-                    </div>
+                <!-- Development Loop Label -->
+                <div style="text-align: center; margin-top: 5px;">
+                    <span style="font-size: 0.9rem; color: #A78BFA;">🚀 Development Loop Iterativo (desde SM Review)</span>
                 </div>
-            </div>
 
-            <!-- Center connector -->
-            <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 10px; border-radius: 8px; text-align: center; max-width: 500px; margin: 12px auto; font-weight: 600; font-size: 0.95rem;">
-                📁 Documents Shardeados → Listos para Dev
+                <!-- Additional agents note -->
+                <div style="text-align: center; margin-top: 10px; font-size: 0.8rem; color: #A78BFA;">
+                    + Analyst, UX Expert, QA, PO Validate cuando sea necesario
+                </div>
             </div>
 
             <!-- HITL Box -->
