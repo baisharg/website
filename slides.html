@@ -1053,79 +1053,6 @@
             </div>
         </div>
 
-        <!-- Slide 10: El ciclo de desarrollo REAL con BMad -->
-        <div class="slide dark-slide">
-            <h2>⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
-
-            <div class="flow-section">
-                <div class="flow-title">📋 Planning Riguroso</div>
-                <div class="flow-items">
-                    <div class="flow-item">PM</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">Architect</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">PO Checklist</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">PO Shard</div>
-                </div>
-                <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
-                    + Analyst, UX Expert, QA cuando sea necesario
-                </div>
-            </div>
-
-            <div
-                style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 15px; border-radius: 10px; margin: 20px auto; text-align: center; max-width: 600px; font-weight: 600; font-size: 1.1rem;">
-                📁 Documents Shardeados → Listos para Dev
-            </div>
-
-            <div class="flow-section">
-                <div class="flow-title">🚀 Development Loop Iterativo</div>
-                <div class="flow-items">
-                    <div class="flow-item">SM Review</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">SM Draft</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">Dev</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">Ready+Notes</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">Tests✓Commit</div>
-                    <div class="flow-arrow" style="font-size: 1.8rem;">🔄</div>
-                </div>
-                <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
-                    + PO Validate, QA Risk/Review cuando sea necesario
-                </div>
-                <p style="text-align: center; color: #A78BFA; margin-top: 15px; font-size: 0.95rem;">
-                    ↻ Repite para cada story hasta completar el proyecto
-                </p>
-            </div>
-
-            <div class="hitl-box">
-                👤 Human in the Loop: Aprobación requerida en puntos clave de transición
-            </div>
-
-            <div
-                style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 20px; border-radius: 10px; max-width: 800px; margin: 20px auto;">
-                <strong style="color: #60A5FA; font-size: 1.1rem;">🤔 ¿Cómo funciona el control humano?</strong>
-                <p style="color: #C4B5FD; margin-top: 10px; line-height: 1.6;">
-                    <strong style="color: white;">VOS invocás cada agente manualmente.</strong> El workflow NO procede
-                    automáticamente.
-                </p>
-                <div
-                    style="margin-top: 15px; padding: 15px; background: #0F0E1A; border-radius: 8px; font-family: 'Monaco', monospace; color: #22D3EE; font-size: 0.95rem;">
-                    1. PM termina → VOS revisás el PRD<br>
-                    2. Si te gusta → VOS tipeas: <span style="color: white;">/architect
-                        *create-full-stack-architecture</span><br>
-                    3. Architect termina → VOS revisás arquitectura<br>
-                    4. Si necesita cambios → VOS editás o pedís regenerar<br>
-                    5. Si está listo → VOS continuás al siguiente paso
-                </div>
-                <p style="color: #86EFAC; margin-top: 10px; font-size: 0.95rem; text-align: center;">
-                    ✅ Tenés control total en cada transición
-                </p>
-            </div>
-        </div>
-
         <!-- Slide 11: Disclaimer - How to Use This Tool Pedagogically -->
         <div class="slide dark-slide">
             <h2>💡 <span class="gradient-text">Cómo Aprovechar Esta Herramienta</span></h2>
@@ -1437,6 +1364,96 @@ export async function createTask(req: Request, res: Response) {
                     </div>
                 </div>
                 <div class="command-box">/qa *review {story}</div>
+            </div>
+        </div>
+
+        <!-- Slide 10: El ciclo de desarrollo REAL con BMad -->
+        <div class="slide dark-slide">
+            <h2>⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
+
+            <!-- Two-column layout for horizontal space -->
+            <div style="display: flex; gap: 30px; width: 100%; max-width: 1400px; margin: 20px 0;">
+                <!-- Left column: Planning -->
+                <div style="flex: 1;">
+                    <div class="flow-section">
+                        <div class="flow-title">📋 Planning Riguroso</div>
+                        <div class="flow-items" style="flex-direction: column; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div class="flow-item" style="flex-shrink: 0;">PM</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-item" style="flex-shrink: 0;">Architect</div>
+                            </div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: 0;">↓</div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div class="flow-item" style="flex-shrink: 0;">PO Checklist</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-item" style="flex-shrink: 0;">PO Shard</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
+                            + Analyst, UX Expert, QA cuando sea necesario
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column: Development Loop -->
+                <div style="flex: 1;">
+                    <div class="flow-section">
+                        <div class="flow-title">🚀 Development Loop Iterativo</div>
+                        <div class="flow-items" style="flex-direction: column; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="flow-item" style="flex-shrink: 0;">SM Review</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-item" style="flex-shrink: 0;">SM Draft</div>
+                            </div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: 0;">↓</div>
+                            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="flow-item" style="flex-shrink: 0;">Dev</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-item" style="flex-shrink: 0;">Ready+Notes</div>
+                            </div>
+                            <div class="flow-arrow" style="transform: rotate(90deg); margin: 0;">↓</div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div class="flow-item" style="flex-shrink: 0;">Tests✓Commit</div>
+                                <div class="flow-arrow" style="font-size: 1.8rem;">🔄</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: #A78BFA;">
+                            + PO Validate, QA Risk/Review cuando sea necesario
+                        </div>
+                        <p style="text-align: center; color: #A78BFA; margin-top: 10px; font-size: 0.9rem;">
+                            ↻ Repite para cada story hasta completar el proyecto
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center connector -->
+            <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); padding: 12px; border-radius: 10px; text-align: center; max-width: 600px; margin: 15px auto; font-weight: 600; font-size: 1rem;">
+                📁 Documents Shardeados → Listos para Dev
+            </div>
+
+            <!-- HITL Box -->
+            <div class="hitl-box">
+                👤 Human in the Loop: Aprobación requerida en puntos clave de transición
+            </div>
+
+            <!-- How HITL works -->
+            <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 18px; border-radius: 10px; max-width: 900px; margin: 15px auto;">
+                <strong style="color: #60A5FA; font-size: 1rem;">🤔 ¿Cómo funciona el control humano?</strong>
+                <p style="color: #C4B5FD; margin-top: 8px; line-height: 1.5; font-size: 0.9rem;">
+                    <strong style="color: white;">VOS invocás cada agente manualmente.</strong> El workflow NO procede automáticamente.
+                </p>
+                <div style="margin-top: 12px; padding: 12px; background: #0F0E1A; border-radius: 8px; font-family: 'Monaco', monospace; color: #22D3EE; font-size: 0.85rem; line-height: 1.6;">
+                    1. PM termina → VOS revisás el PRD<br>
+                    2. Si te gusta → VOS tipeas: <span style="color: white;">/architect *create-full-stack-architecture</span><br>
+                    3. Architect termina → VOS revisás arquitectura<br>
+                    4. Si necesita cambios → VOS editás o pedís regenerar<br>
+                    5. Si está listo → VOS continuás al siguiente paso
+                </div>
+                <p style="color: #86EFAC; margin-top: 8px; font-size: 0.9rem; text-align: center;">
+                    ✅ Tenés control total en cada transición
+                </p>
             </div>
         </div>
 

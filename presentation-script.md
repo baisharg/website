@@ -61,7 +61,7 @@ Ahora sí, vamos al taller.
 
 Antes de seguir, hablemos de cómo usar BMad de forma inteligente.
 
-**BMad acelera la construcción de proyectos y mejora la calidad del código.**
+**BMad acelera la construcción de proyectos y mejora la calidad del código.** Comparado con un workflow de uso de IA que no tiene en cuenta las debilidades de las LLMs.
 
 La estrategia inteligente: usala para **construir más proyectos y aprender más rápido**. Cada proyecto te expone a nuevos patterns, arquitecturas, decisiones de diseño.
 
@@ -244,7 +244,7 @@ Ahora veamos exactamente CÓMO BMad resuelve el problema del contexto.
 
 [Señalar lado izquierdo - Traditional]
 
-Enfoque tradicional: le das TODO a ChatGPT. 50 archivos, 60,000 tokens. Ya vimos - el modelo cae a 64% de precisión. Se ahoga.
+Enfoque tradicional: le das TODO a ChatGPT. 50 archivos, 60,000 tokens. Ya vimos - el modelo cae a 64% de precisión. Se ahoga. Le das muy poco, y alucina los detalles, e implementa cualquier cosa.
 
 [Señalar lado derecho - BMad]
 
@@ -343,51 +343,39 @@ Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, 
 
 Ahora que vieron cómo funciona, veamos los agentes en detalle.
 
-[CLICK - Slide 10]
+[CLICK - Slide 11]
 
 ---
 
-## SLIDE 10: CICLO DE DESARROLLO CON BMAD [19:45 - 21:15]
+## SLIDE 11: CÓMO APROVECHAR ESTA HERRAMIENTA [19:45 - 20:30]
 
-BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
+Antes de seguir, hablemos de cómo usar BMad de forma inteligente.
 
-[Primera sección - Planning]
+**BMad acelera la construcción de proyectos y mejora la calidad del código.** Comparado con un workflow de uso de IA que no tiene en cuenta las debilidades de las LLMs.
 
-**Planning riguroso**: Antes de escribir una línea de código, planificamos. El workflow core es:
+La estrategia inteligente: usala para **construir más proyectos y aprender más rápido**. Cada proyecto te expone a nuevos patterns, arquitecturas, decisiones de diseño.
 
-- **PM** crea el PRD - Product Requirements Document completo
-- **Architect** define la arquitectura técnica y tech stack
-- **PO** corre el Master Checklist - valida que PRD y Arquitectura estén alineados
-- **PO** "shardea" todo - lo parte en epics y stories manejables
+**Casos de uso ideales:** Proyectos personales, MVPs, prototipos, tu startup, hackathons, aprender nuevos tech stacks.
 
-Y después tenés agentes adicionales que usás cuando los necesitás: Analyst para proyectos nuevos, UX Expert para apps con UI, QA para input en áreas de alto riesgo.
+Ahora, sobre los TPs de la facultad - acá viene lo interesante. **SÍ podés usar BMad para TPs**, pero de forma pedagógica:
 
-[Medio - Documents Shardeados]
+[Señalar la caja con el workflow]
 
-El PO es clave acá. Primero valida que los documentos estén alineados - si no, se refinan hasta que todo tenga sentido. Después toma documentos enormes y los parte en pedacitos digeribles. Cada "shard" es un documento focalizado que un agente puede procesar sin ahogarse. Acá es donde resolvemos el problema del contexto largo.
+**Workflow para aprender:**
+1. Usá PM + Architect para **entender** el problema y la arquitectura profesional
+2. Usá SM para dividir el trabajo en stories claras
+3. **Acá está la clave: Salteá el Developer - CODEA VOS**
+4. Usá QA para revisar TU código y aprender de feedback experto
 
-[Segunda sección - Development Loop]
+El resultado: aprendés planificación profesional, codeás vos mismo, y recibís code review automático de calidad. Es como tener un senior developer revisando tu trabajo.
 
-**Development Loop iterativo**: El workflow core tiene pasos críticos:
+Esto es lo que hace BMad diferente - no es solo generación de código, es un sistema completo para aprender y trabajar profesionalmente.
 
-- **SM Review** - revisa notas de la story anterior para aprender
-- **SM Draft** - hace el draft de la siguiente story con tareas secuenciales
-- **Dev** implementa con código, tests, validaciones
-- **Ready + Notes** - Dev marca listo para review y documenta notas
-- **Tests✓ Commit** - Verificar tests de regresión y linting, después COMMIT
-- Loop a siguiente story
-
-Y de nuevo, validación adicional cuando la necesitás: PO para validar contra PRD, QA para review de áreas críticas.
-
-[Abajo - HITL]
-
-Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que aprueba transiciones clave. No es todo automático - vos guiás el equipo.
-
-[CLICK - Slide 8]
+[CLICK - Slide 12]
 
 ---
 
-## SLIDE 8: BUSINESS ANALYST [11:00 - 11:45]
+## SLIDE 12: BUSINESS ANALYST [20:30 - 21:15]
 
 El **Business Analyst** es **el agente que entiende el negocio y te ayuda a arrancar.**
 
@@ -586,11 +574,51 @@ El QA puede entrar antes de desarrollar (análisis de riesgo) o después (code r
 
 **Y acá está el workflow pedagógico:** Si estás haciendo un TP, usá el QA para revisar TU código y aprender de feedback experto.
 
+[CLICK - Slide 10]
+
+---
+
+## SLIDE 10: CICLO DE DESARROLLO CON BMAD [16:35 - 17:50]
+
+BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
+
+[Primera sección - Planning]
+
+**Planning riguroso**: Antes de escribir una línea de código, planificamos. El workflow core es:
+
+- **PM** crea el PRD - Product Requirements Document completo
+- **Architect** define la arquitectura técnica y tech stack
+- **PO** corre el Master Checklist - valida que PRD y Arquitectura estén alineados
+- **PO** "shardea" todo - lo parte en epics y stories manejables
+
+Y después tenés agentes adicionales que usás cuando los necesitás: Analyst para proyectos nuevos, UX Expert para apps con UI, QA para input en áreas de alto riesgo.
+
+[Medio - Documents Shardeados]
+
+El PO es clave acá. Primero valida que los documentos estén alineados - si no, se refinan hasta que todo tenga sentido. Después toma documentos enormes y los parte en pedacitos digeribles. Cada "shard" es un documento focalizado que un agente puede procesar sin ahogarse. Acá es donde resolvemos el problema del contexto largo.
+
+[Segunda sección - Development Loop]
+
+**Development Loop iterativo**: El workflow core tiene pasos críticos:
+
+- **SM Review** - revisa notas de la story anterior para aprender
+- **SM Draft** - hace el draft de la siguiente story con tareas secuenciales
+- **Dev** implementa con código, tests, validaciones
+- **Ready + Notes** - Dev marca listo para review y documenta notas
+- **Tests✓ Commit** - Verificar tests de regresión y linting, después COMMIT
+- Loop a siguiente story
+
+Y de nuevo, validación adicional cuando la necesitás: PO para validar contra PRD, QA para review de áreas críticas.
+
+[Abajo - HITL]
+
+Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que aprueba transiciones clave. No es todo automático - vos guiás el equipo.
+
 [CLICK - Slide 16]
 
 ---
 
-## SLIDE 16: FASE 1 - PLANNING [16:35 - 17:20]
+## SLIDE 16: FASE 1 - PLANNING [17:50 - 18:35]
 
 Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Planning y Development.
 
