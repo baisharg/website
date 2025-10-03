@@ -1,5 +1,11 @@
 # Script de Presentación: Taller de LLM Assisted Coding
-## BAISH x Y-hat | Duración: 30 minutos | Total de slides: 22
+## BAISH x Y-hat | Duración: 40 minutos | Total de slides: 25
+
+**CAMBIOS IMPORTANTES:**
+- **3 nuevos slides:** Qué es un agente (7), Cómo resuelve contexto (8), DEMO (9)
+- **Disclaimer movido:** De slide 3 a slide 11 (después del workflow)
+- **Ejemplos agregados:** PM, Architect, SM, Dev tienen ejemplos de código
+- **Mejoras:** Glossarios, diagramas de ecosistema, definición MCP, costos detallados
 
 ---
 
@@ -145,6 +151,16 @@ BMad funciona para DOS casos:
 
 **Brownfield projects** - Y acá está lo interesante: también sirve para codebases existentes. ¿Cómo? **Documentándolos primero.** Usás los agentes para crear documentación estructurada del proyecto existente - arquitectura, componentes, decisiones de diseño. Ahora los agentes tienen contexto profesional, no tienen que adivinarlo.
 
+[Señalar el nuevo callout azul - Por qué BMad es Diferente]
+
+Este es el punto crucial - ¿por qué BMad no sufre el mismo problema?
+
+Los expertos en ese estudio le dieron TODO el codebase a la AI. 60, 80 mil tokens. Ya vimos que el modelo se degrada ahí.
+
+BMad hace lo opuesto: cada agente recibe SOLO lo que necesita. Un epic shardeado. La parte relevante de la arquitectura. Menos de 5,000 tokens.
+
+No es sobre tener más AI o mejor AI. Es sobre darle a la AI la cantidad CORRECTA de información.
+
 Entonces BMad no es solo para proyectos nuevos - es para cualquier proyecto que quieras desarrollar de forma estructurada y profesional.
 
 [El link al estudio está abajo a la derecha para quien quiera profundizar]
@@ -190,7 +206,146 @@ Eso es BMad.
 
 ---
 
-## SLIDE 7: CICLO DE DESARROLLO CON BMAD [9:30 - 11:00]
+## SLIDE 7: ¿QUÉ ES UN AGENTE BMAD? [9:30 - 11:00]
+
+Ahora, ¿qué es un agente BMad exactamente?
+
+[Señalar lado izquierdo]
+
+Con un chatbot tradicional, le das TODO tu código a ChatGPT. 50 archivos, 60,000 tokens. Vimos que el modelo se degrada a 64% de precisión. Además, el chatbot no tiene un rol - trata de ser PM, arquitecto, programador, todo a la vez.
+
+[Señalar lado derecho]
+
+Un agente BMad es DIFERENTE: Es el mismo LLM (Claude o GPT), pero con dos cambios clave:
+
+1. **Prompt especializado** - El PM Agent tiene instrucciones específicas para pensar como Product Manager. El Developer tiene instrucciones para programar.
+
+2. **Contexto focalizado** - El PM solo lee requirements docs (2K tokens). El Developer solo lee UN epic relevante (1.5K tokens). Nunca el codebase completo.
+
+[Señalar el ejemplo técnico abajo]
+
+Esto mantiene a cada agente en la zona de alta precisión - menos de 5K tokens por tarea, donde vimos 96% de accuracy en el benchmark.
+
+[Señalar el callout de interfaz]
+
+Y ustedes invocan estos agentes escribiendo comandos en el terminal de OpenCode. Por ejemplo: /pm *create-prd. Esto activa al PM Agent.
+
+¿Tiene sentido? Básicamente: en vez de un chatbot genérico ahogándose en contexto, tenés un EQUIPO de especialistas, cada uno con exactamente lo que necesita.
+
+[CLICK - Slide 8]
+
+---
+
+## SLIDE 8: CÓMO BMAD RESUELVE EL PROBLEMA DEL CONTEXTO [11:00 - 12:45]
+
+Ahora veamos exactamente CÓMO BMad resuelve el problema del contexto.
+
+[Señalar lado izquierdo - Traditional]
+
+Enfoque tradicional: le das TODO a ChatGPT. 50 archivos, 60,000 tokens. Ya vimos - el modelo cae a 64% de precisión. Se ahoga.
+
+[Señalar lado derecho - BMad]
+
+Enfoque BMad: cada agente recibe SOLO lo que necesita.
+- PM lee requirements docs → 2,000 tokens
+- Architect lee el PRD + preferencias técnicas → 3,000 tokens
+- Developer lee UN epic específico + la arquitectura relevante → 1,500 tokens
+
+Ningún agente llega cerca de los 20K tokens. Todos operan en la zona del 96% de precisión.
+
+[Señalar la visualización de sharding]
+
+La técnica clave se llama "sharding" - partir documentos grandes en pedazos pequeños.
+
+Ejemplo: El PO toma tu PRD.md gigante de 10,000 tokens y lo parte en archivos separados:
+- epic-1-auth.md con solo la parte de autenticación
+- epic-2-dashboard.md con solo la parte del dashboard
+- epic-3-api.md con solo la parte de la API
+
+Cuando el Developer trabaja en autenticación, lee SOLO epic-1-auth.md. No ve el dashboard ni la API. Contexto quirúrgicamente preciso.
+
+[Señalar el resultado abajo]
+
+Resultado: Cada agente mantiene alta precisión porque nunca se ahoga en contexto. Este es el game changer - no es usar más AI, es usar AI de forma INTELIGENTE.
+
+[CLICK - Slide 9]
+
+---
+
+## SLIDE 9: DEMO [12:45 - 19:45]
+
+Bueno, suficiente teoría. Vamos a ver esto en acción.
+
+[Cambiar a terminal en vivo]
+
+Voy a construir una simple Todo App desde cero usando BMad. Cronometren - veamos cuánto tarda.
+
+[Typing] /pm *create-prd
+
+[ESPERAR mientras el PM genera]
+
+Miren lo que está pasando: el PM Agent está:
+1. Analizando qué features necesita una Todo App
+2. Creando user stories
+3. Definiendo acceptance criteria
+4. Todo estructurado en un PRD
+
+[Cuando termina - scroll through PRD]
+
+Esto toma 30 segundos. Si yo lo escribiera manualmente, 30-60 minutos mínimo.
+
+Ahora el Architect.
+
+[Typing] /architect *create-full-stack-architecture
+
+[ESPERAR]
+
+El Architect leyó el PRD que el PM creó, y ahora está decidiendo:
+- React para frontend
+- Express para backend
+- PostgreSQL para base de datos
+- Estructura de carpetas
+- APIs que necesitamos
+
+[Review architecture doc]
+
+Otro minuto. Manualmente, esto es fácil 1-2 horas de diseño.
+
+Ahora viene la magia - el PO va a shardear esto.
+
+[Typing] /po *shard-doc prd.md
+
+[Muestra los epics creados]
+
+Ven? Creó epic-1-task-management.md, epic-2-ui-components.md. Documentos pequeños.
+
+Ahora el Developer puede trabajar en el primer epic.
+
+[Typing] /dev *develop-story epic-1
+
+[ESPERAR mientras genera código]
+
+El Developer:
+- Lee SOLO epic-1
+- Lee la arquitectura relevante
+- Genera el código
+- Genera los tests
+
+[Muestra el código generado]
+
+Y ahí está. Código funcional, con tests, en ~2 minutos.
+
+[Regresar a slides]
+
+Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, unas 4-6 horas para llegar a este punto con tests y todo documentado.
+
+Ahora que vieron cómo funciona, veamos los agentes en detalle.
+
+[CLICK - Slide 10]
+
+---
+
+## SLIDE 10: CICLO DE DESARROLLO CON BMAD [19:45 - 21:15]
 
 BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
 
@@ -696,22 +851,27 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 
 ---
 
-## TIMING TOTAL: ~24 minutos de presentación + ~6 min de Q&A/transición = ~30 min total
+## TIMING TOTAL: ~37 minutos de presentación + ~3 min de Q&A/transición = ~40 min total
 
-**Breakdown por sección:**
-- Apertura + Slides 1-2: 3:45 min
-- Slide 3 (Aprovechar herramienta): 1:15 min
-- Slide 4 (LoCoDiff): 1:15 min
-- Slide 5 (METR Study): 1:30 min
-- Slide 6 (Problema actual): 1:45 min
-- Slide 7 (Ciclo desarrollo): 1:45 min (+15 seg por PO Checklist + pasos dev detallados)
-- Slides 8-15 (8 agentes individuales): 5:50 min
-- Slides 16-18 (Workflow + QA): 2:25 min (+15 seg por paso adicional en planning y dev)
-- Slides 19-20 (Tools + MCP): 2:15 min
-- Slide 21 (BAISH website ejemplo): 1:15 min
-- Slide 22 (Cierre): 2:00 min
+**Breakdown por sección (25 slides total):**
+- Apertura + Slides 1-2 (Title, BAISH): 3:45 min
+- Slide 3 (LoCoDiff): 1:15 min
+- Slide 4 (METR Study): 1:45 min (+15 seg por BMad difference callout)
+- Slide 5 (Problema actual): 1:45 min
+- Slide 6 (¿Qué es un agente?): 1:30 min [NUEVO]
+- Slide 7 (Cómo resuelve contexto): 1:45 min [NUEVO]
+- Slide 8 (DEMO): 7:00 min [NUEVO - variable 5-7 min]
+- Slide 9 (Ciclo desarrollo + HITL): 1:30 min
+- Slide 10 (Disclaimer - movido): 1:15 min
+- Slides 11-18 (8 agentes individuales con ejemplos): 8:00 min (+2:10 min por ejemplos)
+- Slides 19-20 (Workflow phases): 2:00 min (consolidated)
+- Slide 21 (Quality Gates expandido): 1:00 min
+- Slide 22 (Tools con ecosistema): 2:30 min (+1:15 min por diagramas/costos)
+- Slide 23 (MCP con definición): 1:00 min
+- Slide 24 (BAISH website ejemplo): 1:00 min
+- Slide 25 (Cierre): 2:00 min
 
-**Total: 25:00 min** de presentación + 5:00 min de buffer/Q&A = **30:00 min total**
+**Total: ~37:00 min** de presentación + 3:00 min de buffer/Q&A = **~40:00 min total**
 
 **Nota sobre timing crítico:**
 - Si te atrasás, los agentes opcionales (Analyst, UX Expert) se pueden mencionar más rápido (30 seg cada uno en vez de 45 seg)
@@ -745,13 +905,16 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 5. Hacer agentes restantes más rápidos - 30-40 seg cada uno
 
 **Nunca cortar:**
-- **El workflow pedagógico para TPs (Slide 3)** - Es clave para estudiantes, les da permiso para usar BMad correctamente
-- **El estudio METR (Slide 5)** - Es la justificación de por qué BMad funciona
+- **¿Qué es un agente? (Slide 7)** - CRÍTICO - sin esto no entienden la base conceptual
+- **Cómo resuelve contexto (Slide 8)** - CRÍTICO - muestra el sharding y la solución al problema
+- **DEMO (Slide 9)** - Es el momento "aha!" - pueden acortar a 5 min pero NO eliminar
+- **El estudio METR con BMad difference (Slide 5)** - Es la justificación de por qué BMad funciona
 - El problema y contexto (Slide 6)
-- El flujo general (Slide 7) - **Especialmente el PO Checklist y el loop de aprendizaje (SM Review Notes)**
-- PM (Slide 9), Architect (Slide 10), Developer (Slide 14), PO (Slide 13) - Los agentes core
-- Workflow phases (Slides 16-17) - **Especialmente PO Master Checklist y el paso Verify Tests/Linting → COMMIT**
-- **Los artifacts en cada agente** - Señalar brevemente qué crea cada uno, es clave para entender el flujo
+- El flujo general (Slide 10) - **Especialmente el HITL explanation y el loop de aprendizaje**
+- **El workflow pedagógico para TPs (Slide 11)** - Es clave para estudiantes, les da permiso para usar BMad correctamente
+- PM (Slide 13), Architect (Slide 14), Developer (Slide 18), PO (Slide 17) - Los agentes core con sus ejemplos
+- Workflow phases (Slides 19-20) - **Especialmente el paso "Review Previous Notes (if any)"**
+- **Los ejemplos de código** - Mínimo mostrarlos rápido, hacen todo concreto
 
 ### Si te sobra tiempo
 - Expander más en el ejemplo de BAISH website - mostrar artifacts reales si están disponibles

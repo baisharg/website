@@ -719,27 +719,6 @@
             </div>
         </div>
 
-        <!-- Slide 3: Disclaimer -->
-        <div class="slide dark-slide">
-            <h2>💡 <span class="gradient-text">Cómo Aprovechar Esta Herramienta</span></h2>
-            <div class="disclaimer-box">
-                <p><strong>BMad acelera la construcción de proyectos y mejora la calidad del código.</strong></p>
-                <p style="margin-top: 20px;">🎯 <strong>La estrategia inteligente:</strong> Usala para <em>construir más proyectos y aprender más rápido</em>. Cada proyecto te expone a nuevos patterns, arquitecturas y decisiones de diseño.</p>
-                <p style="margin-top: 20px;">⚡ <strong>Casos de uso ideales:</strong> Proyectos personales • MVPs • Prototipos • Tu startup • Hackathons • Aprender nuevos tech stacks</p>
-                <p style="margin-top: 20px; font-size: 1rem;"><strong>✅ Para TPs de la facultad:</strong> Podés usar BMad de forma pedagógica:</p>
-                <div style="margin-top: 15px; padding: 15px; background: rgba(139, 92, 246, 0.15); border-radius: 8px; border-left: 4px solid #8B5CF6;">
-                    <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        <strong style="color: #A78BFA;">Workflow para aprender:</strong><br>
-                        1️⃣ Usá PM + Architect para <em>entender</em> el problema y arquitectura<br>
-                        2️⃣ Usá SM para dividir en stories claras<br>
-                        3️⃣ <strong>⚠️ Salteá el Developer - CODEA VOS</strong><br>
-                        4️⃣ Usá QA para revisar TU código y aprender de feedback experto<br>
-                        <span style="font-size: 0.85rem; opacity: 0.9; font-style: italic;">Resultado: Aprendés planificación profesional + codeás vos + recibís code review automático</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <!-- Slide 4: LoCoDiff Benchmark Graph -->
         <div class="slide dark-slide" style="position: relative;">
             <h2>📊 <span class="gradient-text">LoCoDiff: Natural Long Context Code Bench</span></h2>
@@ -759,6 +738,13 @@
                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
                 📄 Source: LoCoDiff arXiv:2501.01469
             </a>
+            <div style="position: absolute; bottom: 80px; left: 30px; background: rgba(139, 92, 246, 0.2); padding: 15px 20px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.4); max-width: 400px;">
+                <strong style="color: #A78BFA; font-size: 0.9rem;">📖 ¿Qué es un token?</strong>
+                <p style="color: #C4B5FD; font-size: 0.85rem; margin: 5px 0 0 0; line-height: 1.4;">
+                    ~4 caracteres = 1 token<br>
+                    21K tokens ≈ 84K chars ≈ 2,000 líneas de código
+                </p>
+            </div>
         </div>
 
         <!-- Slide 5: METR Study - AI Slows Down Experienced Developers -->
@@ -788,6 +774,21 @@
                 <p style="color: #86EFAC; font-size: 1.1rem; margin: 0; line-height: 1.6;">
                     <strong>✅ La Solución BMad:</strong> Documentación estructurada + Contexto inteligente<br>
                     <span style="font-size: 0.95rem; opacity: 0.95;">Greenfield: Construye proyectos nuevos desde cero • Brownfield: Documenta proyectos existentes para que los agentes entiendan el contexto</span>
+                </p>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%); border: 3px solid #60A5FA; padding: 30px; border-radius: 12px; max-width: 1000px; margin: 25px auto;">
+                <h3 style="color: #60A5FA; text-align: center; margin-bottom: 15px; font-size: 1.3rem;">💡 Por qué BMad es Diferente</h3>
+                <p style="color: white; font-size: 1.1rem; text-align: center; margin: 0; line-height: 1.7;">
+                    Los expertos fueron más lentos porque dieron a la AI <strong style="color: #FCA5A5;">TODO el contexto</strong> (codebase completo, 60K+ tokens).<br><br>
+                    BMad agents reciben <strong style="color: #86EFAC;">SOLO contexto focalizado</strong> (un epic, arquitectura relevante, &lt;5K tokens).<br><br>
+                    <span style="font-size: 0.95rem; opacity: 0.9;">No es sobre tener AI, es sobre dar a la AI la cantidad CORRECTA de contexto.</span>
+                </p>
+            </div>
+            <div style="position: absolute; bottom: 80px; left: 30px; background: rgba(139, 92, 246, 0.2); padding: 15px 20px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.4); max-width: 450px;">
+                <strong style="color: #A78BFA; font-size: 0.9rem;">📖 Glosario</strong>
+                <p style="color: #C4B5FD; font-size: 0.85rem; margin: 5px 0 0 0; line-height: 1.5;">
+                    <strong>Greenfield:</strong> Proyecto nuevo desde cero<br>
+                    <strong>Brownfield:</strong> Proyecto/código existente
                 </p>
             </div>
             <a href="https://metr.github.io/ai-rd-tasks/" target="_blank"
@@ -861,7 +862,149 @@
             </div>
         </div>
 
-        <!-- Slide 5: El ciclo de desarrollo REAL con BMad -->
+        <!-- Slide 7: What is an Agent vs Chatbot? -->
+        <div class="slide dark-slide">
+            <h2>🤖 <span class="gradient-text">¿Qué es un Agente BMad?</span></h2>
+
+            <!-- Comparison Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1100px; margin: 30px auto;">
+
+                <!-- LEFT: Traditional Chatbot -->
+                <div style="background: rgba(239, 68, 68, 0.1); border: 2px solid #EF4444; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #FCA5A5;">💬 Chatbot Tradicional (ChatGPT/Claude)</h3>
+                    <ul style="color: #E5E7EB; line-height: 1.8; list-style: none; padding-left: 0;">
+                        <li>• Un solo chat con TODO el contexto</li>
+                        <li>• Recibe tu codebase completo</li>
+                        <li>• Se pierde entre 60K+ tokens</li>
+                        <li>• No tiene rol específico</li>
+                        <li>• Trata de hacer todo a la vez</li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT: BMad Agent -->
+                <div style="background: rgba(34, 197, 94, 0.1); border: 2px solid #22C55E; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #86EFAC;">⚡ Agente BMad</h3>
+                    <ul style="color: #E5E7EB; line-height: 1.8; list-style: none; padding-left: 0;">
+                        <li>• <strong>Especializado:</strong> Un rol claro (PM, Dev, QA)</li>
+                        <li>• <strong>Contexto focalizado:</strong> Solo lee lo que necesita</li>
+                        <li>• <strong>Bajo tokens:</strong> &lt;5K tokens por tarea</li>
+                        <li>• <strong>Experticia:</strong> Prompt optimizado para su rol</li>
+                        <li>• <strong>Coordinado:</strong> Trabaja con otros agentes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom: Technical Explanation -->
+            <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 25px; border-radius: 12px; max-width: 900px; margin: 40px auto;">
+                <strong style="color: #A78BFA; font-size: 1.1rem;">Técnicamente:</strong>
+                <p style="color: #C4B5FD; margin-top: 10px; line-height: 1.6;">
+                    Un agente = Mismo LLM (Claude/GPT) + Prompt especializado + Contexto específico
+                </p>
+                <p style="color: #E5E7EB; margin-top: 10px; font-size: 0.95rem;">
+                    <strong>Ejemplo:</strong> PM Agent lee requirements.md (2K tokens) → Architect Agent lee PRD + tech-stack.md (3K tokens) → Developer lee epic-1.md + architecture-backend.md (1.5K tokens)
+                </p>
+            </div>
+
+            <!-- Interface Callout -->
+            <div style="background: #0F0E1A; padding: 20px; border-radius: 8px; max-width: 700px; margin: 20px auto; border: 1px solid #8B5CF6;">
+                <strong style="color: #A78BFA;">🖥️ Dónde usás los agentes:</strong>
+                <p style="color: #22D3EE; margin-top: 10px; font-family: 'Monaco', monospace;">
+                    En el terminal de OpenCode dentro de VS Code: <span style="color: white;">/pm *create-prd</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 8: How BMad Solves Context Problem -->
+        <div class="slide dark-slide">
+            <h2>🎯 <span class="gradient-text">Cómo BMad Resuelve el Problema del Contexto</span></h2>
+
+            <!-- Top: Visual Comparison -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1100px; margin: 30px auto;">
+
+                <!-- Traditional Approach -->
+                <div>
+                    <h3 style="color: #FCA5A5; text-align: center;">❌ Enfoque Tradicional</h3>
+                    <div style="background: rgba(239, 68, 68, 0.1); border: 2px solid #EF4444; padding: 25px; border-radius: 12px; margin-top: 15px;">
+                        <div style="font-size: 2rem; text-align: center; margin-bottom: 15px;">📦</div>
+                        <div style="text-align: center; color: #FCA5A5; font-weight: 600;">TODO en un solo prompt</div>
+                        <div style="color: #E5E7EB; margin-top: 15px; font-size: 0.9rem;">
+                            • 50 archivos<br>
+                            • 60,000 tokens<br>
+                            • Precisión: <span style="color: #EF4444; font-weight: bold;">64%</span><br>
+                            • El modelo se pierde
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMad Approach -->
+                <div>
+                    <h3 style="color: #86EFAC; text-align: center;">✅ Enfoque BMad</h3>
+                    <div style="background: rgba(34, 197, 94, 0.1); border: 2px solid #22C55E; padding: 25px; border-radius: 12px; margin-top: 15px;">
+                        <div style="font-size: 2rem; text-align: center; margin-bottom: 15px;">📋 🏗️ 💻</div>
+                        <div style="text-align: center; color: #86EFAC; font-weight: 600;">Contexto específico por agente</div>
+                        <div style="color: #E5E7EB; margin-top: 15px; font-size: 0.9rem;">
+                            • PM: 2,000 tokens (requirements)<br>
+                            • Architect: 3,000 tokens (PRD + stack)<br>
+                            • Developer: 1,500 tokens (1 epic + arch)<br>
+                            • Precisión: <span style="color: #22C55E; font-weight: bold;">96%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sharding Visualization -->
+            <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 30px; border-radius: 12px; max-width: 900px; margin: 30px auto;">
+                <h3 style="color: #A78BFA; text-align: center; margin-bottom: 20px;">📄 Sharding: La Técnica Clave</h3>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div style="background: #8B5CF6; color: white; padding: 20px; border-radius: 8px; width: 150px; text-align: center;">
+                        <strong>PRD.md</strong><br>
+                        <span style="font-size: 0.8rem;">10,000 tokens</span>
+                    </div>
+                    <div style="font-size: 2rem; color: #8B5CF6;">→</div>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div style="background: rgba(34, 197, 94, 0.7); color: white; padding: 10px 15px; border-radius: 6px; font-size: 0.85rem;">
+                            epic-1-auth.md (800 tokens)
+                        </div>
+                        <div style="background: rgba(34, 197, 94, 0.7); color: white; padding: 10px 15px; border-radius: 6px; font-size: 0.85rem;">
+                            epic-2-dashboard.md (900 tokens)
+                        </div>
+                        <div style="background: rgba(34, 197, 94, 0.7); color: white; padding: 10px 15px; border-radius: 6px; font-size: 0.85rem;">
+                            epic-3-api.md (700 tokens)
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #C4B5FD; margin-top: 20px; font-size: 0.95rem;">
+                    El Developer lee <strong>solo epic-1-auth.md</strong>, no todo el PRD
+                </p>
+            </div>
+
+            <!-- Bottom: Key Insight -->
+            <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%); border: 2px solid #60A5FA; padding: 25px; border-radius: 12px; max-width: 900px; margin: 20px auto;">
+                <p style="color: white; font-size: 1.2rem; text-align: center; margin: 0; line-height: 1.6;">
+                    <strong>🎯 Resultado:</strong> Cada agente opera en la zona de alta precisión (&lt;20K tokens, 96% accuracy) porque solo lee lo relevante para su tarea específica
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 9: DEMO Placeholder -->
+        <div class="slide dark-slide" style="background: linear-gradient(135deg, #6B46C1 0%, #9333EA 100%);">
+            <div style="text-align: center;">
+                <div style="font-size: 6rem; margin-bottom: 30px;">🎬</div>
+                <h1 style="font-size: 3.5rem; color: white; margin-bottom: 30px;">LIVE DEMO</h1>
+                <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.9); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                    Vamos a ver BMad en acción: desde la idea hasta código funcional en 5 minutos
+                </p>
+                <div style="margin-top: 50px; padding: 25px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; max-width: 700px; margin: 50px auto;">
+                    <h3 style="color: #FCD34D; margin-bottom: 20px;">Lo que vamos a construir:</h3>
+                    <p style="color: white; font-size: 1.2rem;">
+                        Una simple Todo App<br>
+                        <span style="font-size: 0.9rem; opacity: 0.8;">PM → Architect → Dev workflow completo</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: El ciclo de desarrollo REAL con BMad -->
         <div class="slide dark-slide">
             <h2>⚙️ <span class="gradient-text">El Ciclo de Desarrollo Real con BMad</span></h2>
 
@@ -911,9 +1054,47 @@
             <div class="hitl-box">
                 👤 Human in the Loop: Aprobación requerida en puntos clave de transición
             </div>
+
+            <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 20px; border-radius: 10px; max-width: 800px; margin: 20px auto;">
+                <strong style="color: #60A5FA; font-size: 1.1rem;">🤔 ¿Cómo funciona el control humano?</strong>
+                <p style="color: #C4B5FD; margin-top: 10px; line-height: 1.6;">
+                    <strong style="color: white;">VOS invocás cada agente manualmente.</strong> El workflow NO procede automáticamente.
+                </p>
+                <div style="margin-top: 15px; padding: 15px; background: #0F0E1A; border-radius: 8px; font-family: 'Monaco', monospace; color: #22D3EE; font-size: 0.95rem;">
+                    1. PM termina → VOS revisás el PRD<br>
+                    2. Si te gusta → VOS tipeas: <span style="color: white;">/architect *create-full-stack-architecture</span><br>
+                    3. Architect termina → VOS revisás arquitectura<br>
+                    4. Si necesita cambios → VOS editás o pedís regenerar<br>
+                    5. Si está listo → VOS continuás al siguiente paso
+                </div>
+                <p style="color: #86EFAC; margin-top: 10px; font-size: 0.95rem; text-align: center;">
+                    ✅ Tenés control total en cada transición
+                </p>
+            </div>
         </div>
 
-        <!-- Slide 8: Business Analyst -->
+        <!-- Slide 11: Disclaimer - How to Use This Tool Pedagogically -->
+        <div class="slide dark-slide">
+            <h2>💡 <span class="gradient-text">Cómo Aprovechar Esta Herramienta</span></h2>
+            <div class="disclaimer-box">
+                <p><strong>BMad acelera la construcción de proyectos y mejora la calidad del código.</strong></p>
+                <p style="margin-top: 20px;">🎯 <strong>La estrategia inteligente:</strong> Usala para <em>construir más proyectos y aprender más rápido</em>. Cada proyecto te expone a nuevos patterns, arquitecturas y decisiones de diseño.</p>
+                <p style="margin-top: 20px;">⚡ <strong>Casos de uso ideales:</strong> Proyectos personales • MVPs • Prototipos • Tu startup • Hackathons • Aprender nuevos tech stacks</p>
+                <p style="margin-top: 20px; font-size: 1rem;"><strong>✅ Para TPs de la facultad:</strong> Podés usar BMad de forma pedagógica:</p>
+                <div style="margin-top: 15px; padding: 15px; background: rgba(139, 92, 246, 0.15); border-radius: 8px; border-left: 4px solid #8B5CF6;">
+                    <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        <strong style="color: #A78BFA;">Workflow para aprender:</strong><br>
+                        1️⃣ Usá PM + Architect para <em>entender</em> el problema y arquitectura<br>
+                        2️⃣ Usá SM para dividir en stories claras<br>
+                        3️⃣ <strong>⚠️ Salteá el Developer - CODEA VOS</strong><br>
+                        4️⃣ Usá QA para revisar TU código y aprender de feedback experto<br>
+                        <span style="font-size: 0.85rem; opacity: 0.9; font-style: italic;">Resultado: Aprendés planificación profesional + codeás vos + recibís code review automático</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Business Analyst -->
         <div class="slide dark-slide">
             <div class="agent-card">
                 <div class="agent-avatar">📊</div>
@@ -958,10 +1139,30 @@
                     </div>
                 </div>
                 <div class="command-box">/pm *create-prd</div>
+                <div style="margin-top: 25px; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #60A5FA;">📄 Ejemplo de PRD generado:</strong>
+                    <pre style="background: #0F0E1A; color: #E5E7EB; padding: 15px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px; overflow-x: auto;"><code>## Todo App - Product Requirements
+
+### Core Features
+1. **Task Management**
+   - Create, read, update, delete tasks
+   - Mark tasks as complete/incomplete
+   - Task priority levels (low, medium, high)
+
+### User Stories
+**Epic 1: Task Management**
+- As a user, I want to create a new task so I can track what I need to do
+- As a user, I want to mark tasks complete so I can see my progress
+
+### Acceptance Criteria
+- Task creation takes &lt;2 seconds
+- Tasks persist across sessions
+- UI is responsive on mobile...</code></pre>
+                </div>
             </div>
         </div>
 
-        <!-- Slide 10: Architect -->
+        <!-- Slide 14: Architect -->
         <div class="slide dark-slide">
             <div class="agent-card">
                 <div class="agent-avatar">🏗️</div>
@@ -983,10 +1184,28 @@
                     </div>
                 </div>
                 <div class="command-box">/architect *create-full-stack-architecture</div>
+                <div style="margin-top: 25px; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #60A5FA;">🏗️ Ejemplo de Arquitectura:</strong>
+                    <pre style="background: #0F0E1A; color: #E5E7EB; padding: 15px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px;"><code>## Tech Stack
+**Frontend:** React 18 + TypeScript + Tailwind
+**Backend:** Express.js + Node.js
+**Database:** PostgreSQL with Prisma ORM
+**Auth:** JWT tokens
+
+## Architecture
+├── frontend/
+│   ├── components/
+│   ├── hooks/
+│   └── services/
+└── backend/
+    ├── routes/
+    ├── controllers/
+    └── models/</code></pre>
+                </div>
             </div>
         </div>
 
-        <!-- Slide 11: UX Expert -->
+        <!-- Slide 15: UX Expert -->
         <div class="slide dark-slide">
             <div class="agent-card">
                 <div class="agent-avatar">🎨</div>
@@ -1033,10 +1252,31 @@
                     </div>
                 </div>
                 <div class="command-box">/sm *draft</div>
+                <div style="margin-top: 25px; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #60A5FA;">📋 Ejemplo de User Story:</strong>
+                    <pre style="background: #0F0E1A; color: #E5E7EB; padding: 15px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px;"><code>## Story: Create Task Endpoint
+
+**As a** frontend developer
+**I want** a POST /api/tasks endpoint
+**So that** users can create new tasks
+
+**Tasks (Sequential):**
+1. Create Task model with Prisma schema
+2. Implement POST /api/tasks route
+3. Add validation middleware
+4. Write unit tests for controller
+5. Write integration tests
+
+**Acceptance Criteria:**
+- ✓ Accepts title, description, priority
+- ✓ Returns 201 with created task
+- ✓ Returns 400 for invalid input
+- ✓ All tests passing</code></pre>
+                </div>
             </div>
         </div>
 
-        <!-- Slide 13: Product Owner -->
+        <!-- Slide 17: Product Owner -->
         <div class="slide dark-slide">
             <div class="agent-card">
                 <div class="agent-avatar">📝</div>
@@ -1083,10 +1323,31 @@
                     </div>
                 </div>
                 <div class="command-box">/dev *develop-story</div>
+                <div style="margin-top: 25px; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #60A5FA;">💻 Ejemplo de Código Generado:</strong>
+                    <pre style="background: #0F0E1A; color: #E5E7EB; padding: 15px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px;"><code>// src/controllers/taskController.ts
+export async function createTask(req: Request, res: Response) {
+  const { title, description, priority } = req.body;
+
+  // Validation
+  if (!title || title.length < 1) {
+    return res.status(400).json({ error: 'Title required' });
+  }
+
+  // Create task
+  const task = await prisma.task.create({
+    data: { title, description, priority, userId: req.user.id }
+  });
+
+  return res.status(201).json(task);
+}
+
+// Tests included ✓</code></pre>
+                </div>
             </div>
         </div>
 
-        <!-- Slide 15: QA/Test Architect -->
+        <!-- Slide 19: QA/Test Architect -->
         <div class="slide dark-slide">
             <div class="agent-card">
                 <div class="agent-avatar">🧪</div>
@@ -1164,8 +1425,8 @@
                     <div class="phase-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <div class="step-title">SM: Review Previous Notes</div>
-                            <div class="step-desc">Revisa notas de dev/QA de la story anterior para aprender</div>
+                            <div class="step-title">SM: Review Previous Notes (if any)</div>
+                            <div class="step-desc">Revisa notas de dev/QA de la story anterior para aprender. <span style="color: #FCD34D;">(Primera story: este paso se salta)</span></div>
                         </div>
                     </div>
                     <div class="phase-step">
@@ -1239,23 +1500,44 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 30px;">
-                <h3 style="color: #A78BFA;">Gate Status (Asesoría - No bloquea):</h3>
-                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
-                    <div
-                        style="background: rgba(34, 197, 94, 0.2); color: #86EFAC; padding: 12px 20px; border-radius: 10px; border: 1px solid #22C55E;">
-                        ✅ PASS</div>
-                    <div
-                        style="background: rgba(251, 191, 36, 0.2); color: #FCD34D; padding: 12px 20px; border-radius: 10px; border: 1px solid #FBBF24;">
-                        ⚠️ CONCERNS</div>
-                    <div
-                        style="background: rgba(239, 68, 68, 0.2); color: #FCA5A5; padding: 12px 20px; border-radius: 10px; border: 1px solid #EF4444;">
-                        ❌ FAIL</div>
-                    <div
-                        style="background: rgba(139, 92, 246, 0.2); color: #C4B5FD; padding: 12px 20px; border-radius: 10px; border: 1px solid #8B5CF6;">
-                        🔓 WAIVED</div>
+                <h3 style="color: #A78BFA;">Gate Status con Opciones de Acción:</h3>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 25px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <div style="background: rgba(34, 197, 94, 0.2); color: #86EFAC; padding: 20px; border-radius: 10px; border: 1px solid #22C55E;">
+                        <div style="font-size: 1.5rem; margin-bottom: 10px;">✅ PASS</div>
+                        <div style="font-size: 0.9rem;">Ship it - No issues found</div>
+                    </div>
+
+                    <div style="background: rgba(251, 191, 36, 0.2); color: #FCD34D; padding: 20px; border-radius: 10px; border: 1px solid #FBBF24;">
+                        <div style="font-size: 1.5rem; margin-bottom: 10px;">⚠️ CONCERNS</div>
+                        <div style="font-size: 0.9rem;">Minor issues - Consider fixing</div>
+                    </div>
+
+                    <div style="background: rgba(239, 68, 68, 0.2); color: #FCA5A5; padding: 20px; border-radius: 10px; border: 1px solid #EF4444;">
+                        <div style="font-size: 1.5rem; margin-bottom: 10px;">❌ FAIL</div>
+                        <div style="font-size: 0.9rem;">Critical issues - Fix recommended</div>
+                    </div>
+
+                    <div style="background: rgba(139, 92, 246, 0.2); color: #C4B5FD; padding: 20px; border-radius: 10px; border: 1px solid #8B5CF6;">
+                        <div style="font-size: 1.5rem; margin-bottom: 10px;">🔓 WAIVED</div>
+                        <div style="font-size: 0.9rem;">Accept technical debt for now</div>
+                    </div>
                 </div>
-                <p style="color: #A78BFA; margin-top: 20px; font-size: 0.9rem;">Los equipos eligen su barra de calidad -
-                    QA asesora, no bloquea</p>
+
+                <!-- QA Recommendations Examples -->
+                <div style="background: rgba(139, 92, 246, 0.1); padding: 20px; border-radius: 10px; margin-top: 25px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <strong style="color: #A78BFA;">Ejemplo de recomendaciones QA:</strong>
+                    <ul style="color: #C4B5FD; text-align: left; margin-top: 10px; line-height: 1.8; list-style: none; padding-left: 0;">
+                        <li>• "Refactor authentication - current approach has security gap"</li>
+                        <li>• "Add input validation on user forms"</li>
+                        <li>• "Consider adding rate limiting to API"</li>
+                        <li>• "Accept prototype-level testing for MVP sprint"</li>
+                    </ul>
+                </div>
+
+                <p style="color: #A78BFA; margin-top: 20px; font-size: 0.9rem;">
+                    QA te da el análisis experto - VOS decidís si seguir, refactorear, o aceptar deuda técnica
+                </p>
             </div>
         </div>
 
@@ -1290,6 +1572,75 @@
                         <div class="tool-category">🔌 Compatibilidad</div>
                         <div class="tool-names">Funciona en Cursor, Copilot, Claude Code</div>
                         <div style="font-size: 0.85rem; color: #C4B5FD; margin-top: 5px;">BMad son prompts, no software propietario</div>
+                    </div>
+                </div>
+
+                <!-- Tool Ecosystem Diagram -->
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 25px; border-radius: 12px; margin-top: 30px;">
+                    <h3 style="color: #A78BFA; margin-bottom: 20px; text-align: center;">🔧 Cómo funciona el stack</h3>
+                    <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%); color: white; padding: 15px 25px; border-radius: 8px; font-weight: 600;">
+                                GitHub Codespaces
+                            </div>
+                            <div style="color: #8B5CF6; font-size: 1.5rem;">↓</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="background: linear-gradient(135deg, #007ACC 0%, #005A9E 100%); color: white; padding: 15px 25px; border-radius: 8px; font-weight: 600;">
+                                VS Code (Editor)
+                            </div>
+                            <div style="color: #8B5CF6; font-size: 1.5rem;">↓</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%); color: white; padding: 15px 25px; border-radius: 8px; font-weight: 600;">
+                                OpenCode (AI Interface)
+                            </div>
+                            <div style="color: #8B5CF6; font-size: 1.5rem;">↓</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%); color: white; padding: 15px 25px; border-radius: 8px; font-weight: 600;">
+                                BMad Agents (Prompts)
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; color: #C4B5FD; margin-top: 20px; font-size: 0.95rem;">
+                        También funciona en: <strong style="color: #A78BFA;">Cursor • Claude Code • Copilot</strong> (BMad son prompts, no software propietario)
+                    </p>
+                </div>
+
+                <!-- OpenCode Terminal Screenshot Placeholder -->
+                <div style="background: #0F0E1A; border: 2px solid #8B5CF6; border-radius: 10px; padding: 25px; margin-top: 25px;">
+                    <div style="background: #1a1625; padding: 20px; border-radius: 8px; font-family: 'Monaco', monospace; color: #22D3EE; font-size: 1rem;">
+                        <div style="color: #86EFAC; margin-bottom: 10px;">$ </div>
+                        <div style="color: white; margin-bottom: 5px;">› <span style="color: #22D3EE;">/pm *create-prd</span></div>
+                        <div style="color: #C4B5FD; font-size: 0.9rem;">📋 John (Product Manager) activated...</div>
+                        <div style="color: #C4B5FD; font-size: 0.9rem;">🤖 Creating PRD from requirements...</div>
+                    </div>
+                    <p style="text-align: center; color: #A78BFA; margin-top: 15px; font-size: 0.9rem;">
+                        Así es como invocás agentes: comandos en el terminal de OpenCode
+                    </p>
+                </div>
+
+                <!-- Cost Breakdown -->
+                <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 20px; border-radius: 10px; margin-top: 25px;">
+                    <h3 style="color: #86EFAC; margin-bottom: 15px; text-align: center;">💰 Costos Reales</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; color: #E5E7EB;">
+                        <div>
+                            <strong style="color: #86EFAC;">Modelos Gratuitos:</strong><br>
+                            <span style="font-size: 0.9rem;">
+                            • code-supernova: Gratis (beta)<br>
+                            • Grok Code Fast 1: Gratis (rate limits)<br>
+                            • Workshop: API keys provistas
+                            </span>
+                        </div>
+                        <div>
+                            <strong style="color: #60A5FA;">Modelos Pagos:</strong><br>
+                            <span style="font-size: 0.9rem;">
+                            • Proyecto pequeño (~50K tokens): ~$0.50<br>
+                            • Proyecto mediano (~200K tokens): ~$2.00<br>
+                            • 1 mes Netflix ≈ 10 proyectos grandes
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -1336,6 +1687,15 @@
         <div class="slide dark-slide">
             <h2>🔌 <span class="gradient-text">MCP Tools: Superpoderes para tus agentes</span></h2>
             <div style="max-width: 1000px; margin: 0 auto;">
+                <!-- MCP Definition -->
+                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 10px; max-width: 900px; margin: 0 auto 30px;">
+                    <strong style="color: #A78BFA; font-size: 1.1rem;">📖 ¿Qué es MCP?</strong>
+                    <p style="color: #C4B5FD; margin-top: 10px; line-height: 1.6;">
+                        <strong style="color: white;">MCP = Model Context Protocol</strong> - Un estándar para darle "herramientas" a los LLMs.<br>
+                        Los agentes pueden controlar un browser, ejecutar código, hacer búsquedas, etc.
+                    </p>
+                </div>
+
                 <!-- Playwright MCP -->
                 <div
                     style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 25px; border-radius: 12px; margin-bottom: 25px;">
@@ -1435,7 +1795,7 @@
                     <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">1️⃣ Fork del repo del workshop</p>
                     <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">2️⃣ Abrirlo en GitHub Codespaces</p>
                     <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">3️⃣ Correr el script de setup</p>
-                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">4️⃣ Ingresar tu API key</p>
+                    <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">4️⃣ Ingresar tu API key <span style="color: #86EFAC; font-size: 0.9rem;">(provista por instructores)</span></p>
                     <p style="font-size: 1.2rem; margin: 12px 0; color: #E5E7EB;">5️⃣ Seleccionar el modelo</p>
                 </div>
                 <button class="cta">¡Vamos a armar algo copado!</button>
@@ -1461,7 +1821,7 @@
     </div>
 
     <div class="slide-number">
-        <span id="currentSlide">1</span> / <span id="totalSlides">22</span>
+        <span id="currentSlide">1</span> / <span id="totalSlides">25</span>
     </div>
 
     <script>
