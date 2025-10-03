@@ -53,39 +53,11 @@ Tenemos tres actividades que pueden interesarles:
 
 Ahora sí, vamos al taller.
 
-[CLICK - Slide 3]
-
----
-
-## SLIDE 3: CÓMO APROVECHAR ESTA HERRAMIENTA [3:45 - 5:00]
-
-Antes de seguir, hablemos de cómo usar BMad de forma inteligente.
-
-**BMad acelera la construcción de proyectos y mejora la calidad del código.** Comparado con un workflow de uso de IA que no tiene en cuenta las debilidades de las LLMs.
-
-La estrategia inteligente: usala para **construir más proyectos y aprender más rápido**. Cada proyecto te expone a nuevos patterns, arquitecturas, decisiones de diseño.
-
-**Casos de uso ideales:** Proyectos personales, MVPs, prototipos, tu startup, hackathons, aprender nuevos tech stacks.
-
-Ahora, sobre los TPs de la facultad - acá viene lo interesante. **SÍ podés usar BMad para TPs**, pero de forma pedagógica:
-
-[Señalar la caja con el workflow]
-
-**Workflow para aprender:**
-1. Usá PM + Architect para **entender** el problema y la arquitectura profesional
-2. Usá SM para dividir el trabajo en stories claras
-3. **Acá está la clave: Salteá el Developer - CODEA VOS**
-4. Usá QA para revisar TU código y aprender de feedback experto
-
-El resultado: aprendés planificación profesional, codeás vos mismo, y recibís code review automático de calidad. Es como tener un senior developer revisando tu trabajo.
-
-Esto es lo que hace BMad diferente - no es solo generación de código, es un sistema completo para aprender y trabajar profesionalmente.
-
 [CLICK - Slide 4]
 
 ---
 
-## SLIDE 4: LOCODIFF BENCHMARK [5:00 - 6:15]
+## SLIDE 4: LOCODIFF BENCHMARK [3:45 - 5:00]
 
 Ahora les voy a mostrar por qué los LLMs tradicionales tienen problemas con el código.
 
@@ -114,7 +86,7 @@ Pero hay algo aún peor que el problema de contexto largo...
 
 ---
 
-## SLIDE 5: ESTUDIO METR - AI Y DEVELOPERS EXPERTOS [6:15 - 7:45]
+## SLIDE 5: ESTUDIO METR - AI Y DEVELOPERS EXPERTOS [5:00 - 6:30]
 
 Los modelos no tienen memoria a largo plazo.
 
@@ -171,7 +143,7 @@ Entonces BMad no es solo para proyectos nuevos - es para cualquier proyecto que 
 
 ---
 
-## SLIDE 6: ¿CÓMO USÁS AI HOY? [7:45 - 9:30]
+## SLIDE 6: ¿CÓMO USÁS AI HOY? [6:30 - 8:15]
 
 Seamos honestos sobre cómo todos usamos los LLMs para programar actualmente.
 
@@ -208,7 +180,7 @@ Eso es BMad.
 
 ---
 
-## SLIDE 7: ¿QUÉ ES UN AGENTE BMAD? [9:30 - 11:00]
+## SLIDE 7: ¿QUÉ ES UN AGENTE BMAD? [8:15 - 9:45]
 
 Ahora, ¿qué es un agente BMad exactamente?
 
@@ -238,7 +210,7 @@ Y ustedes invocan estos agentes escribiendo comandos en el terminal de OpenCode.
 
 ---
 
-## SLIDE 8: CÓMO BMAD RESUELVE EL PROBLEMA DEL CONTEXTO [11:00 - 12:45]
+## SLIDE 8: CÓMO BMAD RESUELVE EL PROBLEMA DEL CONTEXTO [9:45 - 11:30]
 
 Ahora veamos exactamente CÓMO BMad resuelve el problema del contexto.
 
@@ -274,80 +246,7 @@ Resultado: Cada agente mantiene alta precisión porque nunca se ahoga en context
 
 ---
 
-## SLIDE 9: DEMO [12:45 - 19:45]
-
-Bueno, suficiente teoría. Vamos a ver esto en acción.
-
-[Cambiar a terminal en vivo]
-
-Voy a construir una simple Todo App desde cero usando BMad. Cronometren - veamos cuánto tarda.
-
-[Typing] /pm *create-prd
-
-[ESPERAR mientras el PM genera]
-
-Miren lo que está pasando: el PM Agent está:
-1. Analizando qué features necesita una Todo App
-2. Creando user stories
-3. Definiendo acceptance criteria
-4. Todo estructurado en un PRD
-
-[Cuando termina - scroll through PRD]
-
-Esto toma 30 segundos. Si yo lo escribiera manualmente, 30-60 minutos mínimo.
-
-Ahora el Architect.
-
-[Typing] /architect *create-full-stack-architecture
-
-[ESPERAR]
-
-El Architect leyó el PRD que el PM creó, y ahora está decidiendo:
-- React para frontend
-- Express para backend
-- PostgreSQL para base de datos
-- Estructura de carpetas
-- APIs que necesitamos
-
-[Review architecture doc]
-
-Otro minuto. Manualmente, esto es fácil 1-2 horas de diseño.
-
-Ahora viene la magia - el PO va a shardear esto.
-
-[Typing] /po *shard-doc prd.md
-
-[Muestra los epics creados]
-
-Ven? Creó epic-1-task-management.md, epic-2-ui-components.md. Documentos pequeños.
-
-Ahora el Developer puede trabajar en el primer epic.
-
-[Typing] /dev *develop-story epic-1
-
-[ESPERAR mientras genera código]
-
-El Developer:
-- Lee SOLO epic-1
-- Lee la arquitectura relevante
-- Genera el código
-- Genera los tests
-
-[Muestra el código generado]
-
-Y ahí está. Código funcional, con tests, en ~2 minutos.
-
-[Regresar a slides]
-
-Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, unas 4-6 horas para llegar a este punto con tests y todo documentado.
-
-Ahora que vieron cómo funciona, veamos los agentes en detalle.
-
-[CLICK - Slide 9]
-
----
-
-## SLIDE 9: BUSINESS ANALYST [19:45 - 20:15]
+## SLIDE 9: BUSINESS ANALYST [11:30 - 12:00]
 
 El **Business Analyst** es **el agente que entiende el negocio y te ayuda a arrancar.**
 
@@ -371,7 +270,7 @@ El Analyst es para proyectos greenfield donde arrancás de cero. Si ya tenés tu
 
 ---
 
-## SLIDE 10: PRODUCT MANAGER [20:15 - 20:45]
+## SLIDE 10: PRODUCT MANAGER [12:00 - 12:30]
 
 El **Product Manager** es **el agente que planifica TODO.**
 
@@ -396,7 +295,7 @@ El PM es obligatorio - no podés skipear este agente. Necesitás esos requiremen
 
 ---
 
-## SLIDE 11: ARCHITECT [20:45 - 21:15]
+## SLIDE 11: ARCHITECT [12:30 - 13:00]
 
 El **Architect** es el agente que **diseña toda la arquitectura del sistema.**
 
@@ -421,7 +320,7 @@ También es obligatorio - sin arquitectura, el Developer va a inventar cosas sob
 
 ---
 
-## SLIDE 12: UX EXPERT [21:15 - 21:40]
+## SLIDE 12: UX EXPERT [13:00 - 13:25]
 
 El **UX Expert** es el agente **diseñador de experiencia.**
 
@@ -446,7 +345,7 @@ El UX Expert genera un spec que el Developer sigue, o que vos podés usar para g
 
 ---
 
-## SLIDE 13: SCRUM MASTER [21:40 - 22:10]
+## SLIDE 13: SCRUM MASTER [13:25 - 13:55]
 
 El **Scrum Master** es el agente **especialista en preparación de stories.**
 
@@ -472,7 +371,7 @@ Sin el SM, el Developer se paraliza. Con el SM, tiene una tarjeta clara.
 
 ---
 
-## SLIDE 14: PRODUCT OWNER [22:10 - 22:40]
+## SLIDE 14: PRODUCT OWNER [13:55 - 14:25]
 
 El **Product Owner** es el agente que **gestiona el backlog y shardea documentos.**
 
@@ -496,7 +395,7 @@ El PO evita que el contexto explote. En vez de 10,000 tokens de PRD gigante, le 
 
 ---
 
-## SLIDE 15: DEVELOPER [22:40 - 23:10]
+## SLIDE 15: DEVELOPER [14:25 - 14:55]
 
 El **Developer** es el agente que **codea posta.**
 
@@ -523,7 +422,7 @@ El Dev es el más usado - vas a estar en el loop: draft → develop → commit.
 
 ---
 
-## SLIDE 16: QA/TEST ARCHITECT [23:10 - 23:45]
+## SLIDE 16: QA/TEST ARCHITECT [14:55 - 15:25]
 
 El **Test Architect** es el agente **asesor de calidad.**
 
@@ -550,7 +449,7 @@ El QA puede entrar antes de desarrollar (análisis de riesgo) o después (code r
 
 ---
 
-## SLIDE 17: DEMO [23:45 - 30:15]
+## SLIDE 17: DEMO [15:25 - 22:00]
 
 [Switch to live terminal - this was the content that was at slide 9, now moved here after all agents are explained]
 
@@ -623,7 +522,7 @@ Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, 
 
 ---
 
-## SLIDE 18: CICLO DE DESARROLLO CON BMAD [30:15 - 31:30]
+## SLIDE 18: CICLO DE DESARROLLO CON BMAD [22:00 - 23:15]
 
 BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
 
@@ -663,7 +562,7 @@ Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que 
 
 ---
 
-## SLIDE 19: FASE 1 - PLANNING [31:30 - 32:15]
+## SLIDE 19: FASE 1 - PLANNING [23:15 - 24:00]
 
 Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Planning y Development.
 
@@ -696,7 +595,7 @@ No tocaste una línea de código todavía. Y eso está bien - el planning correc
 
 ---
 
-## SLIDE 20: FASE 2 - DEVELOPMENT [32:15 - 32:50]
+## SLIDE 20: FASE 2 - DEVELOPMENT [24:00 - 24:35]
 
 **Fase 2: Development - Implementación iterativa story por story**
 
@@ -728,11 +627,11 @@ La ventaja: siempre tenés una versión funcional. Si después de 5 stories quer
 
 **Y acá está el loop de aprendizaje:** las notas que el Developer deja hoy son las que el SM usa mañana para mejorar el siguiente draft.
 
-[CLICK - Slide 18]
+[CLICK - Slide 21]
 
 ---
 
-## SLIDE 21: QUALITY GATES [32:50 - 33:20]
+## SLIDE 21: QUALITY GATES [24:35 - 25:05]
 
 Hablemos rápido de los quality gates porque son importantes.
 
@@ -765,7 +664,7 @@ El QA te da la información. Vos decidís.
 
 ---
 
-## SLIDE 22: HERRAMIENTAS [33:20 - 34:35]
+## SLIDE 22: HERRAMIENTAS [25:05 - 26:20]
 
 Bueno, ya entendieron la metodología. ¿Cómo lo usamos en la práctica?
 
@@ -799,7 +698,7 @@ El setup es simple:
 
 ---
 
-## SLIDE 23: MCP TOOLS [34:35 - 35:35]
+## SLIDE 23: MCP TOOLS [26:20 - 27:20]
 
 MCP Tools son "superpoderes" para los agentes. Son herramientas especializadas que los LLMs pueden usar para hacer cosas que normalmente no pueden.
 
@@ -852,7 +751,7 @@ Ambos vienen pre-configurados en el repo. Se activan automáticamente cuando los
 
 ---
 
-## SLIDE 24: EJEMPLO REAL - BAISH WEBSITE [35:35 - 36:50]
+## SLIDE 24: EJEMPLO REAL - BAISH WEBSITE [27:20 - 28:35]
 
 Ahora que vieron toda la metodología, les voy a contar algo interesante.
 
@@ -886,7 +785,7 @@ El punto clave: BMad no es solo para proyectos nuevos. Es para cualquier proyect
 
 ---
 
-## SLIDE 25: CÓMO APROVECHAR ESTA HERRAMIENTA [36:50 - 37:35]
+## SLIDE 25: CÓMO APROVECHAR ESTA HERRAMIENTA [28:35 - 29:20]
 
 Antes de comenzar con el hands-on, hablemos de cómo usar BMad de forma inteligente.
 
@@ -914,7 +813,7 @@ Esto es lo que hace BMad diferente - no es solo generación de código, es un si
 
 ---
 
-## SLIDE 26: ¡COMENCEMOS! [37:35 - 39:35]
+## SLIDE 26: ¡COMENCEMOS! [29:20 - 31:20]
 
 Bueno, ya hablamos suficiente. Ahora viene la parte divertida: ustedes van a hacerlo.
 
@@ -952,124 +851,13 @@ Ahora sí - ¿tienen alguna pregunta rápida antes de arrancar con el hands-on?
 
 Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y empecemos a construir.
 
-[CLICK - Slide 26]
+---
+
+## END OF PRESENTATION - HANDS-ON SESSION BEGINS
 
 ---
 
-## SLIDE 26: FEEDBACK [22:00 - 22:30]
-
-Antes de que se vayan a trabajar, necesito pedirles un favor.
-
-[Señalar el QR code]
-
-Su feedback es super importante para mejorar este workshop. Queremos saber:
-- ¿Qué funcionó bien?
-- ¿Qué necesita mejorar?
-- ¿Qué proyectos van a construir con esto?
-
-[Señalar el link]
-
-Pueden scanear el QR o ir directamente al link. Son literalmente 2 minutos - 3-4 preguntas cortitas.
-
-Este es el primer workshop que hacemos con BMad, y su feedback nos va a ayudar a hacerlo mejor para la próxima camada.
-
-[CLICK - Slide 27]
-
----
-
-## SLIDE 27: RECURSOS [22:30 - 23:15]
-
-Para que sigan trabajando después del workshop, acá tienen todos los recursos.
-
-[Señalar el repo de BMad]
-
-**BMad Repository completo** - github.com/bmad-ai/bmad-method
-- Todo el código que vieron hoy
-- Los 8 prompts de agentes
-- Templates y checklists
-- Documentación completa
-
-[Señalar YouTube]
-
-**Tutorial completo en YouTube** - youtube.com/@bmad-method
-- Video paso a paso de todo el método
-- Ejemplos reales de proyectos
-- Tips y best practices
-
-[Señalar la grid de recursos adicionales]
-
-Y tienen más recursos:
-- **Docs** para referencia técnica
-- **Discord** para hacer preguntas y compartir proyectos
-- **Twitter** para updates
-- **Email** si necesitan ayuda directa
-
-[Señalar el CTA verde abajo]
-
-El mejor momento para empezar tu primer proyecto es HOY. No esperes - agarrá una idea que tengas, corré `/pm *create-prd`, y arrancá.
-
-[CLICK - Slide 28]
-
----
-
-## SLIDE 28: INVITACIÓN AIS WORKSHOP [23:15 - 24:00]
-
-Y una invitación especial antes de terminar.
-
-[Señalar el header principal]
-
-**Workshop de AI Safety** - todos los martes, 15:00 a 17:00, Sala 1604.
-
-¿Qué hacemos ahí?
-- Discutimos proyectos de AI
-- Trabajamos en replicaciones de papers
-- Compartimos ideas y feedback
-- Y lo más importante: **café y medialunas gratis**
-
-[Señalar el lado derecho - Important info]
-
-Tres cosas importantes:
-1. **Abierto a todos** - no necesitan inscripción previa, pueden venir cuando quieran
-2. **Sin requisitos previos** - todos los niveles son bienvenidos
-3. **Ambiente colaborativo** - vengan a aprender y compartir
-
-[Señalar el QR de signup]
-
-Si quieren registrarse de todas formas para que sepamos cuánta gente viene (y cuántas medialunas comprar), pueden scanear el QR.
-
-Pero en serio - pueden aparecer el martes sin avisar, no hay problema.
-
-[Señalar el CTA final]
-
-Los esperamos el martes con café y buenas ideas.
-
-[CLICK - Slide 29]
-
----
-
-## SLIDE 29: GRACIAS [24:00 - 24:30]
-
-[Slide final - Thank you]
-
-Bueno, eso es todo por la parte de teoría.
-
-Gracias BAISH y Y-hat por organizar esto.
-
-Y gracias a ustedes por venir y por la atención.
-
-Ahora sí - los siguientes 40-50 minutos son para ustedes. Saquen sus laptops, hagan el setup, y empiecen a construir.
-
-Nosotros vamos a estar dando vueltas para ayudar si tienen problemas con el setup o con sus primeros proyectos.
-
-¿Alguna pregunta de último minuto antes de arrancar?
-
-[Tomar 1-2 preguntas MUY breves, máximo 30 segundos cada una]
-
-Perfecto. ¡A construir!
-
----
-
-## TIMING TOTAL: ~24 minutos de presentación + ~40 min hands-on = ~64 min total workshop
+## TIMING TOTAL: ~31 minutos de presentación + ~35 min hands-on = ~66 min total workshop
 
 **Breakdown por sección (29 slides total):**
 - Apertura + Slides 1-2 (Title, BAISH): 3:45 min
