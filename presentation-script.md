@@ -343,39 +343,11 @@ Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, 
 
 Ahora que vieron cómo funciona, veamos los agentes en detalle.
 
-[CLICK - Slide 11]
+[CLICK - Slide 9]
 
 ---
 
-## SLIDE 11: CÓMO APROVECHAR ESTA HERRAMIENTA [19:45 - 20:30]
-
-Antes de seguir, hablemos de cómo usar BMad de forma inteligente.
-
-**BMad acelera la construcción de proyectos y mejora la calidad del código.** Comparado con un workflow de uso de IA que no tiene en cuenta las debilidades de las LLMs.
-
-La estrategia inteligente: usala para **construir más proyectos y aprender más rápido**. Cada proyecto te expone a nuevos patterns, arquitecturas, decisiones de diseño.
-
-**Casos de uso ideales:** Proyectos personales, MVPs, prototipos, tu startup, hackathons, aprender nuevos tech stacks.
-
-Ahora, sobre los TPs de la facultad - acá viene lo interesante. **SÍ podés usar BMad para TPs**, pero de forma pedagógica:
-
-[Señalar la caja con el workflow]
-
-**Workflow para aprender:**
-1. Usá PM + Architect para **entender** el problema y la arquitectura profesional
-2. Usá SM para dividir el trabajo en stories claras
-3. **Acá está la clave: Salteá el Developer - CODEA VOS**
-4. Usá QA para revisar TU código y aprender de feedback experto
-
-El resultado: aprendés planificación profesional, codeás vos mismo, y recibís code review automático de calidad. Es como tener un senior developer revisando tu trabajo.
-
-Esto es lo que hace BMad diferente - no es solo generación de código, es un sistema completo para aprender y trabajar profesionalmente.
-
-[CLICK - Slide 12]
-
----
-
-## SLIDE 12: BUSINESS ANALYST [20:30 - 21:15]
+## SLIDE 9: BUSINESS ANALYST [19:45 - 20:15]
 
 El **Business Analyst** es **el agente que entiende el negocio y te ayuda a arrancar.**
 
@@ -395,11 +367,11 @@ El comando es `/analyst *create-project-brief`
 
 El Analyst es para proyectos greenfield donde arrancás de cero. Si ya tenés tu idea clara, podés skipear este agente.
 
-[CLICK - Slide 9]
+[CLICK - Slide 10]
 
 ---
 
-## SLIDE 9: PRODUCT MANAGER [11:45 - 12:30]
+## SLIDE 10: PRODUCT MANAGER [20:15 - 20:45]
 
 El **Product Manager** es **el agente que planifica TODO.**
 
@@ -420,11 +392,11 @@ El PRD es tu contrato. Es lo que guía a todos los demás agentes. Si el PRD est
 
 El PM es obligatorio - no podés skipear este agente. Necesitás esos requirements.
 
-[CLICK - Slide 10]
+[CLICK - Slide 11]
 
 ---
 
-## SLIDE 10: ARCHITECT [12:30 - 13:15]
+## SLIDE 11: ARCHITECT [20:45 - 21:15]
 
 El **Architect** es el agente que **diseña toda la arquitectura del sistema.**
 
@@ -445,11 +417,11 @@ El comando es `/architect *create-full-stack-architecture`
 
 También es obligatorio - sin arquitectura, el Developer va a inventar cosas sobre la marcha.
 
-[CLICK - Slide 11]
+[CLICK - Slide 12]
 
 ---
 
-## SLIDE 11: UX EXPERT [13:15 - 13:50]
+## SLIDE 12: UX EXPERT [21:15 - 21:40]
 
 El **UX Expert** es el agente **diseñador de experiencia.**
 
@@ -470,11 +442,11 @@ El comando es `/ux-expert *create-front-end-spec`
 
 El UX Expert genera un spec que el Developer sigue, o que vos podés usar para generar UI con herramientas como v0 o Lovable.
 
-[CLICK - Slide 12]
+[CLICK - Slide 13]
 
 ---
 
-## SLIDE 12: SCRUM MASTER [13:50 - 14:30]
+## SLIDE 13: SCRUM MASTER [21:40 - 22:10]
 
 El **Scrum Master** es el agente **especialista en preparación de stories.**
 
@@ -496,11 +468,11 @@ El SM agarra los shards del PO y dice: "Ok Developer, hacé exactamente esto, en
 
 Sin el SM, el Developer se paraliza. Con el SM, tiene una tarjeta clara.
 
-[CLICK - Slide 13]
+[CLICK - Slide 14]
 
 ---
 
-## SLIDE 13: PRODUCT OWNER [14:30 - 15:10]
+## SLIDE 14: PRODUCT OWNER [22:10 - 22:40]
 
 El **Product Owner** es el agente que **gestiona el backlog y shardea documentos.**
 
@@ -520,11 +492,11 @@ El comando principal es `/po *shard-doc`
 
 El PO evita que el contexto explote. En vez de 10,000 tokens de PRD gigante, le da al Developer 500 tokens con exactamente lo que necesita para esta story.
 
-[CLICK - Slide 14]
+[CLICK - Slide 15]
 
 ---
 
-## SLIDE 14: DEVELOPER [15:10 - 15:50]
+## SLIDE 15: DEVELOPER [22:40 - 23:10]
 
 El **Developer** es el agente que **codea posta.**
 
@@ -547,11 +519,11 @@ El Developer recibe la story del SM, lee la arquitectura del Architect, el spec 
 
 El Dev es el más usado - vas a estar en el loop: draft → develop → commit.
 
-[CLICK - Slide 15]
+[CLICK - Slide 16]
 
 ---
 
-## SLIDE 15: QA/TEST ARCHITECT [15:50 - 16:35]
+## SLIDE 16: QA/TEST ARCHITECT [23:10 - 23:45]
 
 El **Test Architect** es el agente **asesor de calidad.**
 
@@ -574,11 +546,84 @@ El QA puede entrar antes de desarrollar (análisis de riesgo) o después (code r
 
 **Y acá está el workflow pedagógico:** Si estás haciendo un TP, usá el QA para revisar TU código y aprender de feedback experto.
 
-[CLICK - Slide 10]
+[CLICK - Slide 17]
 
 ---
 
-## SLIDE 10: CICLO DE DESARROLLO CON BMAD [16:35 - 17:50]
+## SLIDE 17: DEMO [23:45 - 30:15]
+
+[Switch to live terminal - this was the content that was at slide 9, now moved here after all agents are explained]
+
+Bueno, ahora que conocen todos los agentes, vamos a verlos en acción.
+
+[Cambiar a terminal en vivo]
+
+Voy a construir una simple Todo App desde cero usando BMad. Cronometren - veamos cuánto tarda.
+
+[Typing] /pm *create-prd
+
+[ESPERAR mientras el PM genera]
+
+Miren lo que está pasando: el PM Agent está:
+1. Analizando qué features necesita una Todo App
+2. Creando user stories
+3. Definiendo acceptance criteria
+4. Todo estructurado en un PRD
+
+[Cuando termina - scroll through PRD]
+
+Esto toma 30 segundos. Si yo lo escribiera manualmente, 30-60 minutos mínimo.
+
+Ahora el Architect.
+
+[Typing] /architect *create-full-stack-architecture
+
+[ESPERAR]
+
+El Architect leyó el PRD que el PM creó, y ahora está decidiendo:
+- React para frontend
+- Express para backend
+- PostgreSQL para base de datos
+- Estructura de carpetas
+- APIs que necesitamos
+
+[Review architecture doc]
+
+Otro minuto. Manualmente, esto es fácil 1-2 horas de diseño.
+
+Ahora viene la magia - el PO va a shardear esto.
+
+[Typing] /po *shard-doc prd.md
+
+[Muestra los epics creados]
+
+Ven? Creó epic-1-task-management.md, epic-2-ui-components.md. Documentos pequeños.
+
+Ahora el Developer puede trabajar en el primer epic.
+
+[Typing] /dev *develop-story epic-1
+
+[ESPERAR mientras genera código]
+
+El Developer:
+- Lee SOLO epic-1
+- Lee la arquitectura relevante
+- Genera el código
+- Genera los tests
+
+[Muestra el código generado]
+
+Y ahí está. Código funcional, con tests, en ~2 minutos.
+
+[Regresar a slides]
+
+Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, unas 4-6 horas para llegar a este punto con tests y todo documentado.
+
+[CLICK - Slide 18]
+
+---
+
+## SLIDE 18: CICLO DE DESARROLLO CON BMAD [30:15 - 31:30]
 
 BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
 
@@ -614,11 +659,11 @@ Y de nuevo, validación adicional cuando la necesitás: PO para validar contra P
 
 Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que aprueba transiciones clave. No es todo automático - vos guiás el equipo.
 
-[CLICK - Slide 16]
+[CLICK - Slide 19]
 
 ---
 
-## SLIDE 16: FASE 1 - PLANNING [17:50 - 18:35]
+## SLIDE 19: FASE 1 - PLANNING [31:30 - 32:15]
 
 Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Planning y Development.
 
@@ -651,7 +696,7 @@ No tocaste una línea de código todavía. Y eso está bien - el planning correc
 
 ---
 
-## SLIDE 17: FASE 2 - DEVELOPMENT [17:20 - 18:00]
+## SLIDE 20: FASE 2 - DEVELOPMENT [32:15 - 32:50]
 
 **Fase 2: Development - Implementación iterativa story por story**
 
@@ -687,7 +732,7 @@ La ventaja: siempre tenés una versión funcional. Si después de 5 stories quer
 
 ---
 
-## SLIDE 18: QUALITY GATES [18:00 - 18:30]
+## SLIDE 21: QUALITY GATES [32:50 - 33:20]
 
 Hablemos rápido de los quality gates porque son importantes.
 
@@ -720,7 +765,7 @@ El QA te da la información. Vos decidís.
 
 ---
 
-## SLIDE 19: HERRAMIENTAS [18:30 - 19:45]
+## SLIDE 22: HERRAMIENTAS [33:20 - 34:35]
 
 Bueno, ya entendieron la metodología. ¿Cómo lo usamos en la práctica?
 
@@ -754,7 +799,7 @@ El setup es simple:
 
 ---
 
-## SLIDE 20: MCP TOOLS [19:45 - 20:45]
+## SLIDE 23: MCP TOOLS [34:35 - 35:35]
 
 MCP Tools son "superpoderes" para los agentes. Son herramientas especializadas que los LLMs pueden usar para hacer cosas que normalmente no pueden.
 
@@ -807,7 +852,7 @@ Ambos vienen pre-configurados en el repo. Se activan automáticamente cuando los
 
 ---
 
-## SLIDE 21: EJEMPLO REAL - BAISH WEBSITE [20:45 - 22:00]
+## SLIDE 24: EJEMPLO REAL - BAISH WEBSITE [35:35 - 36:50]
 
 Ahora que vieron toda la metodología, les voy a contar algo interesante.
 
@@ -841,7 +886,35 @@ El punto clave: BMad no es solo para proyectos nuevos. Es para cualquier proyect
 
 ---
 
-## SLIDE 22: ¡COMENCEMOS! [22:00 - 24:00]
+## SLIDE 25: CÓMO APROVECHAR ESTA HERRAMIENTA [36:50 - 37:35]
+
+Antes de comenzar con el hands-on, hablemos de cómo usar BMad de forma inteligente.
+
+**BMad acelera la construcción de proyectos y mejora la calidad del código.** Comparado con un workflow de uso de IA que no tiene en cuenta las debilidades de las LLMs.
+
+La estrategia inteligente: usala para **construir más proyectos y aprender más rápido**. Cada proyecto te expone a nuevos patterns, arquitecturas, decisiones de diseño.
+
+**Casos de uso ideales:** Proyectos personales, MVPs, prototipos, tu startup, hackathons, aprender nuevos tech stacks.
+
+Ahora, sobre los TPs de la facultad - acá viene lo interesante. **SÍ podés usar BMad para TPs**, pero de forma pedagógica:
+
+[Señalar la caja con el workflow]
+
+**Workflow para aprender:**
+1. Usá PM + Architect para **entender** el problema y la arquitectura profesional
+2. Usá SM para dividir el trabajo en stories claras
+3. **Acá está la clave: Salteá el Developer - CODEA VOS**
+4. Usá QA para revisar TU código y aprender de feedback experto
+
+El resultado: aprendés planificación profesional, codeás vos mismo, y recibís code review automático de calidad. Es como tener un senior developer revisando tu trabajo.
+
+Esto es lo que hace BMad diferente - no es solo generación de código, es un sistema completo para aprender y trabajar profesionalmente.
+
+[CLICK - Slide 26]
+
+---
+
+## SLIDE 26: ¡COMENCEMOS! [37:35 - 39:35]
 
 Bueno, ya hablamos suficiente. Ahora viene la parte divertida: ustedes van a hacerlo.
 
