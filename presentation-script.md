@@ -422,34 +422,7 @@ El Dev es el más usado - vas a estar en el loop: draft → develop → commit.
 
 ---
 
-## SLIDE 16: QA/TEST ARCHITECT [14:55 - 15:25]
-
-El **Test Architect** es el agente **asesor de calidad.**
-
-Importante: El QA NO bloquea. El QA **asesora**. Ustedes deciden la barra de calidad.
-
-¿Qué hace el QA?
-- Risk profiling - matriz de riesgos
-- Test design - estrategia de testing
-- Requirements traceability - Given-When-Then
-- NFR assessment - seguridad, performance, confiabilidad
-- Quality gates - PASS / CONCERNS / FAIL / WAIVED
-
-[Señalar artifacts]
-
-**Los artifacts que crea:** QA Reports, Quality Gate Files, Risk Profiles, Test Designs, Requirements Trace Maps. Documentación profesional de calidad.
-
-El comando es `/qa *review {story}`
-
-El QA puede entrar antes de desarrollar (análisis de riesgo) o después (code review). Ustedes deciden si seguir con CONCERNS o arreglar primero.
-
-**Y acá está el workflow pedagógico:** Si estás haciendo un TP, usá el QA para revisar TU código y aprender de feedback experto.
-
-[CLICK - Slide 17]
-
----
-
-## SLIDE 17: DEMO [15:25 - 22:00]
+## SLIDE 16: DEMO [14:55 - 21:30]
 
 [Switch to live terminal - this was the content that was at slide 9, now moved here after all agents are explained]
 
@@ -518,11 +491,11 @@ Y ahí está. Código funcional, con tests, en ~2 minutos.
 
 Todo esto tomó ~5-7 minutos. ¿Cuánto tomaría hacerlo manualmente? Para mí, unas 4-6 horas para llegar a este punto con tests y todo documentado.
 
-[CLICK - Slide 18]
+[CLICK - Slide 17]
 
 ---
 
-## SLIDE 18: CICLO DE DESARROLLO CON BMAD [22:00 - 23:15]
+## SLIDE 17: CICLO DE DESARROLLO CON BMAD [21:30 - 22:45]
 
 BMad sigue un proceso profesional que probablemente reconozcan si hicieron materias de ingeniería de software. Pero lo interesante es cómo lo implementamos de forma práctica.
 
@@ -558,11 +531,11 @@ Y de nuevo, validación adicional cuando la necesitás: PO para validar contra P
 
 Acá está la clave del éxito: **Human in the Loop**. Vos sos el tech lead que aprueba transiciones clave. No es todo automático - vos guiás el equipo.
 
-[CLICK - Slide 19]
+[CLICK - Slide 18]
 
 ---
 
-## SLIDE 19: FASE 1 - PLANNING [23:15 - 24:00]
+## SLIDE 18: FASE 1 - PLANNING [22:45 - 23:30]
 
 Ahora veamos cómo se usan estos agentes en la práctica. Hay dos fases: Planning y Development.
 
@@ -591,11 +564,11 @@ Al final de esta fase tenés:
 
 No tocaste una línea de código todavía. Y eso está bien - el planning correcto te ahorra semanas de refactoring después.
 
-[CLICK - Slide 17]
+[CLICK - Slide 19]
 
 ---
 
-## SLIDE 20: FASE 2 - DEVELOPMENT [24:00 - 24:35]
+## SLIDE 19: FASE 2 - DEVELOPMENT [23:30 - 24:05]
 
 **Fase 2: Development - Implementación iterativa story por story**
 
@@ -627,11 +600,11 @@ La ventaja: siempre tenés una versión funcional. Si después de 5 stories quer
 
 **Y acá está el loop de aprendizaje:** las notas que el Developer deja hoy son las que el SM usa mañana para mejorar el siguiente draft.
 
-[CLICK - Slide 21]
+[CLICK - Slide 20]
 
 ---
 
-## SLIDE 21: QUALITY GATES [24:35 - 25:05]
+## SLIDE 20: QUALITY GATES [24:05 - 24:35]
 
 Hablemos rápido de los quality gates porque son importantes.
 
@@ -660,11 +633,11 @@ Esto significa: si estás haciendo un MVP rápido para una hackathon, podés ign
 
 El QA te da la información. Vos decidís.
 
-[CLICK - Slide 19]
+[CLICK - Slide 21]
 
 ---
 
-## SLIDE 22: HERRAMIENTAS [25:05 - 26:20]
+## SLIDE 21: HERRAMIENTAS [24:35 - 25:50]
 
 Bueno, ya entendieron la metodología. ¿Cómo lo usamos en la práctica?
 
@@ -694,11 +667,11 @@ El setup es simple:
 
 5 pasos, 5 minutos máximo. Después están listos.
 
-[CLICK - Slide 20]
+[CLICK - Slide 22]
 
 ---
 
-## SLIDE 23: MCP TOOLS [26:20 - 27:20]
+## SLIDE 22: MCP TOOLS [25:50 - 26:50]
 
 MCP Tools son "superpoderes" para los agentes. Son herramientas especializadas que los LLMs pueden usar para hacer cosas que normalmente no pueden.
 
@@ -747,11 +720,11 @@ Con Sequential Thinking, el Architect puede pensar "Ok, podría usar REST o Grap
 
 Ambos vienen pre-configurados en el repo. Se activan automáticamente cuando los agentes los necesitan. Ustedes no tienen que hacer nada.
 
-[CLICK - Slide 21]
+[CLICK - Slide 23]
 
 ---
 
-## SLIDE 24: EJEMPLO REAL - BAISH WEBSITE [27:20 - 28:35]
+## SLIDE 23: EJEMPLO REAL - BAISH WEBSITE [26:50 - 28:05]
 
 Ahora que vieron toda la metodología, les voy a contar algo interesante.
 
@@ -781,11 +754,11 @@ Documentación estructurada del proyecto existente, workflow completo, agentes c
 
 El punto clave: BMad no es solo para proyectos nuevos. Es para cualquier proyecto donde quieras trabajar de forma profesional y estructurada.
 
-[CLICK - Slide 22]
+[CLICK - Slide 24]
 
 ---
 
-## SLIDE 25: CÓMO APROVECHAR ESTA HERRAMIENTA [28:35 - 29:20]
+## SLIDE 24: CÓMO APROVECHAR ESTA HERRAMIENTA [28:05 - 28:50]
 
 Antes de comenzar con el hands-on, hablemos de cómo usar BMad de forma inteligente.
 
@@ -809,11 +782,11 @@ El resultado: aprendés planificación profesional, codeás vos mismo, y recibí
 
 Esto es lo que hace BMad diferente - no es solo generación de código, es un sistema completo para aprender y trabajar profesionalmente.
 
-[CLICK - Slide 26]
+[CLICK - Slide 25]
 
 ---
 
-## SLIDE 26: ¡COMENCEMOS! [29:20 - 31:20]
+## SLIDE 25: ¡COMENCEMOS! [28:50 - 30:50]
 
 Bueno, ya hablamos suficiente. Ahora viene la parte divertida: ustedes van a hacerlo.
 
@@ -857,9 +830,9 @@ Perfecto. Abran sus laptops, busquen el link del repo que está en el chat, y em
 
 ---
 
-## TIMING TOTAL: ~31 minutos de presentación + ~35 min hands-on = ~66 min total workshop
+## TIMING TOTAL: ~30 minutos de presentación + ~35 min hands-on = ~65 min total workshop
 
-**Breakdown por sección (29 slides total):**
+**Breakdown por sección (25 slides total):**
 - Apertura + Slides 1-2 (Title, BAISH): 3:45 min
 - Slide 3 (LoCoDiff): 1:15 min
 - Slide 4 (METR Study): 1:45 min (+15 seg por BMad difference callout)
