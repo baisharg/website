@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BMAD Method - Agentic Coding para construir proyectos completos con AI. Planning estructurado, desarrollo iterativo, y contexto inteligente.">
+    <meta name="description"
+        content="BMAD Method - Agentic Coding para construir proyectos completos con AI. Planning estructurado, desarrollo iterativo, y contexto inteligente.">
     <title>BMAD Method - Agentic Coding Profesional</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
@@ -527,10 +528,28 @@
     <!-- Hero Section -->
     <section class="hero">
         <div>
-            <h1>BMAD Method</h1>
-            <p>Un repositorio open source de prompts estructurados para desarrollo de software asistido por AI</p>
+            <h1>Workshop de <span style="text-decoration: line-through;">Vibe Coding</span> Agentic Coding</h1>
+            <p style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 15px;">Armá proyectos con AI como si
+                tuvieras todo un equipo</p>
+            <p style="font-size: clamp(0.9rem, 2vw, 1.1rem); opacity: 0.9; margin-bottom: 25px;">
+                📅 Viernes 3 de octubre 2025, 16:00hs • 📍 Salas 1109 y 1110<br>
+                🎓 BAISH x Y-hat
+            </p>
+            <p style="font-size: clamp(0.85rem, 1.8vw, 1rem); opacity: 0.85; max-width: 700px; margin: 0 auto 20px;">
+                Esta página contiene el resumen y todos los recursos del workshop
+            </p>
+            <div style="max-width: 600px; margin: 0 auto 25px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
+                <p style="color: rgba(255, 255, 255, 0.95); font-size: clamp(0.9rem, 1.8vw, 1.05rem); line-height: 1.6; margin: 0;">
+                    💬 <strong>Unite al grupo de WhatsApp "Agentic Coding"</strong> dentro de la comunidad BAISH para discutir ideas, compartir proyectos, y pedir ayuda con BMAD.
+                </p>
+            </div>
             <div class="cta-buttons">
-                <a href="https://github.com/bmad-code-org/bmad-method/" target="_blank" class="btn btn-primary">Ver en GitHub</a>
+                <a href="#workshop-repo" class="btn btn-primary" style="background: #22C55E; border-color: #22C55E;">🚀 Empezar Ahora</a>
+                <a href="https://baish.com.ar" target="_blank" class="btn btn-primary">🎓 BAISH</a>
+                <a href="https://www.instagram.com/somos.yhat/" target="_blank" class="btn btn-primary">📊 Y-hat</a>
+                <a href="https://chat.whatsapp.com/IpVPWqa5gcM9ePJRgTMUPM" target="_blank" class="btn btn-secondary">💬
+                    Unirse al WhatsApp</a>
+                <a href="#recursos" class="btn btn-secondary">📚 Ver Recursos</a>
             </div>
         </div>
     </section>
@@ -539,7 +558,8 @@
     <section id="problema">
         <div class="container">
             <h2>🚨 <span class="gradient-text">El Problema</span></h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px; font-size: 1.2rem;">
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px; font-size: 1.2rem;">
                 Los LLMs tradicionales tienen dos problemas fundamentales para desarrollo de software:
             </p>
 
@@ -547,23 +567,29 @@
                 <div class="problem-card" style="grid-column: 1 / -1;">
                     <h3>📉 Degradación con Contexto Largo</h3>
                     <p style="margin-bottom: 20px;">
-                        El benchmark LoCoDiff (enero 2025) muestra que incluso el mejor modelo disponible, Sonnet 4.5, degrada significativamente con contextos largos:
+                        El benchmark LoCoDiff (enero 2025) muestra que incluso el mejor modelo disponible, Sonnet 4.5,
+                        degrada significativamente con contextos largos:
                     </p>
-                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: 10px; padding: 20px; margin: 20px 0;">
+                    <div
+                        style="background: rgba(255, 255, 255, 0.02); border-radius: 10px; padding: 20px; margin: 20px 0;">
                         <canvas id="locodiffChart" style="max-height: 400px;"></canvas>
                     </div>
                     <p style="margin-top: 15px;">
-                        <strong style="color: #FCD34D;">El resultado:</strong> De 96% de precisión con 2-21K tokens a 64% con más de 60K tokens. Cuando le das todo tu codebase al modelo, se ahoga en información.
+                        <strong style="color: #FCD34D;">El resultado:</strong> De 96% de precisión con 2-21K tokens a
+                        64% con más de 60K tokens. Cuando le das todo tu codebase al modelo, se ahoga en información.
                     </p>
                     <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
-                        📄 Source: <a href="https://arxiv.org/abs/2501.01469" target="_blank" style="color: var(--accent); text-decoration: none;">LoCoDiff arXiv:2501.01469</a>
+                        📄 Source: <a href="https://abanteai.github.io/LoCoDiff-bench/" target="_blank"
+                            style="color: var(--accent); text-decoration: none;">LoCoDiff Benchmark</a>
                     </p>
                 </div>
 
                 <div class="problem-card" style="grid-column: 1 / -1;">
                     <h3>🧠 Sin Memoria a Largo Plazo</h3>
                     <p style="margin-bottom: 20px;">
-                        Un estudio de METR (julio 2025) demostró que developers expertos con 2+ años de experiencia en sus propios proyectos fueron <strong style="color: #EF4444;">20% MÁS LENTOS</strong> con AI que sin ella.
+                        Un estudio de METR (julio 2025) demostró que developers expertos con 2+ años de experiencia en
+                        sus propios proyectos fueron <strong style="color: #EF4444;">20% MÁS LENTOS</strong> con AI que
+                        sin ella.
                     </p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
                         <div style="background: rgba(255, 255, 255, 0.02); border-radius: 10px; padding: 15px;">
@@ -574,10 +600,14 @@
                         </div>
                     </div>
                     <p style="margin-top: 15px;">
-                        <strong style="color: #FCD34D;">¿Por qué?</strong> Porque el LLM arranca de cero cada vez, sin el contexto que los developers tienen en su cabeza. Los expertos predijeron que serían 39% más rápidos, pero la realidad fue lo opuesto.
+                        <strong style="color: #FCD34D;">¿Por qué?</strong> Porque el LLM arranca de cero cada vez, sin
+                        el contexto que los developers tienen en su cabeza. Los expertos predijeron que serían 39% más
+                        rápidos, pero la realidad fue lo opuesto.
                     </p>
                     <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
-                        📄 Source: <a href="https://metr.org/blog/2025-01-06-ai-rd-with-two-year-experts/" target="_blank" style="color: var(--accent); text-decoration: none;">METR AI R&D Study (July 2025)</a>
+                        📄 Source: <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+                            target="_blank" style="color: var(--accent); text-decoration: none;">METR AI R&D Study (July
+                            2025)</a>
                     </p>
                 </div>
             </div>
@@ -588,25 +618,39 @@
     <section id="solucion" style="background: rgba(139, 92, 246, 0.03);">
         <div class="container">
             <h2>✅ <span class="gradient-text">La Solución: BMAD</span></h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.2rem;">
-                BMAD resuelve estos problemas con tres principios fundamentales:
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 20px; font-size: 1.2rem;">
+                <strong>BMAD</strong> es un método de desarrollo de software con AI donde un equipo de 8 agentes
+                especializados trabaja como un equipo real: planean el proyecto completo antes de codear, después
+                ejecutan story por story con validaciones continuas.
+            </p>
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9;">
+                Cada agente es el mismo LLM con un prompt especializado y contexto quirúrgicamente preciso. No hay
+                memoria mágica - hay documentación estructurada que los agentes leen exactamente cuando la necesitan.
+            </p>
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.2rem;">
+                BMAD resuelve los problemas de degradación y falta de memoria con tres principios fundamentales:
             </p>
 
             <div class="solution-grid">
                 <div class="solution-card">
                     <h3><span style="font-size: 1.5rem;">🔪</span> Sharding</h3>
                     <p>
-                        Partir documentos grandes en pedazos pequeños y enfocados. En vez de darle al Developer un PRD de 10,000 tokens, le das un "shard" de 500 tokens con exactamente lo que necesita para esta story.
+                        Partir documentos grandes en pedazos pequeños y enfocados. En vez de darle al Developer un PRD
+                        de 10,000 tokens, le das un "shard" de 500 tokens con exactamente lo que necesita para esta
+                        story.
                     </p>
                     <p style="margin-top: 10px; color: #86EFAC;">
-                        <strong>Resultado:</strong> Cada agente opera en la zona de 96% de precisión (< 5K tokens).
-                    </p>
+                        <strong>Resultado:</strong> Cada agente opera en la zona de 96% de precisión (< 5K tokens). </p>
                 </div>
 
                 <div class="solution-card">
                     <h3><span style="font-size: 1.5rem;">👥</span> Agentes Especializados</h3>
                     <p>
-                        8 agentes con roles específicos: Product Manager, Architect, Developer, QA, etc. Cada uno tiene instrucciones especializadas y lee SOLO lo que necesita para su tarea.
+                        8 agentes con roles específicos: Product Manager, Architect, Developer, QA, etc. Cada uno tiene
+                        instrucciones especializadas y lee SOLO lo que necesita para su tarea.
                     </p>
                     <p style="margin-top: 10px; color: #86EFAC;">
                         <strong>Resultado:</strong> Contexto quirúrgicamente preciso para cada decisión.
@@ -616,7 +660,8 @@
                 <div class="solution-card">
                     <h3><span style="font-size: 1.5rem;">🎯</span> Documentación Estructurada</h3>
                     <p>
-                        Planning riguroso antes de codear: PRD completo, arquitectura definida, stories secuenciales. Esto crea la "memoria" que los LLMs no tienen.
+                        Planning riguroso antes de codear: PRD completo, arquitectura definida, stories secuenciales.
+                        Esto crea la "memoria" que los LLMs no tienen.
                     </p>
                     <p style="margin-top: 10px; color: #86EFAC;">
                         <strong>Resultado:</strong> Los agentes tienen contexto profesional, no tienen que adivinarlo.
@@ -627,16 +672,20 @@
             <div class="highlight-box" style="margin-top: 50px;">
                 <h3>💡 ¿Por qué BMAD funciona?</h3>
                 <p>
-                    <strong>1. Contexto Optimizado:</strong> Los expertos en el estudio METR le dieron TODO el codebase a la AI (60-80K tokens) y el modelo se degradó.
+                    <strong>1. Contexto Optimizado:</strong> Los expertos en el estudio METR usaron Cursor con Claude Sonnet 3.5 en codebases grandes y fueron 20% más lentos.
                     BMAD hace lo opuesto: cada agente recibe SOLO lo que necesita. PM lee requirements docs (2K tokens),
-                    Architect lee PRD + preferencias técnicas (3K tokens), Developer lee UN epic específico (1.5K tokens).
+                    Architect lee PRD + preferencias técnicas (3K tokens), Developer lee UN epic específico (1.5K
+                    tokens). Esto mantiene la precisión alta evitando la degradación por contexto excesivo.
                 </p>
                 <p style="margin-top: 15px;">
-                    <strong>2. Validaciones y Transparencia:</strong> BMAD tiene múltiples checks de calidad integrados. El PO valida que los story drafts sean coherentes con el PRD.
-                    El QA testea el trabajo del Developer exhaustivamente. La documentación es completamente legible por humanos, y el humano aprueba cada story antes de que se implemente.
+                    <strong>2. Validaciones y Transparencia:</strong> BMAD tiene múltiples checks de calidad integrados.
+                    El PO valida que los story drafts sean coherentes con el PRD.
+                    El QA testea el trabajo del Developer exhaustivamente. La documentación es completamente legible por
+                    humanos, y el humano aprueba cada story antes de que se implemente.
                 </p>
                 <p style="margin-top: 15px;">
-                    <strong>3. Elicitación Avanzada:</strong> Los agentes usan técnicas de elicitación para hacer las preguntas correctas al usuario, empoderándolo para construir exactamente lo que quiere construir.
+                    <strong>3. Elicitación Avanzada:</strong> Los agentes usan técnicas de elicitación para hacer las
+                    preguntas correctas al usuario, empoderándolo para construir exactamente lo que quiere construir.
                     No es solo generar código - es un proceso colaborativo de descubrimiento y validación continua.
                 </p>
             </div>
@@ -647,7 +696,8 @@
     <section id="agentes">
         <div class="container">
             <h2>👥 <span class="gradient-text">Los 8 Agentes</span></h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.2rem;">
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.2rem;">
                 Cada agente es el mismo LLM (Claude/GPT) con un prompt especializado y contexto focalizado:
             </p>
 
@@ -663,7 +713,8 @@
                     <div class="agent-role">Insightful Analyst & Strategic Ideation Partner</div>
                     <div class="agent-command">/analyst *create-project-brief</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        Market research, brainstorming, competitive analysis, creating project briefs, initial project discovery, and documenting existing projects (brownfield).
+                        Market research, brainstorming, competitive analysis, creating project briefs, initial project
+                        discovery, and documenting existing projects (brownfield).
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -687,7 +738,8 @@
                     <div class="agent-role">Investigative Product Strategist & Market-Savvy PM</div>
                     <div class="agent-command">/pm *create-prd</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        Creating PRDs, product strategy, feature prioritization, roadmap planning, and stakeholder communication. <strong>Obligatorio.</strong>
+                        Creating PRDs, product strategy, feature prioritization, roadmap planning, and stakeholder
+                        communication. <strong>Obligatorio - paso central del método.</strong>
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -709,7 +761,8 @@
                     <div class="agent-role">Holistic System Architect & Full-Stack Technical Leader</div>
                     <div class="agent-command">/architect *create-full-stack-architecture</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        System design, architecture documents, technology selection, API design, and infrastructure planning. <strong>Obligatorio.</strong>
+                        System design, architecture documents, technology selection, API design, and infrastructure
+                        planning. <strong>Obligatorio - paso central del método.</strong>
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -733,7 +786,8 @@
                     <div class="agent-role">User Experience Designer & UI Specialist</div>
                     <div class="agent-command">/ux-expert *create-front-end-spec</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        UI/UX design, wireframes, prototypes, front-end specifications, and user experience optimization. Crafts prompts for AI UI generation tools like v0 or Lovable.
+                        UI/UX design, wireframes, prototypes, front-end specifications, and user experience
+                        optimization. Crafts prompts for AI UI generation tools like v0 or Lovable.
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -755,7 +809,9 @@
                     <div class="agent-role">Technical Product Owner & Process Steward</div>
                     <div class="agent-command">/po *shard-doc</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        Backlog management, story refinement, acceptance criteria, sprint planning, prioritization decisions, and validating artifacts cohesion. <strong>Crítico para manejo de contexto.</strong>
+                        Backlog management, story refinement, acceptance criteria, sprint planning, prioritization
+                        decisions, and validating artifacts cohesion. <strong>Crítico - el sharding evita la degradación
+                            del modelo.</strong>
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -778,7 +834,8 @@
                     <div class="agent-role">Technical Scrum Master - Story Preparation Specialist</div>
                     <div class="agent-command">/sm *draft</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        Story creation, epic management, retrospectives, and agile process guidance. Creates crystal-clear stories that AI developers can implement without confusion.
+                        Story creation, epic management, retrospectives, and agile process guidance. Creates
+                        crystal-clear stories that AI developers can implement without confusion.
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -801,7 +858,8 @@
                     <div class="agent-role">Expert Senior Software Engineer & Implementation Specialist</div>
                     <div class="agent-command">/dev *develop-story</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        Code implementation, debugging, refactoring, and development best practices. Implements stories by reading requirements and executing tasks sequentially with comprehensive testing.
+                        Code implementation, debugging, refactoring, and development best practices. Implements stories
+                        by reading requirements and executing tasks sequentially with comprehensive testing.
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -826,7 +884,9 @@
                     <div class="agent-role">Test Architect with Quality Advisory Authority</div>
                     <div class="agent-command">/qa *review</div>
                     <p style="color: #E5E7EB; font-size: 0.9rem;">
-                        Comprehensive test architecture review, quality gate decisions, and code improvement. Provides thorough analysis including requirements traceability, risk assessment, and test strategy. Advisory only - teams choose their quality bar.
+                        Comprehensive test architecture review, quality gate decisions, and code improvement. Provides
+                        thorough analysis including requirements traceability, risk assessment, and test strategy.
+                        Advisory only - teams choose their quality bar.
                     </p>
                     <div class="agent-artifacts">
                         <h4>Artifacts:</h4>
@@ -843,16 +903,82 @@
         </div>
     </section>
 
+    <!-- How Commands Work -->
+    <section style="background: rgba(139, 92, 246, 0.05);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">⌨️ <span class="gradient-text">Cómo Funcionan los
+                    Comandos</span></h2>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div
+                    style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%); border: 2px solid #8B5CF6; padding: 30px; border-radius: 12px; margin-bottom: 25px;">
+                    <h3 style="color: #A78BFA; font-size: 1.4rem; margin-bottom: 15px;">📝 Sintaxis de Comandos</h3>
+                    <p style="color: #E5E7EB; line-height: 1.8; margin-bottom: 15px;">
+                        Los agentes se invocan a través de comandos en tu herramienta de AI. La sintaxis depende de la
+                        herramienta que uses:
+                    </p>
+                    <div style="background: var(--bg-darker); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                        <p style="color: #A78BFA; margin-bottom: 10px; font-weight: 600;">En Claude Code / OpenCode:</p>
+                        <code
+                            style="color: var(--accent); font-size: 1.1rem; display: block; margin-bottom: 5px;">/pm *create-prd here's some rough notes @notes.md</code>
+                        <code
+                            style="color: var(--accent); font-size: 1.1rem; display: block; margin-bottom: 5px;">/architect *create-full-stack-architecture @prd.md</code>
+                        <code
+                            style="color: var(--accent); font-size: 1.1rem; display: block;">/dev *develop-story @docs/stories/1.1.md</code>
+                    </div>
+                    <div style="background: var(--bg-darker); padding: 20px; border-radius: 8px;">
+                        <p style="color: #A78BFA; margin-bottom: 10px; font-weight: 600;">En Cursor / Windsurf:</p>
+                        <code style="color: var(--accent); font-size: 1.1rem; display: block; margin-bottom: 5px;">@PM Create prd, here's some notes @notes.md</code>
+                        <code style="color: var(--accent); font-size: 1.1rem; display: block; margin-bottom: 5px;">@architect Design the system architecture, here's the @prd.md</code>
+                        <code style="color: var(--accent); font-size: 1.1rem; display: block;">@dev *develop @docs/stories/1.1.md</code>
+                    </div>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%); border: 2px solid #22C55E; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #86EFAC; font-size: 1.4rem; margin-bottom: 15px;">🔄 Cómo Cambiar de Agente</h3>
+                    <p style="color: #E5E7EB; line-height: 1.8; margin-bottom: 15px;">
+                        Para invocar un agente diferente:
+                    </p>
+                    <ol style="color: #E5E7EB; line-height: 1.8; padding-left: 20px;">
+                        <li><strong style="color: #86EFAC;">Limpia el contexto</strong> con: <code
+                                style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">/clear</code>
+                            (Claude Code) o <code
+                                style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">/new</code>
+                            (OpenCode)</li>
+                        <li><strong style="color: #86EFAC;">Invoca el agente</strong> con su comando de inicialización
+                            (ej: <code
+                                style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">/pm</code>)
+                        </li>
+                        <li><strong style="color: #86EFAC;">El agente toma control</strong> con su prompt especializado
+                            y contexto preciso</li>
+                    </ol>
+                    <p style="color: #E5E7EB; line-height: 1.8; margin-top: 15px; font-size: 0.95rem; opacity: 0.9;">
+                        💡 <strong>Importante:</strong> Cada agente es el mismo LLM (Claude, GPT, etc.) pero con
+                        instrucciones especializadas. Limpiar el contexto asegura que el nuevo agente arranque limpio
+                        sin confusión de conversaciones anteriores.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Planning Phase -->
     <section id="planning" style="background: rgba(139, 92, 246, 0.03);">
         <div class="container">
             <h2>📐 <span class="gradient-text">Fase 1: Planning</span></h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 20px; font-size: 1.2rem;">
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 20px; font-size: 1.2rem;">
                 Diseño completo antes de codear. Se hace UNA VEZ al principio del proyecto.
+            </p>
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 20px; font-size: 1.1rem; opacity: 0.9;">
+                💡 Todo el planning se ejecuta en la terminal con los comandos de cada agente.
             </p>
 
             <div class="workflow-container">
-                <h3 style="color: #A78BFA; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Workflow Core (4 pasos obligatorios)</h3>
+                <h3 style="color: #A78BFA; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Workflow Core (4
+                    pasos obligatorios)</h3>
 
                 <div class="workflow-steps">
                     <!-- Step 1 -->
@@ -862,18 +988,24 @@
                             <div style="flex: 1;">
                                 <div class="step-title">📋 PM: PRD Creation</div>
                                 <div class="step-description">
-                                    El Product Manager crea el Product Requirements Document siguiendo un proceso paso a paso:
+                                    El Product Manager crea el Product Requirements Document siguiendo un proceso paso a
+                                    paso:
                                     <ul style="margin-top: 10px; padding-left: 20px;">
-                                        <li><strong>Proceso interactivo:</strong> El PM hace preguntas al usuario sección por sección del PRD</li>
+                                        <li><strong>Proceso interactivo:</strong> El PM hace preguntas al usuario
+                                            sección por sección del PRD</li>
                                         <li>Features y epics (con stories MUY cortas - solo títulos)</li>
                                         <li>Requirements funcionales y no funcionales</li>
                                         <li>Priorización MVP vs roadmap</li>
                                         <li>El usuario revisa y aprueba cada sección antes de continuar</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
-                                        <strong style="color: var(--accent);">💡 Nota importante:</strong> Las stories en el PRD son muy breves (solo títulos). El Scrum Master las expandirá más tarde con todos los detalles.
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
+                                        <strong style="color: var(--accent);">💡 Nota importante:</strong> Las stories
+                                        en el PRD son muy breves (solo títulos). El Scrum Master las expandirá más tarde
+                                        con todos los detalles.
                                     </div>
-                                    <div style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
                                         <code style="color: var(--accent);">/pm *create-prd</code>
                                     </div>
                                 </div>
@@ -888,17 +1020,21 @@
                             <div style="flex: 1;">
                                 <div class="step-title">🏗️ Architect: System Design</div>
                                 <div class="step-description">
-                                    El Architect lee el PRD y diseña la arquitectura técnica siguiendo un proceso paso a paso:
+                                    El Architect lee el PRD y diseña la arquitectura técnica siguiendo un proceso paso a
+                                    paso:
                                     <ul style="margin-top: 10px; padding-left: 20px;">
-                                        <li><strong>Proceso interactivo:</strong> El Architect hace preguntas al usuario sección por sección</li>
+                                        <li><strong>Proceso interactivo:</strong> El Architect hace preguntas al usuario
+                                            sección por sección</li>
                                         <li>Tech stack (frontend, backend, base de datos)</li>
                                         <li>Estructura de código y carpetas</li>
                                         <li>APIs y contratos entre componentes</li>
                                         <li>Consideraciones de escalabilidad, seguridad, performance</li>
                                         <li>El usuario revisa y aprueba cada sección antes de continuar</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
-                                        <code style="color: var(--accent);">/architect *create-full-stack-architecture</code>
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code
+                                            style="color: var(--accent);">/architect *create-full-stack-architecture</code>
                                     </div>
                                 </div>
                             </div>
@@ -918,8 +1054,11 @@
                                         <li>Viabilidad de la arquitectura para los features</li>
                                         <li>Identificación de gaps o contradicciones</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(251, 191, 36, 0.1); border-left: 3px solid var(--warning); border-radius: 6px;">
-                                        <strong style="color: var(--warning);">⚠️ Si no alinea:</strong> Se refinan documentos hasta que todo tenga sentido. No se avanza hasta que haya validación completa.
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(251, 191, 36, 0.1); border-left: 3px solid var(--warning); border-radius: 6px;">
+                                        <strong style="color: var(--warning);">⚠️ Si no alinea:</strong> Se refinan
+                                        documentos hasta que todo tenga sentido. No se avanza hasta que haya validación
+                                        completa.
                                     </div>
                                 </div>
                             </div>
@@ -933,17 +1072,38 @@
                             <div style="flex: 1;">
                                 <div class="step-title">🔪 PO: Sharding</div>
                                 <div class="step-description">
-                                    El Product Owner shardea PRD y arquitectura en epics y stories manejables:
+                                    El Product Owner shardea los archivos <code
+                                        style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/prd.md</code>
+                                    y <code
+                                        style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/architecture.md</code>
+                                    en epics y stories manejables:
                                     <ul style="margin-top: 10px; padding-left: 20px;">
+                                        <li>El PO ejecuta un programa de terminal que divide automáticamente los
+                                            documentos</li>
                                         <li>Divide documentos grandes en shards pequeños (< 2K tokens cada uno)</li>
                                         <li>Cada shard es un epic o story con contexto enfocado</li>
-                                        <li>Ejemplo: PRD de 10K tokens → epic-1-auth.md, epic-2-dashboard.md, etc.</li>
+                                        <li>Todos los archivos son <strong>Markdown</strong> guardados en <code
+                                                style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/</code>
+                                            en la raíz del proyecto</li>
+                                        <li>Ejemplo: PRD de 10K tokens → <code
+                                                style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/epics/epic-1-auth.md</code>,
+                                            <code
+                                                style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/epics/epic-2-dashboard.md</code>,
+                                            etc.</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
-                                        <code style="color: var(--accent);">/po *shard-doc prd.md</code>
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/po *shard-doc docs/prd.md</code><br>
+                                        <code style="color: var(--accent);">/po *shard-doc docs/architecture.md</code>
                                     </div>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
-                                        <strong style="color: var(--success);">✅ Resultado:</strong> Backlog de stories shardeadas, listas para desarrollo iterativo.
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
+                                        <strong style="color: var(--success);">✅ Resultado:</strong> Backlog de stories
+                                        shardeadas en <code
+                                            style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/epics/</code>
+                                        y <code
+                                            style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">docs/stories/</code>,
+                                        listas para desarrollo iterativo.
                                     </div>
                                 </div>
                             </div>
@@ -954,8 +1114,10 @@
                 <div class="workflow-note">
                     <h4>📌 Agentes Adicionales (según necesidad)</h4>
                     <p>
-                        <strong>• Business Analyst:</strong> Para proyectos greenfield donde necesitás investigación de mercado y brief inicial.<br>
-                        <strong>• UX Expert:</strong> Para apps con UI - crea specs de diseño y prompts para herramientas como V0/Lovable.<br>
+                        <strong>• Business Analyst:</strong> Para proyectos greenfield donde necesitás investigación de
+                        mercado y brief inicial.<br>
+                        <strong>• UX Expert:</strong> Para apps con UI - crea specs de diseño y prompts para
+                        herramientas como V0/Lovable.<br>
                         <strong>• QA:</strong> Para risk profiling de áreas de alto riesgo antes de empezar desarrollo.
                     </p>
                 </div>
@@ -969,7 +1131,8 @@
                         ✅ Contexto estructurado para todo el equipo
                     </p>
                     <p style="margin-top: 15px; color: var(--warning);">
-                        <strong>No tocaste una línea de código todavía.</strong> Y eso está bien - el planning correcto te ahorra semanas de refactoring después.
+                        <strong>No tocaste una línea de código todavía.</strong> Y eso está bien - el planning correcto
+                        te ahorra semanas de refactoring después.
                     </p>
                 </div>
             </div>
@@ -980,12 +1143,14 @@
     <section id="development">
         <div class="container">
             <h2>🔄 <span class="gradient-text">Fase 2: Development Loop</span></h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 20px; font-size: 1.2rem;">
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 20px; font-size: 1.2rem;">
                 Implementación iterativa story por story. Este loop se repite hasta completar el proyecto.
             </p>
 
             <div class="workflow-container">
-                <h3 style="color: #A78BFA; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Workflow Core (9 pasos iterativos)</h3>
+                <h3 style="color: #A78BFA; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Workflow Core (7
+                    pasos iterativos)</h3>
 
                 <div class="workflow-steps">
                     <!-- Step 1 -->
@@ -1002,8 +1167,14 @@
                                         <li>Feedback del Developer y QA</li>
                                         <li>Aprendizajes para aplicar en la siguiente story</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
-                                        <strong style="color: var(--accent);">💡 Loop de Aprendizaje:</strong> Las notas de hoy informan el draft de mañana. El equipo mejora continuamente.
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/sm *review-notes @docs/stories/1.0.md</code>
+                                    </div>
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
+                                        <strong style="color: var(--accent);">💡 Loop de Aprendizaje:</strong> Las notas
+                                        de hoy informan el draft de mañana. El equipo mejora continuamente.
                                     </div>
                                 </div>
                             </div>
@@ -1026,8 +1197,9 @@
                                         <li>Define criterios de aceptación específicos</li>
                                         <li>Incluye contexto necesario sin ahogar en información</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
-                                        <code style="color: var(--accent);">/sm *draft</code>
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/sm *draft story 1.1</code>
                                     </div>
                                 </div>
                             </div>
@@ -1048,8 +1220,14 @@
                                         <li>Identifica gaps o contradicciones</li>
                                         <li>Da consejos de mejora al Scrum Master si es necesario</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
-                                        <strong style="color: var(--success);">✅ Check de Alineación:</strong> Esto asegura que el Developer implemente exactamente lo que se definió en planning.
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/po *validate story @docs/stories/1.1.md</code>
+                                    </div>
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
+                                        <strong style="color: var(--success);">✅ Check de Alineación:</strong> Esto
+                                        asegura que el Developer implemente exactamente lo que se definió en planning.
                                     </div>
                                 </div>
                             </div>
@@ -1065,14 +1243,17 @@
                                 <div class="step-description">
                                     El Developer implementa la story completa:
                                     <ul style="margin-top: 10px; padding-left: 20px;">
-                                        <li><strong>Código de producción:</strong> Sigue la arquitectura y el spec de UX</li>
+                                        <li><strong>Código de producción:</strong> Sigue la arquitectura y el spec de UX
+                                        </li>
                                         <li><strong>Tests unitarios:</strong> Para cada función/componente</li>
                                         <li><strong>Tests de integración:</strong> Para flujos entre componentes</li>
-                                        <li><strong>Tests E2E:</strong> Para user flows completos (con Playwright MCP si es app web)</li>
+                                        <li><strong>Tests E2E:</strong> Para user flows completos (con Playwright MCP si
+                                            es app web)</li>
                                         <li><strong>Validaciones:</strong> Manejo de errores, edge cases</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
-                                        <code style="color: var(--accent);">/dev *develop-story</code>
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/dev *develop-story @docs/stories/1.1.md</code>
                                     </div>
                                 </div>
                             </div>
@@ -1089,13 +1270,34 @@
                                     El QA testea exhaustivamente el trabajo del Developer:
                                     <ul style="margin-top: 10px; padding-left: 20px;">
                                         <li><strong>Ejecuta todos los tests:</strong> Unitarios, integración, E2E</li>
-                                        <li><strong>Testing manual:</strong> User flows, edge cases, escenarios de error</li>
-                                        <li><strong>Verifica requirements:</strong> La implementación cumple los criterios de aceptación</li>
-                                        <li><strong>Risk profiling:</strong> Identifica áreas de riesgo (seguridad, performance)</li>
-                                        <li><strong>Emite veredicto:</strong> PASS ✅ / CONCERNS ⚠️ / FAIL ❌ / WAIVED 🔓</li>
+                                        <li><strong>Testing manual:</strong> User flows, edge cases, escenarios de error
+                                        </li>
+                                        <li><strong>Verifica requirements:</strong> La implementación cumple los
+                                            criterios de aceptación</li>
+                                        <li><strong>Risk profiling:</strong> Identifica áreas de riesgo (seguridad,
+                                            performance)</li>
+                                        <li><strong>Emite veredicto:</strong> PASS ✅ / CONCERNS ⚠️ / FAIL ❌ / WAIVED 🔓
+                                        </li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
-                                        <strong style="color: var(--success);">✅ Check Crítico:</strong> El QA asegura que el código no solo funciona, sino que cumple estándares de calidad profesional.
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/qa *review @docs/stories/1.1.md</code>
+                                    </div>
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
+                                        <strong style="color: var(--accent);">📋 Quality Gates:</strong><br>
+                                        • <strong>PASS ✅</strong>: Todo funciona, sin problemas críticos<br>
+                                        • <strong>CONCERNS ⚠️</strong>: Problemas no críticos que el equipo debe
+                                        revisar<br>
+                                        • <strong>FAIL ❌</strong>: Problemas críticos que deben arreglarse (seguridad,
+                                        tests P0 faltantes)<br>
+                                        • <strong>WAIVED 🔓</strong>: Problemas aceptados explícitamente por el equipo
+                                    </div>
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
+                                        <strong style="color: var(--success);">✅ Check Crítico:</strong> El QA asegura
+                                        que el código no solo funciona, sino que cumple estándares de calidad
+                                        profesional.
                                     </div>
                                 </div>
                             </div>
@@ -1116,8 +1318,15 @@
                                         <li>Aborda todos los CONCERNS y FAIL items</li>
                                         <li>Verifica que los cambios no rompan tests existentes</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(251, 191, 36, 0.1); border-left: 3px solid var(--warning); border-radius: 6px;">
-                                        <strong style="color: var(--warning);">⚠️ Iterativo:</strong> Si el QA emitió FAIL, el Developer debe arreglar y el QA revisa nuevamente hasta obtener PASS o WAIVED.
+                                    <div
+                                        style="margin-top: 15px; padding: 12px; background: var(--bg-darker); border-radius: 6px;">
+                                        <code style="color: var(--accent);">/dev Fix the issues from QA review @docs/stories/1.1.md</code>
+                                    </div>
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(251, 191, 36, 0.1); border-left: 3px solid var(--warning); border-radius: 6px;">
+                                        <strong style="color: var(--warning);">⚠️ Iterativo:</strong> Si el QA emitió
+                                        FAIL, el Developer debe arreglar y el QA revisa nuevamente hasta obtener PASS o
+                                        WAIVED.
                                     </div>
                                 </div>
                             </div>
@@ -1129,56 +1338,6 @@
                         <div style="display: flex; align-items: start; gap: 15px;">
                             <span class="step-number">7</span>
                             <div style="flex: 1;">
-                                <div class="step-title">📝 Dev: Document Notes for Next Story</div>
-                                <div class="step-description">
-                                    El Developer documenta el trabajo y aprendizajes:
-                                    <ul style="margin-top: 10px; padding-left: 20px;">
-                                        <li>Qué se implementó exactamente</li>
-                                        <li>Decisiones técnicas tomadas y por qué</li>
-                                        <li>Problemas encontrados y cómo se resolvieron</li>
-                                        <li>Feedback del QA y cómo se abordó</li>
-                                        <li>Notas para la próxima story (qué tener en cuenta)</li>
-                                        <li>Áreas que necesitan atención especial</li>
-                                    </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
-                                        <strong style="color: var(--success);">📝 Estas notas:</strong> Son las que el SM va a leer en el paso 1 de la siguiente story.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 8 -->
-                    <div class="workflow-step">
-                        <div style="display: flex; align-items: start; gap: 15px;">
-                            <span class="step-number">8</span>
-                            <div style="flex: 1;">
-                                <div class="step-title">🧪 QA: Verify Tests/Linting → COMMIT</div>
-                                <div class="step-description">
-                                    El QA verifica que todo esté listo para commit:
-                                    <ul style="margin-top: 10px; padding-left: 20px;">
-                                        <li>✅ Todos los tests unitarios pasan</li>
-                                        <li>✅ Tests de integración pasan</li>
-                                        <li>✅ Tests E2E pasan (si corresponde)</li>
-                                        <li>✅ Tests de regresión pasan (que no rompiste nada anterior)</li>
-                                        <li>✅ Linting pasa sin errores</li>
-                                    </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(239, 68, 68, 0.1); border-left: 3px solid #EF4444; border-radius: 6px;">
-                                        <strong style="color: #FCA5A5;">⛔ Si algo falla:</strong> NO commitear. Volver al Developer para arreglar.
-                                    </div>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--success); border-radius: 6px;">
-                                        <strong style="color: var(--success);">✅ Si todo pasa:</strong> COMMIT con mensaje descriptivo.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 9 -->
-                    <div class="workflow-step">
-                        <div style="display: flex; align-items: start; gap: 15px;">
-                            <span class="step-number">9</span>
-                            <div style="flex: 1;">
                                 <div class="step-title">🔄 Mark Done & Next Story</div>
                                 <div class="step-description">
                                     Marcar la story como completa y volver al paso 1 para la siguiente:
@@ -1187,8 +1346,10 @@
                                         <li>Revisar qué sigue en el backlog priorizado</li>
                                         <li>Loop back al paso 1: SM revisa las notas que acabás de dejar</li>
                                     </ul>
-                                    <div style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
-                                        <strong style="color: var(--accent);">🔁 Iterativo:</strong> Story por story, commit por commit, hasta completar el proyecto.
+                                    <div
+                                        style="margin-top: 15px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--secondary); border-radius: 6px;">
+                                        <strong style="color: var(--accent);">🔁 Iterativo:</strong> Story por story,
+                                        commit por commit, hasta completar el proyecto.
                                     </div>
                                 </div>
                             </div>
@@ -1203,19 +1364,29 @@
                 <div class="workflow-note">
                     <h4>📌 Notas sobre el Proceso</h4>
                     <p>
-                        <strong>• Validaciones Integradas:</strong> El PO valida el draft antes de development (paso 3), el QA testea después de development (paso 5), el Developer arregla según feedback (paso 6), y el QA verifica tests/linting antes de commit (paso 8). Estos checks mantienen el sistema alineado con los requirements y estándares de calidad.<br>
-                        <strong>• Flexibilidad de Calidad:</strong> El QA emite PASS ✅ / CONCERNS ⚠️ / FAIL ❌ / WAIVED 🔓. Vos decidís tu barra de calidad - si es un MVP rápido podés aceptar CONCERNS, si es software crítico no.<br>
-                        <strong>• Loop de Aprendizaje:</strong> Las notas del Developer (paso 7) informan el draft del SM en la siguiente story (paso 2). El equipo mejora continuamente.
+                        <strong>• Validaciones Integradas:</strong> El PO valida el draft antes de development (paso 3),
+                        el QA testea después de development (paso 5 - incluye verificación de tests y commit), y el Developer
+                        arregla según feedback (paso 6). Estos checks mantienen el sistema alineado
+                        con los requirements y estándares de calidad.<br>
+                        <strong>• Flexibilidad de Calidad:</strong> El QA emite PASS ✅ / CONCERNS ⚠️ / FAIL ❌ / WAIVED
+                        🔓. Vos decidís tu barra de calidad - si es un MVP rápido podés aceptar CONCERNS, si es software
+                        crítico no.<br>
+                        <strong>• Loop de Aprendizaje:</strong> El Developer documenta notas automáticamente durante el desarrollo (paso 4),
+                        y el SM las revisa en la siguiente story (paso 1). El equipo mejora continuamente.
                     </p>
                 </div>
 
                 <div class="highlight-box" style="margin-top: 30px;">
                     <h3>💪 Ventajas del Loop Iterativo</h3>
                     <p>
-                        ✅ <strong>Siempre tenés una versión funcional:</strong> Después de cada story, el código funciona y está testeado.<br>
-                        ✅ <strong>Flexibilidad para cambiar rumbo:</strong> Si después de 5 stories querés pivotar, podés. No estás comprometido a un plan gigante.<br>
-                        ✅ <strong>Loop de aprendizaje:</strong> El equipo mejora story tras story basándose en notas de lo que pasó.<br>
-                        ✅ <strong>Human in the Loop:</strong> Vos aprobás transiciones clave. Sos el tech lead que guía el equipo.
+                        ✅ <strong>Siempre tenés una versión funcional:</strong> Después de cada story, el código
+                        funciona y está testeado.<br>
+                        ✅ <strong>Flexibilidad para cambiar rumbo:</strong> Si después de 5 stories querés pivotar,
+                        podés. No estás comprometido a un plan gigante.<br>
+                        ✅ <strong>Loop de aprendizaje:</strong> El equipo mejora story tras story basándose en notas de
+                        lo que pasó.<br>
+                        ✅ <strong>Human in the Loop:</strong> Vos aprobás transiciones clave. Sos el tech lead que guía
+                        el equipo.
                     </p>
                 </div>
             </div>
@@ -1226,12 +1397,131 @@
     <section id="recursos" style="background: rgba(139, 92, 246, 0.03);">
         <div class="container">
             <h2>📚 <span class="gradient-text">Recursos para Empezar</span></h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.2rem;">
+            <p
+                style="text-align: center; color: var(--text-secondary); max-width: 900px; margin: 0 auto 40px; font-size: 1.2rem;">
                 Todo lo que necesitás para comenzar a usar BMAD hoy:
             </p>
 
-            <div class="resources-grid">
-                <!-- GitHub Repo -->
+            <!-- Tool Comparison -->
+            <div
+                style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%); border: 2px solid #8B5CF6; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                <h3 style="color: #A78BFA; font-size: 1.5rem; margin-bottom: 20px; text-align: center;">🛠️ ¿Qué
+                    Herramienta Usar?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div
+                        style="background: rgba(59, 130, 246, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #3B82F6;">
+                        <h4 style="color: #60A5FA; margin-bottom: 10px;">🏆 Claude Code</h4>
+                        <p style="color: #E5E7EB; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
+                            <strong>Mejor opción:</strong> Herramienta oficial de Anthropic con Sonnet 4.5 (el mejor del
+                            benchmark).
+                        </p>
+                        <p style="color: #C4B5FD; font-size: 0.85rem;">
+                            ✓ Máxima calidad<br>
+                            ✓ Integración perfecta<br>
+                            ✓ $100/mes (Max Plan)
+                        </p>
+                    </div>
+                    <div
+                        style="background: rgba(34, 197, 94, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #22C55E;">
+                        <h4 style="color: #86EFAC; margin-bottom: 10px;">⚡ OpenCode</h4>
+                        <p style="color: #E5E7EB; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
+                            <strong>Más versátil:</strong> Te logueás con el proveedor que uses y OpenCode usa ese plan.
+                        </p>
+                        <p style="color: #C4B5FD; font-size: 0.85rem;">
+                            ✓ Login con Anthropic, GitHub Copilot, Z.ai, etc<br>
+                            ✓ Usa el plan de tu proveedor<br>
+                            ✓ Open source y multi-modelo
+                        </p>
+                        <p style="color: #FCA5A5; font-size: 0.8rem; margin-top: 8px;">
+                            ⚠️ Requiere workaround (ver recursos abajo)
+                        </p>
+                    </div>
+                    <div
+                        style="background: rgba(139, 92, 246, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #8B5CF6;">
+                        <h4 style="color: #A78BFA; margin-bottom: 10px;">💻 Cursor / Windsurf</h4>
+                        <p style="color: #E5E7EB; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
+                            <strong>También compatibles:</strong> IDEs populares que soportan BMAD con sintaxis
+                            @mention.
+                        </p>
+                        <p style="color: #C4B5FD; font-size: 0.85rem;">
+                            ✓ Editores completos<br>
+                            ✓ Comunidad grande<br>
+                            ✓ Sintaxis @agent
+                        </p>
+                    </div>
+                    <div
+                        style="background: rgba(251, 191, 36, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #FCD34D;">
+                        <h4 style="color: #FCD34D; margin-bottom: 10px;">✨ Gemini CLI</h4>
+                        <p style="color: #E5E7EB; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
+                            <strong>Gratis:</strong> Gemini 2.5 Pro con uso gratuito y soporte oficial BMAD.
+                        </p>
+                        <p style="color: #C4B5FD; font-size: 0.85rem;">
+                            ✓ Gemini 2.5 Pro<br>
+                            ✓ Uso gratuito incluido<br>
+                            ✓ Soporte oficial BMAD
+                        </p>
+                    </div>
+                    <div
+                        style="background: rgba(59, 130, 246, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #60A5FA;">
+                        <h4 style="color: #60A5FA; margin-bottom: 10px;">🤖 Droid CLI</h4>
+                        <p style="color: #E5E7EB; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
+                            <strong>Gratis:</strong> GPT-5-Codex completamente gratis con Factory AI.
+                        </p>
+                        <p style="color: #C4B5FD; font-size: 0.85rem;">
+                            ✓ GPT-5-Codex model<br>
+                            ✓ 100% gratis<br>
+                            ✓ Factory AI platform
+                        </p>
+                        <p style="color: #FCA5A5; font-size: 0.8rem; margin-top: 8px;">
+                            ⚠️ Requiere workaround (ver recursos abajo)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empezá Ahora Section -->
+            <div style="margin-bottom: 50px;" id="workshop-repo">
+                <h3 style="color: #22C55E; font-size: 2rem; margin-bottom: 25px; text-align: center;">🚀 Empezá Ahora</h3>
+                <div class="resources-grid">
+                    <!-- Workshop Repo -->
+                    <div class="resource-card" style="border: 2px solid #22C55E; grid-column: 1 / -1;">
+                    <div class="resource-icon">🚀</div>
+                    <h3>Workshop Repo - ¡Empezá Ya!</h3>
+                    <p style="color: #86EFAC; font-weight: 600; margin-bottom: 10px;">
+                        Repo listo para usar con BMAD pre-instalado y setup automático:
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #E5E7EB;">
+                        <li style="padding: 5px 0;">✓ BMAD pre-instalado y configurado</li>
+                        <li style="padding: 5px 0;">✓ Script de setup para Droid CLI (gratis)</li>
+                        <li style="padding: 5px 0;">✓ MCPs incluidos (Sequential Thinking, Playwright)</li>
+                        <li style="padding: 5px 0;">✓ Comandos BMAD listos para usar</li>
+                        <li style="padding: 5px 0;">✓ Workflows de ejemplo</li>
+                    </ul>
+                    <div class="resource-link">
+                        <a href="https://github.com/baisharg/Workshop-Vibe-Coding"
+                            target="_blank">github.com/baisharg/Workshop-Vibe-Coding</a>
+                    </div>
+                    <div
+                        style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <div style="color: #86EFAC; font-weight: 600; margin-bottom: 8px;">⚡ Quick Start:</div>
+                        <div style="font-family: 'Monaco', monospace; font-size: 0.85rem;">
+                            <code style="color: var(--accent); display: block; margin-bottom: 5px;">git clone https://github.com/baisharg/Workshop-Vibe-Coding</code>
+                            <code style="color: var(--accent); display: block; margin-bottom: 5px;">cd Workshop-Vibe-Coding</code>
+                            <code style="color: var(--accent); display: block;">./setup.sh</code>
+                        </div>
+                        <p style="color: #E5E7EB; font-size: 0.85rem; margin-top: 10px; margin-bottom: 0;">
+                            El script instala Droid CLI (gratis, GPT-5-Codex) y configura todos los comandos BMAD automáticamente.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Repositorios y Aprendizaje Section -->
+            <div style="margin-bottom: 50px;">
+                <h3 style="color: #A78BFA; font-size: 2rem; margin-bottom: 25px; text-align: center;">📚 Repositorios y Aprendizaje</h3>
+                <div class="resources-grid">
+                <!-- BMAD Repo -->
                 <div class="resource-card">
                     <div class="resource-icon">📦</div>
                     <h3>BMAD Repository</h3>
@@ -1245,7 +1535,8 @@
                         <li style="padding: 5px 0;">✓ Ejemplos de proyectos</li>
                     </ul>
                     <div class="resource-link">
-                        <a href="https://github.com/bmad-code-org/bmad-method/" target="_blank">github.com/bmad-code-org/bmad-method</a>
+                        <a href="https://github.com/bmad-code-org/bmad-method/"
+                            target="_blank">github.com/bmad-code-org/bmad-method</a>
                     </div>
                 </div>
 
@@ -1266,7 +1557,13 @@
                         <a href="https://youtu.be/LorEJPrALcg" target="_blank">youtu.be/LorEJPrALcg</a>
                     </div>
                 </div>
+                </div>
+            </div>
 
+            <!-- Planes Recomendados Section -->
+            <div style="margin-bottom: 50px;">
+                <h3 style="color: #60A5FA; font-size: 2rem; margin-bottom: 25px; text-align: center;">🎯 Planes Recomendados</h3>
+                <div class="resources-grid">
                 <!-- Z.ai Recommendation -->
                 <div class="resource-card" style="border-color: var(--success);">
                     <div class="resource-icon">💎</div>
@@ -1282,6 +1579,26 @@
                     </ul>
                     <div class="resource-link">
                         <a href="https://z.ai/subscribe" target="_blank">z.ai/subscribe</a>
+                    </div>
+                </div>
+
+                <!-- Claude Code Max Plan -->
+                <div class="resource-card" style="border-color: #22D3EE;">
+                    <div class="resource-icon">🚀</div>
+                    <h3>Claude Code + Max Plan</h3>
+                    <p>
+                        <strong style="color: #22D3EE;">Para Enthusiasts:</strong> La opción de máxima calidad para
+                        BMAD:
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #E5E7EB;">
+                        <li style="padding: 5px 0;">✓ Claude Code Terminal Agent oficial de Anthropic</li>
+                        <li style="padding: 5px 0;">✓ Acceso a Sonnet 4.5 (el mejor del benchmark)</li>
+                        <li style="padding: 5px 0;">✓ Max Plan: $100/mes con límites muy altos</li>
+                        <li style="padding: 5px 0;">✓ Experiencia optimizada para agentic coding</li>
+                    </ul>
+                    <div class="resource-link">
+                        <a href="https://www.claude.com/product/claude-code"
+                            target="_blank">claude.com/product/claude-code</a>
                     </div>
                 </div>
 
@@ -1302,32 +1619,112 @@
                         <a href="https://education.github.com/pack" target="_blank">education.github.com/pack</a>
                     </div>
                 </div>
+                </div>
+            </div>
 
+            <!-- Herramientas CLI/Terminal Section -->
+            <div style="margin-bottom: 50px;">
+                <h3 style="color: #86EFAC; font-size: 2rem; margin-bottom: 25px; text-align: center;">💻 Herramientas CLI/Terminal</h3>
+                <div class="resources-grid">
                 <!-- OpenCode -->
                 <div class="resource-card">
                     <div class="resource-icon">⚡</div>
                     <h3>OpenCode</h3>
                     <p>
-                        Programa open source para agentic coding en la terminal:
+                        Programa open source de terminal para agentic coding. Te logueás con tu proveedor y OpenCode usa ese plan:
                     </p>
                     <ul style="list-style: none; padding: 0; color: #E5E7EB;">
-                        <li style="padding: 5px 0;">✓ Terminal program (no es un IDE)</li>
-                        <li style="padding: 5px 0;">✓ Corre dentro de cualquier IDE</li>
+                        <li style="padding: 5px 0;">✓ Login con Anthropic, GitHub Copilot, Z.ai, etc</li>
+                        <li style="padding: 5px 0;">✓ Corre en la terminal de cualquier IDE</li>
                         <li style="padding: 5px 0;">✓ Compatible con MCP servers</li>
-                        <li style="padding: 5px 0;">✓ Multi-modelo (Claude, GPT, Gemini)</li>
+                        <li style="padding: 5px 0;">✓ Multi-modelo y open source</li>
                     </ul>
                     <div class="resource-link">
                         <a href="https://opencode.ai/" target="_blank">opencode.ai</a>
                     </div>
-                    <div style="background: var(--bg-darker); padding: 12px; border-radius: 8px; font-family: 'Monaco', monospace; margin-top: 15px; font-size: 0.85rem;">
-                        <div style="color: #86EFAC; margin-bottom: 8px;">Instalación:</div>
+                    <div
+                        style="background: var(--bg-darker); padding: 12px; border-radius: 8px; font-family: 'Monaco', monospace; margin-top: 15px; font-size: 0.85rem;">
+                        <div style="color: #86EFAC; margin-bottom: 8px;">Instalación de OpenCode:</div>
                         <code style="color: var(--accent);">curl -fsSL https://opencode.ai/install | bash</code>
+                    </div>
+                    <div
+                        style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <div style="color: #FCD34D; font-weight: 600; margin-bottom: 8px;">⚙️ Setup para BMAD + OpenCode:</div>
+                        <ol style="color: #E5E7EB; font-size: 0.9rem; line-height: 1.6; margin: 0; padding-left: 20px;">
+                            <li>Instalá BMAD seleccionando la opción <strong>Claude Code</strong></li>
+                            <li>Renombrá el directorio: <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.claude/commands/</code> → <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.opencode/command</code></li>
+                            <li>¡Listo! Funciona seamlessly con OpenCode</li>
+                        </ol>
+                        <p style="color: #FCA5A5; font-size: 0.85rem; margin-top: 10px; margin-bottom: 0;">
+                            Nota: BMAD no tiene soporte oficial para OpenCode aún, este es un workaround.
+                        </p>
                     </div>
                     <p style="margin-top: 10px; font-size: 0.85rem; color: var(--text-muted);">
                         BMAD también funciona con Cursor, Claude Code, Windsurf, y otros IDEs con AI.
                     </p>
                 </div>
 
+                <!-- Gemini CLI -->
+                <div class="resource-card">
+                    <div class="resource-icon">✨</div>
+                    <h3>Gemini CLI</h3>
+                    <p>
+                        Terminal CLI con Gemini 2.5 Pro y uso gratuito:
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #E5E7EB;">
+                        <li style="padding: 5px 0;">✓ Gemini 2.5 Pro model</li>
+                        <li style="padding: 5px 0;">✓ Uso gratuito incluido</li>
+                        <li style="padding: 5px 0;">✓ Soporte oficial BMAD</li>
+                        <li style="padding: 5px 0;">✓ Instalación directa de comandos</li>
+                    </ul>
+                    <div class="resource-link">
+                        <a href="https://github.com/google-gemini/gemini-cli" target="_blank">github.com/google-gemini/gemini-cli</a>
+                    </div>
+                    <div
+                        style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <div style="color: #86EFAC; font-weight: 600; margin-bottom: 8px;">✅ Setup con BMAD:</div>
+                        <p style="color: #E5E7EB; font-size: 0.9rem; margin: 0;">
+                            Seleccioná la opción <strong>Gemini CLI</strong> cuando instalés BMAD y automáticamente se configuran los comandos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Droid CLI -->
+                <div class="resource-card">
+                    <div class="resource-icon">🤖</div>
+                    <h3>Droid CLI (Factory AI)</h3>
+                    <p>
+                        Terminal CLI con GPT-5-Codex, completamente gratis:
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #E5E7EB;">
+                        <li style="padding: 5px 0;">✓ GPT-5-Codex model</li>
+                        <li style="padding: 5px 0;">✓ Completamente gratis</li>
+                        <li style="padding: 5px 0;">✓ Terminal program</li>
+                        <li style="padding: 5px 0;">✓ Factory AI platform</li>
+                    </ul>
+                    <div class="resource-link">
+                        <a href="https://docs.factory.ai/cli/getting-started/overview" target="_blank">docs.factory.ai/cli</a>
+                    </div>
+                    <div
+                        style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <div style="color: #FCD34D; font-weight: 600; margin-bottom: 8px;">⚙️ Setup para BMAD + Droid CLI:</div>
+                        <ol style="color: #E5E7EB; font-size: 0.9rem; line-height: 1.6; margin: 0; padding-left: 20px;">
+                            <li>Instalá BMAD seleccionando la opción <strong>Claude Code</strong></li>
+                            <li>Renombrá el directorio: <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.claude/</code> → <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.factory/</code></li>
+                            <li>Movê los archivos <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.md</code> al nivel superior de <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.factory/</code> (no dentro de agents/ o tasks/)</li>
+                        </ol>
+                        <p style="color: #FCA5A5; font-size: 0.85rem; margin-top: 10px; margin-bottom: 0;">
+                            Nota: Requiere workaround similar a OpenCode.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Instalación y Setup Section -->
+            <div style="margin-bottom: 50px;">
+                <h3 style="color: #FCD34D; font-size: 2rem; margin-bottom: 25px; text-align: center;">🔧 Instalación y Setup</h3>
+                <div class="resources-grid">
                 <!-- BMAD Install -->
                 <div class="resource-card">
                     <div class="resource-icon">📥</div>
@@ -1335,12 +1732,15 @@
                     <p>
                         BMAD se instala por proyecto en el directorio del proyecto:
                     </p>
-                    <div style="background: var(--bg-darker); padding: 12px; border-radius: 8px; font-family: 'Monaco', monospace; margin-top: 15px; font-size: 0.85rem;">
+                    <div
+                        style="background: var(--bg-darker); padding: 12px; border-radius: 8px; font-family: 'Monaco', monospace; margin-top: 15px; font-size: 0.85rem;">
                         <div style="color: #86EFAC; margin-bottom: 8px;">En la raíz de tu proyecto:</div>
                         <code style="color: var(--accent);">npx bmad-method install</code>
                     </div>
                     <p style="margin-top: 15px; color: #E5E7EB; font-size: 0.95rem;">
-                        Esto crea la carpeta <code style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.bmad-core/</code> con todos los agentes, templates, tasks, y checklists.
+                        Esto crea la carpeta <code
+                            style="background: var(--bg-darker); padding: 2px 6px; border-radius: 4px; color: var(--accent);">.bmad-core/</code>
+                        con todos los agentes, templates, tasks, y checklists.
                     </p>
                     <ul style="list-style: none; padding: 0; color: #E5E7EB; margin-top: 10px;">
                         <li style="padding: 5px 0;">✓ Instalación por proyecto (no global)</li>
@@ -1368,6 +1768,7 @@
                         Los MCP tools se configuran en tu IDE y los agentes pueden invocarlos cuando los necesitan.
                     </p>
                 </div>
+                </div>
             </div>
 
         </div>
@@ -1376,7 +1777,7 @@
 
     <script>
         // Sticky navigation on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const nav = document.getElementById('stickyNav');
             if (window.scrollY > 100) {
                 nav.classList.add('visible');
@@ -1387,7 +1788,7 @@
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -1717,19 +2118,19 @@
                                     font: { size: 10 },
                                     color: '#E5E7EB'
                                 },
-                                grid: { display: false }
-                            }
+                                 grid: { display: false }
+                             }
                         }
                     }
                 };
 
-                metrTimeChartInstance = new Chart(ctx2, timeConfig);
+                metrTimrtInstance = new Chart(ctx2, timeConfig);
             }
         }
 
         // Initialize charts when page loads
-        window.addEventListener('load', function() {
-            setTimeout(function() {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
                 initializeLocodiffChart();
                 initializeMetrCharts();
             }, 100);
