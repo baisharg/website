@@ -424,7 +424,7 @@ El Dev es el más usado - vas a estar en el loop: draft → develop → commit.
 
 ## SLIDE 16: DEMO [14:55 - 21:30]
 
-[Switch to live terminal - this was the content that was at slide 9, now moved here after all agents are explained]
+[Switch to live terminal - this was the content that was at slide 9, now moved here after all agents are explained]ggyG
 
 Bueno, ahora que conocen todos los agentes, vamos a verlos en acción.
 
