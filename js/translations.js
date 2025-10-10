@@ -348,6 +348,11 @@ const translations = {
             name: 'Sergio Abriola, PhD',
             title: 'Advisor',
             bio: 'Mathematics PhD and professor with a passion for AI Safety'
+          },
+          charly: {
+            name: 'Carlos Giudice',
+            title: 'Member of Technical Staff',
+            bio: 'Technical staff member supporting AI safety research'
           }
         }
       }
@@ -1487,6 +1492,11 @@ const translations = {
             name: 'Sergio Abriola, PhD',
             title: 'Advisor',
             bio: 'Doctor en Matemáticas y profesor con pasión por la seguridad en IA'
+          },
+          charly: {
+            name: 'Carlos Giudice',
+            title: 'Miembro del Personal Técnico',
+            bio: 'Miembro del personal técnico que apoya la investigación en seguridad de IA'
           }
         }
       }
