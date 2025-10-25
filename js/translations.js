@@ -351,8 +351,8 @@ const translations = {
           },
           charly: {
             name: 'Carlos Giudice',
-            title: 'Member of Technical Staff',
-            bio: 'Technical staff member supporting AI safety research'
+            title: 'Advisor',
+            bio: 'Advisor supporting AI safety research and initiatives'
           }
         }
       }
@@ -1495,8 +1495,8 @@ const translations = {
           },
           charly: {
             name: 'Carlos Giudice',
-            title: 'Miembro del Personal Técnico',
-            bio: 'Miembro del personal técnico que apoya la investigación en seguridad de IA'
+            title: 'Advisor',
+            bio: 'Asesor que apoya la investigación e iniciativas de seguridad en IA'
           }
         }
       }
